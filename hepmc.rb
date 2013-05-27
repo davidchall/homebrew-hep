@@ -15,7 +15,7 @@ class Hepmc < Formula
   end
 
   test do
-    system "make -C #{prefix}/share/HepMC/examples/ example_BuildEventFromScratch.exe"
-    system "#{prefix}/share/HepMC/examples/example_BuildEventFromScratch.exe"
+    system "make -C #{share}/HepMC/examples/ example_BuildEventFromScratch.exe"
+    system "#{share}/HepMC/examples/example_BuildEventFromScratch.exe"
   end
 end
