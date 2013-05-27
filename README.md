@@ -1,4 +1,4 @@
-# homebrew-hep
+# Homebrew-hep
 This repository is a place to store [Homebrew](http://brew.sh/) formulae relating to high energy physics. 
 Homebrew is a package manager for OS X, keeping things nicely organised in `/usr/local`.
 
@@ -10,6 +10,11 @@ Homebrew is a package manager for OS X, keeping things nicely organised in `/usr
 If a formula conflicts with an existing formula in the master repository, use `brew install davidchall/hep/<formula>`.
 
 For a list of available HEP packages, please see [here](https://github.com/davidchall/homebrew-hep).
+
+## Documentation
+__Homebrew:__ `brew help`, `man brew`, or the Homebrew [wiki](http://wiki.github.com/mxcl/homebrew).
+
+__HEP package:__ `brew info <formula>`
 
 ## Can I contribute?
 By all means, yes! I will update this document with instructions in the near future.
