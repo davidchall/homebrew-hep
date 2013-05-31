@@ -46,11 +46,10 @@ class Sherpa < Formula
     end
 
     system "./configure", *args
-    system "make"
     system "make", "install"
   end
 
   test do
-    system "false"
+    system "Sherpa", "--version"
   end
 end
