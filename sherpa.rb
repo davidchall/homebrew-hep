@@ -18,6 +18,7 @@ class Sherpa < Formula
     ]
 
     ENV.fortran
+    ENV.append 'LDFLAGS', "-L/usr/lib -lstdc++"
 
     system "./configure", *args
     system "make"
