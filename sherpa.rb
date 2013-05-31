@@ -11,6 +11,15 @@ class Sherpa < Formula
     version '2.0.b2'
   end
 
+  def patches
+    # Conform to C++ standards (to compile with clang)
+    if build.devel?
+      { :p0 => "https://sherpa.hepforge.org/trac/raw-attachment/ticket/259/clang.patch" }
+    else
+      { :p0 => "https://sherpa.hepforge.org/trac/raw-attachment/ticket/259/143_clang.patch" }
+    end
+  end
+
   def install
     args = %W[
       --disable-dependency-tracking
@@ -27,12 +36,5 @@ class Sherpa < Formula
 
   test do
     system "false"
-  end
-
-  def patches
-    # Conform to C++ standards (to compile with clang)
-    { :p0 => [
-      "https://sherpa.hepforge.org/trac/raw-attachment/ticket/259/clang.patch"
-    ]}
   end
 end
