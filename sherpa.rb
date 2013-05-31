@@ -40,6 +40,11 @@ class Sherpa < Formula
     ENV.fortran
     ENV.append 'LDFLAGS', "-L/usr/lib -lstdc++"
 
+    # OS X 10.8 is now POSIX compatible with scandir signature
+    if MacOS.version >= :mountain_lion
+      inreplace 'PDF/LHAPDF/LHAPDF_Fortran_Interface.C', "#define DIRENT_TYPE dirent", "#define DIRENT_TYPE const dirent"
+    end
+
     system "./configure", *args
     system "make"
     system "make", "install"
