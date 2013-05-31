@@ -20,11 +20,22 @@ class Sherpa < Formula
     end
   end
 
+  depends_on 'hepmc'   => :recommended
+  depends_on 'rivet'   => :recommended
+  depends_on 'lhapdf'  => :recommended
+  depends_on 'fastjet' => :optional
+
   def install
     args = %W[
       --disable-dependency-tracking
       --prefix=#{prefix}
+      --enable-multithread
     ]
+
+    args << "--enable-hepmc2=#{Formula.factory('hepmc').prefix}"    if build.with? "hepmc"
+    args << "--enable-rivet=#{Formula.factory('rivet').prefix}"     if build.with? "rivet"
+    args << "--enable-lhapdf=#{Formula.factory('lhapdf').prefix}"   if build.with? "lhapdf"
+    args << "--enable-fastjet=#{Formula.factory('fastjet').prefix}" if build.with? "fastjet"
 
     ENV.fortran
     ENV.append 'LDFLAGS', "-L/usr/lib -lstdc++"
