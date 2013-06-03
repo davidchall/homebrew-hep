@@ -51,5 +51,31 @@ class Sherpa < Formula
 
   test do
     system "Sherpa", "--version"
+
+    (testpath/"Run.dat").write <<-EOS.undent
+      (beam){
+        BEAM_1 =  2212; BEAM_ENERGY_1 = 7000;
+        BEAM_2 =  2212; BEAM_ENERGY_2 = 7000;
+      }(beam)
+
+      (processes){
+        Process 93 93 -> 11 -11;
+        Order_EW 2;
+        Integration_Error 0.05;
+        End process;
+      }(processes)
+
+      (selector){
+        Mass 11 -11 66 166
+      }(selector)
+
+      (mi){
+        MI_HANDLER = None   # None or Amisic
+      }(mi)
+    EOS
+    
+    system "Sherpa", "-p", testpath, "-L", testpath, "-e", "1000"
+    puts "You just successfully generated 1000 Drell-Yan events!"
+    puts "Please now delete the \"Sherpa_References.tex\" file"
   end
 end
