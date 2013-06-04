@@ -17,8 +17,8 @@ Here are [more detailed installation instructions](https://github.com/davidchall
 
 ### Help
 * [Short guide to Homebrew commands](https://github.com/davidchall/homebrew-hep/wiki/Homebrew-guide)
-* Problems with the packages themselves should be reported to the respective authors (please `brew home <package>`)
-* Problems with the Homebrew-hep installation can be reported on the [issue tracker](https://github.com/davidchall/homebrew-hep/issues)
+* Problems with the packages themselves should be reported to the authors of the respective package (please `brew home <package>`)
+* Problems with the Mac installation through Homebrew-hep can be reported on the [issue tracker](https://github.com/davidchall/homebrew-hep/issues)
 
 ### Can I contribute?
 Of course! [Here](https://github.com/davidchall/homebrew-hep/wiki/How-to-contribute) is a guide to how. Some possible ways could be:
