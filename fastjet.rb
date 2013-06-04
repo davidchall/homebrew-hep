@@ -19,7 +19,7 @@ class Fastjet < Formula
     args << "--with-cgal=#{Formula.factory('cgal').prefix}" if build.with? "cgal"
 
     system "./configure", *args
-    system "make install"
+    system "make", "install"
 
     prefix.install 'example'
   end

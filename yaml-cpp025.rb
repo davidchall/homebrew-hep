@@ -11,6 +11,6 @@ class YamlCpp025 < Formula
 
   def install
     system "cmake", ".", "-DBUILD_SHARED_LIBS=ON", *std_cmake_args
-    system "make install"
+    system "make", "install"
   end
 end

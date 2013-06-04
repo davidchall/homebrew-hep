@@ -10,7 +10,7 @@ class Hepmc < Formula
   def install
     mkdir '../build' do
       system "cmake", buildpath, "-Dmomentum:STRING=GEV", "-Dlength:STRING=MM", *std_cmake_args
-      system "make install"
+      system "make", "install"
     end
   end
 

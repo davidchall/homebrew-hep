@@ -19,7 +19,7 @@ class Pythia8 < Formula
     args << "--with-hepmc=#{Formula.factory('hepmc').prefix}" if build.with? "hepmc"
 
     system "./configure", *args
-    system "make install"
+    system "make", "install"
 
     prefix.install 'examples'
   end
