@@ -11,7 +11,7 @@ Homebrew-hep is a Mac package manager for HEP programs, based on [Homebrew](http
 2. Tap homebrew-hep: `brew tap davidchall/hep`
 3. Install HEP packages: `brew install <package>` (e.g. `brew install pythia8`)
 
-Here are [more detailed installation instructions](https://github.com/davidchall/homebrew-hep/wiki/Detailed-installation-instructions) and a [list of available HEP packages](https://github.com/davidchall/homebrew-hep).
+Here are [more detailed installation instructions](https://github.com/davidchall/homebrew-hep/wiki/Detailed-installation-instructions) and a [list of available HEP packages](https://github.com/davidchall/homebrew-hep/wiki/List-of-packages).
 
 ***
 
