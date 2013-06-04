@@ -1,21 +1,27 @@
-# Homebrew-hep
-This repository is a place to store [Homebrew](http://brew.sh/) formulae relating to high energy physics. 
-Homebrew is a package manager for OS X, keeping things nicely organised in `/usr/local`.
+## Introduction
+Many high energy physics programs require special installation instructions for Mac OS X, and their issue trackers are often filled with unresolved Mac issues. Problems are also encountered when trying to link all these programs together.
+
+Homebrew-hep is a Mac package manager for HEP programs, based on [Homebrew](http://brew.sh/). In Homebrew language, it is a tap. From the end-user's perspective it is nice because it:
+* keeps things organised in `/usr/local` 
+* automatically handles package dependencies
+* is easy to update programs
 
 ## Instructions
-1. First install Homebrew: `ruby -e "$(curl -fsSL https://raw.github.com/mxcl/homebrew/go)"`
-2. Tell it about this repository: `brew tap davidchall/hep`
-3. Install HEP packages: `brew install <formula>` (e.g. `brew install pythia8`)
+1. Install [Homebrew](http://brew.sh/): `ruby -e "$(curl -fsSL https://raw.github.com/mxcl/homebrew/go)"`
+2. Tap homebrew-hep: `brew tap davidchall/hep`
+3. Install HEP packages: `brew install <package>` (e.g. `brew install pythia8`)
 
-If a formula conflicts with an existing formula in the master repository, use `brew install davidchall/hep/<formula>`.
+Here are [more detailed installation instructions](https://github.com/davidchall/homebrew-hep/wiki/Detailed-installation-instructions) and a [list of available HEP packages](https://github.com/davidchall/homebrew-hep).
 
-For a list of available HEP packages, please see [here](https://github.com/davidchall/homebrew-hep).
+***
 
-## Documentation
-__Homebrew:__ `brew help`, `man brew`, or the Homebrew [wiki](http://wiki.github.com/mxcl/homebrew).
+### Help
+* [Short guide to Homebrew commands](https://github.com/davidchall/homebrew-hep/wiki/Homebrew-guide)
+* Problems with the packages themselves should be reported to the respective authors (please `brew home <package>`)
+* Problems with the Homebrew-hep installation can be reported on the [issue tracker](https://github.com/davidchall/homebrew-hep/issues)
 
-__HEP package:__ `brew info <formula>`
-
-## Can I contribute?
-By all means, yes! I will update this document with instructions in the near future.
-But in the meantime, please consult Homebrew's [wiki page](https://github.com/mxcl/homebrew/wiki/Formula-Cookbook) on how to add a new formula.
+### Can I contribute?
+Of course! [Here](https://github.com/davidchall/homebrew-hep/wiki/How-to-contribute) is a guide to how. Some possible ways could be:
+* add a new package
+* add a new option to an existing package
+* update a package to the latest version
