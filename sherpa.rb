@@ -13,10 +13,17 @@ class Sherpa < Formula
 
   def patches
     # Conform to C++ standards (to compile with clang)
+    # OS X 10.8 is now POSIX compatible with scandir signature
     if build.devel?
-      { :p0 => "https://sherpa.hepforge.org/trac/raw-attachment/ticket/259/clang.patch" }
+      { :p0 => [
+        "https://sherpa.hepforge.org/trac/raw-attachment/ticket/259/clang.patch",
+        "https://sherpa.hepforge.org/trac/raw-attachment/ticket/260/dirent.patch"
+        ]}
     else
-      { :p0 => "https://sherpa.hepforge.org/trac/raw-attachment/ticket/259/143_clang.patch" }
+      { :p0 => [
+        "https://sherpa.hepforge.org/trac/raw-attachment/ticket/259/143_clang.patch",
+        "https://sherpa.hepforge.org/trac/raw-attachment/ticket/260/dirent.patch"
+        ]}
     end
   end
 
@@ -39,11 +46,6 @@ class Sherpa < Formula
 
     ENV.fortran
     ENV.append 'LDFLAGS', "-L/usr/lib -lstdc++"
-
-    # OS X 10.8 is now POSIX compatible with scandir signature
-    if MacOS.version >= :mountain_lion
-      inreplace 'PDF/LHAPDF/LHAPDF_Fortran_Interface.C', "#define DIRENT_TYPE dirent", "#define DIRENT_TYPE const dirent"
-    end
 
     system "./configure", *args
     system "make", "install"
@@ -73,7 +75,7 @@ class Sherpa < Formula
         MI_HANDLER = None   # None or Amisic
       }(mi)
     EOS
-    
+
     system "Sherpa", "-p", testpath, "-L", testpath, "-e", "1000"
     puts "You just successfully generated 1000 Drell-Yan events!"
     puts "Please now delete the \"Sherpa_References.tex\" file"
