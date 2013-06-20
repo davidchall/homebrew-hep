@@ -9,12 +9,12 @@ class Madgraph < Formula
 
   def install
     system "ditto . #{prefix}"
-    ln_s bin+'mg5', bin+'madgraph'
+    mv bin+'mg5', bin+'madgraph'
   end
 
   test do
     system "echo \"generate p p > t t~\" >> test.mg5"
     system "echo \"quit\" >> test.mg5"
-    system "mg5 -f test.mg5"
+    system "madgraph -f test.mg5"
   end
 end
