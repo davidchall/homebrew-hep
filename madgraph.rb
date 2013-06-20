@@ -8,8 +8,8 @@ class Madgraph < Formula
   depends_on 'gfortran'
 
   def install
-    system "cp -r ./ #{prefix}"
-    mv bin+'mg5', bin+'madgraph'
+    cp_r ".", "#{prefix}"
+    mv bin + 'mg5', bin + 'madgraph'
   end
 
   test do
