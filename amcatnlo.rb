@@ -6,6 +6,9 @@ class Amcatnlo < Formula
   sha1 '84b931103e42de210db9b93cc4e6da56db5f18f8'
   version '2.0.0.beta3'
 
+  conflicts_with 'madgraph',
+    :because => "aMC@NLO is a beta version of MadGraph"
+
   depends_on 'fastjet'
   depends_on 'gfortran'
 
