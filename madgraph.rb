@@ -8,13 +8,13 @@ class Madgraph < Formula
   depends_on 'gfortran'
 
   def install
-    cp_r ".", "#{prefix}"
+    cp_r '.', prefix
     mv bin + 'mg5', bin + 'madgraph'
   end
 
   test do
-    system "echo \"generate p p > t t~\" >> test.mg5"
-    system "echo \"quit\" >> test.mg5"
-    system "madgraph -f test.mg5"
+    system 'echo \'generate p p > t t~\' >> test.mg5'
+    system 'echo \'quit\' >> test.mg5'
+    system 'madgraph -f test.mg5'
   end
 end

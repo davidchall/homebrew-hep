@@ -10,13 +10,13 @@ class Amcatnlo < Formula
   depends_on 'gfortran'
 
   def install
-    system "ditto . #{prefix}"
-    mv bin+'mg5', bin+'amcatnlo'
+    cp_r '.', prefix
+    mv bin + 'mg5', bin + 'amcatnlo'
   end
 
   test do
-    system "echo \"generate p p > t t~\" >> test.mg5"
-    system "echo \"quit\" >> test.mg5"
-    system "amcatnlo -f test.mg5"
+    system 'echo \'generate p p > t t~\' >> test.mg5'
+    system 'echo \'quit\' >> test.mg5'
+    system 'amcatnlo -f test.mg5'
   end
 end
