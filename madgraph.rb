@@ -8,7 +8,7 @@ class Madgraph < Formula
   depends_on 'gfortran'
 
   def install
-    system "ditto . #{prefix}"
+    system "cp -r ./ #{prefix}"
     mv bin+'mg5', bin+'madgraph'
   end
 
