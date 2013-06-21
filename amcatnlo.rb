@@ -19,4 +19,12 @@ class Amcatnlo < Formula
     system 'echo \'quit\' >> test.mg5'
     system 'amcatnlo -f test.mg5'
   end
+
+  def caveats; <<-EOS.undent
+    Currently, in order to shower aMC@NLO events with Herwig++,
+    it is necessary to change the HWPPPATH, THEPEGPATH and HEPMCPATH
+    variables in ./Cards/shower_card.dat to /usr/local
+
+    EOS
+  end
 end
