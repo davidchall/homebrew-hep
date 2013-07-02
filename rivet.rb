@@ -11,6 +11,7 @@ class Rivet < Formula
   depends_on 'boost'
   depends_on 'yaml-cpp025' # Rivet insists on v0.2.5 API
   depends_on 'swig' => :build
+  depends_on :python
 
   def install
     args = %W[

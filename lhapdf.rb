@@ -8,6 +8,8 @@ class Lhapdf < Formula
   option 'disable-low-memory', "Warning: LHAPDF uses a lot of memory, which OS X complains about"
   option 'with-pdf4lhc', "Only build libraries for sets following PDF4LHC recommendations"
 
+  depends_on :python
+
   def install
     args = %W[
       --disable-debug

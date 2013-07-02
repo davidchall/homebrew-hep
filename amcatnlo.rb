@@ -8,6 +8,7 @@ class Amcatnlo < Formula
 
   depends_on 'fastjet'
   depends_on 'gfortran'
+  depends_on :python
 
   def install
     cp_r '.', prefix

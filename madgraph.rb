@@ -6,6 +6,7 @@ class Madgraph < Formula
   sha1 '905c534bb2e1582e2c589af8eadb652e0336bc49'
 
   depends_on 'gfortran'
+  depends_on :python
 
   def install
     cp_r '.', prefix

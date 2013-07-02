@@ -9,6 +9,7 @@ class Herwigxx < Formula
   depends_on 'hepmc'
   depends_on 'boost'
   depends_on 'gsl'
+  depends_on :python
 
   def install
     args = %W[
