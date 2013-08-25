@@ -7,7 +7,7 @@ class Amcatnlo < Formula
   version '2.0.0.beta3'
 
   depends_on 'fastjet'
-  depends_on 'gfortran'
+  depends_on :fortran
   depends_on :python
 
   def install

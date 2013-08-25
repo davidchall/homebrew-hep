@@ -10,6 +10,7 @@ class Herwigxx < Formula
   depends_on 'boost'
   depends_on 'gsl'
   depends_on :python
+  depends_on :fortran
 
   def install
     args = %W[
@@ -20,7 +21,7 @@ class Herwigxx < Formula
       --with-gsl=#{Formula.factory('gsl').prefix}
     ]
 
-    ENV.fortran
+    # Enable gfortran to find C++ libraries
     ENV.append 'LDFLAGS', "-L/usr/lib -lstdc++"
 
     inreplace 'configure', "if test -x \"$THEPEGPATH/lib/ThePEG/HepMCAnalysis.so\" ; then", "if test -r \"$THEPEGPATH/lib/ThePEG/HepMCAnalysis.so\" ; then"

@@ -31,6 +31,7 @@ class Sherpa < Formula
   depends_on 'rivet'   => :recommended
   depends_on 'lhapdf'  => :recommended
   depends_on 'fastjet' => :optional
+  depends_on :fortran
 
   def install
     args = %W[
@@ -44,7 +45,7 @@ class Sherpa < Formula
     args << "--enable-lhapdf=#{Formula.factory('lhapdf').prefix}"   if build.with? "lhapdf"
     args << "--enable-fastjet=#{Formula.factory('fastjet').prefix}" if build.with? "fastjet"
 
-    ENV.fortran
+    # Enable gfortran to find C++ libraries
     ENV.append 'LDFLAGS', "-L/usr/lib -lstdc++"
 
     system "./configure", *args

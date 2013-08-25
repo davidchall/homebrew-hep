@@ -8,10 +8,9 @@ class Mcfm < Formula
   keg_only "MCFM must be run from its install directory"
 
   depends_on 'lhapdf' => :recommended
+  depends_on :fortran
 
   def install
-    ENV.fortran
-
     system "./Install"
 
     if build.with? 'lhapdf'
