@@ -2,16 +2,24 @@ require 'formula'
 
 class Rivet < Formula
   homepage 'http://rivet.hepforge.org/'
-  url 'http://www.hepforge.org/archive/rivet/Rivet-1.8.3.tar.gz'
-  sha1 'd6a8589deff21c896c76c17cf268e445cea76c53'
+  url 'http://www.hepforge.org/archive/rivet/Rivet-2.0.0.tar.gz'
+  sha1 '92ead69e98463254a4d035c0db38a5e488b63798'
 
   depends_on 'hepmc'
   depends_on 'fastjet'
   depends_on 'gsl'
   depends_on 'boost'
-  depends_on 'yaml-cpp025' # Rivet insists on v0.2.5 API
-  depends_on 'swig' => :build
+  depends_on 'yoda'
+  depends_on 'yaml-cpp'
   depends_on :python
+
+  # Superenv removes -g flag, which breaks binreloc
+  env :std
+
+  def patches
+    # Need to check on this
+    DATA
+  end
 
   def install
     args = %W[
@@ -21,7 +29,6 @@ class Rivet < Formula
       --with-hepmc=#{Formula.factory('hepmc').prefix}
       --with-fastjet=#{Formula.factory('fastjet').prefix}
       --with-gsl=#{Formula.factory('gsl').prefix}
-      --with-yaml_cpp=#{Formula.factory('yaml-cpp025').prefix}
     ]
 
     system "./configure", *args
@@ -34,3 +41,18 @@ class Rivet < Formula
     system "cat #{prefix}/test/testApi.hepmc | #{bin}/rivet -a D0_2008_S7554427"
   end
 end
+
+__END__
+diff --git a/include/Rivet/ProjectionHandler.hh b/include/Rivet/ProjectionHandler.hh
+index 2483a9a..7d42d60 100644
+--- a/include/Rivet/ProjectionHandler.hh
++++ b/include/Rivet/ProjectionHandler.hh
+@@ -49,7 +49,7 @@ namespace Rivet {
+ 
+     /// @brief Typedef for the structure used to contain named projections for a
+     /// particular containing Analysis or Projection.
+-    typedef map<const string, ProjHandle> NamedProjs;
++    typedef map<string, ProjHandle> NamedProjs;
+ 
+     /// Enum to specify depth of projection search.
+     enum ProjDepth { SHALLOW, DEEP };
