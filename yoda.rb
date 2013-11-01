@@ -2,8 +2,8 @@ require 'formula'
 
 class Yoda < Formula
   homepage 'http://yoda.hepforge.org/'
-  url 'http://www.hepforge.org/archive/yoda/YODA-1.0.1.tar.gz'
-  sha1 'b58d8a0f91989e6bd936180486f1e73cfbcdc795'
+  url 'http://www.hepforge.org/archive/yoda/YODA-1.0.4.tar.gz'
+  sha1 '8077b5de16e6198826014a9e01adc7cbb30df401'
 
   depends_on :python
   depends_on 'cython' => :python
