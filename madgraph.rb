@@ -2,8 +2,8 @@ require 'formula'
 
 class Madgraph < Formula
   homepage 'https://launchpad.net/madgraph5'
-  url 'https://launchpad.net/madgraph5/trunk/1.5.0/+download/MadGraph5_v1.5.10.tar.gz'
-  sha1 '905c534bb2e1582e2c589af8eadb652e0336bc49'
+  url 'https://launchpad.net/madgraph5/trunk/1.5.0/+download/MadGraph5_v1.5.13.tar.gz'
+  sha1 '55e0c36164be1b73a6c884d67f7a2054e86d1870'
 
   depends_on 'gfortran'
   depends_on :python
