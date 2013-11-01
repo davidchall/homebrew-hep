@@ -2,12 +2,11 @@ require 'formula'
 
 class Lhapdf < Formula
   homepage 'http://lhapdf.hepforge.org/'
-  url 'http://www.hepforge.org/archive/lhapdf/lhapdf-5.8.9.tar.gz'
-  sha1 '9f02c2c8042811897b0d047259b0cc75e9ec3d19'
+  url 'http://www.hepforge.org/archive/lhapdf/LHAPDF-6.0.4.tar.gz'
+  sha1 'fba70c86d41be0be78703711ae74d22c9e4c098f'
 
-  option 'without-low-memory', "Warning: LHAPDF uses a lot of memory, which OS X complains about"
-  option 'with-pdf4lhc', "Only build libraries for sets following PDF4LHC recommendations"
-
+  depends_on 'boost'
+  depends_on 'yaml-cpp'
   depends_on :python
 
   def install
@@ -16,10 +15,6 @@ class Lhapdf < Formula
       --disable-dependency-tracking
       --prefix=#{prefix}
     ]
-
-    args << "--enable-low-memory" if build.without? "low-memory"
-    args << "--enable-pdfsets=cteq,mstw,nnpdf" if build.with? "pdf4lhc"
-    ENV.fortran
 
     system "./configure", *args
     system "make", "install"
@@ -30,10 +25,10 @@ class Lhapdf < Formula
   end
 
   def caveats; <<-EOS.undent
-    PDF sets are downloaded using the lhapdf-getdata script.
-    Please consult the homepage for more information.
+    PDFs are packaged as downloadable tarballs. These can be installed with, e.g.
+      wget http://www.hepforge.org/archive/lhapdf/pdfsets/6.0.0/CT10nlo.tar.gz -O- | tar xz -C #{share}/LHAPDF
 
-    LHAPDF also searches paths in the LHAPATH variable for
+    LHAPDF also searches paths in the LHA_DATA_PATH variable for
     PDF sets installed externally.
 
     EOS
