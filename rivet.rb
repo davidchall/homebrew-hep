@@ -17,7 +17,7 @@ class Rivet < Formula
   env :std
 
   def patches
-    # Need to check on this
+    # Fix compilation bug, correct rivet-config for Mac
     DATA
   end
 
@@ -43,6 +43,19 @@ class Rivet < Formula
 end
 
 __END__
+diff --git a/bin/rivet-config.in b/bin/rivet-config.in
+index 5108b36..2cc4fcf 100644
+--- a/bin/rivet-config.in
++++ b/bin/rivet-config.in
+@@ -71,7 +71,7 @@ fi
+ 
+ tmp=$( echo "$*" | egrep -- '--\<ldflags\>')
+ if test -n "$tmp"; then
+-    OUT="$OUT -Wl,--no-as-needed"
++    OUT="$OUT"
+     lrivet="@libdir@"
+     test -n "$lrivet" && OUT="$OUT -L${lrivet}"
+     lhepmc="@HEPMCLIBPATH@"
 diff --git a/include/Rivet/ProjectionHandler.hh b/include/Rivet/ProjectionHandler.hh
 index 2483a9a..7d42d60 100644
 --- a/include/Rivet/ProjectionHandler.hh
