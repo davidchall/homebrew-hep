@@ -2,8 +2,8 @@ require 'formula'
 
 class Herwigxx < Formula
   homepage 'http://herwig.hepforge.org/'
-  url 'http://www.hepforge.org/archive/herwig/Herwig++-2.6.3.tar.gz'
-  sha1 'eb49c7ae3106c1aaa3c7f33bcb0fcb99e59ef7b8'
+  url 'http://www.hepforge.org/archive/herwig/Herwig++-2.7.0.tar.gz'
+  sha1 'fff87fc7ee69fedf02d2cb28d9e30b2b5e8d6862'
 
   depends_on 'thepeg'
   depends_on 'hepmc'
@@ -20,11 +20,6 @@ class Herwigxx < Formula
       --with-thepeg=#{Formula.factory('thepeg').prefix}
       --with-gsl=#{Formula.factory('gsl').prefix}
     ]
-
-    # Enable gfortran to find C++ libraries
-    ENV.append 'LDFLAGS', "-L/usr/lib -lstdc++"
-
-    inreplace 'configure', "if test -x \"$THEPEGPATH/lib/ThePEG/HepMCAnalysis.so\" ; then", "if test -r \"$THEPEGPATH/lib/ThePEG/HepMCAnalysis.so\" ; then"
 
     system "./configure", *args
     system "make", "install"
