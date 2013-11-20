@@ -8,16 +8,11 @@ class Hoppet < Formula
   depends_on :fortran
 
   def install
-
-    system "./configure", "--disable-debug",
-                          "--disable-dependency-tracking",
-                          "--disable-silent-rules",
-                          "--prefix=#{prefix}"
-
+    system "./configure", "--prefix=#{prefix}"
     system "make", "install"
   end
 
   test do
-    system "hoppet-config"
+    system "hoppet-config", "--libs"
   end
 end
