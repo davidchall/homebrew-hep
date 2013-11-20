@@ -8,17 +8,16 @@ class Applgrid < Formula
   depends_on :fortran
   depends_on 'root'
   depends_on 'hoppet' => :recommended
+  depends_on 'lhapdf' => :optional
 
   def install
     ENV.j1
 
-    system "./configure", "--disable-debug",
-                          "--disable-dependency-tracking",
-                          "--prefix=#{prefix}"
+    system "./configure", "--disable-dependency-tracking", "--prefix=#{prefix}"
     system "make", "install"
   end
 
   test do
-    system "false"
+    system "applgrid-config", "--version"
   end
 end
