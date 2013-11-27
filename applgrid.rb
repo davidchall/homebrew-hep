@@ -3,7 +3,7 @@ require 'formula'
 class Applgrid < Formula
   homepage 'http://applgrid.hepforge.org'
   url 'http://www.hepforge.org/archive/applgrid/applgrid-1.4.40.tgz'
-  sha1 'c1e806775bcba8c3a6bd0e23f59a5d9a40b42720'
+  sha1 '046b3e2b21ab53d497c4b562930b26cab85f16f4'
 
   depends_on :fortran
   depends_on 'root'
