@@ -8,21 +8,23 @@ class Qcdnum < Formula
 
   depends_on :fortran
 
-  def build_lib(libname)
-    cd libname do
-      system "gfortran -c -Wall -O2 -Iinc */*.f"
-      system "ar -r ../lib/lib#{libname}.a *.o"
-    end
-  end
+  LIBRARIES = %W[
+    mbutil
+    qcdnum
+    zmstf
+    hqstf
+  ]
 
   def install
-    build_lib('mbutil')
-    build_lib('qcdnum')
-    build_lib('zmstf')
-    build_lib('hqstf')
-
-    lib.install Dir['lib/*']
+    lib.mkpath
     prefix.install 'testjobs'
+
+    LIBRARIES.each do |libname|
+      cd libname do
+        system "#{ENV.fc} -c -Wall -O2 -Iinc */*.f"
+        system "ar -r #{lib}/lib#{libname}.a *.o"
+      end
+    end
   end
 
   test do
