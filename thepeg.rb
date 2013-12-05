@@ -10,6 +10,7 @@ class Thepeg < Formula
   depends_on 'rivet'   => :recommended
   depends_on 'lhapdf'  => :recommended
   depends_on 'fastjet' => :recommended
+  option 'with-check', 'Test during installation'
 
   def patches
     DATA
@@ -21,14 +22,11 @@ class Thepeg < Formula
       --prefix=#{prefix}
     ]
 
-    args << "--with-hepmc=#{Formula.factory('hepmc').prefix}"     if build.with? "hepmc"
-    args << "--with-rivet=#{Formula.factory('rivet').prefix}"     if build.with? "rivet"
-    args << "--with-lhapdf=#{Formula.factory('lhapdf').prefix}"   if build.with? "lhapdf"
-    args << "--with-fastjet=#{Formula.factory('fastjet').prefix}" if build.with? "fastjet"
-
     args << "--enable-stdcxx11"
 
     system "./configure", *args
+    system "make"
+    system "make", "check" if build.with? 'check'
     system "make", "install"
   end
 

@@ -6,10 +6,13 @@ class Hepmc < Formula
   sha1 'ecb97190abedfe774629a1cbc961910b4d83b7d6'
 
   depends_on 'cmake' => :build
+  option 'with-check', 'Test during installation'
 
   def install
     mkdir '../build' do
       system "cmake", buildpath, "-Dmomentum:STRING=GEV", "-Dlength:STRING=MM", *std_cmake_args
+      system "make"
+      system "make", "test" if build.with? 'check'
       system "make", "install"
     end
   end

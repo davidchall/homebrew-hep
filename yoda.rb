@@ -8,6 +8,7 @@ class Yoda < Formula
   depends_on :python
   depends_on 'cython' => :python
   depends_on 'boost'
+  option 'with-check', 'Test during installation'
 
   def install
     args = %W[
@@ -17,6 +18,8 @@ class Yoda < Formula
     ]
 
     system "./configure", *args
+    system "make"
+    system "make", "check" if build.with? 'check'
     system "make", "install"
   end
 

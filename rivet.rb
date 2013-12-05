@@ -12,6 +12,7 @@ class Rivet < Formula
   depends_on 'yoda'
   depends_on 'yaml-cpp'
   depends_on :python
+  option 'with-check', 'Test during installation'
 
   # Superenv removes -g flag, which breaks binreloc
   env :std
@@ -26,12 +27,11 @@ class Rivet < Formula
       --disable-debug
       --disable-dependency-tracking
       --prefix=#{prefix}
-      --with-hepmc=#{Formula.factory('hepmc').prefix}
-      --with-fastjet=#{Formula.factory('fastjet').prefix}
-      --with-gsl=#{Formula.factory('gsl').prefix}
     ]
 
     system "./configure", *args
+    system "make"
+    system "make", "check" if build.with? 'check'
     system "make", "install"
 
     prefix.install 'test'

@@ -7,6 +7,7 @@ class Fastjet < Formula
 
   depends_on 'cgal' => :optional
   option 'with-cgal', 'Enable CGAL support (required for NlnN strategy)'
+  option 'with-check', 'Test during installation'
 
   def install
     args = %W[
@@ -19,6 +20,8 @@ class Fastjet < Formula
     args << "--with-cgal=#{Formula.factory('cgal').prefix}" if build.with? "cgal"
 
     system "./configure", *args
+    system "make"
+    system "make", "check" if build.with? 'check'
     system "make", "install"
 
     prefix.install 'example'

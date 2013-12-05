@@ -11,6 +11,7 @@ class Herwigxx < Formula
   depends_on 'gsl'
   depends_on :python
   depends_on :fortran
+  option 'with-check', 'Test during installation'
 
   def install
     args = %W[
@@ -22,11 +23,14 @@ class Herwigxx < Formula
     ]
 
     system "./configure", *args
+    system "make"
+    system "make", "check" if build.with? 'check'
     system "make", "install"
   end
 
   test do
     system "Herwig++ read #{share}/Herwig++/LHC.in"
     system "Herwig++ run LHC.run -N50"
+    ohai 'Successfully generated 50 LHC Drell-Yan events.'
   end
 end
