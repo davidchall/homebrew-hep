@@ -11,10 +11,10 @@ class Yoda < Formula
     depends_on :autoconf
     depends_on :automake
     depends_on :libtool
+    depends_on 'cython' => :python
   end
 
   depends_on :python
-  depends_on 'cython' => :python
   depends_on 'boost'
   option 'with-check', 'Test during installation'
 
