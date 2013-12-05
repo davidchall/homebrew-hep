@@ -5,6 +5,15 @@ class Rivet < Formula
   url 'http://www.hepforge.org/archive/rivet/Rivet-2.0.0.tar.gz'
   sha1 '92ead69e98463254a4d035c0db38a5e488b63798'
 
+  head do
+    url 'http://rivet.hepforge.org/hg/rivet', :using => :hg
+
+    depends_on :autoconf
+    depends_on :automake
+    depends_on :libtool
+    depends_on 'cython' => :python
+  end
+
   depends_on 'hepmc'
   depends_on 'fastjet'
   depends_on 'gsl'
@@ -14,13 +23,10 @@ class Rivet < Formula
   depends_on :python
   option 'with-check', 'Test during installation'
 
-  # Superenv removes -g flag, which breaks binreloc
-  env :std
-
   def patches
     # Fix compilation bug, correct rivet-config for Mac
     DATA
-  end
+  end unless build.head?
 
   def install
     args = %W[
@@ -29,6 +35,7 @@ class Rivet < Formula
       --prefix=#{prefix}
     ]
 
+    system "autoreconf", "-i" if build.head?
     system "./configure", *args
     system "make"
     system "make", "check" if build.with? 'check'
@@ -38,7 +45,8 @@ class Rivet < Formula
   end
 
   test do
-    system "cat #{prefix}/test/testApi.hepmc | #{bin}/rivet -a D0_2008_S7554427"
+    system "cat #{prefix}/test/testApi.hepmc | rivet -a D0_2008_S7554427"
+    ohai "Successfully ran dummy HepMC file through Drell-Yan analysis"
   end
 end
 
