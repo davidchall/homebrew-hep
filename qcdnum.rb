@@ -28,7 +28,8 @@ class Qcdnum < Formula
   end
 
   test do
-    system "gfortran -Wall -O -fbounds-check #{prefix}/testjobs/example.f -o example.exe #{lib}/libhqstf.a #{lib}/libzmstf.a #{lib}/libqcdnum.a #{lib}/libmbutil.a"
+    ENV.fortran
+    system "#{ENV.fc} -Wall -O -fbounds-check #{prefix}/testjobs/example.f -o example.exe #{lib}/libhqstf.a #{lib}/libzmstf.a #{lib}/libqcdnum.a #{lib}/libmbutil.a"
     system "./example.exe"
 
     ohai "Test program worked fine. Use 'brew test -v qcdnum' to watch it work"
