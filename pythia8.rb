@@ -34,15 +34,11 @@ class Pythia8 < Formula
   end
 
   def caveats; <<-EOS.undent
-    Pythia 8 must know where to find its settings and
-    particle data. This can be done using the environment
-    variable "PYTHIA8DATA" or as an argument to the Pythia
-    constructor in your main program.
+    It is recommended to 'brew install sacrifice' now, as
+    the easiest way to generate Pythia 8 events.
 
-    For csh/tcsh users:
-      setenv PYTHIA8DATA `brew --prefix pythia8`/xmldoc
-    For bash/zsh users:
-      export PYTHIA8DATA=$(brew --prefix pythia8)/xmldoc
+    Otherwise, programs can be built against the Pythia 8
+    libraries by making use of 'pythia8-config'.
 
     EOS
   end
