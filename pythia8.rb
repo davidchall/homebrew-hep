@@ -2,11 +2,11 @@ require 'formula'
 
 class Pythia8 < Formula
   homepage 'http://pythia8.hepforge.org'
-  url 'http://home.thep.lu.se/~torbjorn/pythia8/pythia8176.tgz'
-  sha1 '6b75c547afbc476921f645d8133410b023a9eed3'
-  version '8.176'
+  url 'http://home.thep.lu.se/~torbjorn/pythia8/pythia8180.tgz'
+  sha1 'aacc88d27937fd2bcfb5be39cd7055569859ba30'
+  version '8.180'
 
-  depends_on 'hepmc' => :recommended
+  depends_on 'hepmc'
 
   def install
     args = %W[
@@ -16,7 +16,7 @@ class Pythia8 < Formula
       --enable-shared
     ]
 
-    args << "--with-hepmc=#{Formula.factory('hepmc').prefix}" if build.with? "hepmc"
+    args << "--with-hepmc=#{Formula.factory('hepmc').opt_prefix}" if build.with? "hepmc"
 
     system "./configure", *args
     system "make", "install"

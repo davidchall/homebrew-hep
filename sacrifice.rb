@@ -2,8 +2,11 @@ require 'formula'
 
 class Sacrifice < Formula
   homepage 'https://agile.hepforge.org/trac/wiki/Sacrifice'
-  url 'http://www.hepforge.org/archive/agile/Sacrifice-0.9.1.tar.gz'
-  sha1 'c73935f1da816a90dbf1d67d4399fcff6fb32b23'
+  head 'http://agile.hepforge.org/svn/contrib/Sacrifice', :using => :svn
+
+  depends_on :autoconf
+  depends_on :automake
+  depends_on :libtool
 
   depends_on 'pythia8'
   depends_on 'hepmc'
@@ -16,6 +19,7 @@ class Sacrifice < Formula
       --with-pythia=#{Formula.factory('pythia8').opt_prefix}
     ]
 
+    system "autoreconf", "-i"
     system "./configure", *args
     system "make", "install"
   end
@@ -24,5 +28,12 @@ class Sacrifice < Formula
     system "pythia --collision-energy 8000 -c 'SoftQCD:all=on' -n 100"
     ohai "Successfully generated 100 soft QCD events."
     ohai "Use 'brew test -v sacrifice' to view output"
+  end
+
+  def caveats; <<-EOS.undent
+    Sacrifice has installed the executable 'pythia'.
+    Please use 'brew home sacrifice' for more info.
+    
+    EOS
   end
 end
