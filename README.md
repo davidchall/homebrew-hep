@@ -1,4 +1,4 @@
-![#homebrew-hep](http://higgshunter.files.wordpress.com/2013/12/logo.png)
+[![#homebrew-hep](http://higgshunter.files.wordpress.com/2013/12/logo.png)](http://davidchall.github.io/homebrew-hep/)
 
 [Click here](https://travis-ci.org/davidchall/homebrew-hep) for build status of individual packages.
 
