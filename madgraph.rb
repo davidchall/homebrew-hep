@@ -3,7 +3,7 @@ require 'formula'
 class Madgraph < Formula
   homepage 'https://launchpad.net/madgraph5'
   url 'https://launchpad.net/madgraph5/trunk/1.5.0/+download/MadGraph5_v1.5.13.tar.gz'
-  sha1 '55e0c36164be1b73a6c884d67f7a2054e86d1870'
+  sha1 '5de5d24dfa30eb8ade56868009f71ebc868247ba'
 
   depends_on :fortran
   depends_on :python
