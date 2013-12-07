@@ -7,7 +7,7 @@ class Mcfm < Formula
 
   keg_only "MCFM must be run from its install directory"
 
-  depends_on 'lhapdf' => :recommended
+  depends_on 'lhapdf' => :optional
   depends_on :fortran
 
   def install
@@ -34,6 +34,8 @@ class Mcfm < Formula
       system "./mcfm", "test.DAT"
       rm "test.DAT"
     end
+    ohai "Successfully calculated W production at LO"
+    ohai "Use 'brew test -v mcfm' to view ouput"
   end
 
   def caveats; <<-EOS.undent
