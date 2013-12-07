@@ -17,7 +17,7 @@ class Jetvheto < Formula
   end
 
   test do
-    system "#{bin}/jetvheto", "-in", "#{share}/fixed-order/H125-LHC8-R04-xmur050-xmuf050-log.fxd", 
+    system "#{bin}/jetvheto", "-in", "#{share}/fixed-order/H125-LHC8-R04-xmur050-xmuf050-log.fxd",
                               "-xQ", "0.50",
                               "-out", "H125.res"
   end
