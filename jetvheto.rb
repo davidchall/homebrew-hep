@@ -7,7 +7,6 @@ class Jetvheto < Formula
 
   depends_on 'hoppet'
   depends_on 'lhapdf'
-  #depends_on :fortran
 
   def install
     system "make"

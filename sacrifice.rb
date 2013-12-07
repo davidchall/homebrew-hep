@@ -33,7 +33,7 @@ class Sacrifice < Formula
   def caveats; <<-EOS.undent
     Sacrifice has installed the executable 'pythia'.
     Please use 'brew home sacrifice' for more info.
-    
+
     EOS
   end
 end
