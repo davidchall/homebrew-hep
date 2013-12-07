@@ -6,7 +6,24 @@ install:
   - ln -s $PWD $(brew --repo)/Library/Taps/travis-testtap
   - brew tap --repair
 env:
+  - PACKAGE=amcatnlo
+  - PACKAGE=applgrid
+  - PACKAGE=fastjet
+  - PACKAGE=fjcontrib
+  - PACKAGE=hepmc
+  - PACKAGE=herwig++
+  - PACKAGE=hoppet
+  - PACKAGE=jetvheto
   - PACKAGE=lhapdf
+  - PACKAGE=madgraph
+  - PACKAGE=mcfm
+  - PACKAGE=pythia8
+  - PACKAGE=qcdnum
+  - PACKAGE=rivet
+  - PACKAGE=sacrifice
+  - PACKAGE=sherpa
+  - PACKAGE=thepeg
+  - PACKAGE=yoda
 script:
   - brew audit $PACKAGE
   - brew install -v $PACKAGE
