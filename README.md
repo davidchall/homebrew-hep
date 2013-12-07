@@ -1,5 +1,5 @@
 # homebrew-hep
-[![Build Status](https://travis-ci.org/davidchall/homebrew-hep.png)](https://travis-ci.org/davidchall/homebrew-hep)
+[Click here](https://travis-ci.org/davidchall/homebrew-hep) for build status of individual packages.
 
 ## Introduction
 Many high energy physics programs require special installation instructions for Mac OS X, and their issue trackers are often filled with unresolved Mac issues. Problems are also encountered when trying to link all these programs together.
