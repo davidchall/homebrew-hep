@@ -5,7 +5,7 @@ class Madgraph < Formula
   url 'https://launchpad.net/madgraph5/trunk/1.5.0/+download/MadGraph5_v1.5.13.tar.gz'
   sha1 '55e0c36164be1b73a6c884d67f7a2054e86d1870'
 
-  depends_on 'gfortran'
+  depends_on :fortran
   depends_on :python
 
   def install
