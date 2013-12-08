@@ -8,6 +8,7 @@
 Many high energy physics programs require special installation instructions for Mac OS X, and their issue trackers are often filled with unresolved Mac issues. Problems are also encountered when trying to link all these programs together.
 
 Homebrew-hep is a Mac package manager for HEP programs, based on [Homebrew](http://brew.sh/). In Homebrew language, it is a tap. From the end-user's perspective it is nice because it:
+
 * keeps things organised in `/usr/local` 
 * automatically handles package dependencies
 * is easy to update programs
@@ -55,8 +56,9 @@ Any kind of contribution is welcome, but will require a [GitHub](https://github.
    * `brew edit <package>` or
    * `brew create http://example.com/<package>-0.1.0.tar.gz`
 3. test, e.g. `brew install <package>`, `brew test <package>`
-4. `git commit <package>.rb && git push`
-5. open [pull request](https://help.github.com/articles/using-pull-requests)
+4. conforms to style? `brew audit <package>`
+5. `git commit <package>.rb && git push`
+6. open [pull request](https://help.github.com/articles/using-pull-requests)
 
 The Homebrew files which control the package installations are written in Ruby. I realise that this is a language unfamiliar to most high energy physicists, so I am willing to help people to add new packages. If you are struggling with a contribution or have a package request, please open an [issue](https://github.com/davidchall/homebrew-hep/issues) to discuss.
 
@@ -70,4 +72,4 @@ You can add a new dependency with `depends_on`, and then usually pass the locati
 * The `brew create http://example.com/foo-0.1.0.tar.gz` command will download the source tarball and create a template formula for you in the Homebrew repository: `/usr/local/Library/Formula/foo.rb`.
 * You will need to edit the formula: `brew edit foo`. Homebrew maintains a [guide](https://github.com/mxcl/homebrew/wiki/Formula-Cookbook) on writing formulae. It might also be a good idea to browse [other HEP formulae](https://github.com/davidchall/homebrew-hep) or the [main Homebrew repository](https://github.com/mxcl/homebrew/tree/master/Library/Formula).
 * Once you are done making changes and testing, move the file from the Homebrew repository to your forked version of the `homebrew-hep` tap.
-* You can now continue from step 4. of the basic workflow
+* You can now continue from step 5. of the basic workflow
