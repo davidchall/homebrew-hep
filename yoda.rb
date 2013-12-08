@@ -16,6 +16,7 @@ class Yoda < Formula
 
   depends_on :python
   depends_on 'boost'
+  depends_on 'homebrew/science/root' => :optional
   option 'with-check', 'Test during installation'
 
   def install
@@ -24,6 +25,11 @@ class Yoda < Formula
       --disable-dependency-tracking
       --prefix=#{prefix}
     ]
+
+    if build.with? 'root'
+      args << "--enable-root"
+      ENV.append "PYTHONPATH", Formula.factory('root').opt_prefix/"lib/root" if build.with? 'check'
+    end
 
     system "autoreconf", "-i" if build.head?
     system "./configure", *args
@@ -34,5 +40,11 @@ class Yoda < Formula
 
   test do
     system "yoda-config", "--version"
+  end
+
+  def caveats; <<-EOS.undent
+    For yoda2root script, try 'brew install yoda --HEAD --with-root'
+
+    EOS
   end
 end
