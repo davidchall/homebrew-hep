@@ -1,9 +1,5 @@
 [![#homebrew-hep](http://higgshunter.files.wordpress.com/2013/12/logo.png)](http://davidchall.github.io/homebrew-hep/)
 
-**This page is under construction**
-
-[Click here](https://travis-ci.org/davidchall/homebrew-hep) for build status of individual packages.
-
 ## Introduction
 Many high energy physics programs require special installation instructions for Mac OS X, and their issue trackers are often filled with unresolved Mac issues. Problems are also encountered when trying to link all these programs together.
 
@@ -19,9 +15,31 @@ Homebrew-hep is a Mac package manager for HEP programs, based on [Homebrew](http
 3. Find out about package: `brew info <package>`
 4. Install HEP packages: `brew install <package>` (e.g. `brew install fastjet`)
 
-More [detailed installation instructions](#detailed-installation-instructions) are found below.
+Remember to regularly `brew update`! More [detailed installation instructions](#detailed-installation-instructions) are found below.
 
-## List of available packages ##
+## Available packages ##
+All packages are tested on OS X 10.9 (Mavericks) on my personal machine and OS X 10.8 (Mountain Lion) on [Travis CI](https://travis-ci.org/) virtual machines. The build status of each package can be viewed [here](https://travis-ci.org/davidchall/homebrew-hep) - just click on an individual job to see a build log for that package.
+
+Here is a list of available packages. If your favourite package is missing, please request it on the [issues page](https://github.com/davidchall/homebrew-hep/issues) or consider making a [contribution](#contributing).
+
+* `amcatnlo`
+* `applgrid`
+* `fastjet`
+* `fjcontrib`
+* `hepmc`
+* `herwig++`
+* `hoppet`
+* `jetvheto`
+* `lhapdf`
+* `madgraph`
+* `mcfm`
+* `pythia8`
+* `qcdnum`
+* `rivet`
+* `sacrifice`
+* `sherpa`
+* `thepeg`
+* `yoda`
 
 ## Guide to Homebrew ##
 More documentation can be found through `brew help`, `man brew`, or the Homebrew [wiki](http://wiki.github.com/mxcl/homebrew).
