@@ -22,6 +22,8 @@ All packages are tested on OS X 10.9 (Mavericks) on my personal machine and OS X
 
 Here is a list of available packages. If your favourite package is missing, please request it on the [issues page](https://github.com/davidchall/homebrew-hep/issues) or consider making a [contribution](#contributing).
 
+Thanks to [**braumeister.org**](http://braumeister.org/repos/davidchall/homebrew-hep/browse/a), packages can now be browsed visually!
+
 * `amcatnlo`
 * `applgrid`
 * `fastjet`
