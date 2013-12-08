@@ -1,5 +1,7 @@
 [![#homebrew-hep](http://higgshunter.files.wordpress.com/2013/12/logo.png)](http://davidchall.github.io/homebrew-hep/)
 
+**This page is under construction**
+
 [Click here](https://travis-ci.org/davidchall/homebrew-hep) for build status of individual packages.
 
 ## Introduction
@@ -10,21 +12,40 @@ Homebrew-hep is a Mac package manager for HEP programs, based on [Homebrew](http
 * automatically handles package dependencies
 * is easy to update programs
 
-## Instructions
+## Quick start ##
 1. Install [Homebrew](http://brew.sh/): `ruby -e "$(curl -fsSL https://raw.github.com/mxcl/homebrew/go)"`
 2. Tap homebrew-hep: `brew tap davidchall/hep`
-3. Install HEP packages: `brew install <package>` (e.g. `brew install pythia8`)
+3. Find out about package: `brew info <package>`
+4. Install HEP packages: `brew install <package>` (e.g. `brew install fastjet`)
 
-Here are [more detailed installation instructions](https://github.com/davidchall/homebrew-hep/wiki/Detailed-installation-instructions) and a [list of available HEP packages](https://github.com/davidchall/homebrew-hep/wiki/List-of-packages).
+More [detailed installation instructions](#detailed-installation-instructions) are found below.
 
-***
+## Guide to Homebrew ##
+More documentation can be found through `brew help`, `man brew`, or the Homebrew [wiki](http://wiki.github.com/mxcl/homebrew).
 
-### Help
-* [Short guide to Homebrew commands](https://github.com/davidchall/homebrew-hep/wiki/Homebrew-guide)
-* Problems with the packages themselves should be reported to the authors of the respective package (please `brew home <package>`)
-* Problems with the Mac installation through Homebrew-hep can be reported on the [issue tracker](https://github.com/davidchall/homebrew-hep/issues)
+### General
+* `brew list` List installed packages
+* `brew update` Fetch the latest versions of the install scripts
+* `brew outdated` Show packages that have an updated version available
+* `brew upgrade` Upgrade all outdated packages
+* `brew cleanup` Remove old versions of packages
+* `brew doctor` Check your system for potential problems
 
+### Packages
+* `brew info <package>` Display information about package, including install options and dependencies
+* `brew home <package>` Open package website
+* `brew install <package>` Install a specific package
+* `brew upgrade <package>` Upgrade a specific package
+* `brew uninstall <package>` Uninstall a specific package
+* `brew test <package>` Perform a quick test on the package
 
+## List of available packages ##
+
+## Detailed installation instructions ##
+
+## Issues ##
+* Physics problems should be reported to the package developers (please `brew home <package>`)
+* Installation problems can be reported on the [issue tracker](https://github.com/davidchall/homebrew-hep/issues)
 
 ## Contributing ##
 Any kind of contribution is welcome, but will require a [GitHub](https://github.com) account (GitHub _is_ pretty awesome though). If you're unfamiliar with git version control, I suggest you spend a few minutes with [this tutorial](http://try.github.com). The basic workflow is:
