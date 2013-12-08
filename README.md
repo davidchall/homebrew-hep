@@ -43,6 +43,31 @@ More documentation can be found through `brew help`, `man brew`, or the Homebrew
 ## List of available packages ##
 
 ## Detailed installation instructions ##
+### Compilers
+OS X doesn't provide compilers by default, so you must manually download these before starting. If you've already worked with C++ on your Mac then you probably have done this. There are two possible methods:
+
+* [Xcode](http://itunes.apple.com/us/app/xcode/id497799835): Download the full IDE from the App Store and install the command line tools from the menu: Preferences->Downloads.
+* [Command Line Tools for Xcode](https://developer.apple.com/downloads): Xcode is a big download, but you can download a package containing only the compilers. You will need to register with Apple Developers.
+
+### Homebrew
+Homebrew-hep is just an extension ("tap") of the [Homebrew](http://brew.sh/) package manager, so this must be installed. More detailed information on installing Homebrew is available on their [wiki](https://github.com/mxcl/homebrew/wiki/Installation).
+
+**Quick install:** Paste this into your terminal:
+`ruby -e "$(curl -fsSL https://raw.github.com/mxcl/homebrew/go)"`
+
+Homebrew will keep all your packages organised within `/usr/local`. This is great because this is one of the locations automatically searched for programs, libraries, etc.
+
+* Executables are stored in `/usr/local/bin`
+* Libraries are stored in `/usr/local/lib`
+* Headers are stored in `/usr/local/include`
+* Other files are stored in `/usr/local/share`
+
+### Homebrew-hep
+A central part of Homebrew is its list of formulae. A formula gives Homebrew a set of instructions to follow to install a package. A tap is just an external list of formulae to be added to Homebrew's central list.
+
+To add a list of HEP packages to Homebrew, type `brew tap davidchall/hep`.
+
+_You are now ready to use Homebrew to install HEP programs!_
 
 ## Issues ##
 * Physics problems should be reported to the package developers (please `brew home <package>`)
