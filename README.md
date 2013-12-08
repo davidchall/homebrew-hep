@@ -21,6 +21,8 @@ Homebrew-hep is a Mac package manager for HEP programs, based on [Homebrew](http
 
 More [detailed installation instructions](#detailed-installation-instructions) are found below.
 
+## List of available packages ##
+
 ## Guide to Homebrew ##
 More documentation can be found through `brew help`, `man brew`, or the Homebrew [wiki](http://wiki.github.com/mxcl/homebrew).
 
@@ -31,16 +33,15 @@ More documentation can be found through `brew help`, `man brew`, or the Homebrew
 * `brew upgrade` Upgrade all outdated packages
 * `brew cleanup` Remove old versions of packages
 * `brew doctor` Check your system for potential problems
+* `brew search <string>` Substring search for package
 
 ### Packages
-* `brew info <package>` Display information about package, including install options and dependencies
+* `brew info <package>` Display package info (e.g. install options, dependencies)
 * `brew home <package>` Open package website
 * `brew install <package>` Install a specific package
 * `brew upgrade <package>` Upgrade a specific package
 * `brew uninstall <package>` Uninstall a specific package
 * `brew test <package>` Perform a quick test on the package
-
-## List of available packages ##
 
 ## Detailed installation instructions ##
 ### Compilers
