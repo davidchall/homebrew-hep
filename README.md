@@ -20,9 +20,7 @@ Remember to regularly `brew update`! More [detailed installation instructions](#
 ## Available packages ##
 All packages are tested on OS X 10.9 (Mavericks) on my personal machine and OS X 10.8 (Mountain Lion) on [Travis CI](https://travis-ci.org/) virtual machines. The build status of each package can be viewed [here](https://travis-ci.org/davidchall/homebrew-hep) - just click on an individual job to see a build log for that package.
 
-Here is a list of available packages. If your favourite package is missing, please request it on the [issues page](https://github.com/davidchall/homebrew-hep/issues) or consider making a [contribution](#contributing).
-
-Thanks to [**braumeister.org**](http://braumeister.org/repos/davidchall/homebrew-hep/browse/a), packages can now be browsed visually!
+Thanks to [**braumeister.org**](http://braumeister.org/repos/davidchall/homebrew-hep/browse/a), package metadata can now be browsed visually! Here is a quick list though:
 
 * `amcatnlo`
 * `applgrid`
@@ -47,6 +45,8 @@ Other useful Homebrew packages:
 
 * `root` (`brew tap homebrew/science`)
 * `python` (see [here](https://github.com/mxcl/homebrew/wiki/Homebrew-and-Python) for why)
+
+If your favourite package is missing, please request it on the [issues page](https://github.com/davidchall/homebrew-hep/issues) or consider making a [contribution](#contributing).
 
 ## Guide to Homebrew ##
 More documentation can be found through `brew help`, `man brew`, or the Homebrew [wiki](http://wiki.github.com/mxcl/homebrew).
