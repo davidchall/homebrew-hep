@@ -45,6 +45,7 @@ Other useful Homebrew packages:
 
 * `root` (`brew tap homebrew/science`)
 * `python` (see [here](https://github.com/mxcl/homebrew/wiki/Homebrew-and-Python) for why)
+* `bash-completion` (enables tab-completion for some HEP packages)
 
 If your favourite package is missing, please request it on the [issues page](https://github.com/davidchall/homebrew-hep/issues) or consider making a [contribution](#contributing).
 
