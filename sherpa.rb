@@ -29,6 +29,8 @@ class Sherpa < Formula
 
     system "./configure", *args
     system "make", "install"
+
+    bash_completion.install share/'SHERPA-MC/sherpa-completion'
   end
 
   test do

@@ -42,6 +42,7 @@ class Rivet < Formula
     system "make", "install"
 
     prefix.install 'test'
+    bash_completion.install share/'Rivet/rivet-completion'
   end
 
   test do

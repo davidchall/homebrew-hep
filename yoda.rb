@@ -36,6 +36,8 @@ class Yoda < Formula
     system "make"
     system "make", "check" if build.with? 'check'
     system "make", "install"
+
+    bash_completion.install share/'YODA/yoda-completion'
   end
 
   test do
