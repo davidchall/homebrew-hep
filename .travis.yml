@@ -1,7 +1,6 @@
 language: objective-c
 before_install:
   - brew update
-  - brew install gfortran
   - brew tap homebrew/science
 install:
   - mkdir -p $(brew --repo)/Library/Taps
