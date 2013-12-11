@@ -6,7 +6,7 @@ class Rivet < Formula
   sha1 '92ead69e98463254a4d035c0db38a5e488b63798'
 
   head do
-    url 'http://rivet.hepforge.org/hg/rivet', :using => :hg
+    url 'http://rivet.hepforge.org/hg/rivet', :using => :hg, :branch => 'tip'
 
     depends_on :autoconf
     depends_on :automake
