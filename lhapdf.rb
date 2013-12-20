@@ -2,8 +2,8 @@ require 'formula'
 
 class Lhapdf < Formula
   homepage 'http://lhapdf.hepforge.org/'
-  url 'http://www.hepforge.org/archive/lhapdf/LHAPDF-6.0.4.tar.gz'
-  sha1 'fba70c86d41be0be78703711ae74d22c9e4c098f'
+  url 'http://www.hepforge.org/archive/lhapdf/LHAPDF-6.0.5.tar.gz'
+  sha1 '5d71a408c2760dd972c8f82a6413dc6a9a87d9f4'
 
   head do
     url 'http://lhapdf.hepforge.org/hg/lhapdf', :using => :hg
@@ -15,7 +15,7 @@ class Lhapdf < Formula
   end
 
   depends_on 'boost'
-  depends_on 'yaml-cpp'
+  depends_on 'cmake' => :build
   depends_on :python
 
   def install
@@ -27,19 +27,18 @@ class Lhapdf < Formula
 
     system "autoreconf", "-i" if build.head?
     system "./configure", *args
+    system "make"
     system "make", "install"
   end
 
   test do
-    system "lhapdf-config --version"
+    system "lhapdf help"
   end
 
   def caveats; <<-EOS.undent
-    PDFs are packaged as downloadable tarballs. These can be installed with, e.g.
-      wget http://www.hepforge.org/archive/lhapdf/pdfsets/6.0.0/CT10nlo.tar.gz -O- | tar xz -C #{share}/LHAPDF
-
-    LHAPDF also searches paths in the LHAPDF_DATA_PATH variable for
-    PDF sets installed externally.
+    LHAPDF searches #{share}/LHAPDF 
+    and paths in LHAPDF_DATA_PATH for PDF sets.
+    These can be installed with the 'lhapdf' script.
 
     EOS
   end
