@@ -18,11 +18,9 @@ class Lhapdf < Formula
   depends_on 'cmake' => :build
   depends_on :python
 
-  def patches
-    DATA
-  end
-
   def install
+    ENV.cxx11
+
     args = %W[
       --disable-debug
       --disable-dependency-tracking
@@ -40,7 +38,7 @@ class Lhapdf < Formula
   end
 
   def caveats; <<-EOS.undent
-    LHAPDF searches #{share}/LHAPDF 
+    LHAPDF searches #{share}/LHAPDF
     and paths in LHAPDF_DATA_PATH for PDF sets.
     These can be installed with the 'lhapdf' script.
 
@@ -55,14 +53,14 @@ index c1452da..40a2dae 100644
 +++ b/include/LHAPDF/GridPDF.h
 @@ -250,10 +250,10 @@ namespace LHAPDF {
      mutable std::vector<double> _q2knots;
- 
+
      /// Typedef of smart pointer for ipol memory handling
 -    typedef unique_ptr<Interpolator> InterpolatorPtr;
 +    typedef std::unique_ptr<Interpolator> InterpolatorPtr;
- 
+
      /// Typedef of smart pointer for xpol memory handling
 -    typedef unique_ptr<Extrapolator> ExtrapolatorPtr;
 +    typedef std::unique_ptr<Extrapolator> ExtrapolatorPtr;
- 
+
      /// Associated interpolator (mutable to allow laziness)
      mutable InterpolatorPtr _interpolator;
