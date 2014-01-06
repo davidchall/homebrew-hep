@@ -18,6 +18,10 @@ class Lhapdf < Formula
   depends_on 'cmake' => :build
   depends_on :python
 
+  def patches
+    DATA
+  end
+
   def install
     args = %W[
       --disable-debug
@@ -43,3 +47,22 @@ class Lhapdf < Formula
     EOS
   end
 end
+
+__END__
+diff --git a/include/LHAPDF/GridPDF.h b/include/LHAPDF/GridPDF.h
+index c1452da..40a2dae 100644
+--- a/include/LHAPDF/GridPDF.h
++++ b/include/LHAPDF/GridPDF.h
+@@ -250,10 +250,10 @@ namespace LHAPDF {
+     mutable std::vector<double> _q2knots;
+ 
+     /// Typedef of smart pointer for ipol memory handling
+-    typedef unique_ptr<Interpolator> InterpolatorPtr;
++    typedef std::unique_ptr<Interpolator> InterpolatorPtr;
+ 
+     /// Typedef of smart pointer for xpol memory handling
+-    typedef unique_ptr<Extrapolator> ExtrapolatorPtr;
++    typedef std::unique_ptr<Extrapolator> ExtrapolatorPtr;
+ 
+     /// Associated interpolator (mutable to allow laziness)
+     mutable InterpolatorPtr _interpolator;
