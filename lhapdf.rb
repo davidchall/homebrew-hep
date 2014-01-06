@@ -3,7 +3,7 @@ require 'formula'
 class Lhapdf < Formula
   homepage 'http://lhapdf.hepforge.org/'
   url 'http://www.hepforge.org/archive/lhapdf/LHAPDF-6.0.5.tar.gz'
-  sha1 '5d71a408c2760dd972c8f82a6413dc6a9a87d9f4'
+  sha1 'e4c48dc91bc1eaa394d94ce381eb5b83be3e3eaa'
 
   head do
     url 'http://lhapdf.hepforge.org/hg/lhapdf', :using => :hg
