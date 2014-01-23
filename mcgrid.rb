@@ -20,15 +20,28 @@ class Mcgrid < Formula
                           "--prefix=#{prefix}"
     system "make", "install"
 
-    # TODO: Consider to copy the mcgrid example directory into share
     prefix.install("examples")
     prefix.install("manual")
 
   end
 
   test do
-    # TODO: Write test using the examples directory
-    system "true"
+
+    # Try to compile the example analyses and the convolution test program
+
+    examples = prefix+'examples'
+
+    makefile = examples+'Makefile'
+    testcode = examples+'testcode'
+    analyses = examples+'analyses'
+
+    cp makefile, testpath
+    cp_r testcode, testpath
+    cp_r analyses, testpath
+
+    system "make"
+
+    ohai "Compilation of the example rivet analyses and the applgrid convolution test program works fine"
   end
 
   def caveats; <<-EOS.undent
