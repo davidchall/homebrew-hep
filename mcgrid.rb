@@ -22,6 +22,7 @@ class Mcgrid < Formula
 
     prefix.install("examples")
     prefix.install("manual")
+    bin.install Dir['scripts/*']
 
   end
 
@@ -42,6 +43,7 @@ class Mcgrid < Formula
     system "make"
 
     ohai "Compilation of the example rivet analyses and the applgrid convolution test program works fine"
+
   end
 
   def caveats; <<-EOS.undent
@@ -50,6 +52,12 @@ class Mcgrid < Formula
 
     Examples are installed in:
       $(brew --prefix mcgrid)/examples
+
+    Scripts for subprocess extraction are installed in:
+      $(brew --prefix mcgrid)/bin
+    and should be in the path. They are called
+      identify[Generator]Subprocs.py,
+    where `Generator` is "Amegic" or "Comix".
     EOS
   end
 end
