@@ -2,8 +2,8 @@ require "formula"
 
 class Mcgrid < Formula
   homepage "http://mcgrid.hepforge.org"
-  url "http://www.hepforge.org/archive/mcgrid/mcgrid-1.0.tar.gz"
-  sha1 "3a6b314bbe44aef0197c710ecb124f25f7732ebf"
+  url "http://www.hepforge.org/archive/mcgrid/mcgrid-1.0.1.tar.gz"
+  sha1 "acf81099444b2ec3c632de343a22e41ce9373ea6"
 
   depends_on "rivet"
   depends_on "applgrid"
