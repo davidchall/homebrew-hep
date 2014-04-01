@@ -2,12 +2,8 @@ require 'formula'
 
 class Sherpa < Formula
   homepage 'https://sherpa.hepforge.org/'
-  url 'http://www.hepforge.org/archive/sherpa/SHERPA-MC-2.0.0.tar.gz'
-  sha1 'b1371dcb96c7cf4cea7d41fbeb4a402e2b01d05b'
-
-  def patches
-    DATA
-  end
+  url 'http://www.hepforge.org/archive/sherpa/SHERPA-MC-2.1.0.tar.gz'
+  sha1 'f775d3ddd2435a7795f1398335d44d2c49454ea8'
 
   depends_on 'hepmc'   => :recommended
   depends_on 'rivet'   => :recommended
@@ -33,6 +29,21 @@ class Sherpa < Formula
     bash_completion.install share/'SHERPA-MC/sherpa-completion'
   end
 
+  def caveats
+    <<-EOS.undent
+      There seems to be a Mavericks-related problem with fragmentation,
+      which causes a runtime error during the generation of the first few
+      events. See the ticket `https://sherpa.hepforge.org/trac/ticket/279`
+      for more information.
+
+      You can turn off fragmentation explicitly by adding `FRAGMENTATION=Off`
+      to the `(fragmentation)` group of your run card, see
+      `https://sherpa.hepforge.org/doc/SHERPA-MC-2.1.0.html#Fragmentation`.
+      It is also implicitly turned off when you set `SHOWER_GENERATOR=None`
+      or `NLO_QCD_MODE Fixed_Order`.
+    EOS
+  end
+
   test do
     (testpath/"Run.dat").write <<-EOS.undent
       (beam){
@@ -46,6 +57,10 @@ class Sherpa < Formula
         Integration_Error 0.05;
         End process;
       }(processes)
+
+      (fragmentation){
+        FRAGMENTATION = Off
+      }
 
       (selector){
         Mass 11 -11 66 166
@@ -61,47 +76,3 @@ class Sherpa < Formula
     puts "Please now delete the \"Sherpa_References.tex\" file"
   end
 end
-
-
-__END__
-diff --git a/AHADIC++/Tools/Transitions.H b/AHADIC++/Tools/Transitions.H
-index 08e761d..25cf960 100644
---- a/AHADIC++/Tools/Transitions.H
-+++ b/AHADIC++/Tools/Transitions.H
-@@ -13,7 +13,7 @@
- namespace AHADIC {
-   class Flavour_Sorting_Mass {
-   public :
--    bool operator() (const ATOOLS::Flavour & fl1,const ATOOLS::Flavour & fl2) {
-+    bool operator() (const ATOOLS::Flavour & fl1,const ATOOLS::Flavour & fl2) const {
-       if (fl1.HadMass()>fl2.HadMass()) return true;
-       return false;
-     }
-@@ -52,7 +52,7 @@ namespace AHADIC {
-   class Flavour_Pair_Sorting_Mass {
-   public :
-     bool operator() (const Flavour_Pair & flpair1,
--		     const Flavour_Pair & flpair2) {
-+		     const Flavour_Pair & flpair2) const {
-       if (//(flpair1.first==flpair2.second.Bar() &&
- 	  //flpair1.first==flpair2.second &&
- 	  //flpair1.second==flpair2.first.Bar() &&
-diff --git a/MODEL/Main/SM_U1_B.C b/MODEL/Main/SM_U1_B.C
-index 35f7ea2..474c52b 100644
---- a/MODEL/Main/SM_U1_B.C
-+++ b/MODEL/Main/SM_U1_B.C
-@@ -177,10 +177,10 @@ void SM_U1_B::FixMix() {
-       for (int j=0;j<3;++j) {
- 	Complex entry=Complex(0.,0.);
- 	for (int k=0;k<3;++k) entry += Mix[i][k]*Mixconj[k][j];
--	if (ATOOLS::dabs(entry.real())<1.e-12) entry.real() = 0.;
--	if (ATOOLS::dabs(entry.imag())<1.e-12) entry.imag() = 0.;
--	if (ATOOLS::dabs(1.-entry.real())<1.e-12) entry.real() = 1.;
--	if (ATOOLS::dabs(1.-entry.imag())<1.e-12) entry.imag() = 1.;
-+	if (ATOOLS::dabs(entry.real())<1.e-12) entry = Complex(0., entry.imag());
-+	if (ATOOLS::dabs(entry.imag())<1.e-12) entry = Complex(entry.real(), 0.);
-+	if (ATOOLS::dabs(1.-entry.real())<1.e-12) entry = Complex(1., entry.imag());
-+	if (ATOOLS::dabs(1.-entry.imag())<1.e-12) entry = Complex(entry.real(), 1.);
- 	msg_Out()<<std::setw(os)<<entry;
-       }
-       msg_Out()<<"\n";
