@@ -25,6 +25,7 @@ env:
   - PACKAGE=sherpa
   - PACKAGE=thepeg
   - PACKAGE=yoda
+  - PACKAGE=genie
 script:
   - brew audit $PACKAGE
   - brew install -v $PACKAGE
