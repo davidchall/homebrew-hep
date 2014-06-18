@@ -2,8 +2,8 @@ require 'formula'
 
 class Sherpa < Formula
   homepage 'https://sherpa.hepforge.org/'
-  url 'http://www.hepforge.org/archive/sherpa/SHERPA-MC-2.1.0.tar.gz'
-  sha1 'f775d3ddd2435a7795f1398335d44d2c49454ea8'
+  url 'http://www.hepforge.org/archive/sherpa/SHERPA-MC-2.1.1.tar.gz'
+  sha1 '3017ee6e931b8a98acc7b0ed2728a63d7d36b47b'
 
   depends_on 'hepmc'   => :recommended
   depends_on 'rivet'   => :recommended
@@ -18,10 +18,10 @@ class Sherpa < Formula
       --enable-multithread
     ]
 
-    args << "--enable-hepmc2=#{Formula.factory('hepmc').prefix}"    if build.with? "hepmc"
-    args << "--enable-rivet=#{Formula.factory('rivet').prefix}"     if build.with? "rivet"
-    args << "--enable-lhapdf=#{Formula.factory('lhapdf').prefix}"   if build.with? "lhapdf"
-    args << "--enable-fastjet=#{Formula.factory('fastjet').prefix}" if build.with? "fastjet"
+    args << "--enable-hepmc2=#{Formula['hepmc'].prefix}"    if build.with? "hepmc"
+    args << "--enable-rivet=#{Formula['rivet'].prefix}"     if build.with? "rivet"
+    args << "--enable-lhapdf=#{Formula['lhapdf'].prefix}"   if build.with? "lhapdf"
+    args << "--enable-fastjet=#{Formula['fastjet'].prefix}" if build.with? "fastjet"
 
     system "./configure", *args
     system "make", "install"
@@ -30,8 +30,11 @@ class Sherpa < Formula
   def caveats
     <<-EOS.undent
       There seems to be a Mavericks-related problem with fragmentation,
-      which causes a runtime error during the generation of the first few
-      events. See the ticket `https://sherpa.hepforge.org/trac/ticket/279`
+      which causes a runtime error during the generation of the first 100
+      events or so. See the ticket
+
+        https://sherpa.hepforge.org/trac/ticket/279
+
       for more information.
 
       You can turn off fragmentation explicitly by adding `FRAGMENTATION=Off`
