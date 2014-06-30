@@ -4,7 +4,7 @@ before_install:
   - brew tap homebrew/science
 install:
   - mkdir -p $(brew --repo)/Library/Taps
-  - ln -s $PWD $(brew --repo)/Library/Taps/travis-testtap
+  - ln -s $PWD $(brew --repo)/Library/Taps/travis/travis-testtap
   - brew tap --repair
 env:
   - PACKAGE=amcatnlo
