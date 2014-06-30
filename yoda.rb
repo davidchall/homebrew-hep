@@ -2,8 +2,8 @@ require 'formula'
 
 class Yoda < Formula
   homepage 'http://yoda.hepforge.org/'
-  url 'http://www.hepforge.org/archive/yoda/YODA-1.0.4.tar.gz'
-  sha1 '8077b5de16e6198826014a9e01adc7cbb30df401'
+  url 'http://www.hepforge.org/archive/yoda/YODA-1.1.0.tar.gz'
+  sha1 '8be96a95e3f7be0ff430cb0459247ae555e48ad6'
 
   head do
     url 'http://yoda.hepforge.org/hg/yoda', :using => :hg
@@ -28,7 +28,7 @@ class Yoda < Formula
 
     if build.with? 'root'
       args << "--enable-root"
-      ENV.append "PYTHONPATH", Formula.factory('root').opt_prefix/"lib/root" if build.with? 'check'
+      ENV.append "PYTHONPATH", Formula['root'].opt_prefix/"lib/root" if build.with? 'check'
     end
 
     system "autoreconf", "-i" if build.head?
@@ -42,11 +42,5 @@ class Yoda < Formula
 
   test do
     system "yoda-config", "--version"
-  end
-
-  def caveats; <<-EOS.undent
-    For yoda2root script, try 'brew install yoda --HEAD --with-root'
-
-    EOS
   end
 end
