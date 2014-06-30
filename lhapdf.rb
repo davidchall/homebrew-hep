@@ -2,8 +2,8 @@ require 'formula'
 
 class Lhapdf < Formula
   homepage 'http://lhapdf.hepforge.org/'
-  url 'http://www.hepforge.org/archive/lhapdf/LHAPDF-6.0.5.tar.gz'
-  sha1 'e4c48dc91bc1eaa394d94ce381eb5b83be3e3eaa'
+  url 'http://www.hepforge.org/archive/lhapdf/LHAPDF-6.1.3.tar.gz'
+  sha1 '5c11d23b103b8319fa987214710c03f95f86bf45'
 
   head do
     url 'http://lhapdf.hepforge.org/hg/lhapdf', :using => :hg
@@ -15,7 +15,6 @@ class Lhapdf < Formula
   end
 
   depends_on 'boost'
-  depends_on 'cmake' => :build
   depends_on :python
 
   def install
@@ -45,22 +44,3 @@ class Lhapdf < Formula
     EOS
   end
 end
-
-__END__
-diff --git a/include/LHAPDF/GridPDF.h b/include/LHAPDF/GridPDF.h
-index c1452da..40a2dae 100644
---- a/include/LHAPDF/GridPDF.h
-+++ b/include/LHAPDF/GridPDF.h
-@@ -250,10 +250,10 @@ namespace LHAPDF {
-     mutable std::vector<double> _q2knots;
-
-     /// Typedef of smart pointer for ipol memory handling
--    typedef unique_ptr<Interpolator> InterpolatorPtr;
-+    typedef std::unique_ptr<Interpolator> InterpolatorPtr;
-
-     /// Typedef of smart pointer for xpol memory handling
--    typedef unique_ptr<Extrapolator> ExtrapolatorPtr;
-+    typedef std::unique_ptr<Extrapolator> ExtrapolatorPtr;
-
-     /// Associated interpolator (mutable to allow laziness)
-     mutable InterpolatorPtr _interpolator;
