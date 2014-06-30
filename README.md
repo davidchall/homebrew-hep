@@ -124,7 +124,3 @@ You can add a new dependency with `depends_on`, and then usually pass the locati
 ### Add a new package
 * The `brew create http://example.com/foo-0.1.0.tar.gz` command will download the source tarball and create a template formula for you in the Homebrew repository: `/usr/local/Library/Formula/foo.rb`.
 * You will need to edit the formula: `brew edit foo`. Homebrew maintains a [guide](https://github.com/Homebrew/homebrew/wiki/Formula-Cookbook) on writing formulae. It might also be a good idea to browse [other HEP formulae](https://github.com/davidchall/homebrew-hep) or the [main Homebrew repository](https://github.com/Homebrew/homebrew/tree/master/Library/Formula).
-
-
-[![Bitdeli Badge](https://d2weczhvl823v0.cloudfront.net/davidchall/homebrew-hep/trend.png)](https://bitdeli.com/free "Bitdeli Badge")
-
