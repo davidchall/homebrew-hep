@@ -2,8 +2,8 @@ require 'formula'
 
 class Rivet < Formula
   homepage 'http://rivet.hepforge.org/'
-  url 'http://www.hepforge.org/archive/rivet/Rivet-2.0.0.tar.gz'
-  sha1 '92ead69e98463254a4d035c0db38a5e488b63798'
+  url 'http://www.hepforge.org/archive/rivet/Rivet-2.1.2.tar.gz'
+  sha1 '616ada047ff36d628f51130dff59bd01f369fd60'
 
   head do
     url 'http://rivet.hepforge.org/hg/rivet', :using => :hg, :branch => 'tip'
@@ -22,11 +22,7 @@ class Rivet < Formula
   depends_on 'yaml-cpp'
   depends_on :python
   option 'with-check', 'Test during installation'
-
-  def patches
-    # Fix compilation bug, correct rivet-config for Mac
-    DATA
-  end unless build.head?
+  option 'without-analyses', 'Do not build Rivet analyses'
 
   def install
     args = %W[
@@ -34,6 +30,8 @@ class Rivet < Formula
       --disable-dependency-tracking
       --prefix=#{prefix}
     ]
+
+    args << '--disable-analyses' if build.without? 'analyses'
 
     system "autoreconf", "-i" if build.head?
     system "./configure", *args
@@ -50,31 +48,3 @@ class Rivet < Formula
     ohai "Successfully ran dummy HepMC file through Drell-Yan analysis"
   end
 end
-
-__END__
-diff --git a/bin/rivet-config.in b/bin/rivet-config.in
-index 5108b36..2cc4fcf 100644
---- a/bin/rivet-config.in
-+++ b/bin/rivet-config.in
-@@ -71,7 +71,7 @@ fi
- 
- tmp=$( echo "$*" | egrep -- '--\<ldflags\>')
- if test -n "$tmp"; then
--    OUT="$OUT -Wl,--no-as-needed"
-+    OUT="$OUT"
-     lrivet="@libdir@"
-     test -n "$lrivet" && OUT="$OUT -L${lrivet}"
-     lhepmc="@HEPMCLIBPATH@"
-diff --git a/include/Rivet/ProjectionHandler.hh b/include/Rivet/ProjectionHandler.hh
-index 2483a9a..7d42d60 100644
---- a/include/Rivet/ProjectionHandler.hh
-+++ b/include/Rivet/ProjectionHandler.hh
-@@ -49,7 +49,7 @@ namespace Rivet {
- 
-     /// @brief Typedef for the structure used to contain named projections for a
-     /// particular containing Analysis or Projection.
--    typedef map<const string, ProjHandle> NamedProjs;
-+    typedef map<string, ProjHandle> NamedProjs;
- 
-     /// Enum to specify depth of projection search.
-     enum ProjDepth { SHALLOW, DEEP };
