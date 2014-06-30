@@ -2,9 +2,9 @@ require 'formula'
 
 class Pythia8 < Formula
   homepage 'http://pythia8.hepforge.org'
-  url 'http://home.thep.lu.se/~torbjorn/pythia8/pythia8180.tgz'
-  sha1 'aacc88d27937fd2bcfb5be39cd7055569859ba30'
-  version '8.180'
+  url 'http://home.thep.lu.se/~torbjorn/pythia8/pythia8185.tgz'
+  sha1 '6f518b42b7b5e8bc94fac952cd5a02780c035480'
+  version '8.185'
 
   depends_on 'hepmc'
 
@@ -12,8 +12,8 @@ class Pythia8 < Formula
   if build.with? 'vincia'
 
     resource 'vincia' do
-      url 'http://www.hepforge.org/archive/vincia/vincia-1.1.01.tgz'
-      sha1 '5ec6bff1c2e9becb391d28705db644c8262074c6'
+      url 'http://www.hepforge.org/archive/vincia/vincia-1.1.03.tgz'
+      sha1 'df389d134284ecdd51073a7a62d71bb9eedb79e6'
     end
 
     depends_on :fortran
