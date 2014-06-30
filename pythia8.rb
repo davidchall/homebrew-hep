@@ -26,7 +26,7 @@ class Pythia8 < Formula
       --disable-dependency-tracking
       --prefix=#{prefix}
       --enable-shared
-      --with-hepmc=#{Formula.factory('hepmc').opt_prefix}
+      --with-hepmc=#{Formula['hepmc'].opt_prefix}
     ]
 
     system "./configure", *args

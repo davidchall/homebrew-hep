@@ -15,7 +15,7 @@ class Mcfm < Formula
 
     if build.with? 'lhapdf'
       inreplace 'makefile' do |s|
-        s.change_make_var! "LHAPDFLIB", Formula.factory('lhapdf').prefix
+        s.change_make_var! "LHAPDFLIB", Formula['lhapdf'].prefix
         s.change_make_var! "PDFROUTINES", "LHAPDF"
       end
     end
@@ -23,7 +23,7 @@ class Mcfm < Formula
     system "make"
     cp_r "Bin", bin
 
-    ln_s "#{Formula.factory('lhapdf').share}/lhapdf/PDFsets", bin if build.with? 'lhapdf'
+    ln_s "#{Formula['lhapdf'].share}/lhapdf/PDFsets", bin if build.with? 'lhapdf'
   end
 
   test do

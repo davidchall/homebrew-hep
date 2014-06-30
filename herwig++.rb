@@ -27,7 +27,7 @@ class Herwigxx < Formula
       --disable-debug
       --disable-dependency-tracking
       --prefix=#{prefix}
-      --with-thepeg=#{Formula.factory('thepeg').opt_prefix}
+      --with-thepeg=#{Formula['thepeg'].opt_prefix}
     ]
 
     system "autoreconf", "-i" if build.head?

@@ -27,4 +27,3 @@ env:
 script:
   - brew audit $PACKAGE
   - brew install -v $PACKAGE
-  - '! brew cat $PACKAGE | grep -q "test do" || brew test -v $PACKAGE'

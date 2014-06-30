@@ -17,7 +17,7 @@ class Fastjet < Formula
       --enable-allcxxplugins
     ]
 
-    args << "--with-cgal=#{Formula.factory('cgal').prefix}" if build.with? "cgal"
+    args << "--with-cgal=#{Formula['cgal'].prefix}" if build.with? "cgal"
 
     system "./configure", *args
     system "make"

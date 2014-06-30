@@ -16,7 +16,7 @@ class Sacrifice < Formula
     args = %W[
       --disable-dependency-tracking
       --prefix=#{prefix}
-      --with-pythia=#{Formula.factory('pythia8').opt_prefix}
+      --with-pythia=#{Formula['pythia8'].opt_prefix}
     ]
 
     system "autoreconf", "-i"
