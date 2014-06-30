@@ -10,7 +10,7 @@ Homebrew-hep is a Mac package manager for HEP programs, based on [Homebrew](http
 * is easy to update programs
 
 ## Quick start ##
-1. Install [Homebrew](http://brew.sh/): `ruby -e "$(curl -fsSL https://raw.github.com/mxcl/homebrew/go)"`
+1. Install [Homebrew](http://brew.sh/): `ruby -e "$(curl -fsSL https://raw.github.com/Homebrew/homebrew/go/install)"`
 2. Tap homebrew-hep: `brew tap davidchall/hep`
 3. Find out about package: `brew info <package>`
 4. Install HEP packages: `brew install <package>` (e.g. `brew install fastjet`)
@@ -44,13 +44,13 @@ Thanks to [**braumeister.org**](http://braumeister.org/repos/davidchall/homebrew
 Other useful Homebrew packages:
 
 * `root` (`brew tap homebrew/science`)
-* `python` (see [here](https://github.com/mxcl/homebrew/wiki/Homebrew-and-Python) for why)
+* `python` (see [here](https://github.com/Homebrew/homebrew/wiki/Homebrew-and-Python) for why)
 * `bash-completion` (enables tab-completion for some HEP packages)
 
 If your favourite package is missing, please request it on the [issues page](https://github.com/davidchall/homebrew-hep/issues) or consider making a [contribution](#contributing).
 
 ## Guide to Homebrew ##
-More documentation can be found through `brew help`, `man brew`, or the Homebrew [wiki](http://wiki.github.com/mxcl/homebrew).
+More documentation can be found through `brew help`, `man brew`, or the Homebrew [wiki](https://github.com/Homebrew/homebrew/wiki).
 
 ### General
 * `brew list` List installed packages
@@ -77,10 +77,10 @@ OS X doesn't provide compilers by default, so you must manually download these b
 * [Command Line Tools for Xcode](https://developer.apple.com/downloads): Xcode is a big download, but you can download a package containing only the compilers. You will need to register with Apple Developers.
 
 ### Homebrew
-Homebrew-hep is just an extension ("tap") of the [Homebrew](http://brew.sh/) package manager, so this must be installed. More detailed information on installing Homebrew is available on their [wiki](https://github.com/mxcl/homebrew/wiki/Installation).
+Homebrew-hep is just an extension ("tap") of the [Homebrew](http://brew.sh/) package manager, so this must be installed. More detailed information on installing Homebrew is available on their [wiki](https://github.com/Homebrew/homebrew/wiki/Installation).
 
 **Quick install:** Paste this into your terminal:
-`ruby -e "$(curl -fsSL https://raw.github.com/mxcl/homebrew/go)"`
+`ruby -e "$(curl -fsSL https://raw.github.com/Homebrew/homebrew/go/install)"`
 
 Homebrew will keep all your packages organised within `/usr/local`. This is great because this is one of the locations automatically searched for programs, libraries, etc.
 
@@ -119,11 +119,11 @@ The Homebrew files which control the package installations are written in Ruby. 
 This might be as simple as updating the `url` and `sha1` variables, but check the dependencies haven't changed and it still builds.
 
 ### Add new option to a package
-You can add a new dependency with `depends_on`, and then usually pass the location to the `configure` script (see the [Herwig++ formula](https://github.com/davidchall/homebrew-hep/blob/master/herwig%2B%2B.rb) for an example). You can also add other options with `option`. Again, it's a good idea to browse existing formulae for ideas, and even search through the [main Homebrew repository](https://github.com/mxcl/homebrew/tree/master/Library/Formula).
+You can add a new dependency with `depends_on`, and then usually pass the location to the `configure` script (see the [Herwig++ formula](https://github.com/davidchall/homebrew-hep/blob/master/herwig%2B%2B.rb) for an example). You can also add other options with `option`. Again, it's a good idea to browse existing formulae for ideas, and even search through the [main Homebrew repository](https://github.com/Homebrew/homebrew/tree/master/Library/Formula).
 
 ### Add a new package
 * The `brew create http://example.com/foo-0.1.0.tar.gz` command will download the source tarball and create a template formula for you in the Homebrew repository: `/usr/local/Library/Formula/foo.rb`.
-* You will need to edit the formula: `brew edit foo`. Homebrew maintains a [guide](https://github.com/mxcl/homebrew/wiki/Formula-Cookbook) on writing formulae. It might also be a good idea to browse [other HEP formulae](https://github.com/davidchall/homebrew-hep) or the [main Homebrew repository](https://github.com/mxcl/homebrew/tree/master/Library/Formula).
+* You will need to edit the formula: `brew edit foo`. Homebrew maintains a [guide](https://github.com/Homebrew/homebrew/wiki/Formula-Cookbook) on writing formulae. It might also be a good idea to browse [other HEP formulae](https://github.com/davidchall/homebrew-hep) or the [main Homebrew repository](https://github.com/Homebrew/homebrew/tree/master/Library/Formula).
 
 
 [![Bitdeli Badge](https://d2weczhvl823v0.cloudfront.net/davidchall/homebrew-hep/trend.png)](https://bitdeli.com/free "Bitdeli Badge")
