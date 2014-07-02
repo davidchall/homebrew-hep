@@ -25,6 +25,7 @@ Thanks to [**braumeister.org**](http://braumeister.org/repos/davidchall/homebrew
 * `amcatnlo`
 * `applgrid`
 * `fastjet`
+* `fastnlo`
 * `fjcontrib`
 * `hepmc`
 * `herwig++`
