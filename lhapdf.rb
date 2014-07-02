@@ -37,9 +37,12 @@ class Lhapdf < Formula
   end
 
   def caveats; <<-EOS.undent
-    LHAPDF searches #{share}/LHAPDF
+    PDFs may be downloaded and installed with
+
+      lhapdf install CT10nlo
+
+    At runtime, LHAPDF searches #{share}/LHAPDF
     and paths in LHAPDF_DATA_PATH for PDF sets.
-    These can be installed with the 'lhapdf' script.
 
     EOS
   end
