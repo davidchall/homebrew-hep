@@ -2,8 +2,8 @@ require 'formula'
 
 class Applgrid < Formula
   homepage 'http://applgrid.hepforge.org'
-  url 'http://www.hepforge.org/archive/applgrid/applgrid-1.4.42.tgz'
-  sha1 '9dd3bf4696203403c947c2c5f67ffd611e495f05'
+  url 'http://www.hepforge.org/archive/applgrid/applgrid-1.4.56.tgz'
+  sha1 '38ca625f4a5aeaa94db1b62bd93cd654fe31cb32'
 
   depends_on :fortran
   depends_on 'homebrew/science/root'
