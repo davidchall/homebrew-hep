@@ -5,6 +5,12 @@ class Sherpa < Formula
   url 'http://www.hepforge.org/archive/sherpa/SHERPA-MC-2.1.1.tar.gz'
   sha1 '3017ee6e931b8a98acc7b0ed2728a63d7d36b47b'
 
+  patch :p0 do
+    # Fixes undefined behaviour that apparently works with gcc: https://sherpa.hepforge.org/trac/ticket/300
+    url 'https://sherpa.hepforge.org/trac/raw-attachment/ticket/300/iterator.patch'
+    sha1 'a19e8ee6e788070d3d8e42bdfe72dd5d0271b118'
+  end
+
   depends_on 'hepmc'   => :recommended
   depends_on 'rivet'   => :recommended
   depends_on 'lhapdf'  => :recommended
@@ -29,24 +35,6 @@ class Sherpa < Formula
     bash_completion.install share/'SHERPA-MC/sherpa-completion'
   end
 
-  def caveats
-    <<-EOS.undent
-      There seems to be a Mavericks-related problem with fragmentation,
-      which causes a runtime error during the generation of the first 100
-      events or so. See the ticket
-
-        https://sherpa.hepforge.org/trac/ticket/279
-
-      for more information.
-
-      You can turn off fragmentation explicitly by adding `FRAGMENTATION=Off`
-      to the `(fragmentation)` group of your run card, see
-      `https://sherpa.hepforge.org/doc/SHERPA-MC-2.1.0.html#Fragmentation`.
-      It is also implicitly turned off when you set `SHOWER_GENERATOR=None`
-      or `NLO_QCD_MODE Fixed_Order`.
-    EOS
-  end
-
   test do
     (testpath/"Run.dat").write <<-EOS.undent
       (beam){
@@ -60,10 +48,6 @@ class Sherpa < Formula
         Integration_Error 0.05;
         End process;
       }(processes)
-
-      (fragmentation){
-        FRAGMENTATION = Off
-      }(fragmentation)
 
       (selector){
         Mass 11 -11 66 166
