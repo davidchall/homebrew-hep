@@ -18,6 +18,7 @@ env:
   - PACKAGE=lhapdf
   - PACKAGE=madgraph
   - PACKAGE=mcfm
+  - PACKAGE=mcgrid
   - PACKAGE=pythia8
   - PACKAGE=qcdnum
   - PACKAGE=rivet
