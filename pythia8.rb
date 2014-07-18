@@ -16,8 +16,9 @@ class Pythia8 < Formula
       sha1 'df389d134284ecdd51073a7a62d71bb9eedb79e6'
     end
 
-    depends_on :fortran
     depends_on 'wget' => :build
+    depends_on :fortran
+    cxxstdlib_check :skip
   end
 
   def install

@@ -16,6 +16,7 @@ class Sherpa < Formula
   depends_on 'lhapdf'  => :recommended
   depends_on 'fastjet' => :optional
   depends_on :fortran
+  cxxstdlib_check :skip
 
   def install
     args = %W[

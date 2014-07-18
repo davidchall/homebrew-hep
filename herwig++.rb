@@ -20,6 +20,8 @@ class Herwigxx < Formula
   depends_on 'gsl'
   depends_on :python
   depends_on :fortran
+  cxxstdlib_check :skip
+  
   option 'with-check', 'Test during installation'
 
   def install

@@ -6,6 +6,8 @@ class Applgrid < Formula
   sha1 '38ca625f4a5aeaa94db1b62bd93cd654fe31cb32'
 
   depends_on :fortran
+  cxxstdlib_check :skip
+  
   depends_on 'homebrew/science/root'
   depends_on 'hoppet' => :recommended
   depends_on 'lhapdf' => :optional
