@@ -41,6 +41,7 @@ Thanks to [**braumeister.org**](http://braumeister.org/repos/davidchall/homebrew
 * `sacrifice`
 * `sherpa`
 * `thepeg`
+* `whizard`
 * `yoda`
 
 Other useful Homebrew packages:
