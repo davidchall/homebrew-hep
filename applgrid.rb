@@ -7,7 +7,7 @@ class Applgrid < Formula
 
   depends_on :fortran
   cxxstdlib_check :skip
-  
+
   depends_on 'homebrew/science/root'
   depends_on 'hoppet' => :recommended
   depends_on 'lhapdf' => :optional
