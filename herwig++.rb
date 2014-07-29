@@ -2,8 +2,8 @@ require 'formula'
 
 class Herwigxx < Formula
   homepage 'http://herwig.hepforge.org/'
-  url 'http://www.hepforge.org/archive/herwig/Herwig++-2.7.0.tar.gz'
-  sha1 'fff87fc7ee69fedf02d2cb28d9e30b2b5e8d6862'
+  url 'http://www.hepforge.org/archive/herwig/Herwig++-2.7.1.tar.gz'
+  sha1 '60c18beeb34f05ff4e4ae3fbf51f9935d58a0a0e'
 
   head do
     url 'http://herwig.hepforge.org/hg/herwig', :using => :hg
@@ -30,6 +30,7 @@ class Herwigxx < Formula
       --disable-dependency-tracking
       --prefix=#{prefix}
       --with-thepeg=#{Formula['thepeg'].opt_prefix}
+      --enable-stdcxx11
     ]
 
     system "autoreconf", "-i" if build.head?
