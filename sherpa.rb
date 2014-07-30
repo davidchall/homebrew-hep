@@ -18,6 +18,13 @@ class Sherpa < Formula
   depends_on :fortran
   cxxstdlib_check :skip
 
+  # Requires changes to MCFM code, so cannot use MCFM formula
+  option 'with-mcfm', 'Enable use of MCFM loops'
+  if build.with? "mcfm"
+    depends_on 'wget' => :build
+    depends_on 'gnu-sed' => :build
+  end
+
   def install
     args = %W[
       --disable-dependency-tracking
@@ -29,6 +36,21 @@ class Sherpa < Formula
     args << "--enable-rivet=#{Formula['rivet'].prefix}"     if build.with? "rivet"
     args << "--enable-lhapdf=#{Formula['lhapdf'].prefix}"   if build.with? "lhapdf"
     args << "--enable-fastjet=#{Formula['fastjet'].prefix}" if build.with? "fastjet"
+
+    if build.with? "mcfm"
+      mcfm_path = buildpath/'mcfm'
+      mcfm_path.mkdir
+      cd mcfm_path do
+        # MCFM build sometimes fails due to race condition
+        ENV.deparallelize
+        # install script uses GNU extensions to sed
+        inreplace "#{buildpath}/AddOns/MCFM/install_mcfm.sh", "sed", "gsed"
+        system "#{buildpath}/AddOns/MCFM/install_mcfm.sh"
+        # there is no ENV.parallelize
+        ENV['MAKEFLAGS'] = "-j#{ENV.make_jobs}"
+        args << "--enable-mcfm=#{mcfm_path}"
+      end
+    end
 
     system "./configure", *args
     system "make", "install"
