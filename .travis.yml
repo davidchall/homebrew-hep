@@ -7,7 +7,6 @@ install:
   - ln -s $PWD $(brew --repo)/Library/Taps/travis/travis-testtap
   - brew tap --repair
 env:
-  - PACKAGE=amcatnlo
   - PACKAGE=applgrid
   - PACKAGE=fastjet
   - PACKAGE=fastnlo
@@ -17,7 +16,7 @@ env:
   - PACKAGE=hoppet
   - PACKAGE=jetvheto
   - PACKAGE=lhapdf
-  - PACKAGE=madgraph
+  - PACKAGE=madgraph5_amcatnlo
   - PACKAGE=mcfm
   - PACKAGE=mcgrid
   - PACKAGE=pythia8
