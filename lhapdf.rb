@@ -2,8 +2,8 @@ require 'formula'
 
 class Lhapdf < Formula
   homepage 'http://lhapdf.hepforge.org/'
-  url 'http://www.hepforge.org/archive/lhapdf/LHAPDF-6.1.3.tar.gz'
-  sha1 '5c11d23b103b8319fa987214710c03f95f86bf45'
+  url 'http://www.hepforge.org/archive/lhapdf/LHAPDF-6.1.4.tar.gz'
+  sha1 '9c6b6909ed4beee7415f7e7b585f4300a8c342e2'
 
   head do
     url 'http://lhapdf.hepforge.org/hg/lhapdf', :using => :hg
