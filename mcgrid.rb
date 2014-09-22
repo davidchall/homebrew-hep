@@ -3,7 +3,7 @@ require 'formula'
 class Mcgrid < Formula
   homepage 'http://mcgrid.hepforge.org'
   url 'http://www.hepforge.org/archive/mcgrid/mcgrid-1.1.tar.gz'
-  sha1 'acf81099444b2ec3c632de343a22e41ce9373ea6'
+  sha1 '76fa7486e390d127aac3070b2f83fe301b6cce45'
 
   depends_on 'rivet'
   depends_on 'applgrid'
