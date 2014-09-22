@@ -7,7 +7,6 @@ class Mcgrid < Formula
 
   depends_on 'rivet'
   depends_on 'applgrid'
-  # depends_on 'boost'
   depends_on 'pkg-config' => :build
 
   resource 'examples-rivet200' do
@@ -32,7 +31,7 @@ class Mcgrid < Formula
     prefix.install("manual")
     bin.install('scripts/identifySubprocs.py')
 
-    resource("examples-rivet200").stage { 
+    resource("examples-rivet200").stage {
       (prefix/"examples-rivet-2.0.0").install Dir['*']
     }
     resource("examples-rivet212").stage {
@@ -47,8 +46,9 @@ class Mcgrid < Formula
     else
       examples_suffix = '2.1.2'
     end
+    examples_dir = 'examples-rivet-' + examples_suffix
 
-    examples = prefix+'examples-rivet-'+examples_suffix
+    examples = prefix + examples_dir
     system "make -C #{examples}"
 
     ENV['RIVET_ANALYSIS_PATH'] = examples
