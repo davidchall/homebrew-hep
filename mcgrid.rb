@@ -33,10 +33,10 @@ class Mcgrid < Formula
     bin.install('scripts/identifySubprocs.py')
 
     resource("examples-rivet200").stage { 
-      prefix.install "../examples" => "examples-rivet-2.0.0"
+      prefix.install Dir['*'] => "examples-rivet-2.0.0"
     }
     resource("examples-rivet212").stage {
-      prefix.install "../examples" => "examples-rivet-2.1.2"
+      prefix.install Dir['*'] => "examples-rivet-2.1.2"
     }
   end
 
