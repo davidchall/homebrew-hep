@@ -36,7 +36,7 @@ class Mcgrid < Formula
       (prefix/"examples-rivet-2.0.0").install Dir['*']
     }
     resource("examples-rivet212").stage {
-      prefix.install Dir['*'] => "examples-rivet-2.1.2"
+      (prefix/"examples-rivet-2.1.2").install Dir['*']
     }
   end
 
