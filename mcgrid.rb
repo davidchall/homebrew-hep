@@ -10,12 +10,12 @@ class Mcgrid < Formula
   # depends_on 'boost'
   depends_on 'pkg-config' => :build
 
-  resource 'examples-rivet212' do
-    url 'http://www.hepforge.org/archive/mcgrid/MCgridExamples-2.1.2.tgz'
-    sha1 ''
-  end
   resource 'examples-rivet200' do
     url 'http://www.hepforge.org/archive/mcgrid/MCgridExamples-2.0.0.tgz'
+    sha1 '53ecef3a3698e3c1056de64488356bb40418b362'
+  end
+  resource 'examples-rivet212' do
+    url 'http://www.hepforge.org/archive/mcgrid/MCgridExamples-2.1.2.tgz'
     sha1 ''
   end
 
@@ -32,7 +32,11 @@ class Mcgrid < Formula
     prefix.install("manual")
     bin.install('scripts/identifySubprocs.py')
 
-    resource("examples-rivet200").stage { bin.install "examples" => "examples-rivet-2.0.0" }
+    resource("examples-rivet200").stage { 
+      ohai `ls`
+      ohai `pwd`
+      bin.install "examples" => "examples-rivet-2.0.0"
+    }
     resource("examples-rivet212").stage { bin.install "examples" => "examples-rivet-2.1.2" }
   end
 
