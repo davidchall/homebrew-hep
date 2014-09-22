@@ -38,7 +38,7 @@ class Mcgrid < Formula
 
   test do
     rivet_version = `rivet-config --version`
-    if (rivet_version <==> '2.1.2') == -1 then
+    if (rivet_version <=> '2.1.2') == -1 then
       examples_suffix = '2.0.0'
     else
       examples_suffix = '2.1.2'
