@@ -35,7 +35,7 @@ class Mcgrid < Formula
     resource("examples-rivet200").stage { 
       ohai `ls`
       ohai `pwd`
-      bin.install "examples" => "examples-rivet-2.0.0"
+      bin.install "." => "examples-rivet-2.0.0"
     }
     resource("examples-rivet212").stage { bin.install "examples" => "examples-rivet-2.1.2" }
   end
