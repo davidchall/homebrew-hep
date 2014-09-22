@@ -7,6 +7,7 @@ class Mcgrid < Formula
 
   depends_on 'rivet'
   depends_on 'applgrid'
+  depends_on 'boost'
   depends_on 'pkg-config' => :build
 
   resource 'examples-rivet200' do
