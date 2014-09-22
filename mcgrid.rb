@@ -16,7 +16,7 @@ class Mcgrid < Formula
   end
   resource 'examples-rivet212' do
     url 'http://www.hepforge.org/archive/mcgrid/MCgridExamples-2.1.2.tgz'
-    sha1 ''
+    sha1 '3a68ff8d863d596c819f00c5a1053349ba565089'
   end
 
   def install
