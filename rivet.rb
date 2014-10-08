@@ -2,8 +2,8 @@ require 'formula'
 
 class Rivet < Formula
   homepage 'http://rivet.hepforge.org/'
-  url 'http://www.hepforge.org/archive/rivet/Rivet-2.1.2.tar.gz'
-  sha1 '616ada047ff36d628f51130dff59bd01f369fd60'
+  url 'http://www.hepforge.org/archive/rivet/Rivet-2.2.0.tar.gz'
+  sha1 '8185aa644fb69e1ae17f37f1f005ffb5047d65ed'
 
   head do
     url 'http://rivet.hepforge.org/hg/rivet', :using => :hg, :branch => 'tip'
@@ -23,8 +23,6 @@ class Rivet < Formula
   depends_on :python
   option 'with-check', 'Test during installation'
   option 'without-analyses', 'Do not build Rivet analyses'
-
-  patch :DATA unless build.head?
 
   def install
     args = %W[
@@ -50,23 +48,3 @@ class Rivet < Formula
     ohai "Successfully ran dummy HepMC file through Drell-Yan analysis"
   end
 end
-
-__END__
-diff --git a/include/Rivet/Rivet.hh b/include/Rivet/Rivet.hh
-index d637e41..802dbc7 100644
---- a/include/Rivet/Rivet.hh
-+++ b/include/Rivet/Rivet.hh
-@@ -1,10 +1,12 @@
- #ifndef RIVET_Rivet_HH
- #define RIVET_Rivet_HH
- 
-+#include <string>
-+
- namespace Rivet {
- 
-   /// A function to get the Rivet version string
--  string version();
-+  std::string version();
- 
- }
- 
