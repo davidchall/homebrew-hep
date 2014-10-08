@@ -2,8 +2,8 @@ require 'formula'
 
 class Fastjet < Formula
   homepage 'http://fastjet.fr/'
-  url 'http://fastjet.fr/repo/fastjet-3.0.6.tar.gz'
-  sha1 'c70f175f17ea93d2f25d266c9ea7e4e4f3301d38'
+  url 'http://fastjet.fr/repo/fastjet-3.1.0.tar.gz'
+  sha1 '939955f4966941f9a6d4f7cac57980c3d6bb452b'
 
   depends_on 'cgal' => :optional
   option 'with-cgal', 'Enable CGAL support (required for NlnN strategy)'
