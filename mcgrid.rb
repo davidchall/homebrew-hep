@@ -2,8 +2,8 @@ require 'formula'
 
 class Mcgrid < Formula
   homepage 'http://mcgrid.hepforge.org'
-  url 'http://www.hepforge.org/archive/mcgrid/mcgrid-1.1.tar.gz'
-  sha1 '76fa7486e390d127aac3070b2f83fe301b6cce45'
+  url 'http://www.hepforge.org/archive/mcgrid/mcgrid-1.2.tar.gz'
+  sha1 '23b5c4476aa85491eeaf42b67fc4a602ac7db6b5'
 
   depends_on 'rivet'
   depends_on 'applgrid'
@@ -16,6 +16,10 @@ class Mcgrid < Formula
   resource 'examples-rivet212' do
     url 'http://www.hepforge.org/archive/mcgrid/MCgridExamples-2.1.2.tgz'
     sha1 '3a68ff8d863d596c819f00c5a1053349ba565089'
+  end
+  resource 'examples-rivet220' do
+    url 'http://www.hepforge.org/archive/mcgrid/MCgridExamples-2.2.0.tgz'
+    sha1 '89191a252fea9565cf7cd3d582ba7625fb73ab12'
   end
 
   def install
@@ -37,14 +41,26 @@ class Mcgrid < Formula
     resource("examples-rivet212").stage {
       (prefix/"examples-rivet-2.1.2").install Dir['*']
     }
+    resource("examples-rivet220").stage {
+      (prefix/"examples-rivet-2.2.0").install Dir['*']
+    }
   end
 
   test do
+    begin
+      lhapdf_version = `lhapdf-config --version`
+      ohai "Using LHAPDF version " + lhapdf_version
+    rescue
+      onoe "This test needs lhapdf to be installed. Please run `brew install lhapdf` and try again."
+      return false
+    end
     rivet_version = `rivet-config --version`
     if (rivet_version <=> '2.1.2') == -1 then
       examples_suffix = '2.0.0'
-    else
+    elsif (rivet_version <=> '2.2.0') == -1 then
       examples_suffix = '2.1.2'
+    else
+      examples_suffix = '2.2.0'
     end
     examples_dir = 'examples-rivet-' + examples_suffix
 
@@ -69,8 +85,7 @@ class Mcgrid < Formula
     Examples are installed in:
       $(brew --prefix mcgrid)/examples-rivet-2.0.0
       $(brew --prefix mcgrid)/examples-rivet-2.1.2
-    The first set of examples is for use with rivet v2.0.0 up to (but not including) v2.1.2.
-    The second set of examples is for use with rivet v2.1.2 and newer.
+      $(brew --prefix mcgrid)/examples-rivet-2.2.0
     EOS
   end
 end
