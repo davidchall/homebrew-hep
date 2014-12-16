@@ -10,7 +10,7 @@ Homebrew-hep is a Mac package manager for HEP programs, based on [Homebrew](http
 * is easy to update programs
 
 ## Quick start ##
-1. Install [Homebrew](http://brew.sh/): `ruby -e "$(curl -fsSL https://raw.github.com/Homebrew/homebrew/go/install)"`
+1. Install [Homebrew](http://brew.sh/): `ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"`
 2. Tap homebrew-hep: `brew tap davidchall/hep`
 3. Find out about package: `brew info <package>`
 4. Install HEP packages: `brew install <package>` (e.g. `brew install fastjet`)
@@ -82,7 +82,7 @@ OS X doesn't provide compilers by default, so you must manually download these b
 Homebrew-hep is just an extension ("tap") of the [Homebrew](http://brew.sh/) package manager, so this must be installed. More detailed information on installing Homebrew is available on their [wiki](https://github.com/Homebrew/homebrew/wiki/Installation).
 
 **Quick install:** Paste this into your terminal:
-`ruby -e "$(curl -fsSL https://raw.github.com/Homebrew/homebrew/go/install)"`
+`ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"`
 
 Homebrew will keep all your packages organised within `/usr/local`. This is great because this is one of the locations automatically searched for programs, libraries, etc.
 
