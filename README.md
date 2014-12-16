@@ -46,13 +46,13 @@ Thanks to [**braumeister.org**](http://braumeister.org/repos/davidchall/homebrew
 Other useful Homebrew packages:
 
 * `root` (`brew tap homebrew/science`)
-* `python` (see [here](https://github.com/Homebrew/homebrew/wiki/Homebrew-and-Python) for why)
+* `python` (see [here](https://github.com/Homebrew/homebrew/blob/master/share/doc/homebrew/Homebrew-and-Python.md) for why)
 * `bash-completion` (enables tab-completion for some HEP packages)
 
 If your favourite package is missing, please request it on the [issues page](https://github.com/davidchall/homebrew-hep/issues) or consider making a [contribution](#contributing).
 
 ## Guide to Homebrew ##
-More documentation can be found through `brew help`, `man brew`, or the Homebrew [wiki](https://github.com/Homebrew/homebrew/wiki).
+More documentation can be found through `brew help`, `man brew`, or the Homebrew [wiki](https://github.com/Homebrew/homebrew/tree/master/share/doc/homebrew#readme).
 
 ### General
 * `brew list` List installed packages
@@ -79,7 +79,7 @@ OS X doesn't provide compilers by default, so you must manually download these b
 * [Command Line Tools for Xcode](https://developer.apple.com/downloads): Xcode is a big download, but you can download a package containing only the compilers. You will need to register with Apple Developers.
 
 ### Homebrew
-Homebrew-hep is just an extension ("tap") of the [Homebrew](http://brew.sh/) package manager, so this must be installed. More detailed information on installing Homebrew is available on their [wiki](https://github.com/Homebrew/homebrew/wiki/Installation).
+Homebrew-hep is just an extension ("tap") of the [Homebrew](http://brew.sh/) package manager, so this must be installed. More detailed information on installing Homebrew is available on their [wiki](https://github.com/Homebrew/homebrew/blob/master/share/doc/homebrew/Installation.md).
 
 **Quick install:** Paste this into your terminal:
 `ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"`
@@ -125,4 +125,4 @@ You can add a new dependency with `depends_on`, and then usually pass the locati
 
 ### Add a new package
 * The `brew create http://example.com/foo-0.1.0.tar.gz` command will download the source tarball and create a template formula for you in the Homebrew repository: `/usr/local/Library/Formula/foo.rb`.
-* You will need to edit the formula: `brew edit foo`. Homebrew maintains a [guide](https://github.com/Homebrew/homebrew/wiki/Formula-Cookbook) on writing formulae. It might also be a good idea to browse [other HEP formulae](https://github.com/davidchall/homebrew-hep) or the [main Homebrew repository](https://github.com/Homebrew/homebrew/tree/master/Library/Formula).
+* You will need to edit the formula: `brew edit foo`. Homebrew maintains a [guide](https://github.com/Homebrew/homebrew/blob/master/share/doc/homebrew/Formula-Cookbook.md) on writing formulae. It might also be a good idea to browse [other HEP formulae](https://github.com/davidchall/homebrew-hep) or the [main Homebrew repository](https://github.com/Homebrew/homebrew/tree/master/Library/Formula).
