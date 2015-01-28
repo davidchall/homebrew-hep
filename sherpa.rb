@@ -21,6 +21,7 @@ class Sherpa < Formula
   depends_on 'lhapdf'  => :recommended
   depends_on 'fastjet' => :optional
   depends_on 'homebrew/science/root' => :optional
+  depends_on 'blackhat' => :optional
   depends_on :mpi      => [:cc, :cxx, :f90, :optional]
   depends_on :fortran
   cxxstdlib_check :skip
@@ -51,6 +52,7 @@ class Sherpa < Formula
     args << "--enable-lhapdf=#{Formula['lhapdf'].prefix}"   if build.with? "lhapdf"
     args << "--enable-fastjet=#{Formula['fastjet'].prefix}" if build.with? "fastjet"
     args << "--enable-root=#{Formula['root'].prefix}"       if build.with? "root"
+    args << "--enable-blackhat=#{Formula['blackhat'].prefix}" if build.with? "blackhat"
 
     if build.with? "mcfm"
       mcfm_path = buildpath/'mcfm'
