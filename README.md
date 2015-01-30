@@ -40,6 +40,7 @@ Thanks to [**braumeister.org**](http://braumeister.org/repos/davidchall/homebrew
 * `sacrifice`
 * `sherpa`
 * `thepeg`
+* `topdrawer`
 * `whizard`
 * `yoda`
 
