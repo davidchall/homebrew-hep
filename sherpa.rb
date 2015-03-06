@@ -15,6 +15,7 @@ class Sherpa < Formula
   depends_on 'rivet'   => :recommended
   depends_on 'lhapdf'  => :recommended
   depends_on 'fastjet' => :optional
+  depends_on :mpi      => [:cc, :cxx, :f90, :optional]
   depends_on :fortran
   cxxstdlib_check :skip
 
@@ -31,6 +32,13 @@ class Sherpa < Formula
       --prefix=#{prefix}
       --enable-multithread
     ]
+
+    if build.with? "mpi"
+      args << "--enable-mpi"
+      ENV['CC'] = ENV['MPICC']
+      ENV['CXX'] = ENV['MPICXX']
+      ENV['FC'] = ENV['MPIFC']
+    end
 
     args << "--enable-hepmc2=#{Formula['hepmc'].prefix}"    if build.with? "hepmc"
     args << "--enable-rivet=#{Formula['rivet'].prefix}"     if build.with? "rivet"
