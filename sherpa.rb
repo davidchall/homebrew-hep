@@ -11,6 +11,11 @@ class Sherpa < Formula
     sha1 'a19e8ee6e788070d3d8e42bdfe72dd5d0271b118'
   end
 
+  patch :p1 do
+    url 'https://sherpa.hepforge.org/trac/raw-attachment/ticket/342/sherpa_OSX_fix.patch'
+    sha1 '3a1754045d755e6cf4e98afc706934992a93aab4'
+  end
+
   depends_on 'hepmc'   => :recommended
   depends_on 'rivet'   => :recommended
   depends_on 'lhapdf'  => :recommended
