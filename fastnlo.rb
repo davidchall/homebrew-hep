@@ -1,27 +1,39 @@
-require "formula"
-
 class Fastnlo < Formula
   homepage 'http://fastnlo.hepforge.org'
-  url 'http://fastnlo.hepforge.org/code/v21/fastnlo_reader-2.1.0-1689.tar.gz'
-  sha1 'd71b829c3ea332145dc0e6b3bed12d90cf0a373c'
-  version '2.1.0.1689'
+  url 'http://fastnlo.hepforge.org/code/v23/fastnlo_toolkit-2.3.1pre-1871.tar.gz'
+  sha1 'bf536b78c5bb5bc5568e546454fc9dcb87db6978'
+  version '2.3.1.1871'
 
-  depends_on 'lhapdf'  => :recommended
-  depends_on :fortran
-  cxxstdlib_check :skip
+  depends_on 'lhapdf'
+  depends_on 'fastjet' => :optional
+  depends_on 'hoppet'  => :optional
+  depends_on 'qcdnum'  => :optional
+  depends_on 'yoda'    => :optional
+  depends_on :python   => :optional
+
+  def am_opt(pkg)
+    (build.with? pkg) ? "--with-#{pkg}=#{Formula[pkg].prefix}" : "--without-#{pkg}"
+  end
 
   def install
     args = %W[
       --disable-dependency-tracking
       --disable-silent-rules
       --prefix=#{prefix}
+      --with-lhapdf=#{Formula["lhapdf"].prefix}
     ]
+
+    args << am_opt("fastjet")
+    args << am_opt("qcdnum")
+    args << am_opt("hoppet")
+    args << am_opt("yoda")
+    args << "--enable-pyext" if build.with? "python"
 
     system "./configure", *args
     system "make", "install"
   end
 
   test do
-    system "#{bin}/fnlo-cppread", "-h"
+    system "#{bin}/fnlo-tk-cppread", "-h"
   end
 end
