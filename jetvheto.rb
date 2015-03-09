@@ -1,5 +1,3 @@
-require 'formula'
-
 class Jetvheto < Formula
   homepage 'http://jetvheto.hepforge.org'
   url 'http://jetvheto.hepforge.org/downloads/JetVHeto-1.0.0.tgz'
@@ -17,7 +15,7 @@ class Jetvheto < Formula
 
   test do
     # Require a PDF set
-    curl "-O", "http://www.hepforge.org/archive/lhapdf/pdfsets/6.0/unvalidated/MSTW2008nnlo68cl.tar.gz"
+    curl "-O", "http://www.hepforge.org/archive/lhapdf/pdfsets/6.0/MSTW2008nnlo68cl.tar.gz"
     system "tar xzf MSTW2008nnlo68cl.tar.gz"
     ENV["LHAPDF_DATA_PATH"] = Dir.pwd
 
