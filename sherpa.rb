@@ -11,10 +11,17 @@ class Sherpa < Formula
     sha1 'a19e8ee6e788070d3d8e42bdfe72dd5d0271b118'
   end
 
+  patch :p1 do
+    url 'https://sherpa.hepforge.org/trac/raw-attachment/ticket/342/sherpa_OSX_fix.patch'
+    sha1 '3a1754045d755e6cf4e98afc706934992a93aab4'
+  end
+
   depends_on 'hepmc'   => :recommended
   depends_on 'rivet'   => :recommended
   depends_on 'lhapdf'  => :recommended
   depends_on 'fastjet' => :optional
+  depends_on 'homebrew/science/root' => :optional
+  depends_on :mpi      => [:cc, :cxx, :f90, :optional]
   depends_on :fortran
   cxxstdlib_check :skip
 
@@ -32,10 +39,18 @@ class Sherpa < Formula
       --enable-multithread
     ]
 
+    if build.with? "mpi"
+      args << "--enable-mpi"
+      ENV['CC'] = ENV['MPICC']
+      ENV['CXX'] = ENV['MPICXX']
+      ENV['FC'] = ENV['MPIFC']
+    end
+
     args << "--enable-hepmc2=#{Formula['hepmc'].prefix}"    if build.with? "hepmc"
     args << "--enable-rivet=#{Formula['rivet'].prefix}"     if build.with? "rivet"
     args << "--enable-lhapdf=#{Formula['lhapdf'].prefix}"   if build.with? "lhapdf"
     args << "--enable-fastjet=#{Formula['fastjet'].prefix}" if build.with? "fastjet"
+    args << "--enable-root=#{Formula['root'].prefix}"       if build.with? "root"
 
     if build.with? "mcfm"
       mcfm_path = buildpath/'mcfm'

@@ -29,6 +29,9 @@ class Rivet < Formula
       --disable-debug
       --disable-dependency-tracking
       --prefix=#{prefix}
+      --with-fastjet=#{Formula["fastjet"].prefix}
+      --with-hepmc=#{Formula["hepmc"].prefix}
+      --with-yoda=#{Formula["yoda"].prefix}
     ]
 
     args << '--disable-analyses' if build.without? 'analyses'

@@ -24,6 +24,7 @@ class Lhapdf < Formula
       --disable-debug
       --disable-dependency-tracking
       --prefix=#{prefix}
+      --with-boost=#{Formula["boost"].prefix}
     ]
 
     system "autoreconf", "-i" if build.head?
