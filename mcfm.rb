@@ -1,5 +1,3 @@
-require 'formula'
-
 class Mcfm < Formula
   homepage 'http://mcfm.fnal.gov/'
   url 'http://mcfm.fnal.gov/MCFM-6.6.tar.gz'
@@ -27,13 +25,13 @@ class Mcfm < Formula
   end
 
   test do
-    cd bin do
-      cp "input.DAT", "test.DAT"
-      system "chmod u+w test.DAT"
-      inreplace "test.DAT", "-1", "0"
-      system "./mcfm", "test.DAT"
-      rm "test.DAT"
+    ["br.sm1", "br.sm2", "dm_parameters.DAT", "Pdfdata", "process.DAT"].each do |fname|
+      ln_s(bin/fname, ".")
     end
+    cp bin/"input.DAT", "test.DAT"
+    inreplace "test.DAT", "-1", "0"
+    system bin/"mcfm", "test.DAT"
+    assert File.exist?("W_only_lord_cteq6_m_80__80__test.top")
     ohai "Successfully calculated W production at LO"
     ohai "Use 'brew test -v mcfm' to view ouput"
   end
