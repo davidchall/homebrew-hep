@@ -2,8 +2,8 @@ require 'formula'
 
 class Madgraph5Amcatnlo < Formula
   homepage 'https://launchpad.net/mg5amcnlo'
-  url 'https://launchpad.net/mg5amcnlo/2.0/2.1.0/+download/MG5_aMC_v2.1.2.tar.gz'
-  sha1 '949af52852bb615e7515db555c7043ab987964f3'
+  url 'https://launchpad.net/mg5amcnlo/2.0/2.2.0/+download/MG5_aMC_v2.2.3.tar.gz'
+  sha1 '0be13b50433e20c8b75bd31f9efa9e18df07220f'
 
   depends_on 'fastjet'
   depends_on :fortran
@@ -19,7 +19,7 @@ class Madgraph5Amcatnlo < Formula
       Template/NLO/MCatNLO/Scripts/MCatNLO_MadFKS_HERWIG6.Script
       Template/NLO/MCatNLO/Scripts/MCatNLO_MadFKS_PYTHIA6PT.Script
       Template/NLO/MCatNLO/Scripts/MCatNLO_MadFKS_PYTHIA6Q.Script
-      Template/NLO/Source/make_opts
+      Template/NLO/Source/make_opts.inc
       Template/NLO/SubProcesses/makefile_fks_dir
       madgraph/interface/amcatnlo_run_interface.py
       madgraph/iolibs/export_v4.py
