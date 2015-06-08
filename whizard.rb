@@ -1,16 +1,14 @@
-require 'formula'
-
 class Whizard < Formula
-  homepage 'http://whizard.hepforge.org/'
-  url 'http://www.hepforge.org/archive/whizard/whizard-2.2.2.tar.gz'
-  sha1 'eaad01978aa01181fdeec9788f5b8114de5e1fb5'
+  homepage "http://whizard.hepforge.org/"
+  url "http://www.hepforge.org/archive/whizard/whizard-2.2.6.tar.gz"
+  sha256 "5f9bcedcdcf091be8c65bb2a0d6fc47bb8e32d97b8a23aed2d33c0fd1015d275"
 
   depends_on :fortran
-  depends_on 'objective-caml' => :recommended
-  depends_on 'fastjet' => :optional
-  depends_on 'hoppet' => :optional
-  depends_on 'hepmc' => :optional
-  depends_on 'lhapdf' => :optional
+  depends_on "objective-caml" => :recommended
+  depends_on "fastjet" => :optional
+  depends_on "hoppet" => :optional
+  depends_on "hepmc" => :optional
+  depends_on "lhapdf" => :optional
 
 
   def install
@@ -21,9 +19,9 @@ class Whizard < Formula
       --prefix=#{prefix}
     ]
 
-    args << "--disable-ocaml" if build.without? 'objective-caml'
-    args << "--enable-hoppet" if build.with? 'hoppet'
-    args << "--enable-fastjet" if build.with? 'fastjet'
+    args << "--disable-ocaml" if build.without? "objective-caml"
+    args << "--enable-hoppet" if build.with? "hoppet"
+    args << "--enable-fastjet" if build.with? "fastjet"
 
     system "./configure", *args
     system "make", "install"
