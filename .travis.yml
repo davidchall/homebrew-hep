@@ -25,6 +25,7 @@ env:
   - PACKAGE=sacrifice
   - PACKAGE=sherpa
   - PACKAGE=thepeg
+  - PACKAGE=topdrawer
   - PACKAGE=whizard
   - PACKAGE=yoda
 script:
