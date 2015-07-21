@@ -2,19 +2,8 @@ require 'formula'
 
 class Sherpa < Formula
   homepage 'https://sherpa.hepforge.org/'
-  url 'http://www.hepforge.org/archive/sherpa/SHERPA-MC-2.1.1.tar.gz'
-  sha1 '3017ee6e931b8a98acc7b0ed2728a63d7d36b47b'
-
-  patch :p0 do
-    # Fixes undefined behaviour that apparently works with gcc: https://sherpa.hepforge.org/trac/ticket/300
-    url 'https://sherpa.hepforge.org/trac/raw-attachment/ticket/300/iterator.patch'
-    sha1 'a19e8ee6e788070d3d8e42bdfe72dd5d0271b118'
-  end
-
-  patch :p1 do
-    url 'https://sherpa.hepforge.org/trac/raw-attachment/ticket/342/sherpa_OSX_fix.patch'
-    sha1 '3a1754045d755e6cf4e98afc706934992a93aab4'
-  end
+  url 'http://www.hepforge.org/archive/sherpa/SHERPA-MC-2.2.0.tar.gz'
+  sha256 'eb5dfde38f4f7a166f313d3c24d1af22c99f9934b7c50c981ff3f5aec9c467d7'
 
   depends_on 'hepmc'   => :recommended
   depends_on 'rivet'   => :recommended
@@ -76,15 +65,15 @@ class Sherpa < Formula
   test do
     (testpath/"Run.dat").write <<-EOS.undent
       (beam){
-        BEAM_1 =  2212; BEAM_ENERGY_1 = 7000;
-        BEAM_2 =  2212; BEAM_ENERGY_2 = 7000;
+        BEAM_1 = 2212; BEAM_ENERGY_1 = 7000
+        BEAM_2 = 2212; BEAM_ENERGY_2 = 7000
       }(beam)
 
       (processes){
-        Process 93 93 -> 11 -11;
-        Order_EW 2;
-        Integration_Error 0.05;
-        End process;
+        Process 93 93 -> 11 -11
+        Order (*,2)
+        Integration_Error 0.05
+        End process
       }(processes)
 
       (selector){
@@ -97,6 +86,6 @@ class Sherpa < Formula
     EOS
 
     system "Sherpa", "-p", testpath, "-L", testpath, "-e", "1000"
-    puts "You just successfully generated 1000 Drell-Yan events!"
+    ohai "You just successfully generated 1000 Drell-Yan events!"
   end
 end
