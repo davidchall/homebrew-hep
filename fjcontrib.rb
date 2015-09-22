@@ -2,8 +2,8 @@ require 'formula'
 
 class Fjcontrib < Formula
   homepage 'http://fastjet.hepforge.org/contrib/'
-  url 'http://fastjet.hepforge.org/contrib/downloads/fjcontrib-1.016.tar.gz'
-  sha1 '46e4ba3649631b4800fe3e2f919a99660f3f78d9'
+  url 'http://fastjet.hepforge.org/contrib/downloads/fjcontrib-1.018.tar.gz'
+  sha1 'c63eaa6d561271df408f9e48969d9189ad3fa4c8'
 
   depends_on 'fastjet'
   option 'with-check', 'Test during installation'
