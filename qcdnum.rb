@@ -20,7 +20,7 @@ class Qcdnum < Formula
 
     LIBRARIES.each do |libname|
       cd libname do
-        system "#{ENV.fc} -c -Wall -O2 -Iinc */*.f"
+        system "#{ENV.fc} -c -fPIC -Wall -O2 -Iinc */*.f"
         system "ar -r #{lib}/lib#{libname}.a *.o"
       end
     end
