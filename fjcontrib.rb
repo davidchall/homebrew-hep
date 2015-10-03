@@ -1,5 +1,3 @@
-require 'formula'
-
 class Fjcontrib < Formula
   homepage 'http://fastjet.hepforge.org/contrib/'
   url 'http://fastjet.hepforge.org/contrib/downloads/fjcontrib-1.018.tar.gz'

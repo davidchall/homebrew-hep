@@ -1,5 +1,3 @@
-require 'formula'
-
 class Herwigxx < Formula
   homepage 'http://herwig.hepforge.org/'
   url 'http://www.hepforge.org/archive/herwig/Herwig++-2.7.1.tar.gz'

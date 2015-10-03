@@ -1,5 +1,3 @@
-require 'formula'
-
 class Madgraph5Amcatnlo < Formula
   homepage 'https://launchpad.net/mg5amcnlo'
   url 'https://launchpad.net/mg5amcnlo/2.0/2.2.0/+download/MG5_aMC_v2.2.3.tar.gz'

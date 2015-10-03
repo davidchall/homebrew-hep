@@ -1,5 +1,3 @@
-require 'formula'
-
 class Fastjet < Formula
   homepage 'http://fastjet.fr/'
   url 'http://fastjet.fr/repo/fastjet-3.1.3.tar.gz'

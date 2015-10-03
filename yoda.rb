@@ -1,5 +1,3 @@
-require 'formula'
-
 class Yoda < Formula
   homepage 'http://yoda.hepforge.org/'
   url 'http://www.hepforge.org/archive/yoda/YODA-1.5.2.tar.gz'

@@ -1,5 +1,3 @@
-require 'formula'
-
 class Mcgrid < Formula
   homepage 'http://mcgrid.hepforge.org'
   url 'http://www.hepforge.org/archive/mcgrid/mcgrid-1.2.tar.gz'

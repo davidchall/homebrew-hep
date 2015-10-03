@@ -1,5 +1,3 @@
-require 'formula'
-
 class Sacrifice < Formula
   homepage 'https://agile.hepforge.org/trac/wiki/Sacrifice'
   url 'http://www.hepforge.org/archive/agile/Sacrifice-0.9.9.tar.gz'

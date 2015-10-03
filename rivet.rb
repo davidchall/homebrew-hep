@@ -1,5 +1,3 @@
-require 'formula'
-
 class Rivet < Formula
   homepage 'http://rivet.hepforge.org/'
   url 'http://www.hepforge.org/archive/rivet/Rivet-2.3.0.tar.gz'

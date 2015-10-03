@@ -1,5 +1,3 @@
-require 'formula'
-
 class Applgrid < Formula
   homepage 'http://applgrid.hepforge.org'
   url 'http://www.hepforge.org/archive/applgrid/applgrid-1.4.70.tgz'

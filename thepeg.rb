@@ -1,5 +1,3 @@
-require 'formula'
-
 class Thepeg < Formula
   homepage 'http://herwig.hepforge.org/'
   url 'http://www.hepforge.org/archive/thepeg/ThePEG-1.9.2.tar.gz'

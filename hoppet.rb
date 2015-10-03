@@ -1,5 +1,3 @@
-require 'formula'
-
 class Hoppet < Formula
   homepage 'http://hoppet.hepforge.org'
   url 'http://hoppet.hepforge.org/downloads/hoppet-1.1.5.tgz'

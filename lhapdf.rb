@@ -1,5 +1,3 @@
-require 'formula'
-
 class Lhapdf < Formula
   homepage 'http://lhapdf.hepforge.org/'
   url 'http://www.hepforge.org/archive/lhapdf/LHAPDF-6.1.5.tar.gz'
