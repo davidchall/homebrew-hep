@@ -2,7 +2,7 @@ class Qcdnum < Formula
   homepage 'http://mbotje.web.cern.ch/mbotje/qcdnum'
   url 'https://www.hepforge.org/archive/qcdnum/qcdnum-17.00.06.tar.gz'
   mirror 'http://www.nikhef.nl/user/h24/qcdnum-files/download/qcdnum170006.tar.gz'
-  sha1 'e1917d8f3e211b9b516f254509e09a78985f0587'
+  sha256 'c454e8717631ce95180f517e0ddddc1aeeb30aa82eba75e555c39cc1cd4b2824'
   version '17.00.06'
 
   depends_on :fortran

@@ -1,7 +1,7 @@
 class Sacrifice < Formula
   homepage 'https://agile.hepforge.org/trac/wiki/Sacrifice'
   url 'http://www.hepforge.org/archive/agile/Sacrifice-0.9.9.tar.gz'
-  sha1 '3ce1ac020dea5c3b4505f6bf2de1e5c951cb4033'
+  sha256 'dc1630424a527fe4b3a2a92d5f740d7aec20cd79485ef87b14ed7ec6255df83f'
 
   head do
     url 'http://agile.hepforge.org/svn/contrib/Sacrifice', :using => :svn

@@ -1,7 +1,7 @@
 class Fastnlo < Formula
   homepage 'http://fastnlo.hepforge.org'
   url 'http://fastnlo.hepforge.org/code/v23/fastnlo_toolkit-2.3.1pre-1871.tar.gz'
-  sha1 'bf536b78c5bb5bc5568e546454fc9dcb87db6978'
+  sha256 '3336dfd42f88ac1574ee81724c36ce7593fd0de0ff7585c8e16706b5883b8c3e'
   version '2.3.1.1871'
 
   depends_on 'lhapdf'

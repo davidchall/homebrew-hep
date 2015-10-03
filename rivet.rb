@@ -1,7 +1,7 @@
 class Rivet < Formula
   homepage 'http://rivet.hepforge.org/'
   url 'http://www.hepforge.org/archive/rivet/Rivet-2.3.0.tar.gz'
-  sha1 '74d348579a70d7556136a7bb4dfae03d17a16450'
+  sha256 'f8a0806b7c87503e3f083c167991504c2056ab1a91960b3a2cf230611fc361e5'
 
   head do
     url 'http://rivet.hepforge.org/hg/rivet', :using => :hg, :branch => 'tip'
