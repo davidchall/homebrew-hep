@@ -1,7 +1,7 @@
 class Mcfm < Formula
   homepage 'http://mcfm.fnal.gov/'
   url 'http://mcfm.fnal.gov/MCFM-6.6.tar.gz'
-  sha1 'fb07546aa84c4e02ebd317242b1ee756097d493c'
+  sha256 '01ed9998eaac9a4e013e65dc844de4e5e0a491408a152d6ead004e536552b66a'
 
   keg_only "MCFM must be run from its install directory"
 

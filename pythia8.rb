@@ -3,7 +3,7 @@ require 'formula'
 class Pythia8 < Formula
   homepage 'http://pythia8.hepforge.org'
   url 'http://home.thep.lu.se/~torbjorn/pythia8/pythia8186.tgz'
-  sha1 '6b9b58a8574ab406d947e01b0b200dee738e51ac'
+  sha256 '1c0914fc04801ee922c1ad3b544a3cd48b34d9afa4407ae40afbacd009039bd2'
   version '8.186'
 
   depends_on 'hepmc'

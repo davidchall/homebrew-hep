@@ -1,9 +1,7 @@
-require 'formula'
-
 class Madgraph5Amcatnlo < Formula
   homepage 'https://launchpad.net/mg5amcnlo'
   url 'https://launchpad.net/mg5amcnlo/2.0/2.2.0/+download/MG5_aMC_v2.2.3.tar.gz'
-  sha1 '0be13b50433e20c8b75bd31f9efa9e18df07220f'
+  sha256 '3dc45942d0213b22b32770eee559b1cf1d96a77c9e3db82cba3684b240265c99'
 
   depends_on 'fastjet'
   depends_on :fortran

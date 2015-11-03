@@ -1,9 +1,7 @@
-require 'formula'
-
 class Thepeg < Formula
   homepage 'http://herwig.hepforge.org/'
   url 'http://www.hepforge.org/archive/thepeg/ThePEG-1.9.2.tar.gz'
-  sha1 'a5a09b90fb45e43c1e84ac55e4ee26b9bf4d55c5'
+  sha256 '67ad02c05bda877a338e59948c8314039f6152cc8228d881bd45edd12d1c1dc1'
 
   head do
     url 'http://thepeg.hepforge.org/hg/ThePEG', :using => :hg

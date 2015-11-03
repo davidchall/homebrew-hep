@@ -1,9 +1,7 @@
-require 'formula'
-
 class Herwigxx < Formula
   homepage 'http://herwig.hepforge.org/'
   url 'http://www.hepforge.org/archive/herwig/Herwig++-2.7.1.tar.gz'
-  sha1 '60c18beeb34f05ff4e4ae3fbf51f9935d58a0a0e'
+  sha256 'e935134b00184171feafffa173dd7a46184ee7d3628a98f7a7e8ba35cd87d90e'
 
   head do
     url 'http://herwig.hepforge.org/hg/herwig', :using => :hg

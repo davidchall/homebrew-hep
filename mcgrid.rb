@@ -1,9 +1,7 @@
-require 'formula'
-
 class Mcgrid < Formula
   homepage 'http://mcgrid.hepforge.org'
   url 'http://www.hepforge.org/archive/mcgrid/mcgrid-1.2.tar.gz'
-  sha1 '23b5c4476aa85491eeaf42b67fc4a602ac7db6b5'
+  sha256 'd3956ca2b516c55c12a9065aa9789efbeab8791e9b6c96abeeb16c87f8925932'
 
   depends_on 'rivet'
   depends_on 'applgrid'
@@ -11,15 +9,15 @@ class Mcgrid < Formula
 
   resource 'examples-rivet200' do
     url 'http://www.hepforge.org/archive/mcgrid/MCgridExamples-2.0.0.tgz'
-    sha1 '53ecef3a3698e3c1056de64488356bb40418b362'
+    sha256 'c0abb1d1f2d816294eb3de4637107daab95d3494a08899a56bc548e6d72cca10'
   end
   resource 'examples-rivet212' do
     url 'http://www.hepforge.org/archive/mcgrid/MCgridExamples-2.1.2.tgz'
-    sha1 '3a68ff8d863d596c819f00c5a1053349ba565089'
+    sha256 '90c579aa5a0921a1fdd3260a85d2a92b229f80781718cce10bdaae96adde82ea'
   end
   resource 'examples-rivet220' do
     url 'http://www.hepforge.org/archive/mcgrid/MCgridExamples-2.2.0.tgz'
-    sha1 '89191a252fea9565cf7cd3d582ba7625fb73ab12'
+    sha256 'd772decaed3f7310948d1e6f84e553e80a95358a6bca7d7974d2b877b0f2475a'
   end
 
   def install

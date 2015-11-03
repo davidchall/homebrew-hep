@@ -1,5 +1,3 @@
-require 'formula'
-
 class Sherpa < Formula
   homepage 'https://sherpa.hepforge.org/'
   url 'http://www.hepforge.org/archive/sherpa/SHERPA-MC-2.2.0.tar.gz'

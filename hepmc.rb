@@ -3,7 +3,7 @@ require 'formula'
 class Hepmc < Formula
   homepage 'http://lcgapp.cern.ch/project/simu/HepMC/'
   url 'http://lcgapp.cern.ch/project/simu/HepMC/download/HepMC-2.06.09.tar.gz'
-  sha1 'ecb97190abedfe774629a1cbc961910b4d83b7d6'
+  sha256 'c60724ca9740230825e06c0c36fb2ffe17ff1b1465e8656268a61dffe1611a08'
 
   depends_on 'cmake' => :build
   option 'with-check', 'Test during installation'

@@ -19,6 +19,7 @@ env:
   - PACKAGE=madgraph5_amcatnlo
   - PACKAGE=mcfm
   - PACKAGE=mcgrid
+  - PACKAGE=nlojet++
   - PACKAGE=pythia8
   - PACKAGE=qcdnum
   - PACKAGE=rivet
