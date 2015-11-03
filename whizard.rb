@@ -4,7 +4,7 @@ class Whizard < Formula
   sha256 "5f9bcedcdcf091be8c65bb2a0d6fc47bb8e32d97b8a23aed2d33c0fd1015d275"
 
   depends_on :fortran
-  depends_on "objective-caml" => :recommended
+  depends_on "ocaml" => :recommended
   depends_on "fastjet" => :optional
   depends_on "hoppet" => :optional
   depends_on "hepmc" => :optional
