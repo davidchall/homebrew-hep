@@ -1,6 +1,7 @@
 class Qcdnum < Formula
   homepage 'http://mbotje.web.cern.ch/mbotje/qcdnum'
-  url 'http://www.nikhef.nl/user/h24/qcdnum-files/download/qcdnum170006.tar.gz'
+  url 'https://www.hepforge.org/archive/qcdnum/qcdnum-17.00.06.tar.gz'
+  mirror 'http://www.nikhef.nl/user/h24/qcdnum-files/download/qcdnum170006.tar.gz'
   sha1 'e1917d8f3e211b9b516f254509e09a78985f0587'
   version '17.00.06'
 
