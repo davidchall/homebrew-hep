@@ -34,6 +34,7 @@ Thanks to [**braumeister.org**](http://braumeister.org/repos/davidchall/homebrew
 * `madgraph5_amcatnlo`
 * `mcfm`
 * `mcgrid`
+* `nlojet++`
 * `pythia8`
 * `qcdnum`
 * `rivet`
