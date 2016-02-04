@@ -1,7 +1,7 @@
 class Lhapdf < Formula
   homepage 'http://lhapdf.hepforge.org/'
-  url 'http://www.hepforge.org/archive/lhapdf/LHAPDF-6.1.5.tar.gz'
-  sha256 'ee5dfac1c32a386c966b28cb6a2d51531d4eaf9945c4cb48431dd3fabef83231'
+  url 'http://www.hepforge.org/archive/lhapdf/LHAPDF-6.1.6.tar.gz'
+  sha256 'c28138232e3219bf89cf626c0e414c6291c6b0777c3a931af18e51867657ebe9'
 
   head do
     url 'http://lhapdf.hepforge.org/hg/lhapdf', :using => :hg
