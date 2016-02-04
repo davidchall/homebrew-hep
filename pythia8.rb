@@ -2,8 +2,8 @@ require 'formula'
 
 class Pythia8 < Formula
   homepage 'http://pythia8.hepforge.org'
-  url 'http://home.thep.lu.se/~torbjorn/pythia8/pythia8186.tgz'
-  sha256 '1c0914fc04801ee922c1ad3b544a3cd48b34d9afa4407ae40afbacd009039bd2'
+  url 'http://home.thep.lu.se/~torbjorn/pythia8/pythia8215.tgz'
+  sha256 '1b654ac3bf9254055052d1741c07b84c822bd6f349fa52068b5b4a25794d097e'
   version '8.186'
 
   depends_on 'hepmc'
