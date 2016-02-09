@@ -21,6 +21,7 @@ class Rivet < Formula
   depends_on :python
   option 'with-check', 'Test during installation'
   option 'without-analyses', 'Do not build Rivet analyses'
+  option 'with-unvalidated', 'Build and install unvalidated analyses'
 
   def install
     args = %W[
@@ -33,6 +34,7 @@ class Rivet < Formula
     ]
 
     args << '--disable-analyses' if build.without? 'analyses'
+    args << '--enable-unvalidated' if build.with? 'unvalidated'
 
     system "autoreconf", "-i" if build.head?
     system "./configure", *args

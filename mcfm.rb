@@ -1,7 +1,7 @@
 class Mcfm < Formula
   homepage 'http://mcfm.fnal.gov/'
-  url 'http://mcfm.fnal.gov/MCFM-6.6.tar.gz'
-  sha256 '01ed9998eaac9a4e013e65dc844de4e5e0a491408a152d6ead004e536552b66a'
+  url "http://mcfm.fnal.gov/MCFM-7.0.1.tar.gz"
+  sha256 "316ada8fe5032d5bab5e5e556598a754f5f6d23c2c0e32cdf7e844f65235f0eb"
 
   keg_only "MCFM must be run from its install directory"
 
@@ -18,6 +18,11 @@ class Mcfm < Formula
       end
     end
 
+    # TODO: make an option to brew with openmp
+    inreplace "makefile" do |s|
+      s.change_make_var! "USEOMP", "NO"
+    end
+
     system "make"
     cp_r "Bin", bin
 
@@ -26,12 +31,12 @@ class Mcfm < Formula
 
   test do
     ["br.sm1", "br.sm2", "dm_parameters.DAT", "Pdfdata", "process.DAT"].each do |fname|
-      ln_s(bin/fname, ".")
+      cp_r bin/fname, "."
     end
     cp bin/"input.DAT", "test.DAT"
     inreplace "test.DAT", "-1", "0"
     system bin/"mcfm", "test.DAT"
-    assert File.exist?("W_only_lord_cteq6_m_80__80__test.top")
+    assert File.exist?("W_only_lord_CT10.00_80__80__test.top")
     ohai "Successfully calculated W production at LO"
     ohai "Use 'brew test -v mcfm' to view ouput"
   end

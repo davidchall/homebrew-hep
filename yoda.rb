@@ -1,7 +1,7 @@
 class Yoda < Formula
   homepage 'http://yoda.hepforge.org/'
-  url 'http://www.hepforge.org/archive/yoda/YODA-1.5.8.tar.gz'
-  sha256 'a6a7b3afbfaf95415148b6de9ea3b0323660b1cc3bb4e15168e9fc75b51ae0cc'
+  url "http://www.hepforge.org/archive/yoda/YODA-1.5.8.tar.bz2"
+  sha256 "011c5be5cc565f8baf02e7ebbe57a57b4d70dc6a528d5b0102700020bbf5a973"
 
   head do
     url 'http://yoda.hepforge.org/hg/yoda', :using => :hg
@@ -15,6 +15,8 @@ class Yoda < Formula
   depends_on :python
   depends_on 'boost'
   depends_on 'homebrew/science/root' => :optional
+  depends_on "homebrew/python/numpy" => :recommended
+  depends_on "homebrew/python/matplotlib" => :recommended
   option 'with-check', 'Test during installation'
 
   def install
@@ -27,12 +29,6 @@ class Yoda < Formula
     if build.with? 'root'
       args << "--enable-root"
       ENV.append "PYTHONPATH", Formula['root'].opt_prefix/"lib/root" if build.with? 'check'
-    end
-
-    unless build.head?
-      # prevent cython regeneration in YODA-1.3.1.tar.gz
-      touch 'pyext/yoda/.made_pyx_templates'
-      touch Dir.glob("pyext/yoda/*.{cpp,h}")
     end
 
     system "autoreconf", "-i" if build.head?
