@@ -23,6 +23,7 @@ All packages are tested on OS X 10.9 (Mavericks) on [Travis CI](https://travis-c
 Thanks to [**braumeister.org**](http://braumeister.org/repos/davidchall/homebrew-hep/browse/a), package metadata can now be browsed visually! Here is a quick list though:
 
 * `applgrid`
+* `blackhat`
 * `fastjet`
 * `fastnlo`
 * `fjcontrib`

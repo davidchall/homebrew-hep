@@ -8,6 +8,7 @@ install:
   - brew tap --repair
 env:
   - PACKAGE=applgrid
+  - PACKAGE=blackhat
   - PACKAGE=fastjet
   - PACKAGE=fastnlo
   - PACKAGE=fjcontrib
