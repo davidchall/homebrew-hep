@@ -1,9 +1,9 @@
 class Qcdnum < Formula
   homepage 'http://mbotje.web.cern.ch/mbotje/qcdnum'
-  url 'https://www.hepforge.org/archive/qcdnum/qcdnum-17.00.06.tar.gz'
-  mirror 'http://www.nikhef.nl/user/h24/qcdnum-files/download/qcdnum170006.tar.gz'
-  sha256 'c454e8717631ce95180f517e0ddddc1aeeb30aa82eba75e555c39cc1cd4b2824'
-  version '17.00.06'
+  url 'https://www.hepforge.org/archive/qcdnum/qcdnum-17.00.07.tar.gz'
+  mirror 'http://www.nikhef.nl/user/h24/qcdnum-files/download/qcdnum170007.tar.gz'
+  sha256 '768a8cd4d2f140f8ee0d1ba886bc72f872b39a69b6ef16f890c1044295ce31af'
+  version '17.00.07'
 
   depends_on :fortran
 
