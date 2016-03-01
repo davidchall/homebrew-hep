@@ -20,6 +20,7 @@ env:
   - PACKAGE=mcfm
   - PACKAGE=mcgrid
   - PACKAGE=nlojet++
+  - PACKAGE=openloops
   - PACKAGE=pythia8
   - PACKAGE=qcdnum
   - PACKAGE=rivet

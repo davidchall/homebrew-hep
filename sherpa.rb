@@ -7,6 +7,7 @@ class Sherpa < Formula
   depends_on 'rivet'   => :recommended
   depends_on 'lhapdf'  => :recommended
   depends_on 'fastjet' => :optional
+  depends_on 'openloops' => :optional
   depends_on 'homebrew/science/root' => :optional
   depends_on :mpi      => [:cc, :cxx, :f90, :optional]
   depends_on :fortran
@@ -33,11 +34,12 @@ class Sherpa < Formula
       ENV['FC'] = ENV['MPIFC']
     end
 
-    args << "--enable-hepmc2=#{Formula['hepmc'].prefix}"    if build.with? "hepmc"
-    args << "--enable-rivet=#{Formula['rivet'].prefix}"     if build.with? "rivet"
-    args << "--enable-lhapdf=#{Formula['lhapdf'].prefix}"   if build.with? "lhapdf"
-    args << "--enable-fastjet=#{Formula['fastjet'].prefix}" if build.with? "fastjet"
-    args << "--enable-root=#{Formula['root'].prefix}"       if build.with? "root"
+    args << "--enable-hepmc2=#{Formula['hepmc'].prefix}"        if build.with? "hepmc"
+    args << "--enable-rivet=#{Formula['rivet'].prefix}"         if build.with? "rivet"
+    args << "--enable-lhapdf=#{Formula['lhapdf'].prefix}"       if build.with? "lhapdf"
+    args << "--enable-fastjet=#{Formula['fastjet'].prefix}"     if build.with? "fastjet"
+    args << "--enable-openloops=#{Formula['openloops'].prefix}" if build.with? "openloops"
+    args << "--enable-root=#{Formula['root'].prefix}"           if build.with? "root"
 
     if build.with? "mcfm"
       mcfm_path = buildpath/'mcfm'

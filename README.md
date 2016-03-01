@@ -5,7 +5,7 @@ Many high energy physics programs require special installation instructions for 
 
 Homebrew-hep is a Mac package manager for HEP programs, based on [Homebrew](http://brew.sh/), which tries to make life easier. In Homebrew language, it is a tap. From the end-user's perspective it is nice because it:
 
-* keeps things organised in `/usr/local` 
+* keeps things organised in `/usr/local`
 * automatically handles package dependencies
 * is easy to update programs
 
@@ -35,6 +35,7 @@ Thanks to [**braumeister.org**](http://braumeister.org/repos/davidchall/homebrew
 * `mcfm`
 * `mcgrid`
 * `nlojet++`
+* `openloops`
 * `pythia8`
 * `qcdnum`
 * `rivet`
