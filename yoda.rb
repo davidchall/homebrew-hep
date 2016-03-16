@@ -1,7 +1,7 @@
 class Yoda < Formula
   homepage 'http://yoda.hepforge.org/'
-  url "http://www.hepforge.org/archive/yoda/YODA-1.5.8.tar.bz2"
-  sha256 "011c5be5cc565f8baf02e7ebbe57a57b4d70dc6a528d5b0102700020bbf5a973"
+  url "http://www.hepforge.org/archive/yoda/YODA-1.5.9.tar.bz2"
+  sha256 "1a19cc8c34c08f1797a93d355250e682eb85d62d4ab277b6714d7873b4bdde75"
 
   head do
     url 'http://yoda.hepforge.org/hg/yoda', :using => :hg
