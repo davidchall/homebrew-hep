@@ -31,6 +31,7 @@ class Rivet < Formula
       --with-fastjet=#{Formula["fastjet"].prefix}
       --with-hepmc=#{Formula["hepmc"].prefix}
       --with-yoda=#{Formula["yoda"].prefix}
+      --with-boost=#{Formula["boost"].prefix}
     ]
 
     args << '--disable-analyses' if build.without? 'analyses'
