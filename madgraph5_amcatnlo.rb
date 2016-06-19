@@ -1,7 +1,7 @@
 class Madgraph5Amcatnlo < Formula
   homepage 'https://launchpad.net/mg5amcnlo'
-  url 'https://launchpad.net/mg5amcnlo/2.0/2.3.0/+download/MG5_aMC_v2.3.3.tar.gz'
-  sha256 'ad33a26401c0039004d8542820e6433329c23bebf8d647f458a3932ca2d1bb57'
+  url 'https://launchpad.net/mg5amcnlo/2.0/2.4.0/+download/MG5_aMC_v2.4.2.tar.gz'
+  sha256 '622c5cd2bfea5989ba40359ad717ed61204b4fa0fa86d034a252697fc6298ac8'
 
   depends_on 'fastjet'
   depends_on :fortran
@@ -10,20 +10,6 @@ class Madgraph5Amcatnlo < Formula
   option 'use-stdcxx', 'Link to libstdc++ when compiling matrix elements'
 
   def install
-    # MadGraph5_aMC@NLO hardcodes linking to libstdc++
-    filelist = %w[
-      Template/LO/Source/make_opts
-      Template/NLO/MCatNLO/README.shower
-      Template/NLO/MCatNLO/Scripts/MCatNLO_MadFKS_HERWIG6.Script
-      Template/NLO/MCatNLO/Scripts/MCatNLO_MadFKS_PYTHIA6PT.Script
-      Template/NLO/MCatNLO/Scripts/MCatNLO_MadFKS_PYTHIA6Q.Script
-      Template/NLO/Source/make_opts.inc
-      Template/NLO/SubProcesses/makefile_fks_dir
-      madgraph/interface/amcatnlo_run_interface.py
-      madgraph/iolibs/export_v4.py
-    ]
-    inreplace filelist, 'stdc++', 'c++' unless build.include? 'use-stdcxx'
-
     cp_r '.', prefix
 
     # Homebrew deletes empty directories, but aMC@NLO needs them
