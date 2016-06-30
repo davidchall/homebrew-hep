@@ -1,7 +1,7 @@
 class Rivet < Formula
   homepage 'http://rivet.hepforge.org/'
-  url "http://www.hepforge.org/archive/rivet/Rivet-2.4.1.tar.bz2"
-  sha256 "c14f0f58d1792d84d62c62b44ebb94db004776feba83fd8186bba898d55123cf"
+  url "http://www.hepforge.org/archive/rivet/Rivet-2.4.3.tar.gz"
+  sha256 "092b955012702b8883e2f0de5d998114ee1bc4803fa59cd02e2139caf73a018b"
 
   head do
     url 'http://rivet.hepforge.org/hg/rivet', :using => :hg, :branch => 'tip'
@@ -17,7 +17,6 @@ class Rivet < Formula
   depends_on 'gsl'
   depends_on 'boost'
   depends_on 'yoda'
-  depends_on 'yaml-cpp'
   depends_on :python
   option 'with-check', 'Test during installation'
   option 'without-analyses', 'Do not build Rivet analyses'
@@ -27,6 +26,7 @@ class Rivet < Formula
     args = %W[
       --disable-debug
       --disable-dependency-tracking
+      --enable-stdcxx11
       --prefix=#{prefix}
       --with-fastjet=#{Formula["fastjet"].prefix}
       --with-hepmc=#{Formula["hepmc"].prefix}

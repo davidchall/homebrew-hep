@@ -4,14 +4,13 @@ class Sherpa < Formula
   sha256 'eb5dfde38f4f7a166f313d3c24d1af22c99f9934b7c50c981ff3f5aec9c467d7'
 
   depends_on 'hepmc'   => :recommended
-  depends_on 'rivet'   => :recommended
+  depends_on 'rivet'   => :optional
   depends_on 'lhapdf'  => :recommended
   depends_on 'fastjet' => :optional
   depends_on 'openloops' => :optional
   depends_on 'homebrew/science/root' => :optional
   depends_on :mpi      => [:cc, :cxx, :f90, :optional]
   depends_on :fortran
-  cxxstdlib_check :skip
 
   # Requires changes to MCFM code, so cannot use MCFM formula
   option 'with-mcfm', 'Enable use of MCFM loops'
@@ -24,7 +23,6 @@ class Sherpa < Formula
     args = %W[
       --disable-dependency-tracking
       --prefix=#{prefix}
-      --enable-multithread
     ]
 
     if build.with? "mpi"
