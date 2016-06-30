@@ -1,7 +1,7 @@
 class Yoda < Formula
   homepage 'http://yoda.hepforge.org/'
-  url "http://www.hepforge.org/archive/yoda/YODA-1.5.9.tar.bz2"
-  sha256 "1a19cc8c34c08f1797a93d355250e682eb85d62d4ab277b6714d7873b4bdde75"
+  url "http://www.hepforge.org/archive/yoda/YODA-1.6.1.tar.gz"
+  sha256 "70daf67163567d0d9d24fcbca5e4b9f3eca8c359f118395b8d2d21c420fc06c6"
 
   head do
     url 'http://yoda.hepforge.org/hg/yoda', :using => :hg
@@ -13,10 +13,9 @@ class Yoda < Formula
   end
 
   depends_on :python
-  depends_on 'boost'
   depends_on 'homebrew/science/root' => :optional
-  depends_on "homebrew/python/numpy" => :recommended
-  depends_on "homebrew/python/matplotlib" => :recommended
+  depends_on "homebrew/python/numpy" => :optional
+  depends_on "homebrew/python/matplotlib" => :optional
   option 'with-check', 'Test during installation'
 
   def install
