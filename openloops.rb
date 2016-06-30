@@ -1,8 +1,8 @@
 class Openloops < Formula
   desc "Fully automated implementation of the Open Loops algorithm"
   homepage "http://openloops.hepforge.org"
-  url "http://www.hepforge.org/archive/openloops/OpenLoops-1.2.4.tar.gz"
-  sha256 "6c13451a2cf4612ec37d9083c38585f8f37918a5a09b015a801cf15157671455"
+  url "http://www.hepforge.org/archive/openloops/OpenLoops-1.3.1.tar.gz"
+  sha256 "b7610ca62edfab55d0990e94e38048b62b4af0c6b01830b44f40795cd86cb665"
 
   depends_on :fortran
   depends_on :python
