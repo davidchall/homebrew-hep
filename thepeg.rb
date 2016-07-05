@@ -1,7 +1,7 @@
 class Thepeg < Formula
   homepage 'http://herwig.hepforge.org/'
-  url 'http://www.hepforge.org/archive/thepeg/ThePEG-1.9.2.tar.gz'
-  sha256 '67ad02c05bda877a338e59948c8314039f6152cc8228d881bd45edd12d1c1dc1'
+  url 'http://www.hepforge.org/archive/thepeg/ThePEG-2.0.2.tar.bz2'
+  sha256 'd4249e019543d5c7520733292d2edfb0bdd9733177200a63837781ed6194789b'
 
   head do
     url 'http://thepeg.hepforge.org/hg/ThePEG', :using => :hg
@@ -23,6 +23,7 @@ class Thepeg < Formula
       --disable-dependency-tracking
       --prefix=#{prefix}
       --enable-stdcxx11
+      --without-javagui
     ]
 
     system "autoreconf", "-i" if build.head?
