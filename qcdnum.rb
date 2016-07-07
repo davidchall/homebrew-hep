@@ -3,7 +3,6 @@ class Qcdnum < Formula
   url 'https://www.hepforge.org/archive/qcdnum/qcdnum-17.00.07.tar.gz'
   mirror 'http://www.nikhef.nl/user/h24/qcdnum-files/download/qcdnum170007.tar.gz'
   sha256 '768a8cd4d2f140f8ee0d1ba886bc72f872b39a69b6ef16f890c1044295ce31af'
-  version '17.00.07'
 
   depends_on :fortran
 

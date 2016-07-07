@@ -31,5 +31,5 @@ env:
   - PACKAGE=whizard
   - PACKAGE=yoda
 script:
-  - if [ "$PACKAGE" != "qcdnum" ]; then brew audit $PACKAGE; fi
+  - brew audit $PACKAGE
   - brew install -v $PACKAGE
