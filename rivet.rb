@@ -1,7 +1,7 @@
 class Rivet < Formula
   homepage 'http://rivet.hepforge.org/'
-  url "http://www.hepforge.org/archive/rivet/Rivet-2.4.3.tar.gz"
-  sha256 "05061211ab0c080b1116c67c0cc6680252d49cf51e03bc42b5c9ace477c5a8f8"
+  url "http://www.hepforge.org/archive/rivet/Rivet-2.5.0.tar.gz"
+  sha256 "a3fc76796208c213b0583bcf41755df00b0695cebd4a217f3e61e8b26ccdc82f"
 
   head do
     url 'http://rivet.hepforge.org/hg/rivet', :using => :hg, :branch => 'tip'
@@ -15,7 +15,6 @@ class Rivet < Formula
   depends_on 'hepmc'
   depends_on 'fastjet'
   depends_on 'gsl'
-  depends_on 'boost'
   depends_on 'yoda'
   depends_on :python
   option 'with-check', 'Test during installation'
@@ -26,12 +25,10 @@ class Rivet < Formula
     args = %W[
       --disable-debug
       --disable-dependency-tracking
-      --enable-stdcxx11
       --prefix=#{prefix}
       --with-fastjet=#{Formula["fastjet"].prefix}
       --with-hepmc=#{Formula["hepmc"].prefix}
       --with-yoda=#{Formula["yoda"].prefix}
-      --with-boost=#{Formula["boost"].prefix}
     ]
 
     args << '--disable-analyses' if build.without? 'analyses'
