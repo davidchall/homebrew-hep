@@ -43,6 +43,7 @@ Thanks to [**braumeister.org**](http://braumeister.org/repos/davidchall/homebrew
 * `sherpa`
 * `thepeg`
 * `topdrawer`
+* `vincia`
 * `whizard`
 * `yoda`
 
