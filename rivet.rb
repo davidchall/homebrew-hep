@@ -34,6 +34,9 @@ class Rivet < Formula
     args << '--disable-analyses' if build.without? 'analyses'
     args << '--enable-unvalidated' if build.with? 'unvalidated'
 
+    inreplace "include/Rivet/Tools/Utils.hh", "(int(*)(int)) tolower", "[](const unsigned char i){ return tolower(i); }"
+    inreplace "include/Rivet/Tools/Utils.hh", "(int(*)(int)) toupper", "[](const unsigned char i){ return toupper(i); }"
+
     system "autoreconf", "-i" if build.head?
     system "./configure", *args
     system "make"
