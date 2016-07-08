@@ -20,6 +20,7 @@ class Herwig < Formula
   depends_on "gsl"
   depends_on "madgraph5_amcatnlo" => :optional
   depends_on "openloops" => :optional
+  depends_on "vbfnlo" => :optional
   depends_on :python
   depends_on :fortran
   cxxstdlib_check :skip
@@ -36,6 +37,7 @@ class Herwig < Formula
     
     args << "--with-madgraph=#{Formula['madgraph5_amcatnlo'].prefix}" if build.with? "madgraph5_amcatnlo"
     args << "--with-openloops=#{Formula['openloops'].prefix}" if build.with? "openloops"
+    args << "--with-vbfnlo=#{Formula['vbfnlo'].prefix}" if build.with? "vbfnlo"
 
     system "autoreconf", "-i" if build.head?
     system "./configure", *args
