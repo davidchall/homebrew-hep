@@ -19,7 +19,7 @@ class Whizard < Formula
       --prefix=#{prefix}
     ]
 
-    args << "--disable-ocaml" if build.without? "objective-caml"
+    args << "--disable-ocaml" if build.without? "ocaml"
     args << "--enable-hoppet" if build.with? "hoppet"
     args << "--enable-fastjet" if build.with? "fastjet"
 
