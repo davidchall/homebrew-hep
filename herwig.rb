@@ -18,6 +18,8 @@ class Herwig < Formula
   depends_on "hepmc"
   depends_on "boost"
   depends_on "gsl"
+  depends_on "madgraph5_amcatnlo" => :optional
+  depends_on "openloops" => :optional
   depends_on :python
   depends_on :fortran
   cxxstdlib_check :skip
@@ -31,6 +33,9 @@ class Herwig < Formula
       --with-thepeg=#{Formula["thepeg"].opt_prefix}
       --enable-stdcxx11
     ]
+    
+    args << "--with-madgraph=#{Formula['madgraph5_amcatnlo'].prefix}" if build.with? "madgraph5_amcatnlo"
+    args << "--with-openloops=#{Formula['openloops'].prefix}" if build.with? "openloops"
 
     system "autoreconf", "-i" if build.head?
     system "./configure", *args
