@@ -12,7 +12,7 @@ env:
   - PACKAGE=fastnlo
   - PACKAGE=fjcontrib
   - PACKAGE=hepmc
-  - PACKAGE=herwig++
+  - PACKAGE=herwig
   - PACKAGE=hoppet
   - PACKAGE=jetvheto
   - PACKAGE=lhapdf
