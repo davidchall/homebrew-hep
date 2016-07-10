@@ -45,12 +45,12 @@ class Mcfm < Formula
 
   test do
     ["br.sm1", "br.sm2", "dm_parameters.DAT", "Pdfdata", "process.DAT"].each do |fname|
-      cp_r bin/fname, "."
+      ln_s bin/fname, "."
     end
     cp bin/"input.DAT", "test.DAT"
     inreplace "test.DAT", "-1", "0"
     system bin/"mcfm", "test.DAT"
-    assert File.exist?("W_only_lord_CT10.00_80__80__test.top")
+    assert File.exist?("W_only_nlo_CT14.NN_80___80___13TeV.top")
     ohai "Successfully calculated W production at LO"
     ohai "Use 'brew test -v mcfm' to view ouput"
   end
