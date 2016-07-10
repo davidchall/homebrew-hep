@@ -1,27 +1,32 @@
 class Mcfm < Formula
   desc "Monte Carlo for FeMtobarn processes"
   homepage "http://mcfm.fnal.gov"
-  url "http://mcfm.fnal.gov/MCFM-7.0.1.tar.gz"
-  sha256 "316ada8fe5032d5bab5e5e556598a754f5f6d23c2c0e32cdf7e844f65235f0eb"
+  url "http://mcfm.fnal.gov/MCFM-8.0.tar.gz"
+  sha256 "6533a51a93bf97c967bf3bd8d530934c8eb94c84978be1e1f9a9d71319c80cc3"
 
   keg_only "MCFM must be run from its install directory"
+
+  option "with-openmp", "Enable OpenMP multithreading"
+  needs :openmp if build.with? "openmp"
 
   depends_on "lhapdf" => :optional
   depends_on :fortran
 
   def install
-    system "./Install"
+    if build.with? "openmp"
+      system "./Install"
+    else
+      system "./Install_noomp"
+      inreplace "makefile" do |s|
+        s.change_make_var! "USEOMP", "NO"
+      end
+    end
 
     if build.with? "lhapdf"
       inreplace "makefile" do |s|
         s.change_make_var! "LHAPDFLIB", Formula["lhapdf"].opt_prefix
         s.change_make_var! "PDFROUTINES", "LHAPDF"
       end
-    end
-
-    # TODO: make an option to brew with openmp
-    inreplace "makefile" do |s|
-      s.change_make_var! "USEOMP", "NO"
     end
 
     system "make"
