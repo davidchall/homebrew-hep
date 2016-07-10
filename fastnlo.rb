@@ -1,15 +1,16 @@
 class Fastnlo < Formula
   desc "Fast pQCD calculations for PDF fits"
   homepage "http://fastnlo.hepforge.org"
-  url "http://fastnlo.hepforge.org/code/v23/fastnlo_toolkit-2.3.1pre-2163.tar.gz"
-  version "2.3.1.2163"
-  sha256 "18c83d91bb37f526a411150e8bd3cbf7773b6bb3a70d26d9d92477a1faa24493"
+  url "http://fastnlo.hepforge.org/code/v23/fastnlo_toolkit-2.3.1pre-2212.tar.gz"
+  version "2.3.1.2212"
+  sha256 "f7d16524db1e18cd5ee5fb493f0872ae4dc4a448e758d8ccdf5c090018b7f675"
 
   depends_on "lhapdf"
   depends_on "fastjet" => :optional
   depends_on "hoppet"  => :optional
   depends_on "qcdnum"  => :optional
   depends_on "yoda"    => :optional
+  depends_on "homebrew/science/root" => :optional
   depends_on :python   => :optional
 
   def am_opt(pkg)
@@ -28,6 +29,7 @@ class Fastnlo < Formula
     args << am_opt("qcdnum")
     args << am_opt("hoppet")
     args << am_opt("yoda")
+    args << am_opt("root")
     args << "--enable-pyext" if build.with? "python"
 
     system "./configure", *args
