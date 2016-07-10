@@ -28,6 +28,7 @@ env:
   - PACKAGE=sherpa
   - PACKAGE=thepeg
   - PACKAGE=topdrawer
+  - PACKAGE=vbfnlo
   - PACKAGE=vincia
   - PACKAGE=whizard
   - PACKAGE=yoda
