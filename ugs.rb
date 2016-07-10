@@ -1,5 +1,6 @@
 class Ugs < Formula
-  homepage "http://ftp.riken.jp/pub/iris/ugs/"
+  desc "SLAC Unified Graphics System"
+  homepage "http://ftp.riken.jp/pub/iris/ugs"
   url "http://ftp.riken.jp/iris/ugs/ugs.tar.gz"
   version "2.10e"
   sha256 "27bc46e975917bdf149e9ff6997885ffa24b0b1416bdf82ffaea5246b36e1f83"

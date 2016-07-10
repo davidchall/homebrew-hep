@@ -1,23 +1,24 @@
 class Sherpa < Formula
-  homepage 'https://sherpa.hepforge.org/'
-  url 'http://www.hepforge.org/archive/sherpa/SHERPA-MC-2.2.0.tar.gz'
-  sha256 'eb5dfde38f4f7a166f313d3c24d1af22c99f9934b7c50c981ff3f5aec9c467d7'
-
-  depends_on 'hepmc'   => :recommended
-  depends_on 'rivet'   => :optional
-  depends_on 'lhapdf'  => :recommended
-  depends_on 'fastjet' => :optional
-  depends_on 'openloops' => :optional
-  depends_on 'homebrew/science/root' => :optional
-  depends_on :mpi      => [:cc, :cxx, :f90, :optional]
-  depends_on :fortran
+  desc "Monte Carlo event generator"
+  homepage "https://sherpa.hepforge.org"
+  url "http://www.hepforge.org/archive/sherpa/SHERPA-MC-2.2.0.tar.gz"
+  sha256 "eb5dfde38f4f7a166f313d3c24d1af22c99f9934b7c50c981ff3f5aec9c467d7"
 
   # Requires changes to MCFM code, so cannot use MCFM formula
-  option 'with-mcfm', 'Enable use of MCFM loops'
+  option "with-mcfm", "Enable use of MCFM loops"
   if build.with? "mcfm"
-    depends_on 'wget' => :build
-    depends_on 'gnu-sed' => :build
+    depends_on "wget" => :build
+    depends_on "gnu-sed" => :build
   end
+
+  depends_on "hepmc"   => :recommended
+  depends_on "rivet"   => :optional
+  depends_on "lhapdf"  => :recommended
+  depends_on "fastjet" => :optional
+  depends_on "openloops" => :optional
+  depends_on "homebrew/science/root" => :optional
+  depends_on :mpi      => [:cc, :cxx, :f90, :optional]
+  depends_on :fortran
 
   def install
     args = %W[
@@ -27,20 +28,20 @@ class Sherpa < Formula
 
     if build.with? "mpi"
       args << "--enable-mpi"
-      ENV['CC'] = ENV['MPICC']
-      ENV['CXX'] = ENV['MPICXX']
-      ENV['FC'] = ENV['MPIFC']
+      ENV["CC"] = ENV["MPICC"]
+      ENV["CXX"] = ENV["MPICXX"]
+      ENV["FC"] = ENV["MPIFC"]
     end
 
-    args << "--enable-hepmc2=#{Formula['hepmc'].prefix}"        if build.with? "hepmc"
-    args << "--enable-rivet=#{Formula['rivet'].prefix}"         if build.with? "rivet"
-    args << "--enable-lhapdf=#{Formula['lhapdf'].prefix}"       if build.with? "lhapdf"
-    args << "--enable-fastjet=#{Formula['fastjet'].prefix}"     if build.with? "fastjet"
-    args << "--enable-openloops=#{Formula['openloops'].prefix}" if build.with? "openloops"
-    args << "--enable-root=#{Formula['root'].prefix}"           if build.with? "root"
+    args << "--enable-hepmc2=#{Formula["hepmc"].opt_prefix}"        if build.with? "hepmc"
+    args << "--enable-rivet=#{Formula["rivet"].opt_prefix}"         if build.with? "rivet"
+    args << "--enable-lhapdf=#{Formula["lhapdf"].opt_prefix}"       if build.with? "lhapdf"
+    args << "--enable-fastjet=#{Formula["fastjet"].opt_prefix}"     if build.with? "fastjet"
+    args << "--enable-openloops=#{Formula["openloops"].opt_prefix}" if build.with? "openloops"
+    args << "--enable-root=#{Formula["root"].opt_prefix}"           if build.with? "root"
 
     if build.with? "mcfm"
-      mcfm_path = buildpath/'mcfm'
+      mcfm_path = buildpath/"mcfm"
       mcfm_path.mkdir
       cd mcfm_path do
         # MCFM build sometimes fails due to race condition
@@ -49,7 +50,7 @@ class Sherpa < Formula
         inreplace "#{buildpath}/AddOns/MCFM/install_mcfm.sh", "sed", "gsed"
         system "#{buildpath}/AddOns/MCFM/install_mcfm.sh"
         # there is no ENV.parallelize
-        ENV['MAKEFLAGS'] = "-j#{ENV.make_jobs}"
+        ENV["MAKEFLAGS"] = "-j#{ENV.make_jobs}"
         args << "--enable-mcfm=#{mcfm_path}"
       end
     end
@@ -57,7 +58,7 @@ class Sherpa < Formula
     system "./configure", *args
     system "make", "install"
 
-    bash_completion.install share/'SHERPA-MC/sherpa-completion'
+    bash_completion.install share/"SHERPA-MC/sherpa-completion"
   end
 
   test do

@@ -1,5 +1,6 @@
 class Herwig < Formula
-  homepage "http://herwig.hepforge.org/"
+  desc "Monte Carlo event generator"
+  homepage "http://herwig.hepforge.org"
   url "http://www.hepforge.org/archive/herwig/Herwig-7.0.2.tar.bz2"
   sha256 "58139745e9fe1d3dada1eefffde2016d70cf593004a9bac5838c4ac7f5491a5e"
 
@@ -12,7 +13,7 @@ class Herwig < Formula
     depends_on "gengetopt"
   end
 
-  option "with-check", "Test during installation"
+  option "with-test", "Test during installation"
 
   depends_on "thepeg"
   depends_on "hepmc"
@@ -35,9 +36,9 @@ class Herwig < Formula
       --enable-stdcxx11
     ]
 
-    args << "--with-madgraph=#{Formula['madgraph5_amcatnlo'].prefix}" if build.with? "madgraph5_amcatnlo"
-    args << "--with-openloops=#{Formula['openloops'].prefix}" if build.with? "openloops"
-    args << "--with-vbfnlo=#{Formula['openloops'].opt_prefix}" if build.with? "vbfnlo"
+    args << "--with-madgraph=#{Formula["madgraph5_amcatnlo"].opt_prefix}" if build.with? "madgraph5_amcatnlo"
+    args << "--with-openloops=#{Formula["openloops"].opt_prefix}"         if build.with? "openloops"
+    args << "--with-vbfnlo=#{Formula["vbfnlo"].opt_prefix}"               if build.with? "vbfnlo"
 
     system "autoreconf", "-i" if build.head?
     system "./configure", *args
@@ -45,7 +46,7 @@ class Herwig < Formula
     # Herwig runs ThePEG during the make install and make check phases
     system "lhapdf", "install", "MMHT2014lo68cl"
     system "lhapdf", "install", "MMHT2014nlo68cl"
-    system "make", "check" if build.with? "check"
+    system "make", "check" if build.with? "test"
     system "make", "install"
   end
 

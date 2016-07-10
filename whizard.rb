@@ -1,5 +1,6 @@
 class Whizard < Formula
-  homepage "http://whizard.hepforge.org/"
+  desc "Monte Carlo event generator"
+  homepage "http://whizard.hepforge.org"
   url "http://www.hepforge.org/archive/whizard/whizard-2.2.6.tar.gz"
   sha256 "5f9bcedcdcf091be8c65bb2a0d6fc47bb8e32d97b8a23aed2d33c0fd1015d275"
 
@@ -9,7 +10,6 @@ class Whizard < Formula
   depends_on "hoppet" => :optional
   depends_on "hepmc" => :optional
   depends_on "lhapdf" => :optional
-
 
   def install
     args = %W[

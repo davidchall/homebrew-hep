@@ -15,10 +15,6 @@ class Openloops < Formula
     bin.install_symlink prefix/"openloops"
   end
 
-  test do
-    system "openloops", "help"
-  end
-
   def caveats; <<-EOS.undent
     OpenLoops downloads and installs process libraries in its
     own installation path: #{prefix}
@@ -26,6 +22,10 @@ class Openloops < Formula
     These process libraries are lost if OpenLoops is uninstalled.
 
     EOS
+  end
+
+  test do
+    system "openloops", "help"
   end
 end
 
