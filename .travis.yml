@@ -34,5 +34,6 @@ env:
   - PACKAGE=yoda
 script:
   - brew audit $PACKAGE
+  - HOMEBREW_VERBOSE_USING_DOTS=1 brew install -v --only-dependencies $PACKAGE
   - brew install -v $PACKAGE
   - '! brew cat $PACKAGE | grep -q "test do" || brew test -v $PACKAGE'
