@@ -49,6 +49,13 @@ class Rivet < Formula
     bash_completion.install share/"Rivet/rivet-completion"
   end
 
+  def caveats; <<-EOS.undent
+    It may now be necessary to rebuild your Rivet analyses.
+    In case of problems, check your RIVET_ANALYSIS_PATH for old analyses.
+
+    EOS
+  end
+
   test do
     system "cat #{prefix}/test/testApi.hepmc | rivet -a D0_2008_S7554427"
     ohai "Successfully ran dummy HepMC file through Drell-Yan analysis"
