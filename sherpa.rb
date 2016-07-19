@@ -2,7 +2,7 @@ class Sherpa < Formula
   desc "Monte Carlo event generator"
   homepage "https://sherpa.hepforge.org"
   url "http://www.hepforge.org/archive/sherpa/SHERPA-MC-2.2.1.tar.gz"
-  sha256 "95f62b4773a0a00425b6cb70100b8f785e596f2acd97b9a78c3008a1c7a2e69c"
+  sha256 "912ae40b5d2fa77b81941b14496d2eb44e5ff4a5b6d7e19f46dbe389b8f9738f"
 
   # Requires changes to MCFM code, so cannot use MCFM formula
   option "with-mcfm", "Enable use of MCFM loops"
@@ -34,11 +34,16 @@ class Sherpa < Formula
     end
 
     args << "--enable-hepmc2=#{Formula["hepmc"].opt_prefix}"        if build.with? "hepmc"
-    args << "--enable-rivet=#{Formula["rivet"].opt_prefix}"         if build.with? "rivet"
     args << "--enable-lhapdf=#{Formula["lhapdf"].opt_prefix}"       if build.with? "lhapdf"
     args << "--enable-fastjet=#{Formula["fastjet"].opt_prefix}"     if build.with? "fastjet"
     args << "--enable-openloops=#{Formula["openloops"].opt_prefix}" if build.with? "openloops"
     args << "--enable-root=#{Formula["root"].opt_prefix}"           if build.with? "root"
+
+    if build.with? "rivet"
+      args << "--enable-rivet=#{Formula["rivet"].opt_prefix}"
+      # Included rivet headers require C++11 to compile, which sherpa does not do per default
+      ENV.append "CXXFLAGS", "-std=c++11"
+    end
 
     if build.with? "mcfm"
       mcfm_path = buildpath/"mcfm"
