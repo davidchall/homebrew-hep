@@ -1,8 +1,8 @@
 class Mcgrid < Formula
   desc "Projecting cross section calculations on grids"
   homepage "http://mcgrid.hepforge.org"
-  url "http://www.hepforge.org/archive/mcgrid/mcgrid-2.0.tar.gz"
-  sha256 "bb3568ef6376f3359bed7d79b8d1f66e48b2f012edb9f9137729b973c8c76d37"
+  url "http://www.hepforge.org/archive/mcgrid/mcgrid-2.0.1.tar.gz"
+  sha256 "aeb3fb5a1b5667819bf42e86b51fe9eaff0cf826736638043c634695a657f30f"
 
   depends_on "rivet"
   depends_on "applgrid" => :recommended
