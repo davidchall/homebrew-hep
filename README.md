@@ -123,7 +123,7 @@ Any kind of contribution is welcome, but will require a [GitHub](https://github.
 The Homebrew files which control the package installations are written in Ruby. I realise that this is a language unfamiliar to most high energy physicists, so I am willing to help people to add new packages. If you are struggling with a contribution or have a package request, please open an [issue](https://github.com/davidchall/homebrew-hep/issues) to discuss.
 
 ### Update a package version
-This might be as simple as updating the `url` and `sha1` variables, but check the dependencies haven't changed and it still builds.
+This might be as simple as updating the `url` and `sha256` variables, but check the dependencies haven't changed and it still builds.
 
 ### Add new option to a package
 You can add a new dependency with `depends_on`, and then usually pass the location to the `configure` script (see the [Herwig formula](https://github.com/davidchall/homebrew-hep/blob/master/herwig.rb) for an example). You can also add other options with `option`. Again, it's a good idea to browse existing formulae for ideas, and even search through the [main Homebrew repository](https://github.com/Homebrew/homebrew/tree/master/Library/Formula).
