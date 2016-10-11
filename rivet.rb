@@ -1,8 +1,8 @@
 class Rivet < Formula
   desc "Monte Carlo analysis system"
   homepage "http://rivet.hepforge.org"
-  url "http://www.hepforge.org/archive/rivet/Rivet-2.5.0.tar.gz"
-  sha256 "a3fc76796208c213b0583bcf41755df00b0695cebd4a217f3e61e8b26ccdc82f"
+  url "http://www.hepforge.org/archive/rivet/Rivet-2.5.2.tar.gz"
+  sha256 "cd4e66f28493ed8c9bb2af95ea53ae5ed22fa89c5790f5ff5bf4f3879e873fe7"
 
   head do
     url "http://rivet.hepforge.org/hg/rivet", :using => :hg, :branch => "tip"
@@ -35,9 +35,6 @@ class Rivet < Formula
 
     args << "--disable-analyses" if build.without? "analyses"
     args << "--enable-unvalidated" if build.with? "unvalidated"
-
-    inreplace "include/Rivet/Tools/Utils.hh", "(int(*)(int)) tolower", "[](const unsigned char i){ return std::tolower(i); }"
-    inreplace "include/Rivet/Tools/Utils.hh", "(int(*)(int)) toupper", "[](const unsigned char i){ return std::toupper(i); }"
 
     system "autoreconf", "-i" if build.head?
     system "./configure", *args
