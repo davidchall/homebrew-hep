@@ -1,8 +1,8 @@
 class Thepeg < Formula
   desc "Toolkit for high energy physics event generation"
   homepage "http://herwig.hepforge.org"
-  url "http://www.hepforge.org/archive/thepeg/ThePEG-2.0.2.tar.bz2"
-  sha256 "d4249e019543d5c7520733292d2edfb0bdd9733177200a63837781ed6194789b"
+  url "http://www.hepforge.org/archive/thepeg/ThePEG-2.0.3.tar.bz2"
+  sha256 "c57ba68fbfda06a0ba256e06f276f91434bf2529a13f6287c051a4cd6da44634"
 
   head do
     url "http://thepeg.hepforge.org/hg/ThePEG", :using => :hg
