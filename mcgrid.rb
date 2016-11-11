@@ -1,8 +1,8 @@
 class Mcgrid < Formula
   desc "Projecting cross section calculations on grids"
   homepage "http://mcgrid.hepforge.org"
-  url "http://www.hepforge.org/archive/mcgrid/mcgrid-2.0.1.tar.gz"
-  sha256 "aeb3fb5a1b5667819bf42e86b51fe9eaff0cf826736638043c634695a657f30f"
+  url "http://www.hepforge.org/archive/mcgrid/mcgrid-2.0.2.tar.gz"
+  sha256 "deed9f6027b075a4d0e2128adb2c13b16ca5736c43426d9a85ac2dfc4f1788d7"
 
   depends_on "rivet"
   depends_on "applgrid" => :recommended
@@ -25,6 +25,9 @@ class Mcgrid < Formula
       --disable-silent-rules
       --prefix=#{prefix}
     ]
+
+    # Included rivet headers require C++11 to compile, which mcgrid does not do per default
+    ENV.append "CXXFLAGS", "-std=c++11"
 
     system "./configure", *args
     system "make", "install"
