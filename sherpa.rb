@@ -1,8 +1,8 @@
 class Sherpa < Formula
   desc "Monte Carlo event generator"
   homepage "https://sherpa.hepforge.org"
-  url "http://www.hepforge.org/archive/sherpa/SHERPA-MC-2.2.1.tar.gz"
-  sha256 "912ae40b5d2fa77b81941b14496d2eb44e5ff4a5b6d7e19f46dbe389b8f9738f"
+  url "http://www.hepforge.org/archive/sherpa/SHERPA-MC-2.2.2.tar.gz"
+  sha256 "2ecd36175a4ef551dcb00123ea6ff2eab3cfd7b2ea7681f99eec80969408beec"
 
   # Requires changes to MCFM code, so cannot use MCFM formula
   option "with-mcfm", "Enable use of MCFM loops"
@@ -16,7 +16,7 @@ class Sherpa < Formula
   depends_on "lhapdf"  => :recommended
   depends_on "fastjet" => :optional
   depends_on "openloops" => :optional
-  depends_on "homebrew/science/root" => :optional
+  depends_on "homebrew/science/root6" => :optional
   depends_on :mpi      => [:cc, :cxx, :f90, :optional]
   depends_on :fortran
 
@@ -37,7 +37,7 @@ class Sherpa < Formula
     args << "--enable-lhapdf=#{Formula["lhapdf"].opt_prefix}"       if build.with? "lhapdf"
     args << "--enable-fastjet=#{Formula["fastjet"].opt_prefix}"     if build.with? "fastjet"
     args << "--enable-openloops=#{Formula["openloops"].opt_prefix}" if build.with? "openloops"
-    args << "--enable-root=#{Formula["root"].opt_prefix}"           if build.with? "root"
+    args << "--enable-root=#{Formula["root6"].opt_prefix}"          if build.with? "root6"
 
     if build.with? "rivet"
       args << "--enable-rivet=#{Formula["rivet"].opt_prefix}"
