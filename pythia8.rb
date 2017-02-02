@@ -1,17 +1,21 @@
 class Pythia8 < Formula
   desc "Monte Carlo event generator"
   homepage "http://pythia8.hepforge.org"
-  url "http://home.thep.lu.se/~torbjorn/pythia8/pythia8215.tgz"
-  version "8.215"
-  sha256 "1b654ac3bf9254055052d1741c07b84c822bd6f349fa52068b5b4a25794d097e"
+  url "http://home.thep.lu.se/~torbjorn/pythia8/pythia8223.tgz"
+  version "8.223"
+  sha256 "36fda65eed5e9b8cd9f7e6352a4bcb56868595539fa3d2c02814c6d4b738f837"
 
   depends_on "hepmc"
+  depends_on "lhapdf"
+  depends_on "boost"
 
   def install
     args = %W[
       --prefix=#{prefix}
       --enable-shared
       --with-hepmc2=#{Formula["hepmc"].opt_prefix}
+      --with-lhapdf6=#{Formula["lhapdf"].opt_prefix}
+      --with-boost=#{Formula["boost"].opt_prefix}
     ]
 
     system "./configure", *args
