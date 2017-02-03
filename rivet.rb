@@ -1,8 +1,8 @@
 class Rivet < Formula
   desc "Monte Carlo analysis system"
   homepage "http://rivet.hepforge.org"
-  url "http://www.hepforge.org/archive/rivet/Rivet-2.5.2.tar.gz"
-  sha256 "cd4e66f28493ed8c9bb2af95ea53ae5ed22fa89c5790f5ff5bf4f3879e873fe7"
+  url "http://www.hepforge.org/archive/rivet/Rivet-2.5.3.tar.gz"
+  sha256 "c5641c79f2c508040c37538c70f4ad17b8c8c51f1dc974e37b1e3f37180236be"
 
   head do
     url "http://rivet.hepforge.org/hg/rivet", :using => :hg, :branch => "tip"
