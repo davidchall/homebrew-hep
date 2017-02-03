@@ -1,8 +1,8 @@
 class Yoda < Formula
   desc "Yet more Objects for Data Analysis"
   homepage "http://yoda.hepforge.org"
-  url "http://www.hepforge.org/archive/yoda/YODA-1.6.5.tar.gz"
-  sha256 "59ab110f2efcc4c562d3ac881481d3ddba40abdac5b45caa9cde89e6f12309f8"
+  url "http://www.hepforge.org/archive/yoda/YODA-1.6.6.tar.gz"
+  sha256 "407f3bea28bc668e0329f734c637a70c6d13f1d7afe0771493f6983515dd7566"
 
   head do
     url "http://yoda.hepforge.org/hg/yoda", :using => :hg
@@ -16,9 +16,9 @@ class Yoda < Formula
   option "with-test", "Test during installation"
 
   depends_on :python
-  depends_on "homebrew/science/root" => :optional
-  depends_on "homebrew/python/numpy" => :optional
-  depends_on "homebrew/python/matplotlib" => :optional
+  depends_on "homebrew/science/root6" => :optional
+  depends_on "numpy" => :optional
+  depends_on "homebrew/science/matplotlib" => :optional
 
   def install
     args = %W[
@@ -27,9 +27,9 @@ class Yoda < Formula
       --prefix=#{prefix}
     ]
 
-    if build.with? "root"
+    if build.with? "root6"
       args << "--enable-root"
-      ENV.append "PYTHONPATH", Formula["root"].opt_prefix/"lib/root" if build.with? "test"
+      ENV.append "PYTHONPATH", Formula["root6"].opt_prefix/"lib/root" if build.with? "test"
     end
 
     system "autoreconf", "-i" if build.head?
