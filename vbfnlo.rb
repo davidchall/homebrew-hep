@@ -24,6 +24,7 @@ class Vbfnlo < Formula
     args = %W[
       --disable-debug
       --disable-dependency-tracking
+      --enable-shared=no
       --prefix=#{prefix}
     ]
 
