@@ -32,6 +32,7 @@ env:
   - PACKAGE=vincia
   - PACKAGE=whizard
   - PACKAGE=yoda
+  - PACKAGE=genie
 script:
   - brew audit $PACKAGE
   - HOMEBREW_VERBOSE_USING_DOTS=1 brew install -v --only-dependencies $PACKAGE
