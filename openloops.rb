@@ -28,19 +28,3 @@ class Openloops < Formula
     system "openloops", "help"
   end
 end
-
-__END__
-diff --git a/openloops b/openloops
-index 5f068c9..e3e09f7 100755
---- a/openloops
-+++ b/openloops
-@@ -63,6 +63,9 @@ else
-     return 0
-        fi
-
-+  # Make sure we execute everything from $BASEDIR
-+  cd $BASEDIR
-+
- fi
-
- #####################
