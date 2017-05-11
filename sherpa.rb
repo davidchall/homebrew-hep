@@ -1,8 +1,8 @@
 class Sherpa < Formula
   desc "Monte Carlo event generator"
   homepage "https://sherpa.hepforge.org"
-  url "http://www.hepforge.org/archive/sherpa/SHERPA-MC-2.2.2.tar.gz"
-  sha256 "2ecd36175a4ef551dcb00123ea6ff2eab3cfd7b2ea7681f99eec80969408beec"
+  url "http://www.hepforge.org/archive/sherpa/SHERPA-MC-2.2.3.tar.gz"
+  sha256 "e9daf2979e6a9a37111f844952212040a69f1c3ff5575928b4343adfddac1547"
 
   # Requires changes to MCFM code, so cannot use MCFM formula
   option "with-mcfm", "Enable use of MCFM loops"
