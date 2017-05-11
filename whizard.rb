@@ -1,8 +1,8 @@
 class Whizard < Formula
   desc "Monte Carlo event generator"
   homepage "http://whizard.hepforge.org"
-  url "http://www.hepforge.org/archive/whizard/whizard-2.2.8.tar.gz"
-  sha256 "d6b5e84d5bc5bad387f842f7cb69e55a62a0a2a9d42f10fdcf76161459f03902"
+  url "http://www.hepforge.org/archive/whizard/whizard-2.5.0.tar.gz"
+  sha256 "4c8d50bec47a8d81636832a5d2acfd04fa26253ddb005138888d982484d4d470"
 
   depends_on :fortran
   depends_on "ocaml"
@@ -18,9 +18,6 @@ class Whizard < Formula
       --enable-fc-quadruple
       --prefix=#{prefix}
     ]
-
-    # configure script finds some weird libraries that don't exist
-    ENV["CXXLIBS"] = " "
 
     args << "--enable-hoppet" if build.with? "hoppet"
     args << "--enable-fastjet" if build.with? "fastjet"
