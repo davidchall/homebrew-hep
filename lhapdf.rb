@@ -1,8 +1,8 @@
 class Lhapdf < Formula
   desc "PDF interpolation and evaluation"
   homepage "http://lhapdf.hepforge.org"
-  url "http://www.hepforge.org/archive/lhapdf/LHAPDF-6.1.6.tar.gz"
-  sha256 "c28138232e3219bf89cf626c0e414c6291c6b0777c3a931af18e51867657ebe9"
+  url "http://www.hepforge.org/archive/lhapdf/LHAPDF-6.2.0.tar.gz"
+  sha256 "f0f6395f6400eab8306cdf5e73dc1209f9919a1017ce665bcec08eb48fbed23d"
 
   head do
     url "http://lhapdf.hepforge.org/hg/lhapdf", :using => :hg
@@ -13,7 +13,6 @@ class Lhapdf < Formula
     depends_on "cython" => :python
   end
 
-  depends_on "boost"
   depends_on :python
 
   def install
@@ -23,7 +22,6 @@ class Lhapdf < Formula
       --disable-debug
       --disable-dependency-tracking
       --prefix=#{prefix}
-      --with-boost=#{Formula["boost"].opt_prefix}
     ]
 
     system "autoreconf", "-i" if build.head?
