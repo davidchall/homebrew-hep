@@ -1,8 +1,8 @@
 class Yoda < Formula
   desc "Yet more Objects for Data Analysis"
   homepage "http://yoda.hepforge.org"
-  url "http://www.hepforge.org/archive/yoda/YODA-1.6.6.tar.gz"
-  sha256 "407f3bea28bc668e0329f734c637a70c6d13f1d7afe0771493f6983515dd7566"
+  url "http://www.hepforge.org/archive/yoda/YODA-1.6.7.tar.gz"
+  sha256 "9fbdb8e9b2951ee6b984b2d5350b0a5a9c93c6f4a70c51dd77daa87336753cf6"
 
   head do
     url "http://yoda.hepforge.org/hg/yoda", :using => :hg
