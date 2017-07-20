@@ -1,8 +1,8 @@
 class Herwig < Formula
   desc "Monte Carlo event generator"
   homepage "http://herwig.hepforge.org"
-  url "http://www.hepforge.org/archive/herwig/Herwig-7.0.4.tar.bz2"
-  sha256 "e6265f6cae2944b022ee2f1495b0abdd7ed1b50fdda81063f8c17acf8a2f4ced"
+  url "http://www.hepforge.org/archive/herwig/Herwig-7.1.1.tar.bz2"
+  sha256 "72980712a209ae242e7a2c71653683bd8dfe7d339f0b1197b8d5f493f9f4aa8f"
 
   head do
     url "http://herwig.hepforge.org/hg/herwig", :using => :hg
