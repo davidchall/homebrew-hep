@@ -1,8 +1,8 @@
 class Madgraph5Amcatnlo < Formula
   desc "Automated LO and NLO processes matched to parton showers"
   homepage "https://launchpad.net/mg5amcnlo"
-  url "https://launchpadlibrarian.net/321257705/MG5_aMC_v2.5.5.tar.gz"
-  sha256 "7968f6d0543b3af2649ba497d17c3a23b089cc6f5ba352e0fd7fa106aa07a512"
+  url "https://launchpad.net/mg5amcnlo/2.0/2.5.x/+download/MG5_aMC_v2.5.5.tar.gz"
+  sha256 "dbfd242376382b8037e22ec833e77fc39aa3a74133e8bc10a8d92973457834a9"
 
   depends_on "fastjet"
   depends_on :fortran
