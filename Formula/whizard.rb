@@ -1,7 +1,7 @@
 class Whizard < Formula
   desc "Monte Carlo event generator"
-  homepage "http://whizard.hepforge.org"
-  url "http://www.hepforge.org/archive/whizard/whizard-2.6.0.tar.gz"
+  homepage "https://whizard.hepforge.org"
+  url "https://www.hepforge.org/archive/whizard/whizard-2.6.0.tar.gz"
   sha256 "e3fd7abdcfe4349bc84be36302c831e1262aecad9654a6e6e7b0f0436248814b"
 
   depends_on :fortran
@@ -24,6 +24,8 @@ class Whizard < Formula
 
     system "./configure", *args
     system "make", "install"
+
+    chmod 0755, Dir[bin/"*.*sh"]
   end
 
   test do
@@ -35,7 +37,7 @@ class Whizard < Formula
     simulate (ee)
     EOS
 
-    system "whizard", "-r", testpath, "ee.sin"
+    system "#{bin}/whizard", "-r", testpath, "ee.sin"
     ohai "You just successfully generated 10 events!"
   end
 end
