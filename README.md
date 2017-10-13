@@ -36,10 +36,9 @@ Thanks to [**braumeister.org**](http://braumeister.org/repos/davidchall/homebrew
 * `mcgrid`
 * `nlojet++`
 * `openloops`
-* `pythia8`
+* `pythia`
 * `qcdnum`
 * `rivet`
-* `sacrifice`
 * `sherpa`
 * `thepeg`
 * `topdrawer`
