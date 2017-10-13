@@ -24,10 +24,12 @@ before_install:
   - rm -rf "$HOMEBREW_TAP_DIR"
   - ln -s "$PWD" "$HOMEBREW_TAP_DIR"
   - export HOMEBREW_DEVELOPER="1"
+  - export HOMEBREW_BINTRAY_USER="davidchall"
   - ulimit -n 1024
 
 script:
   - brew test-bot
+  - brew test-bot --ci-upload --git-name=davidchall --git-email=dhcrawley@gmail.com --bintray_org=davidchall
 
 notifications:
   email:
