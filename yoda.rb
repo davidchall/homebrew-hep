@@ -16,7 +16,7 @@ class Yoda < Formula
   option "with-test", "Test during installation"
 
   depends_on :python
-  depends_on "homebrew/science/root6" => :optional
+  depends_on "root" => :optional
   depends_on "numpy" => :optional
   depends_on "homebrew/science/matplotlib" => :optional
 
@@ -27,9 +27,9 @@ class Yoda < Formula
       --prefix=#{prefix}
     ]
 
-    if build.with? "root6"
+    if build.with? "root"
       args << "--enable-root"
-      ENV.append "PYTHONPATH", Formula["root6"].opt_prefix/"lib/root" if build.with? "test"
+      ENV.append "PYTHONPATH", Formula["root"].opt_prefix/"lib/root" if build.with? "test"
     end
 
     system "autoreconf", "-i" if build.head?
