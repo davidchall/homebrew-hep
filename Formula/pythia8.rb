@@ -22,16 +22,6 @@ class Pythia8 < Formula
     system "make", "install"
   end
 
-  def caveats; <<-EOS.undent
-    It is recommended to 'brew install sacrifice' now, as
-    the easiest way to generate Pythia 8 events.
-
-    Otherwise, programs can be built against the Pythia 8
-    libraries by making use of 'pythia8-config'.
-
-    EOS
-  end
-
   test do
     ENV["PYTHIA8DATA"] = share/"Pythia8/xmldoc"
 
