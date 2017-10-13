@@ -1,39 +1,26 @@
-language: objective-c
+language: ruby
+os: osx
+env: OSX=10.12
+osx_image: xcode8.1
+rvm: system
 before_install:
-  - brew update
-  - brew upgrade gcc cmake
-install:
-  - mkdir -p $(brew --repo)/Library/Taps/travis
-  - ln -s $PWD $(brew --repo)/Library/Taps/travis/homebrew-testtap
-  - brew tap --repair
-env:
-  - PACKAGE=applgrid
-  - PACKAGE=fastjet
-  - PACKAGE=fastnlo
-  - PACKAGE=fjcontrib
-  - PACKAGE=hepmc
-  - PACKAGE=herwig
-  - PACKAGE=hoppet
-  - PACKAGE=jetvheto
-  - PACKAGE=lhapdf
-  - PACKAGE=madgraph5_amcatnlo
-  - PACKAGE=mcfm
-  - PACKAGE=mcgrid
-  - PACKAGE=nlojet++
-  - PACKAGE=openloops
-  - PACKAGE=pythia8
-  - PACKAGE=qcdnum
-  - PACKAGE=rivet
-  - PACKAGE=sacrifice
-  - PACKAGE=sherpa
-  - PACKAGE=thepeg
-  - PACKAGE=topdrawer
-  - PACKAGE=vbfnlo
-  - PACKAGE=vincia
-  - PACKAGE=whizard
-  - PACKAGE=yoda
+  - export TRAVIS_COMMIT="$(git rev-parse --verify -q HEAD)"
+  - if [ -f ".git/shallow" ]; then
+      travis_retry git fetch --unshallow;
+    fi
+  - HOMEBREW_REPOSITORY="$(brew --repo)"
+  - sudo chown -R "$USER" "$HOMEBREW_REPOSITORY"
+  - git -C "$HOMEBREW_REPOSITORY" reset --hard origin/master
+  - brew update || brew update
+  - HOMEBREW_TAP_DIR="$(brew --repo "$TRAVIS_REPO_SLUG")"
+  - mkdir -p "$HOMEBREW_TAP_DIR"
+  - rm -rf "$HOMEBREW_TAP_DIR"
+  - ln -s "$PWD" "$HOMEBREW_TAP_DIR"
+  - export HOMEBREW_DEVELOPER="1"
+  - ulimit -n 1024
 script:
-  - brew audit $PACKAGE
-  - HOMEBREW_VERBOSE_USING_DOTS=1 brew install -v --only-dependencies $PACKAGE
-  - brew install -v $PACKAGE
-  - '! brew cat $PACKAGE | grep -q "test do" || brew test -v $PACKAGE'
+  - brew test-bot
+notifications:
+  email:
+    on_success: never
+    on_failure: always
