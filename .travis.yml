@@ -1,8 +1,15 @@
 language: ruby
+rvm: system
+cache:
+  directories:
+    - $HOME/.gem/ruby
+    - Library/Homebrew/vendor/bundle
+
+# https://docs.travis-ci.com/user/reference/osx/#OS-X-Version
 os: osx
 env: OSX=10.12
-osx_image: xcode8.1
-rvm: system
+osx_image: xcode8.3
+
 before_install:
   - export TRAVIS_COMMIT="$(git rev-parse --verify -q HEAD)"
   - if [ -f ".git/shallow" ]; then
@@ -18,8 +25,10 @@ before_install:
   - ln -s "$PWD" "$HOMEBREW_TAP_DIR"
   - export HOMEBREW_DEVELOPER="1"
   - ulimit -n 1024
+
 script:
   - brew test-bot
+
 notifications:
   email:
     on_success: never
