@@ -1,8 +1,8 @@
 class Lhapdf < Formula
   desc "PDF interpolation and evaluation"
   homepage "http://lhapdf.hepforge.org"
-  url "http://www.hepforge.org/archive/lhapdf/LHAPDF-6.2.0.tar.gz"
-  sha256 "f0f6395f6400eab8306cdf5e73dc1209f9919a1017ce665bcec08eb48fbed23d"
+  url "http://www.hepforge.org/archive/lhapdf/LHAPDF-6.2.1.tar.gz"
+  sha256 "6d57ced88592bfd0feca4b0b50839110780c3a1cd158091c075a155c5917202e"
 
   head do
     url "http://lhapdf.hepforge.org/hg/lhapdf", :using => :hg
