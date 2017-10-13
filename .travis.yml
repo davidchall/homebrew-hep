@@ -28,6 +28,7 @@ before_install:
 
 script:
   - brew test-bot
+  - brew test-bot --ci-upload --dry-run
 
 notifications:
   email:
