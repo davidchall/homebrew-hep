@@ -7,7 +7,9 @@ cache:
 
 # https://docs.travis-ci.com/user/reference/osx/#OS-X-Version
 os: osx
-env: OSX=10.12
+env:
+  - OSX=10.12
+  - HOMEBREW_BINTRAY_USER=davidchall
 osx_image: xcode8.3
 
 before_install:
@@ -28,7 +30,7 @@ before_install:
 
 script:
   - brew test-bot
-  - brew test-bot --ci-upload
+  - brew test-bot --ci-upload --git-name=davidchall --git-email=dhcrawley@gmail.com --bintray_org=davidchall
 
 notifications:
   email:
