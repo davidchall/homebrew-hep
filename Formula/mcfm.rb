@@ -32,7 +32,7 @@ class Mcfm < Formula
     system "make"
     cp_r "Bin", bin
 
-    ln_s "#{Formula["lhapdf"].opt_share}/lhapdf/PDFsets", bin if build.with? "lhapdf"
+    bin.install_symlink "#{Formula["lhapdf"].opt_share}/lhapdf/PDFsets" if build.with? "lhapdf"
   end
 
   def caveats; <<-EOS.undent
