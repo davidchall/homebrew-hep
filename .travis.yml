@@ -24,10 +24,17 @@ before_install:
   - rm -rf "$HOMEBREW_TAP_DIR"
   - ln -s "$PWD" "$HOMEBREW_TAP_DIR"
   - export HOMEBREW_DEVELOPER="1"
+  - export HOMEBREW_BINTRAY_USER="davidchall"
+  - export HOMEBREW_BOTTLE_DOMAIN="https://dl.bintray.com/davidchall"
   - ulimit -n 1024
 
 script:
-  - brew test-bot
+  - brew tap davidchall/test-bot
+  - 'if [ "$TRAVIS_PULL_REQUEST" != "false" ]; then brew test-bot --ci-pr; fi'
+  - 'if [ "$TRAVIS_PULL_REQUEST" = "false" ]; then brew test-bot --ci-testing; fi'
+
+after_success:
+  - brew test-bot --ci-upload --git-name=davidchall --git-email=dhcrawley@gmail.com --bintray-org=davidchall
 
 notifications:
   email:
