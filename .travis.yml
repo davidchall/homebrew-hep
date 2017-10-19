@@ -30,11 +30,16 @@ before_install:
 
 script:
   - brew tap davidchall/test-bot
-  - 'if [ "$TRAVIS_PULL_REQUEST" != "false" ]; then brew test-bot --ci-pr; fi'
-  - 'if [ "$TRAVIS_PULL_REQUEST" = "false" ]; then brew test-bot --ci-testing; fi'
+  - if [ "$TRAVIS_PULL_REQUEST" = "false" ]; then
+      brew test-bot --ci-testing;
+    else
+      brew test-bot --ci-pr;
+    fi
 
 after_success:
-  - brew test-bot --ci-upload --git-name=davidchall --git-email=dhcrawley@gmail.com --bintray-org=davidchall
+  - if [ "$TRAVIS_BRANCH" = "master" ]; then
+      brew test-bot --ci-upload --git-name=davidchall --git-email=dhcrawley@gmail.com --bintray-org=davidchall;
+    fi
 
 notifications:
   email:
