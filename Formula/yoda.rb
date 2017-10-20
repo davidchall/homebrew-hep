@@ -1,5 +1,4 @@
 class Yoda < Formula
-  # force change
   desc "Yet more Objects for Data Analysis"
   homepage "https://yoda.hepforge.org"
   url "https://www.hepforge.org/archive/yoda/YODA-1.6.7.tar.gz"
