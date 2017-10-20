@@ -4,6 +4,15 @@ class Yoda < Formula
   url "https://www.hepforge.org/archive/yoda/YODA-1.6.7.tar.gz"
   sha256 "9fbdb8e9b2951ee6b984b2d5350b0a5a9c93c6f4a70c51dd77daa87336753cf6"
 
+  bottle do
+    root_url "https://dl.bintray.com/davidchall/bottles-hep"
+    cellar :any
+    sha256 "943992b7196311683bef4f3e9f9c96490de5da4a1ad98b9618e98c0c34b7adf1" => :high_sierra
+    sha256 "b533ca5a8dec8eb39414c1a4d657a99a23679e236c8d4ac3735e56b39cec4aca" => :sierra
+    sha256 "d283f08feb0bec71556900a3de13dc4b7abca06c6a7c3bc9053830d266de3d62" => :el_capitan
+    sha256 "fb8667b0ceac647cfc51d65d3933efec98bff385214b4139237fbefa0fecc95e" => :yosemite
+  end
+
   head do
     url "http://yoda.hepforge.org/hg/yoda", :using => :hg
 
