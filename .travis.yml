@@ -25,7 +25,7 @@ before_install:
   - ln -s "$PWD" "$HOMEBREW_TAP_DIR"
   - export HOMEBREW_DEVELOPER="1"
   - export HOMEBREW_BINTRAY_USER="davidchall"
-  - export HOMEBREW_BOTTLE_DOMAIN="https://dl.bintray.com/davidchall"
+  - export TAP_BOTTLE_DOMAIN="https://dl.bintray.com/davidchall"
   - ulimit -n 1024
 
 script:
