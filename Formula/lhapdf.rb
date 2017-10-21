@@ -1,7 +1,7 @@
 class Lhapdf < Formula
   desc "PDF interpolation and evaluation"
-  homepage "http://lhapdf.hepforge.org"
-  url "http://www.hepforge.org/archive/lhapdf/LHAPDF-6.2.1.tar.gz"
+  homepage "https://lhapdf.hepforge.org/"
+  url "https://www.hepforge.org/archive/lhapdf/LHAPDF-6.2.1.tar.gz"
   sha256 "6d57ced88592bfd0feca4b0b50839110780c3a1cd158091c075a155c5917202e"
 
   head do
@@ -10,10 +10,8 @@ class Lhapdf < Formula
     depends_on "autoconf" => :build
     depends_on "automake" => :build
     depends_on "libtool" => :build
-    depends_on "cython" => :python
+    depends_on "cython" => :build
   end
-
-  depends_on :python
 
   def install
     ENV.cxx11
@@ -42,6 +40,7 @@ class Lhapdf < Formula
   end
 
   test do
-    system "lhapdf", "help"
+    system "#{bin}/lhapdf", "help"
+    system "python", "-c", "import lhapdf; lhapdf.version()"
   end
 end
