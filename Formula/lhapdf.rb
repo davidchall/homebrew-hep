@@ -4,6 +4,13 @@ class Lhapdf < Formula
   url "https://www.hepforge.org/archive/lhapdf/LHAPDF-6.2.1.tar.gz"
   sha256 "6d57ced88592bfd0feca4b0b50839110780c3a1cd158091c075a155c5917202e"
 
+  bottle do
+    root_url "https://dl.bintray.com/davidchall/bottles-hep"
+    sha256 "9baab43625bb96efeceffa0e909a66f3385d44cbe0eec0cbf019cf7f15f6bbeb" => :high_sierra
+    sha256 "550b93a493c3b30fcdb5f2b2326d53758fb8f5d0d76a645eecda6fb239170c05" => :sierra
+    sha256 "c61871005b6f6207946de9ae3f5f710a9ec5e695f324b03ac26dc554a547d432" => :el_capitan
+  end
+
   head do
     url "http://lhapdf.hepforge.org/hg/lhapdf", :using => :hg
 
@@ -12,6 +19,8 @@ class Lhapdf < Formula
     depends_on "libtool" => :build
     depends_on "cython" => :build
   end
+
+  needs :cxx11
 
   def install
     ENV.cxx11
