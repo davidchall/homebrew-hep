@@ -37,14 +37,14 @@ before_install:
 script:
   - brew tap davidchall/test-bot
   - if [ "$TRAVIS_PULL_REQUEST" = "false" ]; then
-      brew test-bot --keep-old --ci-testing;
+      brew test-bot --ci-testing;
     else
-      brew test-bot --keep-old --ci-pr;
+      brew test-bot --ci-pr;
     fi
 
 after_success:
   - if [ "$TRAVIS_PULL_REQUEST" = "false" ] && [ "$TRAVIS_BRANCH" = "master" ]; then
-      brew test-bot --keep-old --ci-upload --git-name=davidchall --git-email=dhcrawley@gmail.com --bintray-org=davidchall;
+      brew test-bot --ci-upload --git-name=davidchall --git-email=dhcrawley@gmail.com --bintray-org=davidchall;
     fi
 
 notifications:

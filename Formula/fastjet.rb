@@ -14,8 +14,8 @@ class Fastjet < Formula
       --disable-debug
       --disable-dependency-tracking
       --prefix=#{prefix}
-      --enable-allcxxplugins
       --enable-pyext
+      --enable-allcxxplugins
     ]
 
     args << "--with-cgal=#{Formula["cgal"].opt_prefix}" if build.with? "cgal"
