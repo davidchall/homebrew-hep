@@ -1,7 +1,7 @@
 class Rivet < Formula
   desc "Monte Carlo analysis system"
-  homepage "http://rivet.hepforge.org"
-  url "http://www.hepforge.org/archive/rivet/Rivet-2.5.4.tar.gz"
+  homepage "https://rivet.hepforge.org"
+  url "https://www.hepforge.org/archive/rivet/Rivet-2.5.4.tar.gz"
   sha256 "2676937cecfda295c1e8597a10f0c2122b8fbb9a1473ef2906cb19a3ddefd8a1"
 
   head do
@@ -10,7 +10,7 @@ class Rivet < Formula
     depends_on "autoconf" => :build
     depends_on "automake" => :build
     depends_on "libtool" => :build
-    depends_on "cython" => :python
+    depends_on "cython" => :build
   end
 
   option "with-test", "Test during installation"
@@ -21,7 +21,6 @@ class Rivet < Formula
   depends_on "fastjet"
   depends_on "gsl"
   depends_on "yoda"
-  depends_on :python
 
   def install
     args = %W[
@@ -54,6 +53,7 @@ class Rivet < Formula
   end
 
   test do
+    system "python", "-c", "import rivet; rivet.version()"
     system "cat #{prefix}/test/testApi.hepmc | rivet -a D0_2008_S7554427"
     ohai "Successfully ran dummy HepMC file through Drell-Yan analysis"
   end
