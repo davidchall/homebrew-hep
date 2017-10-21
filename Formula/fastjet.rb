@@ -4,11 +4,10 @@ class Fastjet < Formula
   url "http://fastjet.fr/repo/fastjet-3.3.0.tar.gz"
   sha256 "e9da5b9840cbbec6d05c9223f73c97af1d955c166826638e0255706a6b2da70f"
 
-  option "with-cgal", "Enable CGAL support (required for NlnN strategy)"
+  option "without-cgal", "Disable CGAL support (required for NlnN strategy)"
   option "with-test", "Test during installation"
 
-  depends_on :python => :recommended
-  depends_on "cgal" => :optional
+  depends_on "cgal" => :recommended
 
   def install
     args = %W[
@@ -16,10 +15,10 @@ class Fastjet < Formula
       --disable-dependency-tracking
       --prefix=#{prefix}
       --enable-allcxxplugins
+      --enable-pyext
     ]
 
     args << "--with-cgal=#{Formula["cgal"].opt_prefix}" if build.with? "cgal"
-    args << "--enable-pyext" if build.with? "python"
 
     system "./configure", *args
     system "make"
@@ -33,6 +32,11 @@ class Fastjet < Formula
   end
 
   test do
-    system "#{prefix}/example/fastjet_example < #{prefix}/example/data/single-event.dat"
+    ln_s prefix/"example/data", testpath
+    ln_s prefix/"example/python", testpath
+    system "#{prefix}/example/fastjet_example < data/single-event.dat"
+    cd "python" do
+      system "python", "01-basic.py"
+    end
   end
 end
