@@ -51,5 +51,6 @@ class Yoda < Formula
 
   test do
     system bin/"yoda-config", "--version"
+    system "python", "-c", "import yoda; yoda.version()"
   end
 end
