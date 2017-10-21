@@ -44,6 +44,7 @@ script:
 
 after_success:
   - if [ "$TRAVIS_PULL_REQUEST" = "false" ] && [ "$TRAVIS_BRANCH" = "master" ]; then
+      brew update
       brew test-bot --ci-upload --git-name=davidchall --git-email=dhcrawley@gmail.com --bintray-org=davidchall;
     fi
 
