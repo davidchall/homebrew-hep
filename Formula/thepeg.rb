@@ -1,7 +1,7 @@
 class Thepeg < Formula
   desc "Toolkit for high energy physics event generation"
-  homepage "http://herwig.hepforge.org"
-  url "http://www.hepforge.org/archive/thepeg/ThePEG-2.1.1.tar.bz2"
+  homepage "https://herwig.hepforge.org"
+  url "https://www.hepforge.org/archive/thepeg/ThePEG-2.1.1.tar.bz2"
   sha256 "e1b0bdc116fbc9a6e598b601f2aa670530cf2e1cd46b4572814a9b0130b10281"
 
   head do
@@ -37,7 +37,7 @@ class Thepeg < Formula
   end
 
   test do
-    system "setupThePEG", "#{share}/ThePEG/MultiLEP.in"
-    system "runThePEG", "MultiLEP.run"
+    system "#{bin}/setupThePEG", "#{share}/ThePEG/MultiLEP.in"
+    system "#{bin}/runThePEG", "MultiLEP.run"
   end
 end
