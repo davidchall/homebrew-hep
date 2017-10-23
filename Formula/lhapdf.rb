@@ -31,6 +31,9 @@ class Lhapdf < Formula
       --prefix=#{prefix}
     ]
 
+    # cython causes ambiguous functions: https://stackoverflow.com/a/37201520/2669425
+    args << "--disable-python" if MacOS.version <= :yosemite
+
     system "autoreconf", "-i" if build.head?
     system "./configure", *args
     system "make"
