@@ -1,28 +1,27 @@
 class Madgraph5Amcatnlo < Formula
   desc "Automated LO and NLO processes matched to parton showers"
   homepage "https://launchpad.net/mg5amcnlo"
-  url "https://launchpad.net/mg5amcnlo/2.0/2.5.x/+download/MG5_aMC_v2.5.5.tar.gz"
-  sha256 "dbfd242376382b8037e22ec833e77fc39aa3a74133e8bc10a8d92973457834a9"
+  url "https://launchpad.net/mg5amcnlo/2.0/2.6.x/+download/MG5_aMC_v2.6.0.tar.gz"
+  sha256 "ba182a2d85733b3652afa87802adee60bf6a5270cc260cdb38366ada5e8afef4"
+
+  bottle :unneeded
 
   depends_on "fastjet"
   depends_on :fortran
-  depends_on :python
 
   def install
+    # fix broken dynamic links
+    MachO::Tools.change_install_name("vendor/DiscreteSampler/check",
+                                     "/opt/local/lib/libgcc/libgfortran.3.dylib",
+                                     "#{Formula["gcc"].lib}/gcc/#{Formula["gcc"].version_suffix}/libgfortran.dylib")
+    MachO::Tools.change_install_name("vendor/DiscreteSampler/check",
+                                     "/opt/local/lib/libgcc/libquadmath.0.dylib",
+                                     "#{Formula["gcc"].lib}/gcc/#{Formula["gcc"].version_suffix}/libquadmath.0.dylib")
+
     cp_r ".", prefix
 
     # Homebrew deletes empty directories, but aMC@NLO needs them
-    empty_dirs = %w[
-      Template/LO/Events
-      Template/NLO/Events
-      Template/NLO/MCatNLO/lib
-      Template/NLO/MCatNLO/objects
-      doc
-      models/usrmod_v4
-      vendor/StdHEP/bin
-      vendor/StdHEP/lib
-    ]
-    empty_dirs.each { |f| touch prefix/f/".empty" }
+    Dir["**/"].reverse_each { |d| touch prefix/d/".keepthisdir" if Dir.entries(d).sort==%w[. ..] }
   end
 
   def caveats; <<-EOS.undent
@@ -40,6 +39,6 @@ class Madgraph5Amcatnlo < Formula
   test do
     system "echo \'generate p p > t t~\' >> test.mg5"
     system "echo \'quit\' >> test.mg5"
-    system "mg5_aMC", "-f", "test.mg5"
+    system "#{bin}/mg5_aMC", "-f", "test.mg5"
   end
 end
