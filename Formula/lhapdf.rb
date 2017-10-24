@@ -9,7 +9,6 @@ class Lhapdf < Formula
     sha256 "9baab43625bb96efeceffa0e909a66f3385d44cbe0eec0cbf019cf7f15f6bbeb" => :high_sierra
     sha256 "550b93a493c3b30fcdb5f2b2326d53758fb8f5d0d76a645eecda6fb239170c05" => :sierra
     sha256 "c61871005b6f6207946de9ae3f5f710a9ec5e695f324b03ac26dc554a547d432" => :el_capitan
-    sha256 "7e3c9003ece3bf868496ac3514d5058b0352b16835c4ee124880cfc0e378a00d" => :yosemite
   end
 
   head do
@@ -33,9 +32,6 @@ class Lhapdf < Formula
       --prefix=#{prefix}
     ]
 
-    # cython causes ambiguous functions: https://stackoverflow.com/a/37201520/2669425
-    args << "--disable-python" if MacOS.version <= :yosemite
-
     system "autoreconf", "-i" if build.head?
     system "./configure", *args
     system "make"
@@ -55,6 +51,6 @@ class Lhapdf < Formula
 
   test do
     system "#{bin}/lhapdf", "help"
-    system "python", "-c", "import lhapdf; lhapdf.version()" if MacOS.version > :yosemite
+    system "python", "-c", "import lhapdf; lhapdf.version()"
   end
 end

@@ -6,7 +6,6 @@ class Thepeg < Formula
 
   bottle do
     root_url "https://dl.bintray.com/davidchall/bottles-hep"
-
     sha256 "a8382b62cc68ff5a5e4a6fe683a95c3060db2fd4a15d2513eb7bc08aded54434" => :high_sierra
     sha256 "9313f687c0d99b20bafde60cf4c76bd788b60fc133ecbf1dfa2c372a307653db" => :sierra
     sha256 "1b5ef62898959d5d6178b92a31802fb8dd783c699321e63bbb161792bc8e3fcc" => :el_capitan
