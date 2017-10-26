@@ -1,16 +1,16 @@
 class Openloops < Formula
   desc "Fully automated implementation of the Open Loops algorithm"
-  homepage "http://openloops.hepforge.org"
-  url "http://www.hepforge.org/archive/openloops/OpenLoops-1.3.1.tar.gz"
+  homepage "https://openloops.hepforge.org"
+  url "https://www.hepforge.org/archive/openloops/OpenLoops-1.3.1.tar.gz"
   sha256 "b7610ca62edfab55d0990e94e38048b62b4af0c6b01830b44f40795cd86cb665"
 
   depends_on :fortran
-  depends_on :python
-  env :std
+  depends_on "scons" => :build
+
   patch :DATA
 
   def install
-    system "./scons"
+    scons
     cp_r ".", prefix
     bin.install_symlink prefix/"openloops"
   end
@@ -25,7 +25,7 @@ class Openloops < Formula
   end
 
   test do
-    system "openloops", "help"
+    system bin/"openloops", "help"
   end
 end
 
