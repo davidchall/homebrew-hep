@@ -28,7 +28,11 @@ class Yoda < Formula
   depends_on "numpy" => :optional
   depends_on "homebrew/science/matplotlib" => :optional
 
+  needs :cxx11
+
   def install
+    ENV.cxx11
+
     args = %W[
       --disable-debug
       --disable-dependency-tracking
