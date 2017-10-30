@@ -4,6 +4,13 @@ class Sherpa < Formula
   url "https://www.hepforge.org/archive/sherpa/SHERPA-MC-2.2.4.tar.gz"
   sha256 "5dc8bccc9a242ead06ce1f8838988b7367641d8989466e0f9d6b7e74fa8e80e7"
 
+  bottle do
+    root_url "https://dl.bintray.com/davidchall/bottles-hep"
+    sha256 "af4c18f1d17a3772a95bd3fa29e49c66c7e1b88d21367f66e5b67be2766882c1" => :high_sierra
+    sha256 "82662b06a6714fb351ff0ab7345266b85058f325c6d9a13c6253be3a94615c2c" => :sierra
+    sha256 "9d38a5e2718fb45a092fbb8914135a81e43299cac979ef9ad559f6cc73e6af63" => :el_capitan
+  end
+
   patch :p2 do
     # resolve ambiguous abs calls
     url "https://gist.githubusercontent.com/davidchall/988f3a2859d7957539a84c79a07a0c2f/raw/3369f6052dcde40c63391fbb4c0e7dd7cc8b9d7d/ambiguous-abs.patch"

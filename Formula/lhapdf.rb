@@ -6,7 +6,7 @@ class Lhapdf < Formula
 
   bottle do
     root_url "https://dl.bintray.com/davidchall/bottles-hep"
-    sha256 "9baab43625bb96efeceffa0e909a66f3385d44cbe0eec0cbf019cf7f15f6bbeb" => :high_sierra
+    sha256 "c42504e9609b05383b06249023a0d3d1a55e80d8b3a7ab716e993142d78382c7" => :high_sierra
     sha256 "550b93a493c3b30fcdb5f2b2326d53758fb8f5d0d76a645eecda6fb239170c05" => :sierra
     sha256 "c61871005b6f6207946de9ae3f5f710a9ec5e695f324b03ac26dc554a547d432" => :el_capitan
   end
