@@ -25,6 +25,11 @@ class Herwig < Formula
   depends_on :fortran
   cxxstdlib_check :skip
 
+  def download_pdfs(dest, pdfs)
+    pdfs.each { |pdf| quiet_system "lhapdf", "--pdfdir=#{dest}", "install", pdf }
+    ENV["LHAPDF_DATA_PATH"] = dest
+  end
+
   def install
     args = %W[
       --disable-debug
@@ -40,11 +45,7 @@ class Herwig < Formula
     args << "--with-vbfnlo=#{Formula["vbfnlo"].opt_prefix}"               if build.with? "vbfnlo"
 
     # Herwig runs ThePEG during the make install and make check phases
-    pdf_path = buildpath/"pdf-sets"
-    pdf_path.mkdir
-    quiet_system "lhapdf", "--pdfdir=#{pdf_path}", "install", "MMHT2014lo68cl"
-    quiet_system "lhapdf", "--pdfdir=#{pdf_path}", "install", "MMHT2014nlo68cl"
-    ENV["LHAPDF_DATA_PATH"] = pdf_path
+    download_pdfs(buildpath/"pdf-sets", %w[MMHT2014lo68cl MMHT2014nlo68cl])
 
     system "autoreconf", "-i" if build.head?
     system "./configure", *args
@@ -54,6 +55,8 @@ class Herwig < Formula
   end
 
   test do
+    download_pdfs(testpath/"pdf-sets", %w[MMHT2014lo68cl])
+
     system "#{bin}/Herwig", "read", share/"Herwig/LHC.in"
     system "#{bin}/Herwig", "run", "LHC.run", "-N", "50"
     ohai "Successfully generated 50 LHC Drell-Yan events."
