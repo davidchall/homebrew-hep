@@ -55,7 +55,7 @@ class Herwig < Formula
   end
 
   test do
-    download_pdfs(testpath/"pdf-sets", %w[MMHT2014lo68cl])
+    download_pdfs(testpath/"pdf-sets", %w[MMHT2014lo68cl MMHT2014nlo68cl])
 
     system "#{bin}/Herwig", "read", share/"Herwig/LHC.in"
     system "#{bin}/Herwig", "run", "LHC.run", "-N", "50"
