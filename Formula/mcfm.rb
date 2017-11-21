@@ -1,10 +1,8 @@
 class Mcfm < Formula
   desc "Monte Carlo for FeMtobarn processes"
-  homepage "http://mcfm.fnal.gov"
-  url "http://mcfm.fnal.gov/MCFM-8.0.tar.gz"
+  homepage "https://mcfm.fnal.gov"
+  url "https://mcfm.fnal.gov/MCFM-8.0.tar.gz"
   sha256 "6533a51a93bf97c967bf3bd8d530934c8eb94c84978be1e1f9a9d71319c80cc3"
-
-  keg_only "MCFM must be run from its install directory"
 
   option "with-openmp", "Enable OpenMP multithreading"
   needs :openmp if build.with? "openmp"
@@ -30,12 +28,18 @@ class Mcfm < Formula
     end
 
     system "make"
-    cp_r "Bin", bin
+    bin.install "Bin/mcfm"
+    pkgshare.install Dir["Bin/*"]
+    doc.install "Doc/mcfm.pdf"
+  end
 
-    ln_s "#{Formula["lhapdf"].opt_share}/lhapdf/PDFsets", bin if build.with? "lhapdf"
+  def post_install
+    pkgshare.install_symlink "#{Formula["lhapdf"].opt_share}/lhapdf/PDFsets" if build.with? "lhapdf"
   end
 
   def caveats; <<-EOS.undent
+    Running MCFM requires files found in #{pkgshare}
+
     If using LHAPDF for PDF sets, the PDF data directory
     must be symlinked to bin/PDFsets for MCFM to run.
     The default LHAPDF data path is symlinked by default.
@@ -44,13 +48,13 @@ class Mcfm < Formula
   end
 
   test do
-    ["br.sm1", "br.sm2", "dm_parameters.DAT", "Pdfdata", "process.DAT"].each do |fname|
-      ln_s bin/fname, "."
+    Dir[pkgshare/"*"].each do |fname|
+      ln_s fname, "."
     end
-    cp bin/"input.DAT", "test.DAT"
+    cp pkgshare/"input.DAT", "test.DAT"
     inreplace "test.DAT", "-1", "0"
     system bin/"mcfm", "test.DAT"
-    assert File.exist?("W_only_nlo_CT14.NN_80___80___13TeV.top")
+    assert_predicate testpath/"W_only_nlo_CT14.NN_80___80___13TeV.top", :exist?
     ohai "Successfully calculated W production at LO"
     ohai "Use 'brew test -v mcfm' to view ouput"
   end

@@ -1,10 +1,10 @@
 class Vincia < Formula
   desc "Dipole-antenna shower plugin for Pythia8"
-  homepage "http://vincia.hepforge.org"
-  url "http://www.hepforge.org/archive/vincia/vincia-2.0.01.tgz"
-  sha256 "fac9be611fa2e6812a9c89e8a9a04b1d8f25ef458dd3598ef45ba5535338fa02"
+  homepage "https://vincia.hepforge.org"
+  url "https://www.hepforge.org/archive/vincia/vincia-2.2.01.tgz"
+  sha256 "ca98d1bb5f73192e01d1e054f3ba9c385df49a1256dc4c932bf40434b6d56d69"
 
-  depends_on "pythia8"
+  depends_on "pythia"
   depends_on "wget" => :build
   depends_on :fortran
 
@@ -12,7 +12,7 @@ class Vincia < Formula
     args = %W[
       --prefix=#{prefix}
       --enable-shared
-      --with-pythia8=#{Formula["pythia8"].opt_prefix}
+      --with-pythia8=#{Formula["pythia"].opt_prefix}
     ]
 
     system "./configure", *args
@@ -22,7 +22,7 @@ class Vincia < Formula
   end
 
   test do
-    ENV["PYTHIA8DATA"] = Formula["pythia8"].share/"Pythia8/xmldoc"
+    ENV["PYTHIA8DATA"] = Formula["pythia"].share/"Pythia8/xmldoc"
     ENV["VINCIADATA"] = share/"Vincia/xmldoc"
 
     cp_r share/"Vincia/examples/.", testpath
