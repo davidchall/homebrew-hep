@@ -1,8 +1,27 @@
+class SherpaSubversionDownloadStrategy < SubversionDownloadStrategy
+  # SubversionDownloadStrategy uses `svn export` for staging, but sherpa needs
+  # a svn-controlled directory, so use `cp` here instead
+  def stage
+    safe_system "cp", "-rf", cached_location, Dir.pwd
+    entries = Dir["*"]
+    case entries.length
+    when 0 then raise "No checkout directory"
+    when 1 then begin
+        Dir.chdir entries.first
+      rescue
+        nil
+      end
+    end
+  end
+end
+
 class Sherpa < Formula
   desc "Monte Carlo event generator"
   homepage "https://sherpa.hepforge.org"
   url "https://www.hepforge.org/archive/sherpa/SHERPA-MC-2.2.4.tar.gz"
   sha256 "5dc8bccc9a242ead06ce1f8838988b7367641d8989466e0f9d6b7e74fa8e80e7"
+
+  head "http://sherpa.hepforge.org/svn/branches/rel-2-2-4", :using => SherpaSubversionDownloadStrategy
 
   bottle do
     root_url "https://dl.bintray.com/davidchall/bottles-hep"
@@ -11,16 +30,25 @@ class Sherpa < Formula
     sha256 "9d38a5e2718fb45a092fbb8914135a81e43299cac979ef9ad559f6cc73e6af63" => :el_capitan
   end
 
-  patch :p2 do
-    # resolve ambiguous abs calls
-    url "https://gist.githubusercontent.com/davidchall/988f3a2859d7957539a84c79a07a0c2f/raw/3369f6052dcde40c63391fbb4c0e7dd7cc8b9d7d/ambiguous-abs.patch"
-    sha256 "a66699c49e0bd17af0cdfb37ef271f06ba7c068a74e69c5820abc218ae7f3f72"
+  if not build.head?
+    patch :p2 do
+      # resolve ambiguous abs calls in 2.2.4 release
+      url "https://gist.githubusercontent.com/davidchall/988f3a2859d7957539a84c79a07a0c2f/raw/3369f6052dcde40c63391fbb4c0e7dd7cc8b9d7d/ambiguous-abs.patch"
+      sha256 "a66699c49e0bd17af0cdfb37ef271f06ba7c068a74e69c5820abc218ae7f3f72"
+    end
+  end
+
+  if build.head
+    depends_on "autoconf" => :build
+    depends_on "automake" => :build
+    depends_on "libtool" => :build
   end
 
   # Requires changes to MCFM code, so cannot use MCFM formula
   option "with-mcfm", "Enable use of MCFM loops"
   depends_on "gnu-sed" => :build if build.with? "mcfm"
 
+  depends_on "sqlite"    # workaround for missing system sqlite headers
   depends_on "hepmc"     => :recommended
   depends_on "rivet"     => :recommended
   depends_on "lhapdf"    => :recommended
@@ -50,6 +78,7 @@ class Sherpa < Formula
       ENV["FC"] = ENV["MPIFC"]
     end
 
+    args << "--with-sqlite3=#{Formula["sqlite"].opt_prefix}"
     args << "--enable-hepmc2=#{Formula["hepmc"].opt_prefix}"        if build.with? "hepmc"
     args << "--enable-lhapdf=#{Formula["lhapdf"].opt_prefix}"       if build.with? "lhapdf"
     args << "--enable-fastjet=#{Formula["fastjet"].opt_prefix}"     if build.with? "fastjet"
@@ -74,6 +103,9 @@ class Sherpa < Formula
       end
     end
 
+    if build.head?
+      system "autoreconf -i"
+    end
     system "./configure", *args
     system "make", "install"
 
