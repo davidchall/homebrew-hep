@@ -30,7 +30,7 @@ class Sherpa < Formula
     sha256 "9d38a5e2718fb45a092fbb8914135a81e43299cac979ef9ad559f6cc73e6af63" => :el_capitan
   end
 
-  if not build.head?
+  unless build.head?
     patch :p2 do
       # resolve ambiguous abs calls in 2.2.4 release
       url "https://gist.githubusercontent.com/davidchall/988f3a2859d7957539a84c79a07a0c2f/raw/3369f6052dcde40c63391fbb4c0e7dd7cc8b9d7d/ambiguous-abs.patch"
@@ -38,7 +38,7 @@ class Sherpa < Formula
     end
   end
 
-  if build.head
+  if build.head?
     depends_on "autoconf" => :build
     depends_on "automake" => :build
     depends_on "libtool" => :build
@@ -48,7 +48,9 @@ class Sherpa < Formula
   option "with-mcfm", "Enable use of MCFM loops"
   depends_on "gnu-sed" => :build if build.with? "mcfm"
 
-  depends_on "sqlite"    # workaround for missing system sqlite headers
+  # workaround for missing system sqlite headers
+  depends_on "sqlite"
+
   depends_on "hepmc"     => :recommended
   depends_on "rivet"     => :recommended
   depends_on "lhapdf"    => :recommended
@@ -103,9 +105,7 @@ class Sherpa < Formula
       end
     end
 
-    if build.head?
-      system "autoreconf -i"
-    end
+    system "autoreconf", "-i" if build.head?
     system "./configure", *args
     system "make", "install"
 
