@@ -12,7 +12,7 @@ class Openloops < Formula
     sha256 "2ff311f8bd08e6f6377e73f7848bc4baffe45cce3b56907bf3aa20efbcbe6431" => :el_capitan
   end
 
-  depends_on :fortran
+  depends_on "gcc" # for gfortran
   depends_on "scons" => :build
 
   patch :DATA

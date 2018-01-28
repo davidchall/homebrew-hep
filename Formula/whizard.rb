@@ -4,7 +4,7 @@ class Whizard < Formula
   url "https://www.hepforge.org/archive/whizard/whizard-2.6.0.tar.gz"
   sha256 "e3fd7abdcfe4349bc84be36302c831e1262aecad9654a6e6e7b0f0436248814b"
 
-  depends_on :fortran
+  depends_on "gcc" # for gfortran
   depends_on "ocaml"
   depends_on "fastjet" => :optional
   depends_on "hoppet" => :optional

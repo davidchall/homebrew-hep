@@ -8,7 +8,7 @@ class Vbfnlo < Formula
   option "with-kk", "Enable Kaluza-Klein resonances"
   option "with-spin2", "Enable spin-2 resonances"
 
-  depends_on :fortran
+  depends_on "gcc" # for gfortran
   depends_on "hepmc" => :recommended
   depends_on "lhapdf" => :recommended
   depends_on "homebrew/science/root6" => :optional

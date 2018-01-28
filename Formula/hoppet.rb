@@ -6,7 +6,7 @@ class Hoppet < Formula
 
   option "with-test", "Test during installation"
 
-  depends_on :fortran
+  depends_on "gcc" # for gfortran
 
   def install
     system "./configure", "--prefix=#{prefix}"

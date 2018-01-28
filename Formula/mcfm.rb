@@ -8,7 +8,7 @@ class Mcfm < Formula
   needs :openmp if build.with? "openmp"
 
   depends_on "lhapdf" => :optional
-  depends_on :fortran
+  depends_on "gcc" # for gfortran
 
   def install
     if build.with? "openmp"

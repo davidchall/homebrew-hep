@@ -5,7 +5,7 @@ class Applgrid < Formula
   sha256 "37e191e0e8598b7ee486007733b99d39da081dd3411339da2468cb3d66e689fb"
   patch :DATA
 
-  depends_on :fortran
+  depends_on "gcc" # for gfortran
   cxxstdlib_check :skip
 
   depends_on "homebrew/science/root"

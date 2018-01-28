@@ -6,7 +6,7 @@ class Vincia < Formula
 
   depends_on "pythia"
   depends_on "wget" => :build
-  depends_on :fortran
+  depends_on "gcc" # for gfortran
 
   def install
     args = %W[

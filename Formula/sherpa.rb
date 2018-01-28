@@ -17,6 +17,8 @@ class Sherpa < Formula
     sha256 "a66699c49e0bd17af0cdfb37ef271f06ba7c068a74e69c5820abc218ae7f3f72"
   end
 
+  option "with-mpi", "Enable MPI support"
+
   # Requires changes to MCFM code, so cannot use MCFM formula
   option "with-mcfm", "Enable use of MCFM loops"
   depends_on "gnu-sed" => :build if build.with? "mcfm"
@@ -27,8 +29,8 @@ class Sherpa < Formula
   depends_on "fastjet"   => :recommended
   depends_on "openloops" => :recommended
   depends_on "root"      => :optional
-  depends_on :mpi        => [:cc, :cxx, :f90, :optional]
-  depends_on :fortran
+  depends_on "open-mpi" if build.with? "mpi"
+  depends_on "gcc" # for gfortran
 
   needs :cxx11 if build.with?("rivet") || build.with?("lhapdf")
 

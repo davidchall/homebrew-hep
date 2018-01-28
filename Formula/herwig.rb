@@ -22,7 +22,7 @@ class Herwig < Formula
   depends_on "madgraph5_amcatnlo" => :optional
   depends_on "openloops" => :optional
   depends_on "vbfnlo" => :optional
-  depends_on :fortran
+  depends_on "gcc" # for gfortran
   cxxstdlib_check :skip
 
   def download_pdfs(dest, pdfs)
