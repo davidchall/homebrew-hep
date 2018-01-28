@@ -1,8 +1,8 @@
 class Rivet < Formula
   desc "Monte Carlo analysis system"
   homepage "https://rivet.hepforge.org"
-  url "https://www.hepforge.org/archive/rivet/Rivet-2.5.4.tar.gz"
-  sha256 "2676937cecfda295c1e8597a10f0c2122b8fbb9a1473ef2906cb19a3ddefd8a1"
+  url "https://www.hepforge.org/archive/rivet/Rivet-2.6.0.tar.gz"
+  sha256 "19fafbeb1238596eaffd73cc6e30baef64ee0c612f40ad224d79c81cc568d9f6"
 
   bottle do
     root_url "https://dl.bintray.com/davidchall/bottles-hep"
