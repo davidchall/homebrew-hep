@@ -1,8 +1,8 @@
 class Yoda < Formula
   desc "Yet more Objects for Data Analysis"
   homepage "https://yoda.hepforge.org"
-  url "https://www.hepforge.org/archive/yoda/YODA-1.6.7.tar.gz"
-  sha256 "9fbdb8e9b2951ee6b984b2d5350b0a5a9c93c6f4a70c51dd77daa87336753cf6"
+  url "https://www.hepforge.org/archive/yoda/YODA-1.7.0.tar.gz"
+  sha256 "182e8848986b08764c15a9ef1bd29e4f6e84375e97be8dc948cda5ab9d34b85f"
 
   bottle do
     root_url "https://dl.bintray.com/davidchall/bottles-hep"
