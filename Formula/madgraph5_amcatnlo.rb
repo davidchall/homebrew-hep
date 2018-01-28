@@ -1,8 +1,8 @@
 class Madgraph5Amcatnlo < Formula
   desc "Automated LO and NLO processes matched to parton showers"
   homepage "https://launchpad.net/mg5amcnlo"
-  url "https://launchpad.net/mg5amcnlo/2.0/2.6.x/+download/MG5_aMC_v2.6.0.tar.gz"
-  sha256 "ba182a2d85733b3652afa87802adee60bf6a5270cc260cdb38366ada5e8afef4"
+  url "https://launchpad.net/mg5amcnlo/2.0/2.6.x/+download/MG5_aMC_v2.6.1.tar.gz"
+  sha256 "cd3eda2bc00599faeabf1efec69297d4d753bdd82b42a5aef570638f39511975"
 
   bottle :unneeded
 
@@ -24,7 +24,7 @@ class Madgraph5Amcatnlo < Formula
     Dir["**/"].reverse_each { |d| touch prefix/d/".keepthisdir" if Dir.entries(d).sort==%w[. ..] }
   end
 
-  def caveats; <<-EOS.undent
+  def caveats; <<~EOS
     To shower aMC@NLO events with herwig++ or pythia8, first install
     them via homebrew and then enter in the mg5_aMC interpreter:
 
