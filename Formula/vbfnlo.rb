@@ -1,9 +1,9 @@
 class Vbfnlo < Formula
   desc "Parton-level Monte Carlo for processes with electroweak bosons"
   homepage "https://www.itp.kit.edu/vbfnlo"
-  url "https://www.itp.kit.edu/vbfnlo/wiki/lib/exe/fetch.php?media=download:vbfnlo-3.0.0beta3.tgz"
-  version "3.0.0beta3"
-  sha256 "bd1fb2e59fc0095bd339fc7a9d2070a078c6ee16f7b74ae5035763eea153cb58"
+  url "https://www.itp.kit.edu/vbfnlo/wiki/lib/exe/fetch.php?media=download:vbfnlo-3.0.0beta4.tgz"
+  version "3.0.0beta4"
+  sha256 "b5bd0bda101c52f2d526570e6f52347a71905eca29f370d31c99493fe33cdbab"
 
   option "with-kk", "Enable Kaluza-Klein resonances"
   option "with-spin2", "Enable spin-2 resonances"
