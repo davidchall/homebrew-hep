@@ -1,8 +1,8 @@
 class Mcfm < Formula
   desc "Monte Carlo for FeMtobarn processes"
   homepage "https://mcfm.fnal.gov"
-  url "https://mcfm.fnal.gov/MCFM-8.0.tar.gz"
-  sha256 "6533a51a93bf97c967bf3bd8d530934c8eb94c84978be1e1f9a9d71319c80cc3"
+  url "https://mcfm.fnal.gov/MCFM-8.1.tar.gz"
+  sha256 "45b8f05813b6da2dd57811650654ee7dfac3e5197347291cc7bedb31d3ce3d87"
 
   option "with-openmp", "Enable OpenMP multithreading"
   needs :openmp if build.with? "openmp"
@@ -37,7 +37,7 @@ class Mcfm < Formula
     pkgshare.install_symlink "#{Formula["lhapdf"].opt_share}/lhapdf/PDFsets" if build.with? "lhapdf"
   end
 
-  def caveats; <<-EOS.undent
+  def caveats; <<~EOS
     Running MCFM requires files found in #{pkgshare}
 
     If using LHAPDF for PDF sets, the PDF data directory
