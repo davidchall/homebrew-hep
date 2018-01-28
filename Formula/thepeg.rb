@@ -1,8 +1,8 @@
-class Thepeg < Formula
+lass Thepeg < Formula
   desc "Toolkit for high energy physics event generation"
   homepage "https://herwig.hepforge.org"
-  url "https://www.hepforge.org/archive/thepeg/ThePEG-2.1.1.tar.bz2"
-  sha256 "e1b0bdc116fbc9a6e598b601f2aa670530cf2e1cd46b4572814a9b0130b10281"
+  url "https://www.hepforge.org/archive/thepeg/ThePEG-2.1.2.tar.bz2"
+  sha256 "6a0f675a27e10863d495de069f25b892e532beb32e9cbfe5a58317d015387f49"
 
   bottle do
     root_url "https://dl.bintray.com/davidchall/bottles-hep"
