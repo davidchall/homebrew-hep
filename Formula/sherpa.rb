@@ -83,7 +83,7 @@ class Sherpa < Formula
   end
 
   test do
-    (testpath/"Run.dat").write <<-EOS.undent
+    (testpath/"Run.dat").write <<~EOS
       (beam){
         BEAM_1 = 2212; BEAM_ENERGY_1 = 7000
         BEAM_2 = 2212; BEAM_ENERGY_2 = 7000
