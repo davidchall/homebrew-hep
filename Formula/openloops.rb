@@ -23,7 +23,7 @@ class Openloops < Formula
     bin.install_symlink prefix/"openloops"
   end
 
-  def caveats; <<-EOS.undent
+  def caveats; <<~EOS
     OpenLoops downloads and installs process libraries in its
     own installation path: #{prefix}
 
