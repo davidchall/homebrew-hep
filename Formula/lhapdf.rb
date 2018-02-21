@@ -13,18 +13,21 @@ class Lhapdf < Formula
 
   head do
     url "http://lhapdf.hepforge.org/hg/lhapdf", :using => :hg
-
-    depends_on "autoconf" => :build
-    depends_on "automake" => :build
-    depends_on "libtool" => :build
-    depends_on "cython" => :build
   end
+
+  depends_on "autoconf" => :build
+  depends_on "automake" => :build
+  depends_on "libtool" => :build
+  depends_on "cython" =>  :build
+  depends_on "python3" => :optional
 
   needs :cxx11
 
   def install
     ENV.cxx11
     inreplace "wrappers/python/setup.py.in", "stdc++", "c++" if ENV.compiler == :clang
+    inreplace "bin/lhapdf.in", "/usr/bin/env python", "/usr/bin/env python3" if build.with?("python3") 
+    inreplace "configure.ac", "AC_PATH_PROG(PYTHON, python)", "AC_PATH_PROG(PYTHON, python3)" if build.with?("python3") 
 
     args = %W[
       --disable-debug
@@ -32,13 +35,13 @@ class Lhapdf < Formula
       --prefix=#{prefix}
     ]
 
-    system "autoreconf", "-i" if build.head?
+    system "autoreconf", "-i" if build.head? or build.with?("python3")
     system "./configure", *args
     system "make"
     system "make", "install"
   end
 
-  def caveats; <<-EOS.undent
+  def caveats; <<~EOS
     PDFs may be downloaded and installed with
 
       lhapdf install CT10nlo
@@ -51,6 +54,10 @@ class Lhapdf < Formula
 
   test do
     system "#{bin}/lhapdf", "help"
-    system "python", "-c", "import lhapdf; lhapdf.version()"
+    if build.with?("python3")
+        system "python3", "-c", "import lhapdf; lhapdf.version()"
+    else
+        system "python", "-c", "import lhapdf; lhapdf.version()"
+    end
   end
 end
