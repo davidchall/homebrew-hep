@@ -26,8 +26,8 @@ class Lhapdf < Formula
   def install
     ENV.cxx11
     inreplace "wrappers/python/setup.py.in", "stdc++", "c++" if ENV.compiler == :clang
-    inreplace "bin/lhapdf.in", "/usr/bin/env python", "/usr/bin/env python3" if build.with?("python3") 
-    inreplace "configure.ac", "AC_PATH_PROG(PYTHON, python)", "AC_PATH_PROG(PYTHON, python3)" if build.with?("python3") 
+    inreplace "bin/lhapdf.in", "/usr/bin/env python", "/usr/bin/env python3" if build.with?("python3")
+    inreplace "configure.ac", "AC_PATH_PROG(PYTHON, python)", "AC_PATH_PROG(PYTHON, python3)" if build.with?("python3")
 
     args = %W[
       --disable-debug
@@ -35,7 +35,7 @@ class Lhapdf < Formula
       --prefix=#{prefix}
     ]
 
-    system "autoreconf", "-i" if build.head? or build.with?("python3")
+    system "autoreconf", "-i" if build.head? || build.with?("python3")
     system "./configure", *args
     system "make"
     system "make", "install"
@@ -55,9 +55,9 @@ class Lhapdf < Formula
   test do
     system "#{bin}/lhapdf", "help"
     if build.with?("python3")
-        system "python3", "-c", "import lhapdf; lhapdf.version()"
+      system "python3", "-c", "import lhapdf; lhapdf.version()"
     else
-        system "python", "-c", "import lhapdf; lhapdf.version()"
+      system "python", "-c", "import lhapdf; lhapdf.version()"
     end
   end
 end
