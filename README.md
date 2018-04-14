@@ -20,7 +20,7 @@ Remember to regularly `brew update`! More [detailed installation instructions](#
 ## Available packages ##
 All packages are tested on OS X 10.9 (Mavericks) on [Travis CI](https://travis-ci.org/) virtual machines. The build status of each package can be viewed [here](https://travis-ci.org/davidchall/homebrew-hep) - just click on an individual job to see a build log for that package.
 
-Thanks to [**braumeister.org**](http://braumeister.org/repos/davidchall/homebrew-hep/browse/a), package metadata can now be browsed visually! Here is a quick list though:
+The available packages are:
 
 * `applgrid`
 * `fastjet`
