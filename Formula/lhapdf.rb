@@ -38,7 +38,7 @@ class Lhapdf < Formula
     system "make", "install"
   end
 
-  def caveats; <<-EOS.undent
+  def caveats; <<~EOS
     PDFs may be downloaded and installed with
 
       lhapdf install CT10nlo
