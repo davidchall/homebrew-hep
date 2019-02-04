@@ -21,12 +21,12 @@ class Thepeg < Formula
 
   option "with-test", "Test during installation"
 
-  depends_on "gsl"
   depends_on "boost"
-  depends_on "hepmc"   => :recommended
-  depends_on "rivet"   => :recommended
-  depends_on "lhapdf"  => :recommended
+  depends_on "gsl"
   depends_on "fastjet" => :recommended
+  depends_on "hepmc"   => :recommended
+  depends_on "lhapdf"  => :recommended
+  depends_on "rivet"   => :recommended
 
   def install
     args = %W[
