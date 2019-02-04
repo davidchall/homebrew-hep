@@ -3,14 +3,14 @@ class Applgrid < Formula
   homepage "http://applgrid.hepforge.org"
   url "http://www.hepforge.org/archive/applgrid/applgrid-1.4.70.tgz"
   sha256 "37e191e0e8598b7ee486007733b99d39da081dd3411339da2468cb3d66e689fb"
-  patch :DATA
 
   depends_on "gcc" # for gfortran
-  cxxstdlib_check :skip
-
-  depends_on "homebrew/science/root"
+  depends_on "root"
   depends_on "hoppet" => :recommended
   depends_on "lhapdf" => :optional
+
+  cxxstdlib_check :skip
+  patch :DATA
 
   def install
     ENV.j1
