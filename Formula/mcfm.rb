@@ -36,7 +36,7 @@ class Mcfm < Formula
     pkgshare.install_symlink "#{Formula["lhapdf"].opt_share}/lhapdf/PDFsets" if build.with? "lhapdf"
   end
 
-  def caveats; <<-EOS.undent
+  def caveats; <<~EOS
     Running MCFM requires files found in #{pkgshare}
 
     If using LHAPDF for PDF sets, the PDF data directory

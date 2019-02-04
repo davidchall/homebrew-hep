@@ -24,7 +24,7 @@ class Madgraph5Amcatnlo < Formula
     Dir["**/"].reverse_each { |d| touch prefix/d/".keepthisdir" if Dir.entries(d).sort==%w[. ..] }
   end
 
-  def caveats; <<-EOS.undent
+  def caveats; <<~EOS
     To shower aMC@NLO events with herwig++ or pythia8, first install
     them via homebrew and then enter in the mg5_aMC interpreter:
 
