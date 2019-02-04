@@ -5,10 +5,9 @@ class Mcfm < Formula
   sha256 "6533a51a93bf97c967bf3bd8d530934c8eb94c84978be1e1f9a9d71319c80cc3"
 
   option "with-openmp", "Enable OpenMP multithreading"
-  needs :openmp if build.with? "openmp"
 
-  depends_on "lhapdf" => :optional
   depends_on "gcc" # for gfortran
+  depends_on "lhapdf" => :optional
 
   def install
     if build.with? "openmp"
