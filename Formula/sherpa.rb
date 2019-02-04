@@ -32,8 +32,6 @@ class Sherpa < Formula
   depends_on "open-mpi" if build.with? "mpi"
   depends_on "gcc" # for gfortran
 
-  needs :cxx11 if build.with?("rivet") || build.with?("lhapdf")
-
   def install
     ENV.cxx11 if build.with?("rivet") || build.with?("lhapdf")
 

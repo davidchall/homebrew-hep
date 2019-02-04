@@ -30,8 +30,6 @@ class Rivet < Formula
   depends_on "gsl"
   depends_on "yoda"
 
-  needs :cxx11
-
   def install
     ENV.cxx11
 
