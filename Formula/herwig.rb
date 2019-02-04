@@ -15,14 +15,15 @@ class Herwig < Formula
 
   option "with-test", "Test during installation"
 
-  depends_on "thepeg"
-  depends_on "hepmc"
   depends_on "boost"
+  depends_on "gcc" # for gfortran
   depends_on "gsl"
+  depends_on "hepmc"
+  depends_on "thepeg"
   depends_on "madgraph5_amcatnlo" => :optional
   depends_on "openloops" => :optional
   depends_on "vbfnlo" => :optional
-  depends_on "gcc" # for gfortran
+
   cxxstdlib_check :skip
 
   def download_pdfs(dest, pdfs)
