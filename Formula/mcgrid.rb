@@ -38,7 +38,7 @@ class Mcgrid < Formula
     prefix.install resource("manual")
   end
 
-  def caveats; <<-EOS.undent
+  def caveats; <<~EOS
     You can disable one of the applgrid and fastnlo dependencies.
     However, the build will fail if you disable both.
 

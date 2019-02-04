@@ -55,7 +55,7 @@ class Rivet < Formula
     bash_completion.install share/"Rivet/rivet-completion"
   end
 
-  def caveats; <<-EOS.undent
+  def caveats; <<~EOS
     It may now be necessary to rebuild your Rivet analyses.
     In case of problems, check your RIVET_ANALYSIS_PATH for old analyses.
 

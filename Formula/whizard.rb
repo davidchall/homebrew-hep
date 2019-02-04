@@ -29,7 +29,7 @@ class Whizard < Formula
   end
 
   test do
-    (testpath/"ee.sin").write <<-EOS.undent
+    (testpath/"ee.sin").write <<~EOS
     process ee = e1, E1 => e2, E2
     sqrts = 360 GeV
     n_events = 10
