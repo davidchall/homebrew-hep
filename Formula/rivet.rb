@@ -17,17 +17,17 @@ class Rivet < Formula
 
     depends_on "autoconf" => :build
     depends_on "automake" => :build
-    depends_on "libtool" => :build
     depends_on "cython" => :build
+    depends_on "libtool" => :build
   end
 
   option "with-test", "Test during installation"
   option "without-analyses", "Do not build Rivet analyses"
   option "with-unvalidated", "Build and install unvalidated analyses"
 
-  depends_on "hepmc"
   depends_on "fastjet"
   depends_on "gsl"
+  depends_on "hepmc"
   depends_on "yoda"
 
   def install
