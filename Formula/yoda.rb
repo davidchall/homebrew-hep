@@ -18,15 +18,15 @@ class Yoda < Formula
 
     depends_on "autoconf" => :build
     depends_on "automake" => :build
-    depends_on "libtool" => :build
     depends_on "cython" => :build
+    depends_on "libtool" => :build
   end
 
   option "with-test", "Test during installation"
 
-  depends_on "root" => :optional
-  depends_on "numpy" => :optional
   depends_on "homebrew/science/matplotlib" => :optional
+  depends_on "numpy" => :optional
+  depends_on "root" => :optional
 
   def install
     ENV.cxx11
