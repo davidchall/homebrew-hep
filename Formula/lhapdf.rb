@@ -20,8 +20,6 @@ class Lhapdf < Formula
     depends_on "cython" => :build
   end
 
-  needs :cxx11
-
   def install
     ENV.cxx11
     inreplace "wrappers/python/setup.py.in", "stdc++", "c++" if ENV.compiler == :clang
