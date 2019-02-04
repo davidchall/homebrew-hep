@@ -1,8 +1,8 @@
 class Fastjet < Formula
   desc "Package for jet finding in pp and ee collisions"
   homepage "http://fastjet.fr"
-  url "http://fastjet.fr/repo/fastjet-3.3.0.tar.gz"
-  sha256 "e9da5b9840cbbec6d05c9223f73c97af1d955c166826638e0255706a6b2da70f"
+  url "http://fastjet.fr/repo/fastjet-3.3.2.tar.gz"
+  sha256 "3f59af13bfc54182c6bb0b0a6a8541b409c6fda5d105f17e03c4cce8db9963c2"
 
   bottle do
     root_url "https://dl.bintray.com/davidchall/bottles-hep"
