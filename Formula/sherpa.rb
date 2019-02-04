@@ -11,26 +11,26 @@ class Sherpa < Formula
     sha256 "9d38a5e2718fb45a092fbb8914135a81e43299cac979ef9ad559f6cc73e6af63" => :el_capitan
   end
 
-  patch :p2 do
-    # resolve ambiguous abs calls
-    url "https://gist.githubusercontent.com/davidchall/988f3a2859d7957539a84c79a07a0c2f/raw/3369f6052dcde40c63391fbb4c0e7dd7cc8b9d7d/ambiguous-abs.patch"
-    sha256 "a66699c49e0bd17af0cdfb37ef271f06ba7c068a74e69c5820abc218ae7f3f72"
-  end
-
   option "with-mpi", "Enable MPI support"
 
   # Requires changes to MCFM code, so cannot use MCFM formula
   option "with-mcfm", "Enable use of MCFM loops"
   depends_on "gnu-sed" => :build if build.with? "mcfm"
 
-  depends_on "hepmc"     => :recommended
-  depends_on "rivet"     => :recommended
-  depends_on "lhapdf"    => :recommended
-  depends_on "fastjet"   => :recommended
-  depends_on "openloops" => :recommended
-  depends_on "root"      => :optional
-  depends_on "open-mpi" if build.with? "mpi"
   depends_on "gcc" # for gfortran
+  depends_on "open-mpi" if build.with? "mpi"
+  depends_on "fastjet"   => :recommended
+  depends_on "hepmc"     => :recommended
+  depends_on "lhapdf"    => :recommended
+  depends_on "openloops" => :recommended
+  depends_on "rivet"     => :recommended
+  depends_on "root"      => :optional
+
+  patch :p2 do
+    # resolve ambiguous abs calls
+    url "https://gist.githubusercontent.com/davidchall/988f3a2859d7957539a84c79a07a0c2f/raw/3369f6052dcde40c63391fbb4c0e7dd7cc8b9d7d/ambiguous-abs.patch"
+    sha256 "a66699c49e0bd17af0cdfb37ef271f06ba7c068a74e69c5820abc218ae7f3f72"
+  end
 
   def install
     ENV.cxx11 if build.with?("rivet") || build.with?("lhapdf")
