@@ -24,7 +24,6 @@ class Yoda < Formula
 
   option "with-test", "Test during installation"
 
-  depends_on "homebrew/science/matplotlib" => :optional
   depends_on "numpy" => :optional
   depends_on "root" => :optional
 
