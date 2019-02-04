@@ -4,10 +4,10 @@ class Mcgrid < Formula
   url "http://www.hepforge.org/archive/mcgrid/mcgrid-2.0.2.tar.gz"
   sha256 "deed9f6027b075a4d0e2128adb2c13b16ca5736c43426d9a85ac2dfc4f1788d7"
 
+  depends_on "pkg-config" => :build
   depends_on "rivet"
   depends_on "applgrid" => :recommended
   depends_on "fastnlo" => :recommended
-  depends_on "pkg-config" => :build
 
   resource "examples-rivet220" do
     url "http://www.hepforge.org/archive/mcgrid/MCgrid2Examples-2.2.0.tar.gz"
