@@ -1,7 +1,7 @@
 class Nlojetxx < Formula
   desc "LO and NLO cross sections"
-  homepage "http://www.desy.de/~znagy/Site/NLOJet++.html"
-  url "http://desy.de/~znagy/hep-programs/nlojet++/nlojet++-4.1.3.tar.gz"
+  homepage "https://www.desy.de/~znagy/Site/NLOJet++.html"
+  url "https://desy.de/~znagy/hep-programs/nlojet++/nlojet++-4.1.3.tar.gz"
   sha256 "176d081bbc8c167cdd4516959cbcb2b9ba8f5515f503d29380deee2f67b10ea3"
 
   patch :p1 do

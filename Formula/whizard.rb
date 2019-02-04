@@ -30,11 +30,11 @@ class Whizard < Formula
 
   test do
     (testpath/"ee.sin").write <<~EOS
-    process ee = e1, E1 => e2, E2
-    sqrts = 360 GeV
-    n_events = 10
-    sample_format = lhef
-    simulate (ee)
+      process ee = e1, E1 => e2, E2
+      sqrts = 360 GeV
+      n_events = 10
+      sample_format = lhef
+      simulate (ee)
     EOS
 
     system "#{bin}/whizard", "-r", testpath, "ee.sin"

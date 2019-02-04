@@ -43,7 +43,7 @@ class Mcfm < Formula
     must be symlinked to bin/PDFsets for MCFM to run.
     The default LHAPDF data path is symlinked by default.
 
-    EOS
+  EOS
   end
 
   test do

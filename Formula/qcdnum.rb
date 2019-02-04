@@ -8,7 +8,7 @@ class Qcdnum < Formula
   depends_on "gcc" # for gfortran
 
   def install
-    libraries = %W[
+    libraries = %w[
       mbutil
       qcdnum
       zmstf
@@ -27,7 +27,19 @@ class Qcdnum < Formula
   end
 
   test do
-    system "gfortran", "-Wall", "-O", "-fbounds-check", "#{prefix}/testjobs/example.f", "-o", "example.exe", "#{lib}/libhqstf.a", "#{lib}/libzmstf.a", "#{lib}/libqcdnum.a", "#{lib}/libmbutil.a"
+    args = %W[
+      -Wall
+      -O
+      -fbounds-check
+      "#{prefix}/testjobs/example.f"
+      -o
+      example.exe
+      "#{lib}/libhqstf.a"
+      "#{lib}/libzmstf.a"
+      "#{lib}/libqcdnum.a"
+      "#{lib}/libmbutil.a"
+    ]
+    system "gfortran", *args
     system "./example.exe"
 
     ohai "Test program worked fine. Use 'brew test -v qcdnum' to watch it work"

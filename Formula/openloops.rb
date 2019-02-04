@@ -29,7 +29,7 @@ class Openloops < Formula
 
     These process libraries are lost if OpenLoops is uninstalled.
 
-    EOS
+  EOS
   end
 
   test do
