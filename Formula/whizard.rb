@@ -7,8 +7,8 @@ class Whizard < Formula
   depends_on "gcc" # for gfortran
   depends_on "ocaml"
   depends_on "fastjet" => :optional
-  depends_on "hoppet" => :optional
   depends_on "hepmc" => :optional
+  depends_on "hoppet" => :optional
   depends_on "lhapdf" => :optional
 
   def install
