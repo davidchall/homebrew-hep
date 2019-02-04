@@ -5,8 +5,8 @@ class Ugs < Formula
   version "2.10e"
   sha256 "27bc46e975917bdf149e9ff6997885ffa24b0b1416bdf82ffaea5246b36e1f83"
 
-  depends_on "homebrew/x11/imake" => :build
   depends_on "gcc" => :build
+  depends_on "homebrew/x11/imake" => :build
   depends_on :x11
 
   patch :p1 do
