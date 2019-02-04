@@ -5,9 +5,9 @@ class Pythia < Formula
   version "8.230"
   sha256 "332fad0ed4f12e6e0cb5755df0ae175329bc16bfaa2ae472d00994ecc99cd78d"
 
+  depends_on "boost"
   depends_on "hepmc"
   depends_on "lhapdf"
-  depends_on "boost"
 
   def install
     args = %W[
