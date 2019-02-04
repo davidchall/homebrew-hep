@@ -2,7 +2,6 @@ class Vbfnlo < Formula
   desc "Parton-level Monte Carlo for processes with electroweak bosons"
   homepage "https://www.itp.kit.edu/vbfnlo"
   url "https://www.itp.kit.edu/vbfnlo/wiki/lib/exe/fetch.php?media=download:vbfnlo-3.0.0beta3.tgz"
-  version "3.0.0beta3"
   sha256 "bd1fb2e59fc0095bd339fc7a9d2070a078c6ee16f7b74ae5035763eea153cb58"
 
   option "with-kk", "Enable Kaluza-Klein resonances"
@@ -11,7 +10,7 @@ class Vbfnlo < Formula
   depends_on "gcc" # for gfortran
   depends_on "hepmc" => :recommended
   depends_on "lhapdf" => :recommended
-  depends_on "homebrew/science/root6" => :optional
+  depends_on "root" => :optional
 
   if build.with? "kk"
     depends_on "gsl"
@@ -39,7 +38,7 @@ class Vbfnlo < Formula
   end
 
   test do
-    system "vbfnlo"
+    system "#{bin}/vbfnlo"
     ohai "Successfully computed VBF Higgs production cross section"
   end
 end
