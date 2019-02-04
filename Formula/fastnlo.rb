@@ -8,10 +8,10 @@ class Fastnlo < Formula
   depends_on "lhapdf"
   depends_on "fastjet" => :optional
   depends_on "hoppet"  => :optional
-  depends_on "qcdnum"  => :optional
-  depends_on "yoda"    => :optional
-  depends_on "homebrew/science/root" => :optional
   depends_on "python"  => :optional
+  depends_on "qcdnum"  => :optional
+  depends_on "root"    => :optional
+  depends_on "yoda"    => :optional
 
   def am_opt(pkg)
     (build.with? pkg) ? "--with-#{pkg}=#{Formula[pkg].opt_prefix}" : "--without-#{pkg}"
