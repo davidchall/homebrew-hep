@@ -59,7 +59,7 @@ class Rivet < Formula
     It may now be necessary to rebuild your Rivet analyses.
     In case of problems, check your RIVET_ANALYSIS_PATH for old analyses.
 
-    EOS
+  EOS
   end
 
   test do

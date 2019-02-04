@@ -1,7 +1,7 @@
 class Fastnlo < Formula
   desc "Fast pQCD calculations for PDF fits"
-  homepage "http://fastnlo.hepforge.org"
-  url "http://fastnlo.hepforge.org/code/v23/fastnlo_toolkit-2.3.1pre-2212.tar.gz"
+  homepage "https://fastnlo.hepforge.org"
+  url "https://fastnlo.hepforge.org/code/v23/fastnlo_toolkit-2.3.1pre-2212.tar.gz"
   version "2.3.1.2212"
   sha256 "f7d16524db1e18cd5ee5fb493f0872ae4dc4a448e758d8ccdf5c090018b7f675"
 

@@ -1,7 +1,7 @@
 class Jetvheto < Formula
   desc "NNLL resummation for jet-veto efficiencies and cross sections"
-  homepage "http://jetvheto.hepforge.org"
-  url "http://jetvheto.hepforge.org/downloads/JetVHeto-1.0.0.tgz"
+  homepage "https://jetvheto.hepforge.org"
+  url "https://jetvheto.hepforge.org/downloads/JetVHeto-1.0.0.tgz"
   sha256 "1e9673439fa9df840e09c0cb94329d52b38e4b5ef49c6f5f6de2388f574cfa3e"
 
   depends_on "hoppet"

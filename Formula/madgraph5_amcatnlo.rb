@@ -33,7 +33,7 @@ class Madgraph5Amcatnlo < Formula
       set hwpp_path #{HOMEBREW_PREFIX}
       set pythia8_path #{HOMEBREW_PREFIX}
 
-    EOS
+  EOS
   end
 
   test do

@@ -1,7 +1,7 @@
 class Hoppet < Formula
   desc "QCD DGLAP evolution"
-  homepage "http://hoppet.hepforge.org"
-  url "http://hoppet.hepforge.org/downloads/hoppet-1.1.5.tgz"
+  homepage "https://hoppet.hepforge.org"
+  url "https://hoppet.hepforge.org/downloads/hoppet-1.1.5.tgz"
   sha256 "41872b2c7ea10344ebbe4260165c24236e17c3d4b14310724eb36577b9c19402"
 
   option "with-test", "Test during installation"

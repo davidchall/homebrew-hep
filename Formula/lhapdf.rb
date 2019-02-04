@@ -44,7 +44,7 @@ class Lhapdf < Formula
     At runtime, LHAPDF searches #{share}/LHAPDF
     and paths in LHAPDF_DATA_PATH for PDF sets.
 
-    EOS
+  EOS
   end
 
   test do
