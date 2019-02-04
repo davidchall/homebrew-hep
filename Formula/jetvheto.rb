@@ -23,7 +23,7 @@ class Jetvheto < Formula
     cp "#{share}/fixed-order/H125-LHC8-R04-xmur050-xmuf050-log.fxd", "input.fxd"
     inreplace "input.fxd", "MSTW2008nnlo90cl.LHgrid", "MSTW2008nnlo68cl"
 
-    system "jetvheto", "-in", "input.fxd", "-out", "output.res", "-xQ", "0.05"
+    system "#{bin}/jetvheto", "-in", "input.fxd", "-out", "output.res", "-xQ", "0.05"
     ohai "Successfully resummed logs for H production at the LHC"
   end
 end
