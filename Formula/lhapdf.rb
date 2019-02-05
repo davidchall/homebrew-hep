@@ -20,6 +20,8 @@ class Lhapdf < Formula
     depends_on "libtool" => :build
   end
 
+  patch :DATA
+
   def install
     ENV.cxx11
     inreplace "wrappers/python/setup.py.in", "stdc++", "c++" if ENV.compiler == :clang
@@ -52,3 +54,71 @@ class Lhapdf < Formula
     system "python", "-c", "import lhapdf; lhapdf.version()"
   end
 end
+__END__
+diff --git a/bin/lhapdf.in b/bin/lhapdf.in
+index 8687cff..8582e15 100644
+--- a/bin/lhapdf.in
++++ b/bin/lhapdf.in
+@@ -271,53 +271,20 @@ def download_url(source, dest_dir, dryrun=False):
+
+     else: # URL
+         url = source
+-        try:
+-            import urllib.request as urllib
+-        except ImportError:
+-            import urllib2 as urllib
+-        try:
+-            u = urllib.urlopen(url)
+-            file_size = int(u.info().get('Content-Length')[0])
+-        except urllib.URLError:
+-            e = sys.exc_info()[1]
+-            logging.error('Unable to download %s' % url)
+-            return False
+-
++        import urllib
+         logging.debug('Downloading from %s' % url)
+         logging.debug('Downloading to %s' % dest_filepath)
+         if dryrun:
+-            logging.info('%s [%s]' % (os.path.basename(url), convertBytes(file_size)))
+             return False
+-
+         try:
+-            dest_file = open(dest_filepath, 'wb')
+-        except IOError:
+-            logging.error('Could not write to %s' % dest_filepath)
++            urllib.urlretrieve(url, dest_filepath)
++        except urllib.URLError:
++            e = sys.exc_info()[1]
++            logging.error('Error during download: ', e.reason)
++            return False
++        except KeyboardInterrupt:
++            logging.error('Download halted by user')
+             return False
+-        try:
+-            try:
+-                file_size_dl = 0
+-                buffer_size  = 8192
+-                while True:
+-                    buffer = u.read(buffer_size)
+-                    if not buffer: break
+-
+-                    file_size_dl += len(buffer)
+-                    dest_file.write(buffer)
+-
+-                    status  = chr(13) + '%s: ' % os.path.basename(url)
+-                    status += r'%s [%3.1f%%]' % (convertBytes(file_size_dl).rjust(10), file_size_dl * 100. / file_size)
+-                    sys.stdout.write(status+' ')
+-            except urllib.URLError:
+-                e = sys.exc_info()[1]
+-                logging.error('Error during download: ', e.reason)
+-                return False
+-            except KeyboardInterrupt:
+-                logging.error('Download halted by user')
+-                return False
+-        finally:
+-            dest_file.close()
+-            print('')
+
+     return True
+
+
