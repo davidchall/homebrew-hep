@@ -1,23 +1,27 @@
 class Mcfm < Formula
   desc "Monte Carlo for FeMtobarn processes"
   homepage "https://mcfm.fnal.gov"
-  url "https://mcfm.fnal.gov/MCFM-8.0.tar.gz"
-  sha256 "6533a51a93bf97c967bf3bd8d530934c8eb94c84978be1e1f9a9d71319c80cc3"
+  url "https://mcfm.fnal.gov/MCFM-8.2.tar.gz"
+  sha256 "075e3782d3cbe92539dc2835a7b94b657b0261717166b8911d4e13afdba83bfd"
 
-  option "with-openmp", "Enable OpenMP multithreading"
-
-  depends_on "gcc" # for gfortran
+  depends_on "gcc@7" # for gfortran
   depends_on "lhapdf" => :optional
 
+  fails_with :gcc => "8" do
+    cause <<~EOS
+      gfortran v.8 fails with "Error: Actual argument contains too few
+      elements for dummy argument 'ff'"
+
+    EOS
+  end
+
+  fails_with :clang do
+    build 1000
+    cause "Needs OpenMP headers that are not available with clang"
+  end
+
   def install
-    if build.with? "openmp"
-      system "./Install"
-    else
-      system "./Install_noomp"
-      inreplace "makefile" do |s|
-        s.change_make_var! "USEOMP", "NO"
-      end
-    end
+    system "FC=gfortran-7 ./Install"
 
     if build.with? "lhapdf"
       inreplace "makefile" do |s|
@@ -26,8 +30,8 @@ class Mcfm < Formula
       end
     end
 
-    system "make"
-    bin.install "Bin/mcfm"
+    system "FC=gfortran-7 make"
+    bin.install "Bin/mcfm_omp"
     pkgshare.install Dir["Bin/*"]
     doc.install "Doc/mcfm.pdf"
   end
@@ -52,7 +56,7 @@ class Mcfm < Formula
     end
     cp pkgshare/"input.DAT", "test.DAT"
     inreplace "test.DAT", "-1", "0"
-    system bin/"mcfm", "test.DAT"
+    system bin/"mcfm_omp", "test.DAT"
     assert_predicate testpath/"W_only_nlo_CT14.NN_80___80___13TeV.top", :exist?
     ohai "Successfully calculated W production at LO"
     ohai "Use 'brew test -v mcfm' to view ouput"
