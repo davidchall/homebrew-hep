@@ -1,8 +1,8 @@
 class Sherpa < Formula
   desc "Monte Carlo event generator"
   homepage "https://sherpa.hepforge.org"
-  url "https://www.hepforge.org/archive/sherpa/SHERPA-MC-2.2.4.tar.gz"
-  sha256 "5dc8bccc9a242ead06ce1f8838988b7367641d8989466e0f9d6b7e74fa8e80e7"
+  url "https://sherpa.hepforge.org/downloads/?f=SHERPA-MC-2.2.6.tar.gz"
+  sha256 "f114e68ed610ff80b772d5ee50fb1cd129d0219f38f0825cbb80ca1bfe9c4fb1"
 
   bottle do
     root_url "https://dl.bintray.com/davidchall/bottles-hep"
@@ -18,6 +18,7 @@ class Sherpa < Formula
   depends_on "gnu-sed" => :build if build.with? "mcfm"
 
   depends_on "gcc" # for gfortran
+  depends_on "sqlite" # configure script does not work with system sqlite
   depends_on "open-mpi" if build.with? "mpi"
   depends_on "fastjet"   => :recommended
   depends_on "hepmc"     => :recommended
@@ -25,12 +26,6 @@ class Sherpa < Formula
   depends_on "openloops" => :recommended
   depends_on "rivet"     => :recommended
   depends_on "root"      => :optional
-
-  patch :p2 do
-    # resolve ambiguous abs calls
-    url "https://gist.githubusercontent.com/davidchall/988f3a2859d7957539a84c79a07a0c2f/raw/3369f6052dcde40c63391fbb4c0e7dd7cc8b9d7d/ambiguous-abs.patch"
-    sha256 "a66699c49e0bd17af0cdfb37ef271f06ba7c068a74e69c5820abc218ae7f3f72"
-  end
 
   def install
     ENV.cxx11 if build.with?("rivet") || build.with?("lhapdf")
@@ -42,6 +37,7 @@ class Sherpa < Formula
       --enable-analysis
       --enable-gzip
     ]
+    args << "--with-sqlite3=#{Formula["sqlite"].opt_prefix}"
 
     if build.with? "mpi"
       args << "--enable-mpi"
