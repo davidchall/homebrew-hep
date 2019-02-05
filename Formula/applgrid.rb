@@ -10,7 +10,6 @@ class Applgrid < Formula
   depends_on "lhapdf" => :optional
 
   cxxstdlib_check :skip
-  #patch :DATA
 
   def install
     ENV.deparallelize
@@ -20,46 +19,6 @@ class Applgrid < Formula
   end
 
   test do
-    system "applgrid-config", "--version"
+    system "#{bin}/applgrid-config", "--version"
   end
 end
-__END__
-diff --git a/appl_grid/appl_grid.h b/appl_grid/appl_grid.h
-index 5059622..bcf5b67 100644
---- a/appl_grid/appl_grid.h
-+++ b/appl_grid/appl_grid.h
-@@ -56,7 +56,7 @@ public:
-   class exception : public std::exception { 
-   public:
-     exception(const std::string& s) { std::cerr << what() << " " << s << std::endl; }; 
--    exception(std::ostream& s)      { std::cerr << what() << " " << s << std::endl; }; 
-+    exception(std::ostream& s)      { std::cerr << std::endl; }; 
-     virtual const char* what() const throw() { return "appl::grid::exception"; }
-   };
- 
-diff --git a/appl_grid/appl_pdf.h b/appl_grid/appl_pdf.h
-index c71fd84..5ac5abd 100644
---- a/appl_grid/appl_pdf.h
-+++ b/appl_grid/appl_pdf.h
-@@ -51,7 +51,7 @@ public:
-   class exception : public std::exception { 
-   public: 
-     exception(const std::string& s="") { std::cerr << what() << " " << s << std::endl; }; 
--    exception(std::ostream& s)         { std::cerr << what() << " " << s << std::endl; }; 
-+    exception(std::ostream& s)         { std::cerr << std::endl; }; 
-     const char* what() const throw() { return "appl::appl_pdf::exception "; }
-   };
-   
-diff --git a/src/appl_igrid.h b/src/appl_igrid.h
-index d25288e..a39fd46 100644
---- a/src/appl_igrid.h
-+++ b/src/appl_igrid.h
-@@ -52,7 +52,7 @@ private:
-   class exception { 
-   public:
-     exception(const std::string& s) { std::cerr << s << std::endl; }; 
--    exception(std::ostream& s)      { std::cerr << s << std::endl; }; 
-+    exception(std::ostream& s)      {}; 
-   };
- 
-   typedef double (igrid::*transform_t)(double) const;
