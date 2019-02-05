@@ -18,8 +18,8 @@ class Sherpa < Formula
   depends_on "gnu-sed" => :build if build.with? "mcfm"
 
   depends_on "gcc" # for gfortran
-  depends_on "sqlite" # configure script does not work with system sqlite
   depends_on "open-mpi" if build.with? "mpi"
+  depends_on "sqlite" # configure script does not work with system sqlite
   depends_on "fastjet"   => :recommended
   depends_on "hepmc"     => :recommended
   depends_on "lhapdf"    => :recommended
