@@ -1,4 +1,4 @@
-lass Thepeg < Formula
+class Thepeg < Formula
   desc "Toolkit for high energy physics event generation"
   homepage "https://herwig.hepforge.org"
   url "https://www.hepforge.org/archive/thepeg/ThePEG-2.1.2.tar.bz2"
