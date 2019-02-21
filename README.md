@@ -27,6 +27,7 @@ The available packages are:
 * `fastnlo`
 * `fjcontrib`
 * `hepmc`
+* `hepmc3`
 * `herwig`
 * `hoppet`
 * `jetvheto`
