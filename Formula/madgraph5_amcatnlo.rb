@@ -1,8 +1,8 @@
 class Madgraph5Amcatnlo < Formula
   desc "Automated LO and NLO processes matched to parton showers"
   homepage "https://launchpad.net/mg5amcnlo"
-  url "https://launchpad.net/mg5amcnlo/2.0/2.6.x/+download/MG5_aMC_v2.6.4.tar.gz"
-  sha256 "ec7f13018433888319536adba436012fca4a2ccb715b2f525c7efa5e870e7605"
+  url "https://launchpad.net/mg5amcnlo/2.0/2.6.x/+download/MG5_aMC_v2.6.5.tar.gz"
+  sha256 "f41d1afa11566d80c867e1bf3d8d135a28e73042d30bd75f28313dee965e0bdb"
 
   bottle :unneeded
 
