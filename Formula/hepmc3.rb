@@ -4,7 +4,6 @@ class Hepmc3 < Formula
   url "https://hepmc.web.cern.ch/hepmc/releases/HepMC3-3.1.1.tar.gz"
   sha256 "2fcbc9964d6f9f7776289d65f9c73033f85c15bf5f0df00c429a6a1d8b8248bb"
 
-
   option "with-test", "Test during installation"
   option "with-root", "Enable root IO"
 
