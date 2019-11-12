@@ -1,8 +1,8 @@
 class Vincia < Formula
   desc "Dipole-antenna shower plugin for Pythia8"
   homepage "https://vincia.hepforge.org"
-  url "https://www.hepforge.org/archive/vincia/vincia-2.2.01.tgz"
-  sha256 "ca98d1bb5f73192e01d1e054f3ba9c385df49a1256dc4c932bf40434b6d56d69"
+  url "https://www.hepforge.org/archive/vincia/vincia-2.3.01.tgz"
+  sha256 "ea2935fe55703559de2beabaa95f209d7b94195fb8380df93687e3cb0db99f06"
 
   depends_on "wget" => :build
   depends_on "gcc" # for gfortran
