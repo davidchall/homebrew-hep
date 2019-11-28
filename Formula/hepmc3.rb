@@ -1,13 +1,15 @@
 class Hepmc3 < Formula
   desc "Library is to handle  event record for Monte Carlo generators"
   homepage "https://hepmc.web.cern.ch/hepmc/"
-  url "https://hepmc.web.cern.ch/hepmc/releases/HepMC3-3.1.2.tar.gz"
-  sha256 "4133074b3928252877982f3d4b4c6c750bb7a324eb6c7bb2afc6fa256da3ecc7"
+  url "https://hepmc.web.cern.ch/hepmc/releases/HepMC3-3.2.0.tar.gz"
+  sha256 "f132387763d170f25a7cc9f0bd586b83373c09acf0c3daa5504063ba460f89fc"
 
   option "with-test", "Test during installation"
+  option "with-python", "Enable building of python bindings"
   option "with-root", "Enable root IO"
 
   depends_on "cmake" => :build
+  depends_on "python" => :optional
   depends_on "root" => :optional
 
   def install
@@ -16,6 +18,7 @@ class Hepmc3 < Formula
         -DCMAKE_INSTALL_PREFIX=#{prefix}
       ]
       args<<"-DHEPMC3_ENABLE_TEST=ON" if build.with? "test"
+      args<<"-DHEPMC3_ENABLE_PYTHON=OFF" if build.without? "python"
       args<<"-DHEPMC3_ENABLE_ROOTIO=OFF" if build.without? "root"
       system "cmake", buildpath, *args
       system "make"
