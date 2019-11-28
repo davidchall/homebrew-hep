@@ -19,7 +19,7 @@ class Hepmc3 < Formula
       ]
       args<<"-DHEPMC3_ENABLE_TEST=ON" if build.with? "test"
       args<<"-DHEPMC3_ENABLE_ROOTIO=OFF" if build.without? "root"
-      args<<"-DHEPMC3_ENABLE_PYTHON=OFF" if build.with? "python"
+      args<<"-DHEPMC3_ENABLE_PYTHON=OFF" if build.without? "python"
       system "cmake", buildpath, *args
       system "make"
       system "make", "test" if build.with? "test"
