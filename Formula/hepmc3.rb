@@ -5,12 +5,12 @@ class Hepmc3 < Formula
   sha256 "f132387763d170f25a7cc9f0bd586b83373c09acf0c3daa5504063ba460f89fc"
 
   option "with-test", "Test during installation"
-  option "with-root", "Enable root IO"
   option "with-python", "Enable building of python bindings"
+  option "with-root", "Enable root IO"
 
   depends_on "cmake" => :build
-  depends_on "root" => :optional
   depends_on "python" => :optional
+  depends_on "root" => :optional
 
   def install
     mkdir "../build" do
@@ -18,8 +18,8 @@ class Hepmc3 < Formula
         -DCMAKE_INSTALL_PREFIX=#{prefix}
       ]
       args<<"-DHEPMC3_ENABLE_TEST=ON" if build.with? "test"
-      args<<"-DHEPMC3_ENABLE_ROOTIO=OFF" if build.without? "root"
       args<<"-DHEPMC3_ENABLE_PYTHON=OFF" if build.without? "python"
+      args<<"-DHEPMC3_ENABLE_ROOTIO=OFF" if build.without? "root"
       system "cmake", buildpath, *args
       system "make"
       system "make", "test" if build.with? "test"
