@@ -52,8 +52,7 @@ The available packages are:
 
 Other useful Homebrew packages:
 
-* `root` (`brew tap homebrew/science`)
-* `python` (see [here](https://github.com/Homebrew/homebrew/blob/master/share/doc/homebrew/Homebrew-and-Python.md) for why)
+* `root` (`brew tap brewsci/science`)
 * `bash-completion` (enables tab-completion for some HEP packages)
 
 If your favourite package is missing, please request it on the [issues page](https://github.com/davidchall/homebrew-hep/issues) or consider making a [contribution](#contributing).
