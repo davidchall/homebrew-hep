@@ -22,6 +22,7 @@ All packages are tested on OS X 10.9 (Mavericks) on [Travis CI](https://travis-c
 
 The available packages are:
 
+* `apfelxx`
 * `applgrid`
 * `fastjet`
 * `fastnlo`
@@ -37,6 +38,7 @@ The available packages are:
 * `mcgrid`
 * `nlojet++`
 * `openloops`
+* `partons`
 * `pythia`
 * `qcdnum`
 * `rivet`
