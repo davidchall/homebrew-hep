@@ -16,6 +16,7 @@ class Hepmc3 < Formula
     mkdir "../build" do
       args = %W[
         -DCMAKE_INSTALL_PREFIX=#{prefix}
+        -DHEPMC3_INSTALL_INTERFACES=ON
       ]
       args<<"-DHEPMC3_ENABLE_TEST=ON" if build.with? "test"
       args<<"-DHEPMC3_ENABLE_PYTHON=OFF" if build.without? "python"
