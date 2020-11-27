@@ -6,6 +6,7 @@ class ElementaryUtils < Formula
 
   depends_on "cmake" => :build
   depends_on "gcc"
+  depends_on "sfml"
 
   def install
     system "cmake", ".", *std_cmake_args
