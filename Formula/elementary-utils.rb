@@ -6,10 +6,7 @@ class ElementaryUtils < Formula
 
   depends_on "cmake" => :build
   depends_on "gcc"
-<<<<<<< HEAD
   depends_on "sfml"
-=======
->>>>>>> upstream/master
 
   def install
     system "cmake", ".", *std_cmake_args
