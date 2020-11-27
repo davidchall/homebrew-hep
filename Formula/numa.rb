@@ -5,10 +5,16 @@ class Numa < Formula
   sha256 "960983d26c42199271601ac201c2f44660e8a6420c872792a1701b63f6e5c8a7"
 
   depends_on "cmake" => :build
+<<<<<<< HEAD
   depends_on "gcc"
   depends_on "sfml"
   depends_on "eigen"
   depends_on "elementary-utils"
+=======
+  depends_on "eigen"
+  depends_on "elementary-utils"
+  depends_on "gcc"
+>>>>>>> upstream/master
 
   def install
     system "cmake", ".", *std_cmake_args

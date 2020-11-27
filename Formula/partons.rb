@@ -5,6 +5,7 @@ class Partons < Formula
   sha256 "75afa187f575f77b3ec63d6e5565c1ccdc7843988f24a8c8b5fdeeb1b4420c82"
 
   depends_on "cmake" => :build
+<<<<<<< HEAD
   depends_on "gcc"
   depends_on "cln"
   depends_on "qt@4"
@@ -12,6 +13,15 @@ class Partons < Formula
   depends_on "gsl"
   depends_on "elementary-utils"
   depends_on "numa"
+=======
+  depends_on "cln"
+  depends_on "elementary-utils"
+  depends_on "gcc"
+  depends_on "gsl"
+  depends_on "numa"
+  depends_on "qt@4"
+  depends_on "sfml"
+>>>>>>> upstream/master
 
   def install
     system "cmake", ".", *std_cmake_args
