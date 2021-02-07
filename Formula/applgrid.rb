@@ -1,8 +1,8 @@
 class Applgrid < Formula
   desc "Quickly reproduce NLO calculations with any input PDFs"
   homepage "https://applgrid.hepforge.org"
-  url "https://www.hepforge.org/archive/applgrid/applgrid-1.5.15.tgz"
-  sha256 "87747fc66318777483e200015b45768d0c8d81f7df6ddc0c70928996ff58d3af"
+  url "https://www.hepforge.org/archive/applgrid/applgrid-1.5.46.tgz"
+  sha256 "166171623d859c42a75aa9659d780a7a22091b9fd936fb3035b1230b73dedaac"
 
   depends_on "gcc" # for gfortran
   depends_on "root"
