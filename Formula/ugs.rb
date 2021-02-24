@@ -7,15 +7,15 @@ class Ugs < Formula
 
   depends_on "gcc" => :build
   depends_on "imake" => :build
-  depends_on "libx11"
-  depends_on "libxt"
-  depends_on "libxext"
+  depends_on "libice"
   depends_on "libsm"
-  depends_on "libice" 
+  depends_on "libx11"
+  depends_on "libxext"
+  depends_on "libxt"
 
   patch :p1 do
-    url "https://gist.githubusercontent.com/veprbl/80ced2fcd27dddf48d8e/raw/38ac4ffeaf60a067b9753d91bafd859a3459a286/ugs_OSX_fix.patch"
-    sha256 "71e9f95cd75561cf7c698da79c6f62902283a30bbf8a2b837dc394baa6762a02"
+    url "https://gist.githubusercontent.com/andriish/4df18144d5992c0d3301e3f0069b9218/raw/e18c51f5657b9ec8c519ed25cba838fc353fc35d/patch-ugs-1.txt"
+    sha256 "3e8915fbeae36d4ade037940bb74a90208c0c9c53472ffe29632b85bb42c9eca"
   end
 
   def install
