@@ -9,8 +9,12 @@ class Topdrawer < Formula
   depends_on "gcc" => :build
   depends_on "imake" => :build
   depends_on "ugs" => :build
-  depends_on :x11
-
+  depends_on "libx11"
+  depends_on "libxt"
+  depends_on "libxext"
+  depends_on "libsm"
+  depends_on "libice"  
+  
   patch :p1 do
     url "https://gist.githubusercontent.com/veprbl/80ced2fcd27dddf48d8e/raw/a5d474f7735221424ebcaa0ff03b6c36135b2d5a/topdrawer_OSX_fix.patch"
     sha256 "e8218390cd185b7a2e0fcdab120ffec3c518ab448154fcc73e928c7e0052080d"
