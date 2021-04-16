@@ -38,16 +38,17 @@ class Mcgrid < Formula
     prefix.install resource("manual")
   end
 
-  def caveats; <<~EOS
-    You can disable one of the applgrid and fastnlo dependencies.
-    However, the build will fail if you disable both.
+  def caveats
+    <<~EOS
+      You can disable one of the applgrid and fastnlo dependencies.
+      However, the build will fail if you disable both.
 
-    A manual is installed in:
-      $(brew --prefix mcgrid)/manual.pdf
+      A manual is installed in:
+        $(brew --prefix mcgrid)/manual.pdf
 
-    Examples are installed in:
-      $(brew --prefix mcgrid)/examples-rivet-2.2.0
-  EOS
+      Examples are installed in:
+        $(brew --prefix mcgrid)/examples-rivet-2.2.0
+    EOS
   end
 
   test do

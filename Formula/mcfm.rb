@@ -7,7 +7,7 @@ class Mcfm < Formula
   depends_on "gcc@7" # for gfortran
   depends_on "lhapdf" => :optional
 
-  fails_with :gcc => "8" do
+  fails_with gcc: "8" do
     cause <<~EOS
       gfortran v.8 fails with "Error: Actual argument contains too few
       elements for dummy argument 'ff'"
@@ -21,7 +21,7 @@ class Mcfm < Formula
   end
 
   def install
-    system "FC=gfortran-7 ./Install"
+    system "FC=gfortran-7", "./Install"
 
     if build.with? "lhapdf"
       inreplace "makefile" do |s|
@@ -30,7 +30,7 @@ class Mcfm < Formula
       end
     end
 
-    system "FC=gfortran-7 make"
+    system "FC=gfortran-7", "make"
     bin.install "Bin/mcfm_omp"
     pkgshare.install Dir["Bin/*"]
     doc.install "Doc/mcfm.pdf"
@@ -40,14 +40,15 @@ class Mcfm < Formula
     pkgshare.install_symlink "#{Formula["lhapdf"].opt_share}/lhapdf/PDFsets" if build.with? "lhapdf"
   end
 
-  def caveats; <<~EOS
-    Running MCFM requires files found in #{pkgshare}
+  def caveats
+    <<~EOS
+      Running MCFM requires files found in #{pkgshare}
 
-    If using LHAPDF for PDF sets, the PDF data directory
-    must be symlinked to bin/PDFsets for MCFM to run.
-    The default LHAPDF data path is symlinked by default.
+      If using LHAPDF for PDF sets, the PDF data directory
+      must be symlinked to bin/PDFsets for MCFM to run.
+      The default LHAPDF data path is symlinked by default.
 
-  EOS
+    EOS
   end
 
   test do
