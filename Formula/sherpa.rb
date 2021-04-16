@@ -6,9 +6,9 @@ class Sherpa < Formula
 
   bottle do
     root_url "https://dl.bintray.com/davidchall/bottles-hep"
-    sha256 "af4c18f1d17a3772a95bd3fa29e49c66c7e1b88d21367f66e5b67be2766882c1" => :high_sierra
-    sha256 "82662b06a6714fb351ff0ab7345266b85058f325c6d9a13c6253be3a94615c2c" => :sierra
-    sha256 "9d38a5e2718fb45a092fbb8914135a81e43299cac979ef9ad559f6cc73e6af63" => :el_capitan
+    sha256 high_sierra: "af4c18f1d17a3772a95bd3fa29e49c66c7e1b88d21367f66e5b67be2766882c1"
+    sha256 sierra:      "82662b06a6714fb351ff0ab7345266b85058f325c6d9a13c6253be3a94615c2c"
+    sha256 el_capitan:  "9d38a5e2718fb45a092fbb8914135a81e43299cac979ef9ad559f6cc73e6af63"
   end
 
   option "with-mpi", "Enable MPI support"

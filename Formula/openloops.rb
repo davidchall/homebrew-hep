@@ -6,10 +6,9 @@ class Openloops < Formula
 
   bottle do
     root_url "https://dl.bintray.com/davidchall/bottles-hep"
-    cellar :any
-    sha256 "f8bc5cf0dca69fc919509ccbbf0968f66bf55a666367b8ff8834a0feed13acaa" => :high_sierra
-    sha256 "3ad94bed490c03bde85f0cea77e26a3bcd89be195d77476c41a0132887aba841" => :sierra
-    sha256 "2ff311f8bd08e6f6377e73f7848bc4baffe45cce3b56907bf3aa20efbcbe6431" => :el_capitan
+    sha256 cellar: :any, high_sierra: "f8bc5cf0dca69fc919509ccbbf0968f66bf55a666367b8ff8834a0feed13acaa"
+    sha256 cellar: :any, sierra:      "3ad94bed490c03bde85f0cea77e26a3bcd89be195d77476c41a0132887aba841"
+    sha256 cellar: :any, el_capitan:  "2ff311f8bd08e6f6377e73f7848bc4baffe45cce3b56907bf3aa20efbcbe6431"
   end
 
   depends_on "scons" => :build
@@ -23,13 +22,14 @@ class Openloops < Formula
     bin.install_symlink prefix/"openloops"
   end
 
-  def caveats; <<~EOS
-    OpenLoops downloads and installs process libraries in its
-    own installation path: #{prefix}
+  def caveats
+    <<~EOS
+      OpenLoops downloads and installs process libraries in its
+      own installation path: #{prefix}
 
-    These process libraries are lost if OpenLoops is uninstalled.
+      These process libraries are lost if OpenLoops is uninstalled.
 
-  EOS
+    EOS
   end
 
   test do

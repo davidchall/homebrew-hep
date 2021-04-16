@@ -18,17 +18,18 @@ class Partons < Formula
     system "make", "install"
   end
 
-  def caveats; <<~EOS
-    The PARTONS library is now installed on this machine.
-    An example suite can be found here:
+  def caveats
+    <<~EOS
+      The PARTONS library is now installed on this machine.
+      An example suite can be found here:
 
-        https://drf-gitlab.cea.fr/partons/core/partons-example/repository/v2.0/archive.tar.gz
+          https://drf-gitlab.cea.fr/partons/core/partons-example/repository/v2.0/archive.tar.gz
 
-    A usage guide is available at:
+      A usage guide is available at:
 
-        http://partons.cea.fr/partons/doc/html/index.html
+          http://partons.cea.fr/partons/doc/html/index.html
 
-  EOS
+    EOS
   end
 
   test do

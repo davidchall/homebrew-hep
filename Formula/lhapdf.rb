@@ -6,13 +6,13 @@ class Lhapdf < Formula
 
   bottle do
     root_url "https://dl.bintray.com/davidchall/bottles-hep"
-    sha256 "c42504e9609b05383b06249023a0d3d1a55e80d8b3a7ab716e993142d78382c7" => :high_sierra
-    sha256 "550b93a493c3b30fcdb5f2b2326d53758fb8f5d0d76a645eecda6fb239170c05" => :sierra
-    sha256 "c61871005b6f6207946de9ae3f5f710a9ec5e695f324b03ac26dc554a547d432" => :el_capitan
+    sha256 high_sierra: "c42504e9609b05383b06249023a0d3d1a55e80d8b3a7ab716e993142d78382c7"
+    sha256 sierra:      "550b93a493c3b30fcdb5f2b2326d53758fb8f5d0d76a645eecda6fb239170c05"
+    sha256 el_capitan:  "c61871005b6f6207946de9ae3f5f710a9ec5e695f324b03ac26dc554a547d432"
   end
 
   head do
-    url "http://lhapdf.hepforge.org/hg/lhapdf", :using => :hg
+    url "http://lhapdf.hepforge.org/hg/lhapdf", using: :hg
 
     depends_on "autoconf" => :build
     depends_on "automake" => :build
@@ -38,15 +38,16 @@ class Lhapdf < Formula
     system "make", "install"
   end
 
-  def caveats; <<~EOS
-    PDFs may be downloaded and installed with
+  def caveats
+    <<~EOS
+      PDFs may be downloaded and installed with
 
-      lhapdf install CT10nlo
+        lhapdf install CT10nlo
 
-    At runtime, LHAPDF searches #{share}/LHAPDF
-    and paths in LHAPDF_DATA_PATH for PDF sets.
+      At runtime, LHAPDF searches #{share}/LHAPDF
+      and paths in LHAPDF_DATA_PATH for PDF sets.
 
-  EOS
+    EOS
   end
 
   test do

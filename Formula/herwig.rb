@@ -5,7 +5,7 @@ class Herwig < Formula
   sha256 "31892bc68d32e967509b87c9bc5d34afac6daa534fb5d70d639be6e26aad2273"
 
   head do
-    url "http://herwig.hepforge.org/hg/herwig", :using => :hg
+    url "http://herwig.hepforge.org/hg/herwig", using: :hg
 
     depends_on "autoconf" => :build
     depends_on "automake" => :build
