@@ -4,13 +4,6 @@ class Openloops < Formula
   url "https://www.hepforge.org/archive/openloops/OpenLoops-1.3.1.tar.gz"
   sha256 "b7610ca62edfab55d0990e94e38048b62b4af0c6b01830b44f40795cd86cb665"
 
-  bottle do
-    root_url "https://dl.bintray.com/davidchall/bottles-hep"
-    sha256 cellar: :any, high_sierra: "f8bc5cf0dca69fc919509ccbbf0968f66bf55a666367b8ff8834a0feed13acaa"
-    sha256 cellar: :any, sierra:      "3ad94bed490c03bde85f0cea77e26a3bcd89be195d77476c41a0132887aba841"
-    sha256 cellar: :any, el_capitan:  "2ff311f8bd08e6f6377e73f7848bc4baffe45cce3b56907bf3aa20efbcbe6431"
-  end
-
   depends_on "scons" => :build
   depends_on "gcc" # for gfortran
 
