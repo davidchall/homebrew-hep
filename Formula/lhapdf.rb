@@ -124,3 +124,12 @@ index 4f99959..d4d056e 100644
  
      return True
  
+@@ -270,7 +229,7 @@ The main sub-commands that can be used are:
+         if not hasattr(self, self.mainargs.COMMAND):
+             print("Unrecognized command")
+             ap.print_help()
+-            exit(2)
++            exit(0)
+
+         ## Use dispatch pattern to invoke method with same name:
+         getattr(self, self.mainargs.COMMAND)(otherargs)
