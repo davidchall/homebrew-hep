@@ -4,20 +4,18 @@ class Sherpa < Formula
   url "https://sherpa.hepforge.org/downloads/?f=SHERPA-MC-2.2.6.tar.gz"
   sha256 "f114e68ed610ff80b772d5ee50fb1cd129d0219f38f0825cbb80ca1bfe9c4fb1"
 
-  option "with-mpi", "Enable MPI support"
-
   # Requires changes to MCFM code, so cannot use MCFM formula
   option "with-mcfm", "Enable use of MCFM loops"
   depends_on "gnu-sed" => :build if build.with? "mcfm"
 
   depends_on "gcc" # for gfortran
-  depends_on "open-mpi" if build.with? "mpi"
   depends_on "sqlite" # configure script does not work with system sqlite
   depends_on "fastjet"   => :recommended
   depends_on "hepmc"     => :recommended
   depends_on "lhapdf"    => :recommended
   depends_on "openloops" => :recommended
   depends_on "rivet"     => :recommended
+  depends_on "open-mpi"  => :optional
   depends_on "root"      => :optional
 
   def install
@@ -32,7 +30,7 @@ class Sherpa < Formula
     ]
     args << "--with-sqlite3=#{Formula["sqlite"].opt_prefix}"
 
-    if build.with? "mpi"
+    if build.with? "open-mpi"
       args << "--enable-mpi"
       ENV["CC"] = ENV["MPICC"]
       ENV["CXX"] = ENV["MPICXX"]
