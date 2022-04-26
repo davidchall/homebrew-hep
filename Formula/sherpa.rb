@@ -15,8 +15,8 @@ class Sherpa < Formula
   depends_on "lhapdf"    => :recommended
   depends_on "openloops" => :recommended
   depends_on "rivet"     => :recommended
-  depends_on "root"      => :optional
   depends_on "open-mpi"  => :optional
+  depends_on "root"      => :optional
 
   def install
     ENV.cxx11 if build.with?("rivet") || build.with?("lhapdf")
