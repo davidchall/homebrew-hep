@@ -8,7 +8,7 @@ class Hepmc3 < Formula
   option "with-python", "Enable building of python bindings"
   option "with-root", "Enable root IO"
 
-  depends_on "cmake" => :build
+  depends_on "cmake" => [:build, :test]
   depends_on "python" => :optional
   depends_on "root" => :optional
 
