@@ -3,6 +3,7 @@ class Hepmc3 < Formula
   homepage "https://hepmc.web.cern.ch/"
   url "https://hepmc.web.cern.ch/hepmc/releases/HepMC3-3.2.5.tar.gz"
   sha256 "cd0f75c80f75549c59cc2a829ece7601c77de97cb2a5ab75790cac8e1d585032"
+  revision 1
 
   bottle do
     root_url "https://ghcr.io/v2/davidchall/hep"
@@ -11,11 +12,10 @@ class Hepmc3 < Formula
   end
 
   option "with-test", "Test during installation"
-  option "with-python", "Enable building of python bindings"
   option "with-root", "Enable root IO"
 
   depends_on "cmake" => [:build, :test]
-  depends_on "python" => :optional
+  depends_on "python@3.9"
   depends_on "root" => :optional
 
   def install
@@ -23,10 +23,12 @@ class Hepmc3 < Formula
       args = %W[
         -DCMAKE_INSTALL_PREFIX=#{prefix}
         -DHEPMC3_INSTALL_INTERFACES=ON
+        -DHEPMC3_BUILD_STATIC_LIBS=OFF
+        -DHEPMC3_PYTHON_VERSIONS=3.9
+        -DHEPMC3_Python_SITEARCH39=#{prefix/Language::Python.site_packages("python3.9")}
       ]
 
       args << "-DHEPMC3_ENABLE_TEST=ON" if build.with? "test"
-      args << "-DHEPMC3_ENABLE_PYTHON=OFF" if build.without? "python"
       args << "-DHEPMC3_ENABLE_ROOTIO=OFF" if build.without? "root"
 
       system "cmake", buildpath, *args
@@ -37,6 +39,9 @@ class Hepmc3 < Formula
   end
 
   test do
+    python = Formula["python@3.9"].opt_bin/"python3"
+    system python, "-c", "import pyHepMC3"
+
     cp_r share/"doc/HepMC3/examples/.", testpath
     system "cmake", "-DUSE_INSTALLED_HEPMC3=ON", "CMakeLists.txt"
     system "make", "basic_tree.exe"
