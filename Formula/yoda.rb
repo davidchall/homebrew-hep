@@ -1,8 +1,10 @@
 class Yoda < Formula
+  include Language::Python::Shebang
+
   desc "Yet more Objects for Data Analysis"
   homepage "https://yoda.hepforge.org"
-  url "https://www.hepforge.org/archive/yoda/YODA-1.6.7.tar.gz"
-  sha256 "9fbdb8e9b2951ee6b984b2d5350b0a5a9c93c6f4a70c51dd77daa87336753cf6"
+  url "https://yoda.hepforge.org/downloads/?f=YODA-1.9.4.tar.gz"
+  sha256 "02d89e37fbe01c5b19140e7ded9082930f76bf3d15a6ff9742fd52c8f0e738d7"
 
   head do
     url "http://yoda.hepforge.org/hg/yoda", using: :hg
@@ -15,11 +17,12 @@ class Yoda < Formula
 
   option "with-test", "Test during installation"
 
+  depends_on "python@3.9"
   depends_on "numpy" => :optional
   depends_on "root" => :optional
 
   def install
-    ENV.cxx11
+    ENV.prepend_path "PATH", Formula["python@3.9"].opt_libexec/"bin"
 
     args = %W[
       --disable-debug
@@ -38,11 +41,14 @@ class Yoda < Formula
     system "make", "check" if build.with? "test"
     system "make", "install"
 
-    bash_completion.install share/"YODA/yoda-completion"
+    Dir.each_child(bin) do |script|
+      rewrite_shebang detected_python_shebang, bin/script
+    end
   end
 
   test do
     system bin/"yoda-config", "--version"
-    system "python", "-c", "import yoda; yoda.version()"
+    system Formula["python@3.9"].opt_bin/"python3", "-c", "import yoda; yoda.version()"
+    system bin/"yodastack", "--help"
   end
 end
