@@ -6,6 +6,14 @@ class Lhapdf < Formula
   url "https://lhapdf.hepforge.org/downloads/?f=LHAPDF-6.4.0.tar.gz"
   sha256 "7d2f0267e2d65b0ddee048553b342d7c893a6dbabe1e326cad62de0010dd810c"
 
+  bottle do
+    root_url "https://ghcr.io/v2/davidchall/hep"
+    rebuild 1
+    sha256 monterey: "2d4038d6fa63fd8e38dd7830bf85119044de2138b90e107c2c75c3575f547da8"
+    sha256 big_sur:  "bf9c3cddc0a5560686e410b47458cca7babd3507d142c67ca6692d6112b66d7a"
+    sha256 catalina: "b31b3333be0bfa2983460b75954e9ac56e16700b9bc61f5cff147c765e3d5704"
+  end
+
   head do
     url "http://lhapdf.hepforge.org/hg/lhapdf", using: :hg
 
