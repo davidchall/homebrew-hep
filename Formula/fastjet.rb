@@ -4,6 +4,11 @@ class Fastjet < Formula
   url "http://fastjet.fr/repo/fastjet-3.4.0.tar.gz"
   sha256 "ee07c8747c8ead86d88de4a9e4e8d1e9e7d7614973f5631ba8297f7a02478b91"
 
+  bottle do
+    root_url "https://ghcr.io/v2/davidchall/hep"
+    sha256 cellar: :any, big_sur: "70bf614b145b8bdb130f07305784040e802e7b3fbc352bc140df5bce67886b01"
+  end
+
   option "without-cgal", "Disable CGAL support (required for NlnN strategy)"
   option "with-test", "Test during installation"
 
