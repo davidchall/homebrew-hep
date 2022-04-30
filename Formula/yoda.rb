@@ -41,14 +41,13 @@ class Yoda < Formula
     system "make", "check" if build.with? "test"
     system "make", "install"
 
-    Dir.each_child(bin) do |script|
-      rewrite_shebang detected_python_shebang, bin/script
-    end
+    rewrite_shebang detected_python_shebang, *bin.children
   end
 
   test do
+    python = Formula["python@3.9"].opt_bin/"python3"
+    system python, "-c", "import yoda"
     system bin/"yoda-config", "--version"
-    system Formula["python@3.9"].opt_bin/"python3", "-c", "import yoda; yoda.version()"
     system bin/"yodastack", "--help"
   end
 end
