@@ -11,6 +11,8 @@ class Fastjet < Formula
   depends_on "cgal" => :recommended
 
   def install
+    ENV.prepend_path "PATH", Formula["python@3.9"].opt_libexec/"bin"
+
     args = %W[
       --disable-debug
       --disable-dependency-tracking
