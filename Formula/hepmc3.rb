@@ -4,6 +4,12 @@ class Hepmc3 < Formula
   url "https://hepmc.web.cern.ch/hepmc/releases/HepMC3-3.2.5.tar.gz"
   sha256 "cd0f75c80f75549c59cc2a829ece7601c77de97cb2a5ab75790cac8e1d585032"
 
+  bottle do
+    root_url "https://ghcr.io/v2/davidchall/hep"
+    rebuild 1
+    sha256 cellar: :any, big_sur: "933a6df2bf7ff89635d370aae083eda97c5e877305e0eac2bf9d44743c31d81c"
+  end
+
   option "with-test", "Test during installation"
   option "with-python", "Enable building of python bindings"
   option "with-root", "Enable root IO"
