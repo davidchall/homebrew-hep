@@ -52,7 +52,8 @@ class Lhapdf < Formula
   end
 
   test do
+    python = Formula["python@3.9"].opt_bin/"python3"
     system bin/"lhapdf", "--help"
-    system Formula["python@3.9"].opt_bin/"python3", "-c", "import lhapdf; lhapdf.version()"
+    system python, "-c", "import lhapdf"
   end
 end
