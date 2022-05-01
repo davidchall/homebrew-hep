@@ -1,8 +1,8 @@
 class Thepeg < Formula
   desc "Toolkit for high energy physics event generation"
   homepage "https://herwig.hepforge.org"
-  url "https://www.hepforge.org/archive/thepeg/ThePEG-2.1.2.tar.bz2"
-  sha256 "6a0f675a27e10863d495de069f25b892e532beb32e9cbfe5a58317d015387f49"
+  url "https://thepeg.hepforge.org/downloads/ThePEG-2.2.3.tar.bz2"
+  sha256 "f21473197a761fc32917b08a8d24d2bfaf93ff57f3441fd605da99ac9de5d50b"
 
   head do
     url "http://thepeg.hepforge.org/hg/ThePEG", using: :hg
@@ -15,18 +15,22 @@ class Thepeg < Formula
   option "with-test", "Test during installation"
 
   depends_on "boost"
+  depends_on "fastjet"
   depends_on "gsl"
-  depends_on "fastjet" => :recommended
-  depends_on "hepmc"   => :recommended
-  depends_on "lhapdf"  => :recommended
-  depends_on "rivet"   => :recommended
+  depends_on "hepmc3"
+  depends_on "lhapdf"
 
   def install
     args = %W[
       --disable-dependency-tracking
       --prefix=#{prefix}
-      --enable-stdcxx11
       --without-javagui
+      --with-boost=#{Formula["boost"].opt_prefix}
+      --with-gsl=#{Formula["gsl"].opt_prefix}
+      --with-fastjet=#{Formula["fastjet"].opt_prefix}
+      --with-hepmc=#{Formula["hepmc3"].opt_prefix}
+      --with-hepmcversion=3
+      --with-lhapdf=#{Formula["lhapdf"].opt_prefix}
     ]
 
     system "autoreconf", "-i" if build.head?
@@ -37,7 +41,7 @@ class Thepeg < Formula
   end
 
   test do
-    system "#{bin}/setupThePEG", "#{share}/ThePEG/MultiLEP.in"
-    system "#{bin}/runThePEG", "MultiLEP.run"
+    system bin/"setupThePEG", share/"ThePEG/MultiLEP.in"
+    system bin/"runThePEG", "MultiLEP.run"
   end
 end
