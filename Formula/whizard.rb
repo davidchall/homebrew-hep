@@ -26,7 +26,7 @@ class Whizard < Formula
 
     # F90 truncates lines longer than 132 characters
     # but src/system/system_dependencies.f90 contains long path strings
-    args << "FFLAGS=-ffree-line-length-512"
+    args << "FCFLAGS=-ffree-line-length-512"
 
     system "./configure", *args
     system "make"
