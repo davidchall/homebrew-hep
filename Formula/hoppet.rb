@@ -16,6 +16,6 @@ class Hoppet < Formula
   end
 
   test do
-    system "#{bin}/hoppet-config", "--libs"
+    system bin/"hoppet-config", "--libs"
   end
 end
