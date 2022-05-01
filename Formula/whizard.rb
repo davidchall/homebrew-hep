@@ -24,6 +24,10 @@ class Whizard < Formula
     args << "--enable-hoppet" if build.with? "hoppet"
     args << "--enable-fastjet" if build.with? "fastjet"
 
+    # F90 truncates lines longer than 132 characters
+    # but src/system/system_dependencies.f90 contains long path strings
+    args << "FFLAGS=-ffree-line-length-512"
+
     system "./configure", *args
     system "make"
     system "make", "install"
