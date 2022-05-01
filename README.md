@@ -2,13 +2,13 @@
 
 ## Introduction
 
-Many high energy physics programs require special installation instructions for macOS, and their issue trackers are often filled with unresolved Mac issues. Problems are also encountered when trying to link all these programs together.
+Homebrew-hep is a macOS package manager for high energy physics software, based on [Homebrew](https://brew.sh/).
+In Homebrew terminology, it is a tap.
+It simplifies the user workflow by:
 
-Homebrew-hep is a macOS package manager for HEP programs, based on [Homebrew](https://brew.sh/), which tries to make life easier. In Homebrew terminology, it is a tap. From the user's perspective it is nice because it:
-
-* Keeps things organised in a dedicated directory
-* Automatically handles package dependencies
-* Makes it easy to update programs
+* Keeping things organised in a dedicated directory
+* Automatically handling package dependencies
+* Facilitating easy upgrades
 
 ## Quick start
 
@@ -29,5 +29,6 @@ Other Homebrew packages useful for high energy physics:
 If your favourite HEP package is missing, please request it on the [issues page](https://github.com/davidchall/homebrew-hep/issues) or consider making a [contribution](./CONTRIBUTING.md).
 
 ## Issues
+
 * Report physics problems to the package developers (`brew home <package>`)
 * Report installation problems on the [issue tracker](https://github.com/davidchall/homebrew-hep/issues)

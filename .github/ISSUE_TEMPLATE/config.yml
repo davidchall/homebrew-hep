@@ -3,6 +3,7 @@ blank_issues_enabled: true
 contact_links:
   - name: New issue on Homebrew/brew
     url: https://github.com/Homebrew/brew/issues/new/choose
-    about: Having a `brew` problem that's not from a `brew install` or `brew upgrade` of a single formula/package? Report it to Homebrew/brew (the Homebrew package manager).
-  - name: New issue on package issue tracker
-    about: Software problems unrelated to homebrew-hep should be reported to the package developers (`brew home <package>`).
+    about: Having a `brew` problem that's not from a `brew install` of a single formula/package? Report it to Homebrew/brew (the Homebrew package manager).
+  - name: Contact package developers
+    url: https://github.com/davidchall/homebrew-hep
+    about: Software problems unrelated to homebrew-hep (e.g., physics problems) should be reported to the package developers (`brew home <package>`).
