@@ -40,8 +40,10 @@ class Fastjet < Formula
     ln_s prefix/"example/data", testpath
     ln_s prefix/"example/python", testpath
     system prefix/"example/fastjet_example < data/single-event.dat"
+
+    python = Formula["python@3.9"].opt_bin/"python3"
     cd "python" do
-      system Formula["python@3.9"].opt_bin/"python3", "01-basic.py"
+      system python, "01-basic.py"
     end
   end
 end
