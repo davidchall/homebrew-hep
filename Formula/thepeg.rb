@@ -16,8 +16,8 @@ class Thepeg < Formula
 
   depends_on "boost"
   depends_on "gsl"
+  depends_on "hepmc3"
   depends_on "fastjet" => :recommended
-  depends_on "hepmc3"  => :recommended
   depends_on "lhapdf"  => :recommended
 
   def install
@@ -28,12 +28,12 @@ class Thepeg < Formula
       --without-javagui
       --with-boost=#{Formula["boost"].opt_prefix}
       --with-gsl=#{Formula["gsl"].opt_prefix}
+      --with-hepmc=#{Formula["hepmc3"].opt_prefix}
+      --with-hepmcversion=3
     ]
 
     args << "--with-fastjet=#{Formula["fastjet"].opt_prefix}" if build.with? "fastjet"
     args << "--with-lhapdf=#{Formula["lhapdf"].opt_prefix}"   if build.with? "lhapdf"
-    args << "--with-hepmc=#{Formula["hepmc3"].opt_prefix}"    if build.with? "hepmc3"
-    args << "--with-hepmcversion=3"                           if build.with? "hepmc3"
 
     system "autoreconf", "-i" if build.head?
     system "./configure", *args
