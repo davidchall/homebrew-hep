@@ -30,8 +30,6 @@ body:
     attributes:
       label: Other details
       description: |
-        Please provide any other relevant details. For example, problems encountered
-        while attempting to write the Homebrew formula yourself, installation experience
-        outside Homebrew, etc.
+        Please provide any other relevant details. For example, problems encountered while attempting to write the Homebrew formula yourself, installation experience outside Homebrew, etc.
     validations:
       required: false
