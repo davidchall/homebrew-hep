@@ -1,31 +1,37 @@
 class Whizard < Formula
   desc "Monte Carlo event generator"
   homepage "https://whizard.hepforge.org"
-  url "http://whizard.hepforge.org/whizard-2.7.0.tar.gz"
-  sha256 "97a50705a8ba4174206cdc2c9cf0981a4046352e815e1903f124a92bd05eb4a9"
+  url "http://whizard.hepforge.org/whizard-3.0.3.tar.gz"
+  sha256 "20f2269d302fc162a6aed8e781b504ba5112ef0711c078cdb08b293059ed67cf"
+  revision 1
 
   depends_on "gcc" # for gfortran
   depends_on "ocaml"
   depends_on "fastjet" => :optional
-  depends_on "hepmc" => :optional
+  depends_on "hepmc3" => :optional
   depends_on "hoppet" => :optional
   depends_on "lhapdf" => :optional
+
+  # post-install cleaner overwrites script permissions, causing audit failure
+  patch :DATA
 
   def install
     args = %W[
       --disable-dependency-tracking
       --enable-fc-openmp
-      --enable-fc-quadruple
       --prefix=#{prefix}
     ]
 
     args << "--enable-hoppet" if build.with? "hoppet"
     args << "--enable-fastjet" if build.with? "fastjet"
 
-    system "./configure", *args
-    system "make", "install"
+    # F90 truncates lines longer than 132 characters
+    # but src/system/system_dependencies.f90 contains long path strings
+    args << "FCFLAGS=-ffree-line-length-512"
 
-    chmod 0755, Dir[bin/"*.*sh"]
+    system "./configure", *args
+    system "make"
+    system "make", "install"
   end
 
   test do
@@ -37,7 +43,26 @@ class Whizard < Formula
       simulate (ee)
     EOS
 
-    system "#{bin}/whizard", "-r", testpath, "ee.sin"
-    ohai "You just successfully generated 10 events!"
+    system bin/"whizard", "-r", testpath, "ee.sin"
   end
 end
+
+__END__
+diff --git a/scripts/whizard-setup.csh.in b/scripts/whizard-setup.csh.in
+index abab707..898a9e2 100644
+--- a/scripts/whizard-setup.csh.in
++++ b/scripts/whizard-setup.csh.in
+@@ -1,3 +1,4 @@
++#!/usr/bin/env csh
+ # source this file to set up environment variables for an
+ # installed WHIZARD in csh(-compatible) shells
+ #
+diff --git a/scripts/whizard-setup.sh.in b/scripts/whizard-setup.sh.in
+index aec3d25..155216f 100644
+--- a/scripts/whizard-setup.sh.in
++++ b/scripts/whizard-setup.sh.in
+@@ -1,3 +1,4 @@
++#!/usr/bin/env sh
+ # source this file to set up environment variables for an
+ # installed WHIZARD in Bourne(-compatible) shells
+ #
