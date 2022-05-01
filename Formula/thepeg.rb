@@ -15,25 +15,23 @@ class Thepeg < Formula
   option "with-test", "Test during installation"
 
   depends_on "boost"
+  depends_on "fastjet"
   depends_on "gsl"
   depends_on "hepmc3"
-  depends_on "fastjet" => :recommended
-  depends_on "lhapdf"  => :recommended
+  depends_on "lhapdf"
 
   def install
     args = %W[
       --disable-dependency-tracking
       --prefix=#{prefix}
-      --enable-stdcxx11
       --without-javagui
       --with-boost=#{Formula["boost"].opt_prefix}
       --with-gsl=#{Formula["gsl"].opt_prefix}
+      --with-fastjet=#{Formula["fastjet"].opt_prefix}
       --with-hepmc=#{Formula["hepmc3"].opt_prefix}
       --with-hepmcversion=3
+      --with-lhapdf=#{Formula["lhapdf"].opt_prefix}
     ]
-
-    args << "--with-fastjet=#{Formula["fastjet"].opt_prefix}" if build.with? "fastjet"
-    args << "--with-lhapdf=#{Formula["lhapdf"].opt_prefix}"   if build.with? "lhapdf"
 
     system "autoreconf", "-i" if build.head?
     system "./configure", *args
