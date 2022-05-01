@@ -1,0 +1,41 @@
+name: Request new package
+description: Submit a request for a new package to be added to homebrew-hep.
+title: "[Package Request]: "
+labels: ["new formula"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for your interest in homebrew-hep!
+        Unfortunately we can't offer guarantees about adding a new package,
+        because we don't have dedicated funding or resources.
+
+        Nevertheless, I still recommend logging the request.
+        The homebrew-hep community might offer installation advice, or someone
+        might even know how to write the Homebrew formula.
+  - type: input
+    id: url
+    attributes:
+      label: Package homepage
+      description: What is the website associated with the software?
+      placeholder: https://www.mypackage.com
+    validations:
+      required: true
+  - type: textarea
+    id: reason
+    attributes:
+      label: Motivation
+      description: Why is the package needed by high energy physicists?
+      placeholder: Fastjet provides jet finding algorithms used by many Monte Carlo event generators.
+    validations:
+      required: true
+  - type: textarea
+    id: other
+    attributes:
+      label: Other details
+      description: |
+        Please provide any other relevant details. For example, problems encountered
+        while attempting to write the Homebrew formula yourself, installation experience
+        outside Homebrew, etc.
+    validations:
+      required: false
