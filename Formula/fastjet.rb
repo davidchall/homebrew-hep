@@ -6,7 +6,10 @@ class Fastjet < Formula
 
   bottle do
     root_url "https://ghcr.io/v2/davidchall/hep"
-    sha256 cellar: :any, big_sur: "70bf614b145b8bdb130f07305784040e802e7b3fbc352bc140df5bce67886b01"
+    rebuild 1
+    sha256 cellar: :any, monterey: "8391ca25a36a28be07e680a6af1419b43c3f130c18485af6c560bd87663e782f"
+    sha256 cellar: :any, big_sur:  "64793fb0741fda6358b64297cc07a2c9c5386fc25dba0fce8d125d918cb9e7d0"
+    sha256 cellar: :any, catalina: "44ea80df7cdce1f0078bc40bcc1fe9039c69b73b2e37236bc6b134eb25c85d54"
   end
 
   option "without-cgal", "Disable CGAL support (required for NlnN strategy)"
