@@ -4,6 +4,13 @@ class Thepeg < Formula
   url "https://thepeg.hepforge.org/downloads/ThePEG-2.2.3.tar.bz2"
   sha256 "f21473197a761fc32917b08a8d24d2bfaf93ff57f3441fd605da99ac9de5d50b"
 
+  bottle do
+    root_url "https://ghcr.io/v2/davidchall/hep"
+    sha256 monterey: "4aea760158f86dd841f1b42beed8bef5c131bb1059a3a5ad3f21e8f08f8d3603"
+    sha256 big_sur:  "99a54ff9080a78a665a38310481030b5cc68ea3c19aa511e448c7e047bc57106"
+    sha256 catalina: "c9a02975c359e7f61582004b2e7c9f2f4b17b719dd44272b166e36e3df1f5a6b"
+  end
+
   head do
     url "http://thepeg.hepforge.org/hg/ThePEG", using: :hg
 
