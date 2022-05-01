@@ -31,8 +31,9 @@ class Thepeg < Formula
     ]
 
     args << "--with-fastjet=#{Formula["fastjet"].opt_prefix}" if build.with? "fastjet"
-    args << "--with-hepmc=#{Formula["hepmc3"].opt_prefix}"    if build.with? "hepmc3"
     args << "--with-lhapdf=#{Formula["lhapdf"].opt_prefix}"   if build.with? "lhapdf"
+    args << "--with-hepmc=#{Formula["hepmc3"].opt_prefix}"    if build.with? "hepmc3"
+    args << "--with-hepmcversion=3"                           if build.with? "hepmc3"
 
     system "autoreconf", "-i" if build.head?
     system "./configure", *args
