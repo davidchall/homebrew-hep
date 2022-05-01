@@ -6,13 +6,9 @@ body:
   - type: markdown
     attributes:
       value: |
-        Thanks for your interest in homebrew-hep!
-        Unfortunately we can't offer guarantees about adding a new package,
-        because we don't have dedicated funding or resources.
+        Thanks for your interest in homebrew-hep! Unfortunately we can't offer guarantees about adding a new package, because we don't have dedicated funding or resources.
 
-        Nevertheless, I still recommend logging the request.
-        The homebrew-hep community might offer installation advice, or someone
-        might even know how to write the Homebrew formula.
+        Nevertheless, I still recommend logging the request. The homebrew-hep community might offer installation advice, or someone might even know how to write the Homebrew formula.
   - type: input
     id: url
     attributes:
