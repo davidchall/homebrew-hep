@@ -1,6 +1,7 @@
 [
   "herwig",
   "lhapdf",
+  "sherpa",
   "thepeg",
   "yoda"
 ]
