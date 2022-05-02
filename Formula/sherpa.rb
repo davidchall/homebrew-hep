@@ -12,6 +12,8 @@ class Sherpa < Formula
   depends_on "sqlite" # configure script does not work with system sqlite
 
   def install
+    ENV.cxx11
+
     args = %W[
       --disable-dependency-tracking
       --prefix=#{prefix}
