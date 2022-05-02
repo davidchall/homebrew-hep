@@ -4,6 +4,13 @@ class Herwig < Formula
   url "https://herwig.hepforge.org/downloads/Herwig-7.2.3.tar.bz2"
   sha256 "5599899379b01b09e331a2426d78d39b7f6ec126db2543e9d340aefe6aa50f84"
 
+  bottle do
+    root_url "https://ghcr.io/v2/davidchall/hep"
+    sha256 monterey: "23e0a0115b0077bf8b8fe4367e2e384e324a6ecaba6e16cf470d5140e5214462"
+    sha256 big_sur:  "3349d0dbf8d52bca6bbd522d42035b04183bf75755621600e0d154db56b70bfc"
+    sha256 catalina: "f21c7d39637ac707d8a461c702322d43be7ca104d508973a2302fca1eb8eaffe"
+  end
+
   head do
     url "http://herwig.hepforge.org/hg/herwig", using: :hg
 
