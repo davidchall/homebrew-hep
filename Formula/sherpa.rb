@@ -4,6 +4,13 @@ class Sherpa < Formula
   url "https://sherpa.hepforge.org/downloads/?f=SHERPA-MC-2.2.11.tar.gz"
   sha256 "0eb03f87f7ff3231b294ac40b5532ae8e2ef11d6fac81ee946df14257366c22d"
 
+  bottle do
+    root_url "https://ghcr.io/v2/davidchall/hep"
+    sha256 monterey: "79c9816b55eb429711b71ed508255b579e845a6ac601a234bce0c2edc9f17fb0"
+    sha256 big_sur:  "44f66ee7aeca47af32f560adf19ae19b62c0622b8b9d3ff01945c360b5004430"
+    sha256 catalina: "0b8b3d103971053db5307fda595fb6d503bcf16588f6903f0ee787a3640b0eac"
+  end
+
   depends_on "autoconf" => :build
   depends_on "fastjet"
   depends_on "gcc" # for gfortran
