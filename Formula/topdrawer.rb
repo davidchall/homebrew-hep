@@ -37,12 +37,10 @@ class Topdrawer < Formula
   end
 
   test do
-    cd testpath do
-      system bin/"td", share/"examples/muon.top", "-d", "postscr"
-    end
+    system bin/"td", share/"examples/muon.top", "-d", "postscr"
     # ouput filename is garbled due to some bug
-    ps_file = Dir[testpath/"*"].first
-    type = `file -b #{ps_file}`
-    assert_equal type.split.first, "PostScript"
+    ps_file = testpath.children.reject { |f| File.directory?(f) }.first
+    file_type = shell_output("file -b #{ps_file}")
+    assert_equal file_type.split.first, "PostScript"
   end
 end
