@@ -6,6 +6,14 @@ class F2c < Formula
   version "2022.04.25"
   sha256 "ca404070e9ce0a9aaa6a71fc7d5489d014ade952c5d6de7efb88de8e24f2e8e0"
 
+  bottle do
+    root_url "https://ghcr.io/v2/davidchall/hep"
+    rebuild 1
+    sha256 cellar: :any_skip_relocation, monterey: "9fca4caf6891bdd46e29f4768ddc52818e985047935aa767104178d87fd40a79"
+    sha256 cellar: :any_skip_relocation, big_sur:  "a0890f7c39400305d7eb3ce750934349cd66c53eb6727ad50e89236b691649c5"
+    sha256 cellar: :any_skip_relocation, catalina: "8a18288b8722e77aca1f1d771cb5d049486ff47ce40527c18ea5627cbfff8cc7"
+  end
+
   resource "f2cexecutablesrc" do
     url "https://netlib.sandia.gov/f2c/src.tgz"
     sha256 "d4847456aa91c74e5e61e2097780ca6ac3b20869fae8864bfa8dcc66f6721d35"
