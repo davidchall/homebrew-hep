@@ -8,7 +8,6 @@ class Vbfnlo < Formula
   option "with-spin2", "Enable spin-2 resonances"
 
   depends_on "gcc" # for gfortran
-  depends_on "hepmc" => :recommended
   depends_on "lhapdf" => :recommended
   depends_on "root" => :optional
 
@@ -19,7 +18,6 @@ class Vbfnlo < Formula
   end
 
   def install
-    ENV.delete("F77")
     args = %W[
       --disable-debug
       --disable-dependency-tracking
@@ -30,15 +28,19 @@ class Vbfnlo < Formula
     args << "--enable-spin2"                                if build.with? "spin2"
     args << "--enable-kk"                                   if build.with? "kk"
     args << "--with-LHAPDF=#{Formula["lhapdf"].opt_prefix}" if build.with? "lhapdf"
-    args << "--with-root=#{Formula["root6"].opt_prefix}"    if build.with? "root6"
-    args << "--with-hepmc=#{Formula["hepmc"].opt_prefix}"   if build.with? "hepmc"
+    args << "--with-root=#{Formula["root"].opt_prefix}"     if build.with? "root"
+
+    # https://github.com/davidchall/homebrew-hep/issues/203
+    args << "--disable-quad"
+
+    ENV.append "FCFLAGS", "-std=legacy"
 
     system "./configure", *args
+    system "make"
     system "make", "install"
   end
 
   test do
-    system "#{bin}/vbfnlo"
-    ohai "Successfully computed VBF Higgs production cross section"
+    system bin/"vbfnlo"
   end
 end
