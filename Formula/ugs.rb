@@ -5,6 +5,14 @@ class Ugs < Formula
   version "2.10e"
   sha256 "27bc46e975917bdf149e9ff6997885ffa24b0b1416bdf82ffaea5246b36e1f83"
 
+  bottle do
+    root_url "https://ghcr.io/v2/davidchall/hep"
+    rebuild 1
+    sha256 cellar: :any_skip_relocation, monterey: "95993825db09461a6a4ba622722ff68868612f5ac6051ce075ba02c066be6705"
+    sha256 cellar: :any_skip_relocation, big_sur:  "e916e3e696ec3d3756e89826e630082009080675a8ef4626e07e040772fbe591"
+    sha256 cellar: :any_skip_relocation, catalina: "8457dcfe4a4d90f748ab6fa15612125bc6e7967efa72dd5cad68173a220d97dc"
+  end
+
   depends_on "gcc" => :build
   depends_on "imake" => :build
   depends_on "libice"
