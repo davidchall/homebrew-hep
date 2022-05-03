@@ -20,6 +20,8 @@ class Topdrawer < Formula
     sha256 "ff0ecaf06cb27daef99edaec786897c8cc53ef01e45388b4b9c0adfe6859f4a0"
   end
 
+  env :std
+
   def install
     ENV.deparallelize
 
