@@ -41,7 +41,10 @@ class Topdrawer < Formula
     system bin/"td", "test.top", "-d", "postscr"
     system "ls *"
     # ouput filename is garbled due to some bug
-    ps_file = testpath.children.max_by { |f| File.mtime(f) }
+    output_file = testpath.children.max_by { |f| File.mtime(f) }
+    ps_file = testpath/"test.ps"
+    mv output_file, ps_file
+    system "ls *"
     file_type = shell_output("file -b #{ps_file}")
     assert_equal "PostScript", file_type.split.first
   end
