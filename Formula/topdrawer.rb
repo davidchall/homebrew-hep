@@ -39,7 +39,7 @@ class Topdrawer < Formula
   test do
     system bin/"td", share/"examples/muon.top", "-d", "postscr"
     # ouput filename is garbled due to some bug
-    ps_file = testpath.children.reject { |f| File.directory?(f) }.first
+    ps_file = testpath.children.max_by { |f| File.mtime(f) }
     file_type = shell_output("file -b #{ps_file}")
     assert_equal file_type.split.first, "PostScript"
   end
