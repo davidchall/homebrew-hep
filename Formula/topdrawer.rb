@@ -37,14 +37,13 @@ class Topdrawer < Formula
   end
 
   test do
-    cp share/"examples/muon.top", "test.top"
-    system bin/"td", "test.top", "-d", "postscr"
-    system "ls *"
+    system bin/"td", share/"examples/muon.top", "-d", "postscr"
+
     # ouput filename is garbled due to some bug
     output_file = testpath.children.max_by { |f| File.mtime(f) }
     ps_file = testpath/"test.ps"
     mv output_file, ps_file
-    system "ls *"
+
     file_type = shell_output("file -b #{ps_file}")
     assert_equal "PostScript", file_type.split.first
   end
