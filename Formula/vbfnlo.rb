@@ -24,6 +24,7 @@ class Vbfnlo < Formula
       --disable-dependency-tracking
       --enable-shared=no
       --prefix=#{prefix}
+      FCFLAGS=-std=legacy
     ]
 
     args << "--enable-spin2"                                if build.with? "spin2"
