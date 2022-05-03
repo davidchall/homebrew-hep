@@ -20,8 +20,6 @@ class Topdrawer < Formula
     sha256 "ff0ecaf06cb27daef99edaec786897c8cc53ef01e45388b4b9c0adfe6859f4a0"
   end
 
-  env :std
-
   def install
     ENV.deparallelize
 
@@ -37,8 +35,9 @@ class Topdrawer < Formula
   end
 
   test do
-    system bin/"td", share/"examples/muon.top", "-d", "postscr"
-    system "ls"
+    cp share/"examples/muon.top", "test.top"
+    system bin/"td", "test.top", "-d", "postscr"
+    system "ls *"
     # ouput filename is garbled due to some bug
     ps_file = testpath.children.max_by { |f| File.mtime(f) }
     file_type = shell_output("file -b #{ps_file}")
