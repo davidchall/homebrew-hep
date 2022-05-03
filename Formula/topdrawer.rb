@@ -6,9 +6,9 @@ class Topdrawer < Formula
   sha256 "2a44dffd19e243aa261b4e3cd2b0fe6247ced97ee10e3271f8c7eeae8cb62401"
 
   depends_on "f2c" => :build
-  depends_on "gcc" => :build
   depends_on "imake" => :build
   depends_on "ugs" => :build
+  depends_on "gcc"
   depends_on "libice"
   depends_on "libsm"
   depends_on "libx11"
