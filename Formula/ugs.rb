@@ -1,7 +1,7 @@
 class Ugs < Formula
   desc "SLAC Unified Graphics System"
-  homepage "http://ftp.riken.jp/pub/iris/ugs"
-  url "http://ftp.riken.jp/iris/ugs/ugs.tar.gz"
+  homepage "https://ftp.riken.jp/pub/iris/ugs"
+  url "https://ftp.riken.jp/iris/ugs/ugs.tar.gz"
   version "2.10e"
   sha256 "27bc46e975917bdf149e9ff6997885ffa24b0b1416bdf82ffaea5246b36e1f83"
 
@@ -27,5 +27,9 @@ class Ugs < Formula
     system "make"
 
     lib.install "ugs.a"
+  end
+
+  test do
+    assert_predicate lib/"ugs.a", :exist?
   end
 end
