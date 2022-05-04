@@ -14,7 +14,7 @@ class Sherpa < Formula
   depends_on "autoconf" => :build
   depends_on "fastjet"
   depends_on "gcc" # for gfortran
-  depends_on "hepmc3"
+  depends_on "hepmc"
   depends_on "lhapdf"
   depends_on "sqlite" # configure script does not work with system sqlite
 
@@ -27,7 +27,7 @@ class Sherpa < Formula
       --enable-analysis
       --enable-gzip
       --enable-fastjet=#{Formula["fastjet"].opt_prefix}
-      --enable-hepmc3=#{Formula["hepmc3"].opt_prefix}
+      --enable-hepmc3=#{Formula["hepmc"].opt_prefix}
       --enable-lhapdf=#{Formula["lhapdf"].opt_prefix}
       --with-sqlite3=#{Formula["sqlite"].opt_prefix}
     ]
