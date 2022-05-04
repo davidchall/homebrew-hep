@@ -3,6 +3,7 @@ class Herwig < Formula
   homepage "https://herwig.hepforge.org"
   url "https://herwig.hepforge.org/downloads/Herwig-7.2.3.tar.bz2"
   sha256 "5599899379b01b09e331a2426d78d39b7f6ec126db2543e9d340aefe6aa50f84"
+  license "GPL-3.0-only"
 
   bottle do
     root_url "https://ghcr.io/v2/davidchall/hep"
@@ -26,7 +27,7 @@ class Herwig < Formula
   depends_on "fastjet"
   depends_on "gcc" # for gfortran
   depends_on "gsl"
-  depends_on "hepmc"
+  depends_on "hepmc3"
   depends_on "thepeg"
 
   patch :DATA

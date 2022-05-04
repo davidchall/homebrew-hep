@@ -3,6 +3,7 @@ class Sherpa < Formula
   homepage "https://sherpa-team.gitlab.io"
   url "https://sherpa.hepforge.org/downloads/?f=SHERPA-MC-2.2.11.tar.gz"
   sha256 "0eb03f87f7ff3231b294ac40b5532ae8e2ef11d6fac81ee946df14257366c22d"
+  license "GPL-2.0-only"
 
   bottle do
     root_url "https://ghcr.io/v2/davidchall/hep"
@@ -14,7 +15,7 @@ class Sherpa < Formula
   depends_on "autoconf" => :build
   depends_on "fastjet"
   depends_on "gcc" # for gfortran
-  depends_on "hepmc"
+  depends_on "hepmc3"
   depends_on "lhapdf"
   depends_on "sqlite" # configure script does not work with system sqlite
 
@@ -27,7 +28,7 @@ class Sherpa < Formula
       --enable-analysis
       --enable-gzip
       --enable-fastjet=#{Formula["fastjet"].opt_prefix}
-      --enable-hepmc3=#{Formula["hepmc"].opt_prefix}
+      --enable-hepmc3=#{Formula["hepmc3"].opt_prefix}
       --enable-lhapdf=#{Formula["lhapdf"].opt_prefix}
       --with-sqlite3=#{Formula["sqlite"].opt_prefix}
     ]

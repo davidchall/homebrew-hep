@@ -3,6 +3,7 @@ class Thepeg < Formula
   homepage "https://herwig.hepforge.org"
   url "https://thepeg.hepforge.org/downloads/ThePEG-2.2.3.tar.bz2"
   sha256 "f21473197a761fc32917b08a8d24d2bfaf93ff57f3441fd605da99ac9de5d50b"
+  license "GPL-3.0-only"
 
   bottle do
     root_url "https://ghcr.io/v2/davidchall/hep"
@@ -24,7 +25,7 @@ class Thepeg < Formula
   depends_on "boost"
   depends_on "fastjet"
   depends_on "gsl"
-  depends_on "hepmc"
+  depends_on "hepmc3"
   depends_on "lhapdf"
 
   def install
@@ -35,7 +36,7 @@ class Thepeg < Formula
       --with-boost=#{Formula["boost"].opt_prefix}
       --with-gsl=#{Formula["gsl"].opt_prefix}
       --with-fastjet=#{Formula["fastjet"].opt_prefix}
-      --with-hepmc=#{Formula["hepmc"].opt_prefix}
+      --with-hepmc=#{Formula["hepmc3"].opt_prefix}
       --with-hepmcversion=3
       --with-lhapdf=#{Formula["lhapdf"].opt_prefix}
     ]

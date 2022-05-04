@@ -4,6 +4,7 @@ class Pythia < Formula
   url "https://pythia.org/download/pythia83/pythia8307.tgz"
   version "8.307"
   sha256 "e5b14d44aa5943332e32dd5dda9a18fdd1a0085c7198e28d840e04167fa6013d"
+  license "GPL-2.0-or-later"
 
   bottle do
     root_url "https://ghcr.io/v2/davidchall/hep"
@@ -13,13 +14,13 @@ class Pythia < Formula
   end
 
   depends_on "boost"
-  depends_on "hepmc"
+  depends_on "hepmc3"
   depends_on "lhapdf"
 
   def install
     args = %W[
       --prefix=#{prefix}
-      --with-hepmc3=#{Formula["hepmc"].opt_prefix}
+      --with-hepmc3=#{Formula["hepmc3"].opt_prefix}
       --with-lhapdf6=#{Formula["lhapdf"].opt_prefix}
       --with-boost=#{Formula["boost"].opt_prefix}
     ]

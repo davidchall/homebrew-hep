@@ -5,6 +5,7 @@ class Rivet < Formula
   homepage "https://rivet.hepforge.org"
   url "https://rivet.hepforge.org/downloads/?f=Rivet-3.1.5.tar.gz"
   sha256 "fa5582d3b17b6197575111f3b390a09eca59502c8146d22290a9a98544c16938"
+  license "GPL-3.0-only"
 
   bottle do
     root_url "https://ghcr.io/v2/davidchall/hep"
@@ -28,7 +29,7 @@ class Rivet < Formula
 
   depends_on "fastjet"
   depends_on "gsl"
-  depends_on "hepmc"
+  depends_on "hepmc3"
   depends_on "python@3.9"
   depends_on "yoda"
 
@@ -55,7 +56,7 @@ class Rivet < Formula
       --prefix=#{prefix}
       --with-fastjet=#{Formula["fastjet"].opt_prefix}
       --with-fjcontrib=#{prefix}
-      --with-hepmc3=#{Formula["hepmc"].opt_prefix}
+      --with-hepmc3=#{Formula["hepmc3"].opt_prefix}
       --with-yoda=#{Formula["yoda"].opt_prefix}
     ]
 
