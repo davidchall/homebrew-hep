@@ -29,7 +29,7 @@ class Rivet < Formula
 
   depends_on "fastjet"
   depends_on "gsl"
-  depends_on "hepmc"
+  depends_on "hepmc3"
   depends_on "python@3.9"
   depends_on "yoda"
 
@@ -56,7 +56,7 @@ class Rivet < Formula
       --prefix=#{prefix}
       --with-fastjet=#{Formula["fastjet"].opt_prefix}
       --with-fjcontrib=#{prefix}
-      --with-hepmc3=#{Formula["hepmc"].opt_prefix}
+      --with-hepmc3=#{Formula["hepmc3"].opt_prefix}
       --with-yoda=#{Formula["yoda"].opt_prefix}
     ]
 

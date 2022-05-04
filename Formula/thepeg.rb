@@ -25,7 +25,7 @@ class Thepeg < Formula
   depends_on "boost"
   depends_on "fastjet"
   depends_on "gsl"
-  depends_on "hepmc"
+  depends_on "hepmc3"
   depends_on "lhapdf"
 
   def install
@@ -36,7 +36,7 @@ class Thepeg < Formula
       --with-boost=#{Formula["boost"].opt_prefix}
       --with-gsl=#{Formula["gsl"].opt_prefix}
       --with-fastjet=#{Formula["fastjet"].opt_prefix}
-      --with-hepmc=#{Formula["hepmc"].opt_prefix}
+      --with-hepmc=#{Formula["hepmc3"].opt_prefix}
       --with-hepmcversion=3
       --with-lhapdf=#{Formula["lhapdf"].opt_prefix}
     ]

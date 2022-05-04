@@ -14,13 +14,13 @@ class Pythia < Formula
   end
 
   depends_on "boost"
-  depends_on "hepmc"
+  depends_on "hepmc3"
   depends_on "lhapdf"
 
   def install
     args = %W[
       --prefix=#{prefix}
-      --with-hepmc3=#{Formula["hepmc"].opt_prefix}
+      --with-hepmc3=#{Formula["hepmc3"].opt_prefix}
       --with-lhapdf6=#{Formula["lhapdf"].opt_prefix}
       --with-boost=#{Formula["boost"].opt_prefix}
     ]
