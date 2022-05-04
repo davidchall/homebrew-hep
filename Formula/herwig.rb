@@ -26,7 +26,7 @@ class Herwig < Formula
   depends_on "fastjet"
   depends_on "gcc" # for gfortran
   depends_on "gsl"
-  depends_on "hepmc3"
+  depends_on "hepmc"
   depends_on "thepeg"
 
   patch :DATA
