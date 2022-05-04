@@ -3,6 +3,7 @@ class Thepeg < Formula
   homepage "https://herwig.hepforge.org"
   url "https://thepeg.hepforge.org/downloads/ThePEG-2.2.3.tar.bz2"
   sha256 "f21473197a761fc32917b08a8d24d2bfaf93ff57f3441fd605da99ac9de5d50b"
+  license "GPL-3.0-only"
 
   bottle do
     root_url "https://ghcr.io/v2/davidchall/hep"

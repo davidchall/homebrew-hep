@@ -5,6 +5,7 @@ class Rivet < Formula
   homepage "https://rivet.hepforge.org"
   url "https://rivet.hepforge.org/downloads/?f=Rivet-3.1.5.tar.gz"
   sha256 "fa5582d3b17b6197575111f3b390a09eca59502c8146d22290a9a98544c16938"
+  license "GPL-3.0-only"
 
   bottle do
     root_url "https://ghcr.io/v2/davidchall/hep"

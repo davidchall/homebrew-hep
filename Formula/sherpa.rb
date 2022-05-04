@@ -3,6 +3,7 @@ class Sherpa < Formula
   homepage "https://sherpa-team.gitlab.io"
   url "https://sherpa.hepforge.org/downloads/?f=SHERPA-MC-2.2.11.tar.gz"
   sha256 "0eb03f87f7ff3231b294ac40b5532ae8e2ef11d6fac81ee946df14257366c22d"
+  license "GPL-2.0-only"
 
   bottle do
     root_url "https://ghcr.io/v2/davidchall/hep"
