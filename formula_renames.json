@@ -1,4 +1,5 @@
 {
+  "hepmc3": "hepmc",
   "herwig++": "herwig",
   "pythia8": "pythia"
 }
