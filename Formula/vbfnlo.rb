@@ -7,7 +7,6 @@ class Vbfnlo < Formula
   option "with-kk", "Enable Kaluza-Klein resonances"
   option "with-spin2", "Enable spin-2 resonances"
 
-  depends_on arch: :x86_64
   depends_on "gcc" # for gfortran
   depends_on "lhapdf" => :recommended
   depends_on "root" => :optional
@@ -24,7 +23,6 @@ class Vbfnlo < Formula
       --disable-dependency-tracking
       --enable-shared=no
       --prefix=#{prefix}
-      FCFLAGS=-std=legacy
     ]
 
     args << "--enable-spin2"                                if build.with? "spin2"
@@ -32,7 +30,13 @@ class Vbfnlo < Formula
     args << "--with-LHAPDF=#{Formula["lhapdf"].opt_prefix}" if build.with? "lhapdf"
     args << "--with-root=#{Formula["root"].opt_prefix}"     if build.with? "root"
 
+    # https://github.com/davidchall/homebrew-hep/issues/203
+    args << "--disable-quad"
+
+    ENV.append "FCFLAGS", "-std=legacy"
+
     system "./configure", *args
+    system "make"
     system "make", "install"
   end
 
