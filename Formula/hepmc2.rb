@@ -3,6 +3,7 @@ class Hepmc2 < Formula
   homepage "https://hepmc.web.cern.ch/"
   url "https://gitlab.cern.ch/hepmc/HepMC/-/archive/2.06.11/HepMC-2.06.11.tar.gz"
   sha256 "ceaced62d39e4e2a1469fa2f20662d4d370279b3209930250766db02f44ae8de"
+  license "LGPL-2.1-or-later"
 
   option "with-test", "Test during installation"
 
