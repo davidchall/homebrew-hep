@@ -9,13 +9,11 @@ class Hepmc3 < Formula
   option "with-root", "Enable root IO"
 
   depends_on "cmake" => [:build, :test]
+  depends_on "coreutils" # HepMC3-config uses greadlink
   depends_on "python@3.9"
   depends_on "root" => :optional
 
   def install
-    # use system readlink
-    inreplace "HepMC3-config.in", "greadlink", "readlink"
-
     mkdir "../build" do
       args = %W[
         -DCMAKE_INSTALL_PREFIX=#{prefix}
