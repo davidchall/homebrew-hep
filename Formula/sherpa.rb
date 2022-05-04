@@ -4,6 +4,7 @@ class Sherpa < Formula
   url "https://sherpa.hepforge.org/downloads/?f=SHERPA-MC-2.2.11.tar.gz"
   sha256 "0eb03f87f7ff3231b294ac40b5532ae8e2ef11d6fac81ee946df14257366c22d"
   license "GPL-2.0-only"
+  revision 1
 
   bottle do
     root_url "https://ghcr.io/v2/davidchall/hep"
@@ -13,11 +14,13 @@ class Sherpa < Formula
   end
 
   depends_on "autoconf" => :build
-  depends_on "fastjet"
   depends_on "gcc" # for gfortran
-  depends_on "hepmc3"
-  depends_on "lhapdf"
-  depends_on "sqlite" # configure script does not work with system sqlite
+  depends_on "sqlite"
+  depends_on "fastjet" => :recommended
+  depends_on "hepmc3"  => :recommended
+  depends_on "lhapdf"  => :recommended
+  depends_on "rivet"   => :recommended
+  depends_on "root"    => :optional
 
   def install
     ENV.cxx11
@@ -27,11 +30,14 @@ class Sherpa < Formula
       --prefix=#{prefix}
       --enable-analysis
       --enable-gzip
-      --enable-fastjet=#{Formula["fastjet"].opt_prefix}
-      --enable-hepmc3=#{Formula["hepmc3"].opt_prefix}
-      --enable-lhapdf=#{Formula["lhapdf"].opt_prefix}
       --with-sqlite3=#{Formula["sqlite"].opt_prefix}
     ]
+
+    args << "--enable-fastjet=#{Formula["fastjet"].opt_prefix}" if build.with? "fastjet"
+    args << "--enable-hepmc3=#{Formula["hepmc3"].opt_prefix}"   if build.with? "hepmc3"
+    args << "--enable-lhapdf=#{Formula["lhapdf"].opt_prefix}"   if build.with? "lhapdf"
+    args << "--enable-rivet=#{Formula["rivet"].opt_prefix}"     if build.with? "rivet"
+    args << "--enable-root=#{Formula["root"].opt_prefix}"       if build.with? "root"
 
     system "./configure", *args
     system "make"
