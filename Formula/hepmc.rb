@@ -4,13 +4,6 @@ class Hepmc < Formula
   url "https://hepmc.web.cern.ch/hepmc/releases/HepMC3-3.2.5.tar.gz"
   sha256 "cd0f75c80f75549c59cc2a829ece7601c77de97cb2a5ab75790cac8e1d585032"
 
-  bottle do
-    root_url "https://ghcr.io/v2/davidchall/hep"
-    sha256 cellar: :any, monterey: "712a1f121f0068b8e728edc70f367a8e73e2b127541000a7439f340391aa2479"
-    sha256 cellar: :any, big_sur:  "83680442908866dc286291b8158d195b8eb42b73fa7bbcf545929a4e3908be6f"
-    sha256 cellar: :any, catalina: "8859f256ea68856522ac217017de97b12528f7b6e2f756fd3ab66e7f61cc6cc7"
-  end
-
   option "with-test", "Test during installation"
   option "with-root", "Enable root IO"
 
