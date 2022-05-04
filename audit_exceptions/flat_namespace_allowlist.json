@@ -1,6 +1,7 @@
 [
   "herwig",
   "lhapdf",
+  "rivet",
   "sherpa",
   "thepeg",
   "yoda"
