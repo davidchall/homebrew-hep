@@ -4,6 +4,14 @@ class Vbfnlo < Formula
   url "https://www.itp.kit.edu/vbfnlo/wiki/lib/exe/fetch.php?media=download:vbfnlo-3.0.0beta5.tgz"
   sha256 "d7ce67aa394a6b47da33ede3a0314436414ec12d6c30238622405bdfb76cb544"
 
+  bottle do
+    root_url "https://ghcr.io/v2/davidchall/hep"
+    rebuild 1
+    sha256 cellar: :any, monterey: "a201d2b48c6433a0cb2e2bdb9a8984ca9c70631e9bcffdbedc7e95a27c05dec1"
+    sha256 cellar: :any, big_sur:  "944b879b9f93277279313595fba2a2e4d31372c9ab0a3f7d8b9a0f14ed09c08a"
+    sha256 cellar: :any, catalina: "15e60fa3a3887b3605ff7949306185000084d76521bb48fb228884b2ff8d8b7b"
+  end
+
   option "with-kk", "Enable Kaluza-Klein resonances"
   option "with-spin2", "Enable spin-2 resonances"
 
