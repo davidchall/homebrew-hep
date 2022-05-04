@@ -6,6 +6,13 @@ class Rivet < Formula
   url "https://rivet.hepforge.org/downloads/?f=Rivet-3.1.5.tar.gz"
   sha256 "fa5582d3b17b6197575111f3b390a09eca59502c8146d22290a9a98544c16938"
 
+  bottle do
+    root_url "https://ghcr.io/v2/davidchall/hep"
+    sha256 monterey: "29424a47d929906d44afa4dd4d50a24680cb918bb911ecb89e2b55c0faa46fc1"
+    sha256 big_sur:  "994733c064eb1a851d77030279d8fcf284aa1922dc82dc7b31d5de045eb924da"
+    sha256 catalina: "162ca873c2a2c12a020e3df7e0b3f43cf49ed753ecb136c0966b530be18506f8"
+  end
+
   head do
     url "http://rivet.hepforge.org/hg/rivet", using: :hg, branch: "tip"
 
