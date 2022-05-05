@@ -7,6 +7,13 @@ class Madgraph5Amcatnlo < Formula
   sha256 "d62f020d5b1bf72f654acc96916aba895bdc50f88ad560080f0e63894201ed99"
   license "NCSA"
 
+  bottle do
+    root_url "https://ghcr.io/v2/davidchall/hep"
+    sha256 cellar: :any, monterey: "bfa29f457fce1100175e984e4251820488b7445a55233fa139245684a3e74556"
+    sha256 cellar: :any, big_sur:  "00343ca5ba71ab37f02825c6064c05bf590355d75cdc6ba7e72c43da2ab6fd32"
+    sha256 cellar: :any, catalina: "6dbc708ed385e802a4977566177bc1a959aa4fcf2e4e52d76f617278f6d4df90"
+  end
+
   depends_on "fastjet"
   depends_on "gcc" # for gfortran
   depends_on "python@3.9"
