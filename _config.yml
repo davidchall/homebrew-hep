@@ -17,8 +17,8 @@ exclude:
   - script
   - Gemfile*
   - vendor
+  - README.md
 
 logo: https://raw.githubusercontent.com/davidchall/homebrew-hep/HEAD/.github/homebrew-hep-logo.png
 
-search_name: homebrew-hep
-search_site: homebrew-hep
+forkme_nwo: davidchall/hep
