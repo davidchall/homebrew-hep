@@ -11,7 +11,7 @@
   ],
   "desc": "PARtonic Tomography Of Nucleon Software",
   "license": null,
-  "homepage": "http://partons.cea.fr/partons/doc/html/index.html",
+  "homepage": "http://partons.cea.fr/",
   "versions": {
     "stable": "2.0",
     "head": null,
