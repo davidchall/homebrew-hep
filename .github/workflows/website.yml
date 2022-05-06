@@ -1,0 +1,37 @@
+name: Publish website
+on:
+  push:
+    branches:
+      - master
+
+jobs:
+  generate:
+    runs-on: macos-latest
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@main
+        with:
+          ref: gh-pages
+
+      - name: Set up Homebrew
+        id: set-up-homebrew
+        uses: Homebrew/actions/setup-homebrew@master
+
+      - name: Set up git
+        uses: Homebrew/actions/git-user-config@master
+
+      - name: Set up tap (+ dependency taps)
+        run: |
+          brew tap davidchall/hep
+          brew tap cartr/qt4
+
+      - name: Generate formulae data
+        run: brew ruby script/generate.rb
+
+      - name: Push changes
+        run: |
+          git add _data/formula{,_canonical.json} formula
+          if ! git diff --no-patch --exit-code HEAD -- _data/formula{,_canonical.json} formula; then
+            git commit -m "Update formulae data" _data/formula{,_canonical.json} formula
+          fi
+          git push
