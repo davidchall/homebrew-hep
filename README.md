@@ -4,11 +4,10 @@
 
 Homebrew-hep is a macOS package manager for high energy physics software, based on [Homebrew](https://brew.sh/).
 In Homebrew terminology, it is a tap.
-It simplifies the user workflow by:
 
-* Keeping things organised in a dedicated directory
-* Automatically handling package dependencies
-* Facilitating easy upgrades
+* Keeps things organised in a dedicated directory
+* Handles package dependencies
+* Facilitates easy upgrades
 
 ## Quick start
 
@@ -19,12 +18,7 @@ It simplifies the user workflow by:
 
 ## Available packages
 
-A list of HEP packages provided by homebrew-hep can be found [here](https://github.com/davidchall/homebrew-hep/tree/master/Formula).
-
-Other Homebrew packages useful for high energy physics:
-
-* `root` ([see details](https://formulae.brew.sh/formula/root))
-* `bash-completion` (enables tab-completion for some HEP packages)
+You can browse packages provided by homebrew-hep [here](https://davidchall.github.io/homebrew-hep/formula/).
 
 If your favourite HEP package is missing, please request it on the [issues page](https://github.com/davidchall/homebrew-hep/issues) or consider making a [contribution](./CONTRIBUTING.md).
 
