@@ -1,6 +1,6 @@
 class Partons < Formula
   desc "PARtonic Tomography Of Nucleon Software"
-  homepage "http://partons.cea.fr/partons/doc/html/index.html"
+  homepage "http://partons.cea.fr/"
   url "https://drf-gitlab.cea.fr/partons/core/partons/repository/v2.0/archive.tar.gz"
   sha256 "75afa187f575f77b3ec63d6e5565c1ccdc7843988f24a8c8b5fdeeb1b4420c82"
 
