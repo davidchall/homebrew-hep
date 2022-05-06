@@ -1,0 +1,24 @@
+title: homebrew-hep
+description: Homebrew's package index
+
+repo: homebrew-hep
+remote: https://github.com/davidchall/homebrew-hep
+
+remote_theme: Homebrew/brew.sh
+
+plugins:
+  - jekyll-feed
+  - jekyll-redirect-from
+  - jekyll-remote-theme
+  - jekyll-seo-tag
+  - jekyll-sitemap
+
+exclude:
+  - script
+  - Gemfile*
+  - vendor
+
+logo: https://raw.githubusercontent.com/davidchall/homebrew-hep/HEAD/.github/homebrew-hep-logo.png
+
+search_name: homebrew-hep
+search_site: homebrew-hep

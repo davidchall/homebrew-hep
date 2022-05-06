@@ -1,0 +1,141 @@
+<!-- BSD 2-Clause License
+
+Copyright (c) 2009-present, Homebrew contributors
+All rights reserved.
+
+Redistribution and use in source and binary forms, with or without
+modification, are permitted provided that the following conditions are met:
+
+* Redistributions of source code must retain the above copyright notice, this
+  list of conditions and the following disclaimer.
+
+* Redistributions in binary form must reproduce the above copyright notice,
+  this list of conditions and the following disclaimer in the documentation
+  and/or other materials provided with the distribution.
+
+THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS"
+AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE
+IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE
+DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT HOLDER OR CONTRIBUTORS BE LIABLE
+FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL
+DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR
+SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER
+CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY,
+OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
+OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE. -->
+{% assign t = site.data.locales[page.lang][page.lang] %}
+<!DOCTYPE html>
+<html {% if page.direction == "rtl" %}dir="rtl" {% endif %}lang="{{ page.lang }}">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    {% if page.title %}
+    <title>{{ page.title }} — {{ site.title }}</title>
+    {% elsif t.subtitle %}
+    {% if page.direction == "rtl" %}
+    <title>{{ site.title }} — {{ t.subtitle }}</title>
+    {% else %}
+    <title>{{ t.subtitle }} — {{ site.title }}</title>
+    {% endif %}
+    {% else %}
+    <title>{{ site.title }}</title>
+    {% endif %}
+    {% seo title=false %}
+    {% feed_meta %}
+    <meta name="viewport" content="width=device-width">
+    <link rel="icon" type="image/x-icon" href="{{ "/assets/img/favicon.ico" | relative_url }}">
+    <link rel="apple-touch-icon" href="{{ "/assets/img/apple-touch-icon.png" | relative_url }}">
+    <link rel="stylesheet" href="{{ "/assets/css/styles.css" | relative_url }}" type="text/css" media="screen">
+    {% if site.url == "http://localhost:4000" %}
+    <script src="https://github.com/Khan/tota11y/releases/download/0.1.3/tota11y.min.js"></script>
+    {% endif %}
+    {% if site.data.locales and page.lang %}
+    {% assign locales = site.data.locales | sort %}
+    {% for locale in locales %}
+      {% assign lang = locale[0] %}
+      {% if lang == "en" %}
+      <link rel="alternate" hreflang="en" href="{{ site.url }}" />
+      <link rel="alternate" hreflang="x-default" href="{{ site.url }}" />
+      {% else %}
+      <link rel="alternate" hreflang="{{ lang }}" href="{{ lang | prepend: '/index_' | prepend: site.url }}" />
+      {% endif %}
+    {% endfor %}
+    {% endif %}
+  </head>
+  <body onload="setupCopyables()">
+    <div id="wrap">
+      <div id="header" class="{{ page.header-class }}">
+        {% if page.logo %}
+        <img alt="{{ page.title }} logo" src="{{ page.logo | relative_url }}" width="128" height="128">
+        {% elsif site.logo %}
+        <a href="{{ site.baseurl }}/"><img alt="{{ site.title }} logo" src="{{ site.logo | relative_url }}" width="750" height="152"></a>
+        {% else %}
+        <img alt="Homebrew logo" src="{{ "/assets/img/homebrew-256x256.png" | relative_url }}" width="128" height="128">
+        {% endif %}
+        {% if t.subtitle %}
+        <p id="subtitle"><strong>{{ t.subtitle }}</strong></p>
+        {% endif %}
+
+        {% if page.lang %}
+        <select id="language" onchange="loadLanguage(this.options[this.selectedIndex].value)">
+          {% for locale in locales %}
+            {% assign lang = locale[0] %}
+            {% assign locale_name = locale[1][lang].locale_name %}
+            {% if page.lang == lang %}
+            <option value="{{ lang }}" selected="selected">{{ locale_name }}</option>
+            {% else %}
+            <option value="{{ lang }}">{{ locale_name }}</option>
+            {% endif %}
+          {% endfor %}
+        </select>
+        {% endif %}
+      </div>
+
+      {{ content }}
+
+    </div>
+
+    <script>
+      function loadLanguage(lang) {
+        if (lang === {{ page.lang | jsonify }}) {
+            return;
+        } else if (lang === "en") {
+            window.location.assign("/");
+        } else {
+            window.location.assign("/index_" + lang);
+        }
+      }
+
+      function loadAnchors() {
+        anchors.options = {
+          placement: 'left',
+          visible: 'touch',
+        };
+        anchors.add('#page > h2, #page > h3, #page > h4, #page > h5, #page > h6');
+      };
+
+      function setupCopyables() {
+        if (navigator.clipboard) {
+          for (const element of document.getElementsByClassName("copyable")) {
+            let text = element.innerText.trim();
+            if(text.startsWith("$")) {
+              text = text.substr(1).trimLeft();
+            }
+            const button = document.createElement("button");
+            button.innerHTML = "📋";
+            button.setAttribute("aria-label", "Copy to clipboard");
+            button.onclick = () => {
+              navigator.clipboard.writeText(text);
+              button.innerHTML = "✅";
+              setTimeout(() => button.innerHTML="📋", 1000);
+            }
+            element.appendChild(button);
+          }
+        }
+      }
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/anchor-js/4.2.0/anchor.min.js"
+            integrity="sha256-m1eTvwEHwmsw4+XKF7BshClVJEPwTVycveNl0CS0Mkk="
+            crossorigin="anonymous"
+            onload="loadAnchors()" async></script>
+  </body>
+</html>

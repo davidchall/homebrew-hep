@@ -1,0 +1,12 @@
+
+        {%- assign formula_parts = include.formula | split: "/" -%}
+        {%- if formula_parts.size == 1 -%}
+        <td><a href="https://formulae.brew.sh/formula/{{ include.formula }}"
+            >{{ include.formula }}</a></td>
+        <td></td>
+        <td><i>Provided by Homebrew</i></td>
+        {%- else %}
+        <td>{{ formula_parts[2] }}</td>
+        <td></td>
+        <td><i>Provided by {{ formula_parts[0] }}/{{ formula_parts[1] }}</i></td>
+        {%- endif -%}

@@ -1,0 +1,17 @@
+---
+title: homebrew-hep
+layout: default
+permalink: /formula/
+---
+<p>This is a list of all packages available from <a href="{{ site.remote }}">{{ site.repo }}</a>.</p>
+
+<table>
+    {%- assign sorted_formulae = site.data.formula | sort -%}
+    {%- for f in sorted_formulae -%}
+    <tr>
+        {%- assign formula = f[1] -%}
+        {%- include formula.html formula=formula -%}
+    </tr>
+    {%- endfor -%}
+</table>
+<footer id="border-no-bottom">Last updated: {{ "today" | date: "%F %R" }}</footer>
