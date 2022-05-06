@@ -1,0 +1,99 @@
+{
+  "name": "fastnlo",
+  "full_name": "davidchall/hep/fastnlo",
+  "tap": "davidchall/hep",
+  "oldname": null,
+  "aliases": [
+
+  ],
+  "versioned_formulae": [
+
+  ],
+  "desc": "Fast pQCD calculations for PDF fits",
+  "license": null,
+  "homepage": "https://fastnlo.hepforge.org",
+  "versions": {
+    "stable": "2.3.1.2212",
+    "head": null,
+    "bottle": false
+  },
+  "urls": {
+    "stable": {
+      "url": "https://fastnlo.hepforge.org/code/v23/fastnlo_toolkit-2.3.1pre-2212.tar.gz",
+      "tag": null,
+      "revision": null
+    }
+  },
+  "revision": 0,
+  "version_scheme": 0,
+  "bottle": {
+  },
+  "keg_only": false,
+  "keg_only_reason": null,
+  "bottle_disabled": false,
+  "options": [
+    {
+      "option": "--with-fastjet",
+      "description": "Build with fastjet support"
+    },
+    {
+      "option": "--with-hoppet",
+      "description": "Build with hoppet support"
+    },
+    {
+      "option": "--with-python",
+      "description": "Build with python support"
+    },
+    {
+      "option": "--with-qcdnum",
+      "description": "Build with qcdnum support"
+    },
+    {
+      "option": "--with-root",
+      "description": "Build with root support"
+    },
+    {
+      "option": "--with-yoda",
+      "description": "Build with yoda support"
+    }
+  ],
+  "build_dependencies": [
+
+  ],
+  "dependencies": [
+    "lhapdf"
+  ],
+  "recommended_dependencies": [
+
+  ],
+  "optional_dependencies": [
+    "fastjet",
+    "hoppet",
+    "python",
+    "qcdnum",
+    "root",
+    "yoda"
+  ],
+  "uses_from_macos": [
+
+  ],
+  "requirements": [
+
+  ],
+  "conflicts_with": [
+
+  ],
+  "caveats": null,
+  "installed": [
+
+  ],
+  "linked_keg": null,
+  "pinned": false,
+  "outdated": false,
+  "deprecated": false,
+  "deprecation_date": null,
+  "deprecation_reason": null,
+  "disabled": false,
+  "disable_date": null,
+  "disable_reason": null
+}

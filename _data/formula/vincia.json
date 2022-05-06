@@ -1,0 +1,72 @@
+{
+  "name": "vincia",
+  "full_name": "davidchall/hep/vincia",
+  "tap": "davidchall/hep",
+  "oldname": null,
+  "aliases": [
+
+  ],
+  "versioned_formulae": [
+
+  ],
+  "desc": "Dipole-antenna shower plugin for Pythia8",
+  "license": null,
+  "homepage": "https://vincia.hepforge.org",
+  "versions": {
+    "stable": "2.3.01",
+    "head": null,
+    "bottle": false
+  },
+  "urls": {
+    "stable": {
+      "url": "https://www.hepforge.org/archive/vincia/vincia-2.3.01.tgz",
+      "tag": null,
+      "revision": null
+    }
+  },
+  "revision": 0,
+  "version_scheme": 0,
+  "bottle": {
+  },
+  "keg_only": false,
+  "keg_only_reason": null,
+  "bottle_disabled": false,
+  "options": [
+
+  ],
+  "build_dependencies": [
+    "wget"
+  ],
+  "dependencies": [
+    "gcc",
+    "pythia"
+  ],
+  "recommended_dependencies": [
+
+  ],
+  "optional_dependencies": [
+
+  ],
+  "uses_from_macos": [
+
+  ],
+  "requirements": [
+
+  ],
+  "conflicts_with": [
+
+  ],
+  "caveats": null,
+  "installed": [
+
+  ],
+  "linked_keg": null,
+  "pinned": false,
+  "outdated": false,
+  "deprecated": false,
+  "deprecation_date": null,
+  "deprecation_reason": null,
+  "disabled": false,
+  "disable_date": null,
+  "disable_reason": null
+}

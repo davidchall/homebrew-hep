@@ -1,0 +1,92 @@
+{
+  "name": "lhapdf",
+  "full_name": "davidchall/hep/lhapdf",
+  "tap": "davidchall/hep",
+  "oldname": null,
+  "aliases": [
+
+  ],
+  "versioned_formulae": [
+
+  ],
+  "desc": "PDF interpolation and evaluation",
+  "license": null,
+  "homepage": "https://lhapdf.hepforge.org/",
+  "versions": {
+    "stable": "6.4.0",
+    "head": "HEAD",
+    "bottle": true
+  },
+  "urls": {
+    "stable": {
+      "url": "https://lhapdf.hepforge.org/downloads/?f=LHAPDF-6.4.0.tar.gz",
+      "tag": null,
+      "revision": null
+    }
+  },
+  "revision": 0,
+  "version_scheme": 0,
+  "bottle": {
+    "stable": {
+      "rebuild": 1,
+      "root_url": "https://ghcr.io/v2/davidchall/hep",
+      "files": {
+        "monterey": {
+          "cellar": "/usr/local/Cellar",
+          "url": "https://ghcr.io/v2/davidchall/hep/lhapdf/blobs/sha256:2d4038d6fa63fd8e38dd7830bf85119044de2138b90e107c2c75c3575f547da8",
+          "sha256": "2d4038d6fa63fd8e38dd7830bf85119044de2138b90e107c2c75c3575f547da8"
+        },
+        "big_sur": {
+          "cellar": "/usr/local/Cellar",
+          "url": "https://ghcr.io/v2/davidchall/hep/lhapdf/blobs/sha256:bf9c3cddc0a5560686e410b47458cca7babd3507d142c67ca6692d6112b66d7a",
+          "sha256": "bf9c3cddc0a5560686e410b47458cca7babd3507d142c67ca6692d6112b66d7a"
+        },
+        "catalina": {
+          "cellar": "/usr/local/Cellar",
+          "url": "https://ghcr.io/v2/davidchall/hep/lhapdf/blobs/sha256:b31b3333be0bfa2983460b75954e9ac56e16700b9bc61f5cff147c765e3d5704",
+          "sha256": "b31b3333be0bfa2983460b75954e9ac56e16700b9bc61f5cff147c765e3d5704"
+        }
+      }
+    }
+  },
+  "keg_only": false,
+  "keg_only_reason": null,
+  "bottle_disabled": false,
+  "options": [
+
+  ],
+  "build_dependencies": [
+
+  ],
+  "dependencies": [
+    "python@3.9"
+  ],
+  "recommended_dependencies": [
+
+  ],
+  "optional_dependencies": [
+
+  ],
+  "uses_from_macos": [
+
+  ],
+  "requirements": [
+
+  ],
+  "conflicts_with": [
+
+  ],
+  "caveats": "PDFs may be downloaded and installed with\n\n  lhapdf install CT10nlo\n\nAt runtime, LHAPDF searches $(brew --prefix)/Cellar/lhapdf/6.4.0/share/LHAPDF\nand paths in LHAPDF_DATA_PATH for PDF sets.\n\n",
+  "installed": [
+
+  ],
+  "linked_keg": null,
+  "pinned": false,
+  "outdated": false,
+  "deprecated": false,
+  "deprecation_date": null,
+  "deprecation_reason": null,
+  "disabled": false,
+  "disable_date": null,
+  "disable_reason": null
+}

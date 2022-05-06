@@ -1,0 +1,99 @@
+{
+  "name": "fastjet",
+  "full_name": "davidchall/hep/fastjet",
+  "tap": "davidchall/hep",
+  "oldname": null,
+  "aliases": [
+
+  ],
+  "versioned_formulae": [
+
+  ],
+  "desc": "Package for jet finding in pp and ee collisions",
+  "license": null,
+  "homepage": "http://fastjet.fr",
+  "versions": {
+    "stable": "3.4.0",
+    "head": null,
+    "bottle": true
+  },
+  "urls": {
+    "stable": {
+      "url": "http://fastjet.fr/repo/fastjet-3.4.0.tar.gz",
+      "tag": null,
+      "revision": null
+    }
+  },
+  "revision": 0,
+  "version_scheme": 0,
+  "bottle": {
+    "stable": {
+      "rebuild": 1,
+      "root_url": "https://ghcr.io/v2/davidchall/hep",
+      "files": {
+        "monterey": {
+          "cellar": ":any",
+          "url": "https://ghcr.io/v2/davidchall/hep/fastjet/blobs/sha256:8391ca25a36a28be07e680a6af1419b43c3f130c18485af6c560bd87663e782f",
+          "sha256": "8391ca25a36a28be07e680a6af1419b43c3f130c18485af6c560bd87663e782f"
+        },
+        "big_sur": {
+          "cellar": ":any",
+          "url": "https://ghcr.io/v2/davidchall/hep/fastjet/blobs/sha256:64793fb0741fda6358b64297cc07a2c9c5386fc25dba0fce8d125d918cb9e7d0",
+          "sha256": "64793fb0741fda6358b64297cc07a2c9c5386fc25dba0fce8d125d918cb9e7d0"
+        },
+        "catalina": {
+          "cellar": ":any",
+          "url": "https://ghcr.io/v2/davidchall/hep/fastjet/blobs/sha256:44ea80df7cdce1f0078bc40bcc1fe9039c69b73b2e37236bc6b134eb25c85d54",
+          "sha256": "44ea80df7cdce1f0078bc40bcc1fe9039c69b73b2e37236bc6b134eb25c85d54"
+        }
+      }
+    }
+  },
+  "keg_only": false,
+  "keg_only_reason": null,
+  "bottle_disabled": false,
+  "options": [
+    {
+      "option": "--without-cgal",
+      "description": "Disable CGAL support (required for NlnN strategy)"
+    },
+    {
+      "option": "--with-test",
+      "description": "Test during installation"
+    }
+  ],
+  "build_dependencies": [
+
+  ],
+  "dependencies": [
+    "python@3.9"
+  ],
+  "recommended_dependencies": [
+    "cgal"
+  ],
+  "optional_dependencies": [
+
+  ],
+  "uses_from_macos": [
+
+  ],
+  "requirements": [
+
+  ],
+  "conflicts_with": [
+
+  ],
+  "caveats": null,
+  "installed": [
+
+  ],
+  "linked_keg": null,
+  "pinned": false,
+  "outdated": false,
+  "deprecated": false,
+  "deprecation_date": null,
+  "deprecation_reason": null,
+  "disabled": false,
+  "disable_date": null,
+  "disable_reason": null
+}

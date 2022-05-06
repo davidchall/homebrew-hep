@@ -1,0 +1,100 @@
+{
+  "name": "hepmc3",
+  "full_name": "davidchall/hep/hepmc3",
+  "tap": "davidchall/hep",
+  "oldname": null,
+  "aliases": [
+
+  ],
+  "versioned_formulae": [
+
+  ],
+  "desc": "C++ event record for Monte Carlo generators",
+  "license": "GPL-3.0-or-later",
+  "homepage": "https://hepmc.web.cern.ch/",
+  "versions": {
+    "stable": "3.2.5",
+    "head": null,
+    "bottle": true
+  },
+  "urls": {
+    "stable": {
+      "url": "https://hepmc.web.cern.ch/hepmc/releases/HepMC3-3.2.5.tar.gz",
+      "tag": null,
+      "revision": null
+    }
+  },
+  "revision": 1,
+  "version_scheme": 0,
+  "bottle": {
+    "stable": {
+      "rebuild": 0,
+      "root_url": "https://ghcr.io/v2/davidchall/hep",
+      "files": {
+        "monterey": {
+          "cellar": ":any",
+          "url": "https://ghcr.io/v2/davidchall/hep/hepmc3/blobs/sha256:712a1f121f0068b8e728edc70f367a8e73e2b127541000a7439f340391aa2479",
+          "sha256": "712a1f121f0068b8e728edc70f367a8e73e2b127541000a7439f340391aa2479"
+        },
+        "big_sur": {
+          "cellar": ":any",
+          "url": "https://ghcr.io/v2/davidchall/hep/hepmc3/blobs/sha256:83680442908866dc286291b8158d195b8eb42b73fa7bbcf545929a4e3908be6f",
+          "sha256": "83680442908866dc286291b8158d195b8eb42b73fa7bbcf545929a4e3908be6f"
+        },
+        "catalina": {
+          "cellar": ":any",
+          "url": "https://ghcr.io/v2/davidchall/hep/hepmc3/blobs/sha256:8859f256ea68856522ac217017de97b12528f7b6e2f756fd3ab66e7f61cc6cc7",
+          "sha256": "8859f256ea68856522ac217017de97b12528f7b6e2f756fd3ab66e7f61cc6cc7"
+        }
+      }
+    }
+  },
+  "keg_only": false,
+  "keg_only_reason": null,
+  "bottle_disabled": false,
+  "options": [
+    {
+      "option": "--with-test",
+      "description": "Test during installation"
+    },
+    {
+      "option": "--with-root",
+      "description": "Enable root IO"
+    }
+  ],
+  "build_dependencies": [
+    "cmake"
+  ],
+  "dependencies": [
+    "coreutils",
+    "python@3.9"
+  ],
+  "recommended_dependencies": [
+
+  ],
+  "optional_dependencies": [
+    "root"
+  ],
+  "uses_from_macos": [
+
+  ],
+  "requirements": [
+
+  ],
+  "conflicts_with": [
+
+  ],
+  "caveats": null,
+  "installed": [
+
+  ],
+  "linked_keg": null,
+  "pinned": false,
+  "outdated": false,
+  "deprecated": false,
+  "deprecation_date": null,
+  "deprecation_reason": null,
+  "disabled": false,
+  "disable_date": null,
+  "disable_reason": null
+}

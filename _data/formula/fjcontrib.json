@@ -1,0 +1,85 @@
+{
+  "name": "fjcontrib",
+  "full_name": "davidchall/hep/fjcontrib",
+  "tap": "davidchall/hep",
+  "oldname": null,
+  "aliases": [
+
+  ],
+  "versioned_formulae": [
+
+  ],
+  "desc": "Package of contributed add-ons to FastJet",
+  "license": null,
+  "homepage": "https://fastjet.hepforge.org/contrib/",
+  "versions": {
+    "stable": "1.048",
+    "head": null,
+    "bottle": true
+  },
+  "urls": {
+    "stable": {
+      "url": "https://fastjet.hepforge.org/contrib/downloads/fjcontrib-1.048.tar.gz",
+      "tag": null,
+      "revision": null
+    }
+  },
+  "revision": 1,
+  "version_scheme": 0,
+  "bottle": {
+    "stable": {
+      "rebuild": 0,
+      "root_url": "https://ghcr.io/v2/davidchall/hep",
+      "files": {
+        "big_sur": {
+          "cellar": ":any_skip_relocation",
+          "url": "https://ghcr.io/v2/davidchall/hep/fjcontrib/blobs/sha256:81a5f5da671b112f7f1d90405fd8ee95927a873dc198111f6bfd7f2c66c9da67",
+          "sha256": "81a5f5da671b112f7f1d90405fd8ee95927a873dc198111f6bfd7f2c66c9da67"
+        }
+      }
+    }
+  },
+  "keg_only": false,
+  "keg_only_reason": null,
+  "bottle_disabled": false,
+  "options": [
+    {
+      "option": "--with-test",
+      "description": "Test during installation"
+    }
+  ],
+  "build_dependencies": [
+
+  ],
+  "dependencies": [
+    "fastjet"
+  ],
+  "recommended_dependencies": [
+
+  ],
+  "optional_dependencies": [
+
+  ],
+  "uses_from_macos": [
+
+  ],
+  "requirements": [
+
+  ],
+  "conflicts_with": [
+
+  ],
+  "caveats": null,
+  "installed": [
+
+  ],
+  "linked_keg": null,
+  "pinned": false,
+  "outdated": false,
+  "deprecated": false,
+  "deprecation_date": null,
+  "deprecation_reason": null,
+  "disabled": false,
+  "disable_date": null,
+  "disable_reason": null
+}

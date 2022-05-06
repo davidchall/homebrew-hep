@@ -1,0 +1,99 @@
+{
+  "name": "thepeg",
+  "full_name": "davidchall/hep/thepeg",
+  "tap": "davidchall/hep",
+  "oldname": null,
+  "aliases": [
+
+  ],
+  "versioned_formulae": [
+
+  ],
+  "desc": "Toolkit for high energy physics event generation",
+  "license": "GPL-3.0-only",
+  "homepage": "https://herwig.hepforge.org",
+  "versions": {
+    "stable": "2.2.3",
+    "head": "HEAD",
+    "bottle": true
+  },
+  "urls": {
+    "stable": {
+      "url": "https://thepeg.hepforge.org/downloads/ThePEG-2.2.3.tar.bz2",
+      "tag": null,
+      "revision": null
+    }
+  },
+  "revision": 0,
+  "version_scheme": 0,
+  "bottle": {
+    "stable": {
+      "rebuild": 0,
+      "root_url": "https://ghcr.io/v2/davidchall/hep",
+      "files": {
+        "monterey": {
+          "cellar": "/usr/local/Cellar",
+          "url": "https://ghcr.io/v2/davidchall/hep/thepeg/blobs/sha256:4aea760158f86dd841f1b42beed8bef5c131bb1059a3a5ad3f21e8f08f8d3603",
+          "sha256": "4aea760158f86dd841f1b42beed8bef5c131bb1059a3a5ad3f21e8f08f8d3603"
+        },
+        "big_sur": {
+          "cellar": "/usr/local/Cellar",
+          "url": "https://ghcr.io/v2/davidchall/hep/thepeg/blobs/sha256:99a54ff9080a78a665a38310481030b5cc68ea3c19aa511e448c7e047bc57106",
+          "sha256": "99a54ff9080a78a665a38310481030b5cc68ea3c19aa511e448c7e047bc57106"
+        },
+        "catalina": {
+          "cellar": "/usr/local/Cellar",
+          "url": "https://ghcr.io/v2/davidchall/hep/thepeg/blobs/sha256:c9a02975c359e7f61582004b2e7c9f2f4b17b719dd44272b166e36e3df1f5a6b",
+          "sha256": "c9a02975c359e7f61582004b2e7c9f2f4b17b719dd44272b166e36e3df1f5a6b"
+        }
+      }
+    }
+  },
+  "keg_only": false,
+  "keg_only_reason": null,
+  "bottle_disabled": false,
+  "options": [
+    {
+      "option": "--with-test",
+      "description": "Test during installation"
+    }
+  ],
+  "build_dependencies": [
+
+  ],
+  "dependencies": [
+    "boost",
+    "fastjet",
+    "gsl",
+    "hepmc3",
+    "lhapdf"
+  ],
+  "recommended_dependencies": [
+
+  ],
+  "optional_dependencies": [
+
+  ],
+  "uses_from_macos": [
+
+  ],
+  "requirements": [
+
+  ],
+  "conflicts_with": [
+
+  ],
+  "caveats": null,
+  "installed": [
+
+  ],
+  "linked_keg": null,
+  "pinned": false,
+  "outdated": false,
+  "deprecated": false,
+  "deprecation_date": null,
+  "deprecation_reason": null,
+  "disabled": false,
+  "disable_date": null,
+  "disable_reason": null
+}

@@ -1,0 +1,115 @@
+{
+  "name": "sherpa",
+  "full_name": "davidchall/hep/sherpa",
+  "tap": "davidchall/hep",
+  "oldname": null,
+  "aliases": [
+
+  ],
+  "versioned_formulae": [
+
+  ],
+  "desc": "Monte Carlo event generator",
+  "license": "GPL-2.0-only",
+  "homepage": "https://sherpa-team.gitlab.io",
+  "versions": {
+    "stable": "2.2.11",
+    "head": null,
+    "bottle": true
+  },
+  "urls": {
+    "stable": {
+      "url": "https://sherpa.hepforge.org/downloads/?f=SHERPA-MC-2.2.11.tar.gz",
+      "tag": null,
+      "revision": null
+    }
+  },
+  "revision": 1,
+  "version_scheme": 0,
+  "bottle": {
+    "stable": {
+      "rebuild": 0,
+      "root_url": "https://ghcr.io/v2/davidchall/hep",
+      "files": {
+        "monterey": {
+          "cellar": "/usr/local/Cellar",
+          "url": "https://ghcr.io/v2/davidchall/hep/sherpa/blobs/sha256:eb9a0f2d9cd4530ad1e71f54fbacfe9f07d46a73faad50af6c7643832a1f3c8f",
+          "sha256": "eb9a0f2d9cd4530ad1e71f54fbacfe9f07d46a73faad50af6c7643832a1f3c8f"
+        },
+        "big_sur": {
+          "cellar": "/usr/local/Cellar",
+          "url": "https://ghcr.io/v2/davidchall/hep/sherpa/blobs/sha256:f1b40ed3ff8b18fa02ad6f1b13ba7886864c4cf7bce63021743e09885722cb33",
+          "sha256": "f1b40ed3ff8b18fa02ad6f1b13ba7886864c4cf7bce63021743e09885722cb33"
+        },
+        "catalina": {
+          "cellar": "/usr/local/Cellar",
+          "url": "https://ghcr.io/v2/davidchall/hep/sherpa/blobs/sha256:6a4027b82c52811969edccd2d37df65b5c1a870bfa1d4dfa6865e4e61cc4809e",
+          "sha256": "6a4027b82c52811969edccd2d37df65b5c1a870bfa1d4dfa6865e4e61cc4809e"
+        }
+      }
+    }
+  },
+  "keg_only": false,
+  "keg_only_reason": null,
+  "bottle_disabled": false,
+  "options": [
+    {
+      "option": "--without-fastjet",
+      "description": "Build without fastjet support"
+    },
+    {
+      "option": "--without-hepmc3",
+      "description": "Build without hepmc3 support"
+    },
+    {
+      "option": "--without-lhapdf",
+      "description": "Build without lhapdf support"
+    },
+    {
+      "option": "--without-rivet",
+      "description": "Build without rivet support"
+    },
+    {
+      "option": "--with-root",
+      "description": "Build with root support"
+    }
+  ],
+  "build_dependencies": [
+    "autoconf"
+  ],
+  "dependencies": [
+    "gcc",
+    "sqlite"
+  ],
+  "recommended_dependencies": [
+    "fastjet",
+    "hepmc3",
+    "lhapdf",
+    "rivet"
+  ],
+  "optional_dependencies": [
+    "root"
+  ],
+  "uses_from_macos": [
+
+  ],
+  "requirements": [
+
+  ],
+  "conflicts_with": [
+
+  ],
+  "caveats": null,
+  "installed": [
+
+  ],
+  "linked_keg": null,
+  "pinned": false,
+  "outdated": false,
+  "deprecated": false,
+  "deprecation_date": null,
+  "deprecation_reason": null,
+  "disabled": false,
+  "disable_date": null,
+  "disable_reason": null
+}

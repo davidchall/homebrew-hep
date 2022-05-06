@@ -1,0 +1,97 @@
+{
+  "name": "ugs",
+  "full_name": "davidchall/hep/ugs",
+  "tap": "davidchall/hep",
+  "oldname": null,
+  "aliases": [
+
+  ],
+  "versioned_formulae": [
+
+  ],
+  "desc": "SLAC Unified Graphics System",
+  "license": null,
+  "homepage": "https://ftp.riken.jp/pub/iris/ugs",
+  "versions": {
+    "stable": "2.10e",
+    "head": null,
+    "bottle": true
+  },
+  "urls": {
+    "stable": {
+      "url": "https://ftp.riken.jp/iris/ugs/ugs.tar.gz",
+      "tag": null,
+      "revision": null
+    }
+  },
+  "revision": 0,
+  "version_scheme": 0,
+  "bottle": {
+    "stable": {
+      "rebuild": 1,
+      "root_url": "https://ghcr.io/v2/davidchall/hep",
+      "files": {
+        "monterey": {
+          "cellar": ":any_skip_relocation",
+          "url": "https://ghcr.io/v2/davidchall/hep/ugs/blobs/sha256:95993825db09461a6a4ba622722ff68868612f5ac6051ce075ba02c066be6705",
+          "sha256": "95993825db09461a6a4ba622722ff68868612f5ac6051ce075ba02c066be6705"
+        },
+        "big_sur": {
+          "cellar": ":any_skip_relocation",
+          "url": "https://ghcr.io/v2/davidchall/hep/ugs/blobs/sha256:e916e3e696ec3d3756e89826e630082009080675a8ef4626e07e040772fbe591",
+          "sha256": "e916e3e696ec3d3756e89826e630082009080675a8ef4626e07e040772fbe591"
+        },
+        "catalina": {
+          "cellar": ":any_skip_relocation",
+          "url": "https://ghcr.io/v2/davidchall/hep/ugs/blobs/sha256:8457dcfe4a4d90f748ab6fa15612125bc6e7967efa72dd5cad68173a220d97dc",
+          "sha256": "8457dcfe4a4d90f748ab6fa15612125bc6e7967efa72dd5cad68173a220d97dc"
+        }
+      }
+    }
+  },
+  "keg_only": false,
+  "keg_only_reason": null,
+  "bottle_disabled": false,
+  "options": [
+
+  ],
+  "build_dependencies": [
+    "gcc",
+    "imake"
+  ],
+  "dependencies": [
+    "libice",
+    "libsm",
+    "libx11",
+    "libxext",
+    "libxt"
+  ],
+  "recommended_dependencies": [
+
+  ],
+  "optional_dependencies": [
+
+  ],
+  "uses_from_macos": [
+
+  ],
+  "requirements": [
+
+  ],
+  "conflicts_with": [
+
+  ],
+  "caveats": null,
+  "installed": [
+
+  ],
+  "linked_keg": null,
+  "pinned": false,
+  "outdated": false,
+  "deprecated": false,
+  "deprecation_date": null,
+  "deprecation_reason": null,
+  "disabled": false,
+  "disable_date": null,
+  "disable_reason": null
+}

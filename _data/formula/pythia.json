@@ -1,0 +1,94 @@
+{
+  "name": "pythia",
+  "full_name": "davidchall/hep/pythia",
+  "tap": "davidchall/hep",
+  "oldname": "pythia8",
+  "aliases": [
+
+  ],
+  "versioned_formulae": [
+
+  ],
+  "desc": "Monte Carlo event generator",
+  "license": "GPL-2.0-or-later",
+  "homepage": "https://pythia.org",
+  "versions": {
+    "stable": "8.307",
+    "head": null,
+    "bottle": true
+  },
+  "urls": {
+    "stable": {
+      "url": "https://pythia.org/download/pythia83/pythia8307.tgz",
+      "tag": null,
+      "revision": null
+    }
+  },
+  "revision": 0,
+  "version_scheme": 0,
+  "bottle": {
+    "stable": {
+      "rebuild": 0,
+      "root_url": "https://ghcr.io/v2/davidchall/hep",
+      "files": {
+        "monterey": {
+          "cellar": "/usr/local/Cellar",
+          "url": "https://ghcr.io/v2/davidchall/hep/pythia/blobs/sha256:1324fce29466c5f53bb3139598c90cd17939e5b26a499d7cdd8d9e3e9923d7ae",
+          "sha256": "1324fce29466c5f53bb3139598c90cd17939e5b26a499d7cdd8d9e3e9923d7ae"
+        },
+        "big_sur": {
+          "cellar": "/usr/local/Cellar",
+          "url": "https://ghcr.io/v2/davidchall/hep/pythia/blobs/sha256:4b620e01e9684de0f59348176aa57d9389f634918c13f171c9c1f4053964986d",
+          "sha256": "4b620e01e9684de0f59348176aa57d9389f634918c13f171c9c1f4053964986d"
+        },
+        "catalina": {
+          "cellar": "/usr/local/Cellar",
+          "url": "https://ghcr.io/v2/davidchall/hep/pythia/blobs/sha256:1e053044666bf492bb748e187ea581e7b12523424862a884d3d207e32a0337c5",
+          "sha256": "1e053044666bf492bb748e187ea581e7b12523424862a884d3d207e32a0337c5"
+        }
+      }
+    }
+  },
+  "keg_only": false,
+  "keg_only_reason": null,
+  "bottle_disabled": false,
+  "options": [
+
+  ],
+  "build_dependencies": [
+
+  ],
+  "dependencies": [
+    "boost",
+    "hepmc3",
+    "lhapdf"
+  ],
+  "recommended_dependencies": [
+
+  ],
+  "optional_dependencies": [
+
+  ],
+  "uses_from_macos": [
+
+  ],
+  "requirements": [
+
+  ],
+  "conflicts_with": [
+
+  ],
+  "caveats": null,
+  "installed": [
+
+  ],
+  "linked_keg": null,
+  "pinned": false,
+  "outdated": false,
+  "deprecated": false,
+  "deprecation_date": null,
+  "deprecation_reason": null,
+  "disabled": false,
+  "disable_date": null,
+  "disable_reason": null
+}

@@ -1,0 +1,104 @@
+{
+  "name": "yoda",
+  "full_name": "davidchall/hep/yoda",
+  "tap": "davidchall/hep",
+  "oldname": null,
+  "aliases": [
+
+  ],
+  "versioned_formulae": [
+
+  ],
+  "desc": "Yet more Objects for Data Analysis",
+  "license": null,
+  "homepage": "https://yoda.hepforge.org",
+  "versions": {
+    "stable": "1.9.4",
+    "head": "HEAD",
+    "bottle": true
+  },
+  "urls": {
+    "stable": {
+      "url": "https://yoda.hepforge.org/downloads/?f=YODA-1.9.4.tar.gz",
+      "tag": null,
+      "revision": null
+    }
+  },
+  "revision": 0,
+  "version_scheme": 0,
+  "bottle": {
+    "stable": {
+      "rebuild": 1,
+      "root_url": "https://ghcr.io/v2/davidchall/hep",
+      "files": {
+        "monterey": {
+          "cellar": ":any",
+          "url": "https://ghcr.io/v2/davidchall/hep/yoda/blobs/sha256:7d8066c9493267eb51dd2cf9df480723ef4e210643d33c2c4eba332722d69496",
+          "sha256": "7d8066c9493267eb51dd2cf9df480723ef4e210643d33c2c4eba332722d69496"
+        },
+        "big_sur": {
+          "cellar": ":any",
+          "url": "https://ghcr.io/v2/davidchall/hep/yoda/blobs/sha256:31e667ee68972ee0427ce8d2a99bdf439c48a6cbee290e68e798dc3e3d15b174",
+          "sha256": "31e667ee68972ee0427ce8d2a99bdf439c48a6cbee290e68e798dc3e3d15b174"
+        },
+        "catalina": {
+          "cellar": ":any",
+          "url": "https://ghcr.io/v2/davidchall/hep/yoda/blobs/sha256:a3c03d1f831a4e9cfe9519abf5b07a55029cf56de1766b453910e12fadd4e25c",
+          "sha256": "a3c03d1f831a4e9cfe9519abf5b07a55029cf56de1766b453910e12fadd4e25c"
+        }
+      }
+    }
+  },
+  "keg_only": false,
+  "keg_only_reason": null,
+  "bottle_disabled": false,
+  "options": [
+    {
+      "option": "--with-test",
+      "description": "Test during installation"
+    },
+    {
+      "option": "--with-numpy",
+      "description": "Build with numpy support"
+    },
+    {
+      "option": "--with-root",
+      "description": "Build with root support"
+    }
+  ],
+  "build_dependencies": [
+
+  ],
+  "dependencies": [
+    "python@3.9"
+  ],
+  "recommended_dependencies": [
+
+  ],
+  "optional_dependencies": [
+    "numpy",
+    "root"
+  ],
+  "uses_from_macos": [
+
+  ],
+  "requirements": [
+
+  ],
+  "conflicts_with": [
+
+  ],
+  "caveats": null,
+  "installed": [
+
+  ],
+  "linked_keg": null,
+  "pinned": false,
+  "outdated": false,
+  "deprecated": false,
+  "deprecation_date": null,
+  "deprecation_reason": null,
+  "disabled": false,
+  "disable_date": null,
+  "disable_reason": null
+}

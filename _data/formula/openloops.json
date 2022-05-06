@@ -1,0 +1,71 @@
+{
+  "name": "openloops",
+  "full_name": "davidchall/hep/openloops",
+  "tap": "davidchall/hep",
+  "oldname": null,
+  "aliases": [
+
+  ],
+  "versioned_formulae": [
+
+  ],
+  "desc": "Fully automated implementation of the Open Loops algorithm",
+  "license": null,
+  "homepage": "https://openloops.hepforge.org",
+  "versions": {
+    "stable": "1.3.1",
+    "head": null,
+    "bottle": false
+  },
+  "urls": {
+    "stable": {
+      "url": "https://www.hepforge.org/archive/openloops/OpenLoops-1.3.1.tar.gz",
+      "tag": null,
+      "revision": null
+    }
+  },
+  "revision": 0,
+  "version_scheme": 0,
+  "bottle": {
+  },
+  "keg_only": false,
+  "keg_only_reason": null,
+  "bottle_disabled": false,
+  "options": [
+
+  ],
+  "build_dependencies": [
+    "scons"
+  ],
+  "dependencies": [
+    "gcc"
+  ],
+  "recommended_dependencies": [
+
+  ],
+  "optional_dependencies": [
+
+  ],
+  "uses_from_macos": [
+
+  ],
+  "requirements": [
+
+  ],
+  "conflicts_with": [
+
+  ],
+  "caveats": "OpenLoops downloads and installs process libraries in its\nown installation path: $(brew --prefix)/Cellar/openloops/1.3.1\n\nThese process libraries are lost if OpenLoops is uninstalled.\n\n",
+  "installed": [
+
+  ],
+  "linked_keg": null,
+  "pinned": false,
+  "outdated": false,
+  "deprecated": false,
+  "deprecation_date": null,
+  "deprecation_reason": null,
+  "disabled": false,
+  "disable_date": null,
+  "disable_reason": null
+}

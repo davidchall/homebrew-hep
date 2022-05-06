@@ -1,0 +1,100 @@
+{
+  "name": "herwig",
+  "full_name": "davidchall/hep/herwig",
+  "tap": "davidchall/hep",
+  "oldname": "herwig++",
+  "aliases": [
+
+  ],
+  "versioned_formulae": [
+
+  ],
+  "desc": "Monte Carlo event generator",
+  "license": "GPL-3.0-only",
+  "homepage": "https://herwig.hepforge.org",
+  "versions": {
+    "stable": "7.2.3",
+    "head": "HEAD",
+    "bottle": true
+  },
+  "urls": {
+    "stable": {
+      "url": "https://herwig.hepforge.org/downloads/Herwig-7.2.3.tar.bz2",
+      "tag": null,
+      "revision": null
+    }
+  },
+  "revision": 0,
+  "version_scheme": 0,
+  "bottle": {
+    "stable": {
+      "rebuild": 0,
+      "root_url": "https://ghcr.io/v2/davidchall/hep",
+      "files": {
+        "monterey": {
+          "cellar": "/usr/local/Cellar",
+          "url": "https://ghcr.io/v2/davidchall/hep/herwig/blobs/sha256:23e0a0115b0077bf8b8fe4367e2e384e324a6ecaba6e16cf470d5140e5214462",
+          "sha256": "23e0a0115b0077bf8b8fe4367e2e384e324a6ecaba6e16cf470d5140e5214462"
+        },
+        "big_sur": {
+          "cellar": "/usr/local/Cellar",
+          "url": "https://ghcr.io/v2/davidchall/hep/herwig/blobs/sha256:3349d0dbf8d52bca6bbd522d42035b04183bf75755621600e0d154db56b70bfc",
+          "sha256": "3349d0dbf8d52bca6bbd522d42035b04183bf75755621600e0d154db56b70bfc"
+        },
+        "catalina": {
+          "cellar": "/usr/local/Cellar",
+          "url": "https://ghcr.io/v2/davidchall/hep/herwig/blobs/sha256:f21c7d39637ac707d8a461c702322d43be7ca104d508973a2302fca1eb8eaffe",
+          "sha256": "f21c7d39637ac707d8a461c702322d43be7ca104d508973a2302fca1eb8eaffe"
+        }
+      }
+    }
+  },
+  "keg_only": false,
+  "keg_only_reason": null,
+  "bottle_disabled": false,
+  "options": [
+    {
+      "option": "--with-test",
+      "description": "Test during installation"
+    }
+  ],
+  "build_dependencies": [
+
+  ],
+  "dependencies": [
+    "boost",
+    "fastjet",
+    "gcc",
+    "gsl",
+    "hepmc3",
+    "thepeg"
+  ],
+  "recommended_dependencies": [
+
+  ],
+  "optional_dependencies": [
+
+  ],
+  "uses_from_macos": [
+
+  ],
+  "requirements": [
+
+  ],
+  "conflicts_with": [
+
+  ],
+  "caveats": null,
+  "installed": [
+
+  ],
+  "linked_keg": null,
+  "pinned": false,
+  "outdated": false,
+  "deprecated": false,
+  "deprecation_date": null,
+  "deprecation_reason": null,
+  "disabled": false,
+  "disable_date": null,
+  "disable_reason": null
+}

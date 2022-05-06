@@ -1,0 +1,79 @@
+{
+  "name": "applgrid",
+  "full_name": "davidchall/hep/applgrid",
+  "tap": "davidchall/hep",
+  "oldname": null,
+  "aliases": [
+
+  ],
+  "versioned_formulae": [
+
+  ],
+  "desc": "Quickly reproduce NLO calculations with any input PDFs",
+  "license": null,
+  "homepage": "https://applgrid.hepforge.org",
+  "versions": {
+    "stable": "1.5.46",
+    "head": null,
+    "bottle": false
+  },
+  "urls": {
+    "stable": {
+      "url": "https://www.hepforge.org/archive/applgrid/applgrid-1.5.46.tgz",
+      "tag": null,
+      "revision": null
+    }
+  },
+  "revision": 0,
+  "version_scheme": 0,
+  "bottle": {
+  },
+  "keg_only": false,
+  "keg_only_reason": null,
+  "bottle_disabled": false,
+  "options": [
+    {
+      "option": "--without-hoppet",
+      "description": "Build without hoppet support"
+    },
+    {
+      "option": "--with-lhapdf",
+      "description": "Build with lhapdf support"
+    }
+  ],
+  "build_dependencies": [
+
+  ],
+  "dependencies": [
+    "gcc",
+    "root"
+  ],
+  "recommended_dependencies": [
+    "hoppet"
+  ],
+  "optional_dependencies": [
+    "lhapdf"
+  ],
+  "uses_from_macos": [
+
+  ],
+  "requirements": [
+
+  ],
+  "conflicts_with": [
+
+  ],
+  "caveats": null,
+  "installed": [
+
+  ],
+  "linked_keg": null,
+  "pinned": false,
+  "outdated": false,
+  "deprecated": false,
+  "deprecation_date": null,
+  "deprecation_reason": null,
+  "disabled": false,
+  "disable_date": null,
+  "disable_reason": null
+}

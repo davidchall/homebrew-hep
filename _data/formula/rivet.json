@@ -1,0 +1,107 @@
+{
+  "name": "rivet",
+  "full_name": "davidchall/hep/rivet",
+  "tap": "davidchall/hep",
+  "oldname": null,
+  "aliases": [
+
+  ],
+  "versioned_formulae": [
+
+  ],
+  "desc": "Monte Carlo analysis system",
+  "license": "GPL-3.0-only",
+  "homepage": "https://rivet.hepforge.org",
+  "versions": {
+    "stable": "3.1.5",
+    "head": "HEAD",
+    "bottle": true
+  },
+  "urls": {
+    "stable": {
+      "url": "https://rivet.hepforge.org/downloads/?f=Rivet-3.1.5.tar.gz",
+      "tag": null,
+      "revision": null
+    }
+  },
+  "revision": 0,
+  "version_scheme": 0,
+  "bottle": {
+    "stable": {
+      "rebuild": 0,
+      "root_url": "https://ghcr.io/v2/davidchall/hep",
+      "files": {
+        "monterey": {
+          "cellar": "/usr/local/Cellar",
+          "url": "https://ghcr.io/v2/davidchall/hep/rivet/blobs/sha256:29424a47d929906d44afa4dd4d50a24680cb918bb911ecb89e2b55c0faa46fc1",
+          "sha256": "29424a47d929906d44afa4dd4d50a24680cb918bb911ecb89e2b55c0faa46fc1"
+        },
+        "big_sur": {
+          "cellar": "/usr/local/Cellar",
+          "url": "https://ghcr.io/v2/davidchall/hep/rivet/blobs/sha256:994733c064eb1a851d77030279d8fcf284aa1922dc82dc7b31d5de045eb924da",
+          "sha256": "994733c064eb1a851d77030279d8fcf284aa1922dc82dc7b31d5de045eb924da"
+        },
+        "catalina": {
+          "cellar": "/usr/local/Cellar",
+          "url": "https://ghcr.io/v2/davidchall/hep/rivet/blobs/sha256:162ca873c2a2c12a020e3df7e0b3f43cf49ed753ecb136c0966b530be18506f8",
+          "sha256": "162ca873c2a2c12a020e3df7e0b3f43cf49ed753ecb136c0966b530be18506f8"
+        }
+      }
+    }
+  },
+  "keg_only": false,
+  "keg_only_reason": null,
+  "bottle_disabled": false,
+  "options": [
+    {
+      "option": "--with-test",
+      "description": "Test during installation"
+    },
+    {
+      "option": "--without-analyses",
+      "description": "Do not build Rivet analyses"
+    },
+    {
+      "option": "--with-unvalidated",
+      "description": "Build and install unvalidated analyses"
+    }
+  ],
+  "build_dependencies": [
+
+  ],
+  "dependencies": [
+    "fastjet",
+    "gsl",
+    "hepmc3",
+    "python@3.9",
+    "yoda"
+  ],
+  "recommended_dependencies": [
+
+  ],
+  "optional_dependencies": [
+
+  ],
+  "uses_from_macos": [
+
+  ],
+  "requirements": [
+
+  ],
+  "conflicts_with": [
+
+  ],
+  "caveats": null,
+  "installed": [
+
+  ],
+  "linked_keg": null,
+  "pinned": false,
+  "outdated": false,
+  "deprecated": false,
+  "deprecation_date": null,
+  "deprecation_reason": null,
+  "disabled": false,
+  "disable_date": null,
+  "disable_reason": null
+}

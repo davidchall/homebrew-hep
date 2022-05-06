@@ -1,0 +1,74 @@
+{
+  "name": "mcfm",
+  "full_name": "davidchall/hep/mcfm",
+  "tap": "davidchall/hep",
+  "oldname": null,
+  "aliases": [
+
+  ],
+  "versioned_formulae": [
+
+  ],
+  "desc": "Monte Carlo for FeMtobarn processes",
+  "license": null,
+  "homepage": "https://mcfm.fnal.gov",
+  "versions": {
+    "stable": "8.2",
+    "head": null,
+    "bottle": false
+  },
+  "urls": {
+    "stable": {
+      "url": "https://mcfm.fnal.gov/MCFM-8.2.tar.gz",
+      "tag": null,
+      "revision": null
+    }
+  },
+  "revision": 0,
+  "version_scheme": 0,
+  "bottle": {
+  },
+  "keg_only": false,
+  "keg_only_reason": null,
+  "bottle_disabled": false,
+  "options": [
+    {
+      "option": "--with-lhapdf",
+      "description": "Build with lhapdf support"
+    }
+  ],
+  "build_dependencies": [
+
+  ],
+  "dependencies": [
+    "gcc@7"
+  ],
+  "recommended_dependencies": [
+
+  ],
+  "optional_dependencies": [
+    "lhapdf"
+  ],
+  "uses_from_macos": [
+
+  ],
+  "requirements": [
+
+  ],
+  "conflicts_with": [
+
+  ],
+  "caveats": "Running MCFM requires files found in $(brew --prefix)/Cellar/mcfm/8.2/share/mcfm\n\nIf using LHAPDF for PDF sets, the PDF data directory\nmust be symlinked to bin/PDFsets for MCFM to run.\nThe default LHAPDF data path is symlinked by default.\n\n",
+  "installed": [
+
+  ],
+  "linked_keg": null,
+  "pinned": false,
+  "outdated": false,
+  "deprecated": false,
+  "deprecation_date": null,
+  "deprecation_reason": null,
+  "disabled": false,
+  "disable_date": null,
+  "disable_reason": null
+}

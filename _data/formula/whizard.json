@@ -1,0 +1,111 @@
+{
+  "name": "whizard",
+  "full_name": "davidchall/hep/whizard",
+  "tap": "davidchall/hep",
+  "oldname": null,
+  "aliases": [
+
+  ],
+  "versioned_formulae": [
+
+  ],
+  "desc": "Monte Carlo event generator",
+  "license": "GPL-2.0-or-later",
+  "homepage": "https://whizard.hepforge.org",
+  "versions": {
+    "stable": "3.0.3",
+    "head": null,
+    "bottle": true
+  },
+  "urls": {
+    "stable": {
+      "url": "http://whizard.hepforge.org/whizard-3.0.3.tar.gz",
+      "tag": null,
+      "revision": null
+    }
+  },
+  "revision": 1,
+  "version_scheme": 0,
+  "bottle": {
+    "stable": {
+      "rebuild": 0,
+      "root_url": "https://ghcr.io/v2/davidchall/hep",
+      "files": {
+        "monterey": {
+          "cellar": ":any",
+          "url": "https://ghcr.io/v2/davidchall/hep/whizard/blobs/sha256:124a47db2f0b5a6baced2a178666ffa0c08f42a7ccf3686ca817ab5e05070e3c",
+          "sha256": "124a47db2f0b5a6baced2a178666ffa0c08f42a7ccf3686ca817ab5e05070e3c"
+        },
+        "big_sur": {
+          "cellar": ":any",
+          "url": "https://ghcr.io/v2/davidchall/hep/whizard/blobs/sha256:938cd25668912373ea0f0389fd8b84deae7ff6576e0a4db0554d0cdb3992cce6",
+          "sha256": "938cd25668912373ea0f0389fd8b84deae7ff6576e0a4db0554d0cdb3992cce6"
+        },
+        "catalina": {
+          "cellar": ":any",
+          "url": "https://ghcr.io/v2/davidchall/hep/whizard/blobs/sha256:f99730f905b29ecdbfc0490a399a38a692b86c3d15315837209582275eada4ab",
+          "sha256": "f99730f905b29ecdbfc0490a399a38a692b86c3d15315837209582275eada4ab"
+        }
+      }
+    }
+  },
+  "keg_only": false,
+  "keg_only_reason": null,
+  "bottle_disabled": false,
+  "options": [
+    {
+      "option": "--with-fastjet",
+      "description": "Build with fastjet support"
+    },
+    {
+      "option": "--with-hepmc3",
+      "description": "Build with hepmc3 support"
+    },
+    {
+      "option": "--with-hoppet",
+      "description": "Build with hoppet support"
+    },
+    {
+      "option": "--with-lhapdf",
+      "description": "Build with lhapdf support"
+    }
+  ],
+  "build_dependencies": [
+
+  ],
+  "dependencies": [
+    "gcc",
+    "ocaml"
+  ],
+  "recommended_dependencies": [
+
+  ],
+  "optional_dependencies": [
+    "fastjet",
+    "hepmc3",
+    "hoppet",
+    "lhapdf"
+  ],
+  "uses_from_macos": [
+
+  ],
+  "requirements": [
+
+  ],
+  "conflicts_with": [
+
+  ],
+  "caveats": null,
+  "installed": [
+
+  ],
+  "linked_keg": null,
+  "pinned": false,
+  "outdated": false,
+  "deprecated": false,
+  "deprecation_date": null,
+  "deprecation_reason": null,
+  "disabled": false,
+  "disable_date": null,
+  "disable_reason": null
+}

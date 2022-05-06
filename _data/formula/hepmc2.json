@@ -1,0 +1,95 @@
+{
+  "name": "hepmc2",
+  "full_name": "davidchall/hep/hepmc2",
+  "tap": "davidchall/hep",
+  "oldname": "hepmc",
+  "aliases": [
+
+  ],
+  "versioned_formulae": [
+
+  ],
+  "desc": "C++ event record for Monte Carlo generators",
+  "license": "LGPL-2.1-or-later",
+  "homepage": "https://hepmc.web.cern.ch/",
+  "versions": {
+    "stable": "2.06.11",
+    "head": null,
+    "bottle": true
+  },
+  "urls": {
+    "stable": {
+      "url": "https://gitlab.cern.ch/hepmc/HepMC/-/archive/2.06.11/HepMC-2.06.11.tar.gz",
+      "tag": null,
+      "revision": null
+    }
+  },
+  "revision": 0,
+  "version_scheme": 0,
+  "bottle": {
+    "stable": {
+      "rebuild": 1,
+      "root_url": "https://ghcr.io/v2/davidchall/hep",
+      "files": {
+        "monterey": {
+          "cellar": ":any",
+          "url": "https://ghcr.io/v2/davidchall/hep/hepmc2/blobs/sha256:8356e9c1015f3fa94b10353c6b9576dbe10eedae93d582f2d12ddc69593afba6",
+          "sha256": "8356e9c1015f3fa94b10353c6b9576dbe10eedae93d582f2d12ddc69593afba6"
+        },
+        "big_sur": {
+          "cellar": ":any",
+          "url": "https://ghcr.io/v2/davidchall/hep/hepmc2/blobs/sha256:7286697a692029d4cfa8d8d9f95afa8c662f96894b241f14f923c596d88ed971",
+          "sha256": "7286697a692029d4cfa8d8d9f95afa8c662f96894b241f14f923c596d88ed971"
+        },
+        "catalina": {
+          "cellar": ":any",
+          "url": "https://ghcr.io/v2/davidchall/hep/hepmc2/blobs/sha256:a15dbef41ec9a792fa5308f6d6c26a943f5944978f269b49969294a7cf813603",
+          "sha256": "a15dbef41ec9a792fa5308f6d6c26a943f5944978f269b49969294a7cf813603"
+        }
+      }
+    }
+  },
+  "keg_only": false,
+  "keg_only_reason": null,
+  "bottle_disabled": false,
+  "options": [
+    {
+      "option": "--with-test",
+      "description": "Test during installation"
+    }
+  ],
+  "build_dependencies": [
+    "cmake"
+  ],
+  "dependencies": [
+
+  ],
+  "recommended_dependencies": [
+
+  ],
+  "optional_dependencies": [
+
+  ],
+  "uses_from_macos": [
+
+  ],
+  "requirements": [
+
+  ],
+  "conflicts_with": [
+
+  ],
+  "caveats": null,
+  "installed": [
+
+  ],
+  "linked_keg": null,
+  "pinned": false,
+  "outdated": false,
+  "deprecated": false,
+  "deprecation_date": null,
+  "deprecation_reason": null,
+  "disabled": false,
+  "disable_date": null,
+  "disable_reason": null
+}

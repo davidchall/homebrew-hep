@@ -1,0 +1,95 @@
+{
+  "name": "hoppet",
+  "full_name": "davidchall/hep/hoppet",
+  "tap": "davidchall/hep",
+  "oldname": null,
+  "aliases": [
+
+  ],
+  "versioned_formulae": [
+
+  ],
+  "desc": "QCD DGLAP evolution",
+  "license": null,
+  "homepage": "https://hoppet.hepforge.org",
+  "versions": {
+    "stable": "1.2.0",
+    "head": null,
+    "bottle": true
+  },
+  "urls": {
+    "stable": {
+      "url": "https://hoppet.hepforge.org/downloads/hoppet-1.2.0.tgz",
+      "tag": null,
+      "revision": null
+    }
+  },
+  "revision": 0,
+  "version_scheme": 0,
+  "bottle": {
+    "stable": {
+      "rebuild": 1,
+      "root_url": "https://ghcr.io/v2/davidchall/hep",
+      "files": {
+        "monterey": {
+          "cellar": ":any_skip_relocation",
+          "url": "https://ghcr.io/v2/davidchall/hep/hoppet/blobs/sha256:e8687b0c1afff6831e8a4ec26f071aa676d70b795b697cf09ec6616fa6761e16",
+          "sha256": "e8687b0c1afff6831e8a4ec26f071aa676d70b795b697cf09ec6616fa6761e16"
+        },
+        "big_sur": {
+          "cellar": ":any_skip_relocation",
+          "url": "https://ghcr.io/v2/davidchall/hep/hoppet/blobs/sha256:4672285059183790b9ea035f832c33824cec851ade64a905c0f6f4117fbc6adb",
+          "sha256": "4672285059183790b9ea035f832c33824cec851ade64a905c0f6f4117fbc6adb"
+        },
+        "catalina": {
+          "cellar": ":any_skip_relocation",
+          "url": "https://ghcr.io/v2/davidchall/hep/hoppet/blobs/sha256:1b15536020d406d54892dead96e4eb99f6efae7fb08fd069e7fb6258859d0b8e",
+          "sha256": "1b15536020d406d54892dead96e4eb99f6efae7fb08fd069e7fb6258859d0b8e"
+        }
+      }
+    }
+  },
+  "keg_only": false,
+  "keg_only_reason": null,
+  "bottle_disabled": false,
+  "options": [
+    {
+      "option": "--with-test",
+      "description": "Test during installation"
+    }
+  ],
+  "build_dependencies": [
+
+  ],
+  "dependencies": [
+    "gcc"
+  ],
+  "recommended_dependencies": [
+
+  ],
+  "optional_dependencies": [
+
+  ],
+  "uses_from_macos": [
+
+  ],
+  "requirements": [
+
+  ],
+  "conflicts_with": [
+
+  ],
+  "caveats": null,
+  "installed": [
+
+  ],
+  "linked_keg": null,
+  "pinned": false,
+  "outdated": false,
+  "deprecated": false,
+  "deprecation_date": null,
+  "deprecation_reason": null,
+  "disabled": false,
+  "disable_date": null,
+  "disable_reason": null
+}

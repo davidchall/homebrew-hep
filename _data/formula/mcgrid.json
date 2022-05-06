@@ -1,0 +1,79 @@
+{
+  "name": "mcgrid",
+  "full_name": "davidchall/hep/mcgrid",
+  "tap": "davidchall/hep",
+  "oldname": null,
+  "aliases": [
+
+  ],
+  "versioned_formulae": [
+
+  ],
+  "desc": "Projecting cross section calculations on grids",
+  "license": null,
+  "homepage": "https://mcgrid.hepforge.org",
+  "versions": {
+    "stable": "2.0.2",
+    "head": null,
+    "bottle": false
+  },
+  "urls": {
+    "stable": {
+      "url": "https://www.hepforge.org/archive/mcgrid/mcgrid-2.0.2.tar.gz",
+      "tag": null,
+      "revision": null
+    }
+  },
+  "revision": 0,
+  "version_scheme": 0,
+  "bottle": {
+  },
+  "keg_only": false,
+  "keg_only_reason": null,
+  "bottle_disabled": false,
+  "options": [
+    {
+      "option": "--without-applgrid",
+      "description": "Build without applgrid support"
+    },
+    {
+      "option": "--without-fastnlo",
+      "description": "Build without fastnlo support"
+    }
+  ],
+  "build_dependencies": [
+    "pkg-config"
+  ],
+  "dependencies": [
+    "rivet"
+  ],
+  "recommended_dependencies": [
+    "applgrid",
+    "fastnlo"
+  ],
+  "optional_dependencies": [
+
+  ],
+  "uses_from_macos": [
+
+  ],
+  "requirements": [
+
+  ],
+  "conflicts_with": [
+
+  ],
+  "caveats": "You can disable one of the applgrid and fastnlo dependencies.\nHowever, the build will fail if you disable both.\n\nA manual is installed in:\n  $(brew --prefix mcgrid)/manual.pdf\n\nExamples are installed in:\n  $(brew --prefix mcgrid)/examples-rivet-2.2.0\n",
+  "installed": [
+
+  ],
+  "linked_keg": null,
+  "pinned": false,
+  "outdated": false,
+  "deprecated": false,
+  "deprecation_date": null,
+  "deprecation_reason": null,
+  "disabled": false,
+  "disable_date": null,
+  "disable_reason": null
+}
