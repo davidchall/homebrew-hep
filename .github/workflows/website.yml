@@ -26,7 +26,9 @@ jobs:
           brew tap cartr/qt4
 
       - name: Generate formulae data
-        run: brew ruby script/generate.rb
+        run: |
+          ls -l
+          brew ruby script/generate.rb
 
       - name: Push changes
         run: |
