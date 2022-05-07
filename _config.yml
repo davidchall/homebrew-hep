@@ -20,5 +20,3 @@ exclude:
   - README.md
 
 logo: https://raw.githubusercontent.com/davidchall/homebrew-hep/HEAD/.github/homebrew-hep-logo.png
-
-forkme_nwo: davidchall/homebrew-hep
