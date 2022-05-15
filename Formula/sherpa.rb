@@ -6,6 +6,11 @@ class Sherpa < Formula
   license "GPL-2.0-only"
   revision 1
 
+  livecheck do
+    url "https://sherpa.hepforge.org/downloads"
+    regex(/href=.*?SHERPA-MC[._-]v?(\d+(?:\.\d+)+)\.t/i)
+  end
+
   bottle do
     root_url "https://ghcr.io/v2/davidchall/hep"
     sha256 monterey: "eb9a0f2d9cd4530ad1e71f54fbacfe9f07d46a73faad50af6c7643832a1f3c8f"
