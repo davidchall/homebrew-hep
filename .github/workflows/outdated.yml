@@ -1,0 +1,15 @@
+name: Find outdated packages
+
+on:
+  schedule:
+    - cron: 0 0 * * 1
+
+jobs:
+  outdated:
+    runs-on: macos-latest
+    steps:
+      - name: Set up tap
+        run: brew tap davidchall/hep
+
+      - name: Check for outdated
+        run: brew livecheck --newer-only --tap davidchall/hep
