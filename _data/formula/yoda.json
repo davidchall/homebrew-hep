@@ -10,7 +10,7 @@
 
   ],
   "desc": "Yet more Objects for Data Analysis",
-  "license": null,
+  "license": "GPL-3.0-only",
   "homepage": "https://yoda.hepforge.org",
   "versions": {
     "stable": "1.9.4",

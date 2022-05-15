@@ -10,16 +10,16 @@
 
   ],
   "desc": "Fast pQCD calculations for PDF fits",
-  "license": null,
+  "license": "GPL-3.0-only",
   "homepage": "https://fastnlo.hepforge.org",
   "versions": {
-    "stable": "2.3.1.2212",
+    "stable": "2.5.0",
     "head": null,
-    "bottle": false
+    "bottle": true
   },
   "urls": {
     "stable": {
-      "url": "https://fastnlo.hepforge.org/code/v23/fastnlo_toolkit-2.3.1pre-2212.tar.gz",
+      "url": "https://fastnlo.hepforge.org/code/v25/fastnlo_toolkit-2.5.0-2826.tar.gz",
       "tag": null,
       "revision": null
     }
@@ -27,22 +27,43 @@
   "revision": 0,
   "version_scheme": 0,
   "bottle": {
+    "stable": {
+      "rebuild": 0,
+      "root_url": "https://ghcr.io/v2/davidchall/hep",
+      "files": {
+        "monterey": {
+          "cellar": ":any",
+          "url": "https://ghcr.io/v2/davidchall/hep/fastnlo/blobs/sha256:f9c252db9a66f6722fe788fc77080ecadb9c2c19ab7493fb043583acd348e5ba",
+          "sha256": "f9c252db9a66f6722fe788fc77080ecadb9c2c19ab7493fb043583acd348e5ba"
+        },
+        "big_sur": {
+          "cellar": ":any",
+          "url": "https://ghcr.io/v2/davidchall/hep/fastnlo/blobs/sha256:41e03eb2f24fbe0d8179c15fa931d663d01d139a67249f2cfd14bba482f669d2",
+          "sha256": "41e03eb2f24fbe0d8179c15fa931d663d01d139a67249f2cfd14bba482f669d2"
+        },
+        "catalina": {
+          "cellar": ":any",
+          "url": "https://ghcr.io/v2/davidchall/hep/fastnlo/blobs/sha256:ba2772fe7d874cae5edf92df882aba3f345574e0ab74f591a5ccb472b806e1ff",
+          "sha256": "ba2772fe7d874cae5edf92df882aba3f345574e0ab74f591a5ccb472b806e1ff"
+        }
+      }
+    }
   },
   "keg_only": false,
   "keg_only_reason": null,
   "bottle_disabled": false,
   "options": [
     {
-      "option": "--with-fastjet",
-      "description": "Build with fastjet support"
+      "option": "--with-test",
+      "description": "Test during installation"
+    },
+    {
+      "option": "--without-fastjet",
+      "description": "Build without fastjet support"
     },
     {
       "option": "--with-hoppet",
       "description": "Build with hoppet support"
-    },
-    {
-      "option": "--with-python",
-      "description": "Build with python support"
     },
     {
       "option": "--with-qcdnum",
@@ -64,12 +85,10 @@
     "lhapdf"
   ],
   "recommended_dependencies": [
-
+    "fastjet"
   ],
   "optional_dependencies": [
-    "fastjet",
     "hoppet",
-    "python",
     "qcdnum",
     "root",
     "yoda"
