@@ -7,6 +7,11 @@ class Rivet < Formula
   sha256 "fa5582d3b17b6197575111f3b390a09eca59502c8146d22290a9a98544c16938"
   license "GPL-3.0-only"
 
+  livecheck do
+    url "https://rivet.hepforge.org/downloads/"
+    regex(/href=.*?Rivet[._-]v?(\d+(?:\.\d+)+)\.t/i)
+  end
+
   bottle do
     root_url "https://ghcr.io/v2/davidchall/hep"
     sha256 monterey: "29424a47d929906d44afa4dd4d50a24680cb918bb911ecb89e2b55c0faa46fc1"
