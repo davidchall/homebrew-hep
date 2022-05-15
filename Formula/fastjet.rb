@@ -3,6 +3,12 @@ class Fastjet < Formula
   homepage "http://fastjet.fr"
   url "http://fastjet.fr/repo/fastjet-3.4.0.tar.gz"
   sha256 "ee07c8747c8ead86d88de4a9e4e8d1e9e7d7614973f5631ba8297f7a02478b91"
+  license "GPL-2.0-or-later"
+
+  livecheck do
+    url "http://fastjet.fr/all-releases.html"
+    regex(/href=.*?fastjet[._-]v?(\d+(?:\.\d+)+)\.t/i)
+  end
 
   bottle do
     root_url "https://ghcr.io/v2/davidchall/hep"
