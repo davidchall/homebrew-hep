@@ -10,7 +10,7 @@
 
   ],
   "desc": "Package for jet finding in pp and ee collisions",
-  "license": null,
+  "license": "GPL-2.0-or-later",
   "homepage": "http://fastjet.fr",
   "versions": {
     "stable": "3.4.0",

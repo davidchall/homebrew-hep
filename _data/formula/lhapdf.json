@@ -10,7 +10,7 @@
 
   ],
   "desc": "PDF interpolation and evaluation",
-  "license": null,
+  "license": "GPL-3.0-or-later",
   "homepage": "https://lhapdf.hepforge.org/",
   "versions": {
     "stable": "6.4.0",
