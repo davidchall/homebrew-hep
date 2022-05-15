@@ -6,6 +6,13 @@ class Fastnlo < Formula
   sha256 "eda20c6023a41c2ff5ec21d88847ebc6fb522714c38afad2ec1437d9c1a2132d"
   license "GPL-3.0-only"
 
+  bottle do
+    root_url "https://ghcr.io/v2/davidchall/hep"
+    sha256 cellar: :any, monterey: "f9c252db9a66f6722fe788fc77080ecadb9c2c19ab7493fb043583acd348e5ba"
+    sha256 cellar: :any, big_sur:  "41e03eb2f24fbe0d8179c15fa931d663d01d139a67249f2cfd14bba482f669d2"
+    sha256 cellar: :any, catalina: "ba2772fe7d874cae5edf92df882aba3f345574e0ab74f591a5ccb472b806e1ff"
+  end
+
   option "with-test", "Test during installation"
 
   depends_on "lhapdf"
