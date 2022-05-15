@@ -13,7 +13,7 @@
   "license": null,
   "homepage": "https://www.nikhef.nl/~h24/qcdnum",
   "versions": {
-    "stable": "170007",
+    "stable": "17.0.7",
     "head": null,
     "bottle": false
   },
