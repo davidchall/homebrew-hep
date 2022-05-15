@@ -4,6 +4,7 @@ class Fastnlo < Formula
   url "https://fastnlo.hepforge.org/code/v25/fastnlo_toolkit-2.5.0-2826.tar.gz"
   version "2.5.0"
   sha256 "eda20c6023a41c2ff5ec21d88847ebc6fb522714c38afad2ec1437d9c1a2132d"
+  license "GPL-3.0-only"
 
   option "with-test", "Test during installation"
 
