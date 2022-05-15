@@ -5,6 +5,12 @@ class Yoda < Formula
   homepage "https://yoda.hepforge.org"
   url "https://yoda.hepforge.org/downloads/?f=YODA-1.9.4.tar.gz"
   sha256 "02d89e37fbe01c5b19140e7ded9082930f76bf3d15a6ff9742fd52c8f0e738d7"
+  license "GPL-3.0-only"
+
+  livecheck do
+    url "https://yoda.hepforge.org/downloads/"
+    regex(/href=.*?YODA[._-]v?(\d+(?:\.\d+)+)\.t/i)
+  end
 
   bottle do
     root_url "https://ghcr.io/v2/davidchall/hep"
