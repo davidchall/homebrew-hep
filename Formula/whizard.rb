@@ -1,10 +1,15 @@
 class Whizard < Formula
   desc "Monte Carlo event generator"
   homepage "https://whizard.hepforge.org"
-  url "http://whizard.hepforge.org/whizard-3.0.3.tar.gz"
+  url "https://whizard.hepforge.org/downloads/?f=whizard-3.0.3.tar.gz"
   sha256 "20f2269d302fc162a6aed8e781b504ba5112ef0711c078cdb08b293059ed67cf"
   license "GPL-2.0-or-later"
   revision 1
+
+  livecheck do
+    url "https://whizard.hepforge.org/downloads/"
+    regex(/href=.*?whizard[._-]v?(\d+(?:\.\d+)+)\.t/i)
+  end
 
   bottle do
     root_url "https://ghcr.io/v2/davidchall/hep"
