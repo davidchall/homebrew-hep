@@ -5,6 +5,11 @@ class Thepeg < Formula
   sha256 "f21473197a761fc32917b08a8d24d2bfaf93ff57f3441fd605da99ac9de5d50b"
   license "GPL-3.0-only"
 
+  livecheck do
+    url "https://thepeg.hepforge.org/downloads"
+    regex(/href=.*?ThePEG[._-]v?(\d+(?:\.\d+)+)\.t/i)
+  end
+
   bottle do
     root_url "https://ghcr.io/v2/davidchall/hep"
     sha256 monterey: "4aea760158f86dd841f1b42beed8bef5c131bb1059a3a5ad3f21e8f08f8d3603"
