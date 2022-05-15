@@ -4,6 +4,11 @@ class Hoppet < Formula
   url "https://hoppet.hepforge.org/downloads/hoppet-1.2.0.tgz"
   sha256 "bffd1bbfd3cc8d1470ded5c82fe33346d44e86cf426439eb77ab7702f319e448"
 
+  livecheck do
+    url "https://hoppet.hepforge.org/downloads"
+    regex(/href=.*?hoppet[._-]v?(\d+(?:\.\d+)+)\.t/i)
+  end
+
   bottle do
     root_url "https://ghcr.io/v2/davidchall/hep"
     rebuild 1
