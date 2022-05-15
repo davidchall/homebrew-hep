@@ -5,6 +5,12 @@ class Lhapdf < Formula
   homepage "https://lhapdf.hepforge.org/"
   url "https://lhapdf.hepforge.org/downloads/?f=LHAPDF-6.4.0.tar.gz"
   sha256 "7d2f0267e2d65b0ddee048553b342d7c893a6dbabe1e326cad62de0010dd810c"
+  license "GPL-3.0-or-later"
+
+  livecheck do
+    url "https://lhapdf.hepforge.org/downloads"
+    regex(/href=.*?LHAPDF[._-]v?(\d+(?:\.\d+)+)\.t/i)
+  end
 
   bottle do
     root_url "https://ghcr.io/v2/davidchall/hep"
