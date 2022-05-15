@@ -5,6 +5,11 @@ class Herwig < Formula
   sha256 "5599899379b01b09e331a2426d78d39b7f6ec126db2543e9d340aefe6aa50f84"
   license "GPL-3.0-only"
 
+  livecheck do
+    url "https://herwig.hepforge.org/downloads"
+    regex(/href=.*?Herwig[._-]v?(\d+(?:\.\d+)+)\.t/i)
+  end
+
   bottle do
     root_url "https://ghcr.io/v2/davidchall/hep"
     sha256 monterey: "23e0a0115b0077bf8b8fe4367e2e384e324a6ecaba6e16cf470d5140e5214462"
