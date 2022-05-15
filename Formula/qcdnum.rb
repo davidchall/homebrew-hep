@@ -1,8 +1,17 @@
 class Qcdnum < Formula
   desc "Fast PDF evolution"
   homepage "https://www.nikhef.nl/~h24/qcdnum"
-  url "https://www.nikhef.nl/user/h24/qcdnum-files/download/qcdnum170007.tar.gz"
-  sha256 "768a8cd4d2f140f8ee0d1ba886bc72f872b39a69b6ef16f890c1044295ce31af"
+  url "https://www.nikhef.nl/~h24/qcdnum-files/download/qcdnum180000.tar.gz"
+  version "18.0.0"
+  sha256 "e108f926b7840352e4080ba71914d3403ed8118364f87710e221fdec320ee200"
+  license "GPL-3.0-or-later"
+
+  bottle do
+    root_url "https://ghcr.io/v2/davidchall/hep"
+    sha256 cellar: :any_skip_relocation, monterey: "09784b1ccf97422566c754601d49b83766668fa9e0e0e6d1372ab4f9d915c4c7"
+    sha256 cellar: :any_skip_relocation, big_sur:  "2839af37bbd5ee48f72ae80dbaf0acabc466a8751dabd239334b3de4cf8e3d7c"
+    sha256 cellar: :any_skip_relocation, catalina: "3f8d86f689008c58d016885fdea5e203f828766fd2a086b0db108654c1c8f229"
+  end
 
   depends_on "gcc" # for gfortran
 
@@ -30,17 +39,15 @@ class Qcdnum < Formula
       -Wall
       -O
       -fbounds-check
-      "#{prefix}/testjobs/example.f"
+      #{prefix}/testjobs/example.f
       -o
       example.exe
-      "#{lib}/libhqstf.a"
-      "#{lib}/libzmstf.a"
-      "#{lib}/libqcdnum.a"
-      "#{lib}/libmbutil.a"
+      #{lib}/libhqstf.a
+      #{lib}/libzmstf.a
+      #{lib}/libqcdnum.a
+      #{lib}/libmbutil.a
     ]
     system "gfortran", *args
     system "./example.exe"
-
-    ohai "Test program worked fine. Use 'brew test -v qcdnum' to watch it work"
   end
 end
