@@ -6,6 +6,11 @@ class Hepmc3 < Formula
   license "GPL-3.0-or-later"
   revision 1
 
+  livecheck do
+    url "https://hepmc.web.cern.ch/hepmc/"
+    regex(/href=.*?HepMC3[._-]v?(\d+(?:\.\d+)+)\.t/i)
+  end
+
   bottle do
     root_url "https://ghcr.io/v2/davidchall/hep"
     sha256 cellar: :any, monterey: "712a1f121f0068b8e728edc70f367a8e73e2b127541000a7439f340391aa2479"
