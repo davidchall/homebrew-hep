@@ -6,6 +6,14 @@ class Qcdnum < Formula
   sha256 "e108f926b7840352e4080ba71914d3403ed8118364f87710e221fdec320ee200"
   license "GPL-3.0-or-later"
 
+  livecheck do
+    url "https://www.nikhef.nl/~h24/qcdnum-files/download/"
+    regex(/href=.*?qcdnum(\d{2})(\d{2})(\d{2})\.t/i)
+    strategy :page_match do |page, regex|
+      page.scan(regex).map { |match| match.map(&:to_i).join(".") }
+    end
+  end
+
   bottle do
     root_url "https://ghcr.io/v2/davidchall/hep"
     sha256 cellar: :any_skip_relocation, monterey: "09784b1ccf97422566c754601d49b83766668fa9e0e0e6d1372ab4f9d915c4c7"
