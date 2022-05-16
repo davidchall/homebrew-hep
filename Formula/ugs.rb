@@ -5,6 +5,10 @@ class Ugs < Formula
   version "2.10e"
   sha256 "27bc46e975917bdf149e9ff6997885ffa24b0b1416bdf82ffaea5246b36e1f83"
 
+  livecheck do
+    skip "No version information available"
+  end
+
   bottle do
     root_url "https://ghcr.io/v2/davidchall/hep"
     rebuild 1

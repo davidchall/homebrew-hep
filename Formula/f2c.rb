@@ -6,6 +6,10 @@ class F2c < Formula
   version "2022.04.25"
   sha256 "ca404070e9ce0a9aaa6a71fc7d5489d014ade952c5d6de7efb88de8e24f2e8e0"
 
+  livecheck do
+    skip "No version information available"
+  end
+
   bottle do
     root_url "https://ghcr.io/v2/davidchall/hep"
     rebuild 1
