@@ -10,16 +10,16 @@
 
   ],
   "desc": "PARtonic Tomography Of Nucleon Software",
-  "license": null,
-  "homepage": "http://partons.cea.fr/",
+  "license": "Apache-2.0 and GPL-3.0-only",
+  "homepage": "http://partons.cea.fr",
   "versions": {
-    "stable": "2.0",
+    "stable": "3.0",
     "head": null,
     "bottle": false
   },
   "urls": {
     "stable": {
-      "url": "https://drf-gitlab.cea.fr/partons/core/partons/repository/v2.0/archive.tar.gz",
+      "url": "https://drf-gitlab.cea.fr/partons/core/partons/-/archive/v3.0/partons-v3.0.tar.gz",
       "tag": null,
       "revision": null
     }
@@ -38,12 +38,13 @@
     "cmake"
   ],
   "dependencies": [
-    "cartr/qt4/qt@4",
+    "apfelxx",
     "cln",
-    "elementary-utils",
+    "eigen",
     "gcc",
     "gsl",
-    "numa",
+    "lhapdf",
+    "qt@5",
     "sfml"
   ],
   "recommended_dependencies": [
@@ -61,7 +62,7 @@
   "conflicts_with": [
 
   ],
-  "caveats": "The PARTONS library is now installed on this machine.\nAn example suite can be found here:\n\n    https://drf-gitlab.cea.fr/partons/core/partons-example/repository/v2.0/archive.tar.gz\n\nA usage guide is available at:\n\n    http://partons.cea.fr/partons/doc/html/index.html\n\n",
+  "caveats": null,
   "installed": [
 
   ],
