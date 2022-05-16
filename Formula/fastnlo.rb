@@ -6,6 +6,11 @@ class Fastnlo < Formula
   sha256 "eda20c6023a41c2ff5ec21d88847ebc6fb522714c38afad2ec1437d9c1a2132d"
   license "GPL-3.0-only"
 
+  livecheck do
+    url :homepage
+    regex(%r{href=.*?code/v\d+/fastnlo_toolkit[._-]v?(\d+(?:\.\d+)+)-\d+\.t}i)
+  end
+
   bottle do
     root_url "https://ghcr.io/v2/davidchall/hep"
     sha256 cellar: :any, monterey: "f9c252db9a66f6722fe788fc77080ecadb9c2c19ab7493fb043583acd348e5ba"
