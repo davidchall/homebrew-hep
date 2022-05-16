@@ -19,7 +19,6 @@ jobs:
       - name: Set up tap (+ dependency taps)
         run: |
           brew tap davidchall/hep
-          brew tap cartr/qt4
 
       - name: Generate formulae data
         run: brew ruby script/generate.rb
