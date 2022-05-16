@@ -1,8 +1,13 @@
 class Mcfm < Formula
   desc "Monte Carlo for FeMtobarn processes"
   homepage "https://mcfm.fnal.gov"
-  url "https://mcfm.fnal.gov/MCFM-8.2.tar.gz"
+  url "https://mcfm.fnal.gov/downloads/MCFM-8.2.tar.gz"
   sha256 "075e3782d3cbe92539dc2835a7b94b657b0261717166b8911d4e13afdba83bfd"
+
+  livecheck do
+    url :homepage
+    regex(/href=.*?MCFM[._-]v?(\d+(?:\.\d+)+)\.t/i)
+  end
 
   depends_on "gcc@7" # for gfortran
   depends_on "lhapdf" => :optional
