@@ -19,7 +19,7 @@
   },
   "urls": {
     "stable": {
-      "url": "https://mcfm.fnal.gov/MCFM-8.2.tar.gz",
+      "url": "https://mcfm.fnal.gov/downloads/MCFM-8.2.tar.gz",
       "tag": null,
       "revision": null
     }
