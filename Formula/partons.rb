@@ -55,9 +55,9 @@ class Partons < Formula
 
   test do
     resource("partons-test").stage do
-      system "cmake", "CMakeLists.txt"
+      system "cmake", ".", *std_cmake_args(testpath)
       system "make", "PARTONS_example"
-      system "./bin/PARTONS_example", "data/examples/gpd/computeSingleKinematicsForGPD.xml"
+      system testpath/"bin/PARTONS_example", "data/examples/gpd/computeSingleKinematicsForGPD.xml"
     end
   end
 end
