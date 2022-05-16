@@ -7,6 +7,11 @@ class Madgraph5Amcatnlo < Formula
   sha256 "d62f020d5b1bf72f654acc96916aba895bdc50f88ad560080f0e63894201ed99"
   license "NCSA"
 
+  livecheck do
+    url "https://launchpad.net/mg5amcnlo/+download"
+    regex(/href=.*?MG5_aMC[._-]v?(\d+(?:\.\d+)+)\.t/i)
+  end
+
   bottle do
     root_url "https://ghcr.io/v2/davidchall/hep"
     sha256 cellar: :any, monterey: "bfa29f457fce1100175e984e4251820488b7445a55233fa139245684a3e74556"
