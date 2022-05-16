@@ -5,6 +5,11 @@ class Fjcontrib < Formula
   sha256 "f9989d3b6aeb22848bcf91095c30607f027d3ef277a4f0f704a8f0fc2e766981"
   revision 1
 
+  livecheck do
+    url "https://fastjet.hepforge.org/contrib/downloads"
+    regex(/href=.*?fjcontrib[._-]v?(\d+(?:\.\d+)+)\.t/i)
+  end
+
   bottle do
     root_url "https://ghcr.io/v2/davidchall/hep"
     sha256 cellar: :any_skip_relocation, big_sur: "81a5f5da671b112f7f1d90405fd8ee95927a873dc198111f6bfd7f2c66c9da67"
