@@ -6,6 +6,14 @@ class Pythia < Formula
   sha256 "e5b14d44aa5943332e32dd5dda9a18fdd1a0085c7198e28d840e04167fa6013d"
   license "GPL-2.0-or-later"
 
+  livecheck do
+    url "https://pythia.org/releases"
+    regex(/href=.*?pythia(\d)(\d{3})\.t/i)
+    strategy :page_match do |page, regex|
+      page.scan(regex).map { |match| match.join(".") }
+    end
+  end
+
   bottle do
     root_url "https://ghcr.io/v2/davidchall/hep"
     sha256 monterey: "1324fce29466c5f53bb3139598c90cd17939e5b26a499d7cdd8d9e3e9923d7ae"
