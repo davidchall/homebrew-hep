@@ -4,6 +4,10 @@ class Vbfnlo < Formula
   url "https://www.itp.kit.edu/vbfnlo/wiki/lib/exe/fetch.php?media=download:vbfnlo-3.0.0beta5.tgz"
   sha256 "d7ce67aa394a6b47da33ede3a0314436414ec12d6c30238622405bdfb76cb544"
 
+  livecheck do
+    skip "In longterm beta"
+  end
+
   bottle do
     root_url "https://ghcr.io/v2/davidchall/hep"
     rebuild 1
