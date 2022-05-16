@@ -4,6 +4,11 @@ class Mcgrid < Formula
   url "https://www.hepforge.org/archive/mcgrid/mcgrid-2.0.2.tar.gz"
   sha256 "deed9f6027b075a4d0e2128adb2c13b16ca5736c43426d9a85ac2dfc4f1788d7"
 
+  livecheck do
+    url "https://mcgrid.hepforge.org/downloads/"
+    regex(/href=.*?mcgrid[._-]v?(\d+(?:\.\d+)+)\.t/i)
+  end
+
   depends_on "pkg-config" => :build
   depends_on "rivet"
   depends_on "applgrid" => :recommended
