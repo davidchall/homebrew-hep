@@ -4,6 +4,11 @@ class Applgrid < Formula
   url "https://www.hepforge.org/archive/applgrid/applgrid-1.5.46.tgz"
   sha256 "166171623d859c42a75aa9659d780a7a22091b9fd936fb3035b1230b73dedaac"
 
+  livecheck do
+    url "https://applgrid.hepforge.org/downloads"
+    regex(/href=.*?applgrid[._-]v?(\d+(?:\.\d+)+)\.t/i)
+  end
+
   depends_on "gcc" # for gfortran
   depends_on "root"
   depends_on "hoppet" => :recommended
