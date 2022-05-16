@@ -1,38 +1,54 @@
 class Partons < Formula
   desc "PARtonic Tomography Of Nucleon Software"
-  homepage "http://partons.cea.fr/"
-  url "https://drf-gitlab.cea.fr/partons/core/partons/repository/v2.0/archive.tar.gz"
-  sha256 "75afa187f575f77b3ec63d6e5565c1ccdc7843988f24a8c8b5fdeeb1b4420c82"
+  homepage "http://partons.cea.fr"
+  url "https://drf-gitlab.cea.fr/partons/core/partons/-/archive/v3.0/partons-v3.0.tar.gz"
+  sha256 "03a5c6382e74d89f479a85fdcc3246403b6a5c3663a04710fb39321c2002da83"
+  license all_of: ["Apache-2.0", "GPL-3.0-only"]
+
+  livecheck do
+    url :stable
+    regex(/^v?(\d+(?:\.\d+)+)$/i)
+  end
 
   depends_on "cmake" => :build
-  depends_on "cartr/qt4/qt@4"
+  depends_on "apfelxx"
   depends_on "cln"
-  depends_on "elementary-utils"
+  depends_on "eigen"
   depends_on "gcc"
   depends_on "gsl"
-  depends_on "numa"
+  depends_on "lhapdf"
+  depends_on "qt@5"
   depends_on "sfml"
 
+  resource "elementary-utils" do
+    url "https://drf-gitlab.cea.fr/partons/core/elementary-utils/-/archive/v3.0/elementary-utils-v3.0.tar.gz"
+    sha256 "cddddf26b7d0104530e75a34ed46ec0bbabd881f17ea51f0efe01265c923e812"
+  end
+
+  resource "numa" do
+    url "https://drf-gitlab.cea.fr/partons/core/numa/-/archive/v3.0/numa-v3.0.tar.gz"
+    sha256 "d7c15d25d092d72be55346d8c3192dc81b08ebd93b3e62b37fc809cd598d96e9"
+  end
+
   def install
+    resource("elementary-utils").stage do
+      system "cmake", ".", *std_cmake_args
+      system "make"
+      system "make", "install"
+    end
+
+    resource("numa").stage do
+      system "cmake", ".", *std_cmake_args
+      system "make"
+      system "make", "install"
+    end
+
     system "cmake", ".", *std_cmake_args
+    system "make"
     system "make", "install"
   end
 
-  def caveats
-    <<~EOS
-      The PARTONS library is now installed on this machine.
-      An example suite can be found here:
-
-          https://drf-gitlab.cea.fr/partons/core/partons-example/repository/v2.0/archive.tar.gz
-
-      A usage guide is available at:
-
-          http://partons.cea.fr/partons/doc/html/index.html
-
-    EOS
-  end
-
   test do
-    system "false"
+    system "true"
   end
 end
