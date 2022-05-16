@@ -19,7 +19,7 @@
   },
   "urls": {
     "stable": {
-      "url": "http://whizard.hepforge.org/whizard-3.0.3.tar.gz",
+      "url": "https://whizard.hepforge.org/downloads/?f=whizard-3.0.3.tar.gz",
       "tag": null,
       "revision": null
     }
