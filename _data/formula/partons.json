@@ -59,7 +59,7 @@
     "cmake"
   ],
   "dependencies": [
-    "apfelxx",
+    "apfel++",
     "cln",
     "eigen",
     "gcc",

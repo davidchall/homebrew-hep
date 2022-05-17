@@ -1,8 +1,8 @@
 {
-  "name": "apfelxx",
-  "full_name": "davidchall/hep/apfelxx",
+  "name": "apfel++",
+  "full_name": "davidchall/hep/apfel++",
   "tap": "davidchall/hep",
-  "oldname": null,
+  "oldname": "apfelxx",
   "aliases": [
 
   ],
@@ -15,7 +15,7 @@
   "versions": {
     "stable": "4.6.0",
     "head": null,
-    "bottle": true
+    "bottle": false
   },
   "urls": {
     "stable": {
@@ -27,27 +27,6 @@
   "revision": 0,
   "version_scheme": 0,
   "bottle": {
-    "stable": {
-      "rebuild": 1,
-      "root_url": "https://ghcr.io/v2/davidchall/hep",
-      "files": {
-        "monterey": {
-          "cellar": ":any",
-          "url": "https://ghcr.io/v2/davidchall/hep/apfelxx/blobs/sha256:86353a8db456cd0c9ea518a49c5635c7e4f6e991427511c3e97ae37121aacf27",
-          "sha256": "86353a8db456cd0c9ea518a49c5635c7e4f6e991427511c3e97ae37121aacf27"
-        },
-        "big_sur": {
-          "cellar": ":any",
-          "url": "https://ghcr.io/v2/davidchall/hep/apfelxx/blobs/sha256:4ca1f71dc1051367b88399cc6904814e716d3f34346e8000a20f590ec0f13acd",
-          "sha256": "4ca1f71dc1051367b88399cc6904814e716d3f34346e8000a20f590ec0f13acd"
-        },
-        "catalina": {
-          "cellar": ":any",
-          "url": "https://ghcr.io/v2/davidchall/hep/apfelxx/blobs/sha256:3e9573793d1ba460086caa3cfc76ef4740ba65d038d2a06e93baccddbeea7eb9",
-          "sha256": "3e9573793d1ba460086caa3cfc76ef4740ba65d038d2a06e93baccddbeea7eb9"
-        }
-      }
-    }
   },
   "keg_only": false,
   "keg_only_reason": null,
