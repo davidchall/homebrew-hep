@@ -4,6 +4,11 @@ class Openloops < Formula
   url "https://www.hepforge.org/archive/openloops/OpenLoops-1.3.1.tar.gz"
   sha256 "b7610ca62edfab55d0990e94e38048b62b4af0c6b01830b44f40795cd86cb665"
 
+  livecheck do
+    url "https://openloops.hepforge.org/downloads"
+    regex(/href=.*?OpenLoops[._-]v?(\d+(?:\.\d+)+)\.t/i)
+  end
+
   depends_on "scons" => :build
   depends_on "gcc" # for gfortran
 
