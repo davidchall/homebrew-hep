@@ -55,8 +55,8 @@ class Partons < Formula
 
   test do
     testpath.install resource("partons-test")
-    system "cmake", "-S", testpath, "-B", (testpath/"build"), *std_cmake_args
-    system "cmake", "--build", (testpath/"build")
+    system "cmake", ".", *std_cmake_args, "-DCMAKE_PREFIX_PATH=#{Formula["qt@5"].opt_prefix}"
+    system "make"
     system testpath/"bin/PARTONS_example", "data/examples/gpd/computeSingleKinematicsForGPD.xml"
   end
 end
