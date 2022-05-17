@@ -19,7 +19,7 @@ class Partons < Formula
   end
 
   depends_on "cmake" => [:build, :test]
-  depends_on "apfelxx"
+  depends_on "apfel++"
   depends_on "cln"
   depends_on "eigen"
   depends_on "gcc"
