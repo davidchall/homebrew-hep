@@ -1,11 +1,11 @@
-name: Find outdated packages
+name: Packages up-to-date
 
 on:
   schedule:
     - cron: 0 0 * * 1
 
 jobs:
-  outdated:
+  livecheck:
     runs-on: macos-latest
     steps:
       - name: Set up tap
