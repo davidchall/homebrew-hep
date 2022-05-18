@@ -10,8 +10,8 @@ class Openloops < Formula
   end
 
   depends_on arch: :x86_64 # https://github.com/davidchall/homebrew-hep/issues/203
-  depends_on "scons"
   depends_on "gcc" # for gfortran
+  depends_on "scons"
 
   patch :DATA
 
