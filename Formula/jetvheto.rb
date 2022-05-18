@@ -1,4 +1,4 @@
-require_relative "../lib/download_pdfs.rb"
+require_relative "../lib/download_pdfs"
 
 class Jetvheto < Formula
   desc "NNLL resummation for jet-veto efficiencies and cross sections"

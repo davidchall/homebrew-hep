@@ -1,4 +1,4 @@
-require_relative "../lib/download_pdfs.rb"
+require_relative "../lib/download_pdfs"
 
 class Herwig < Formula
   desc "Monte Carlo event generator"

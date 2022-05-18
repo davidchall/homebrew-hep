@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 def download_pdfs(dest, pdfs)
   require "utils"
 

@@ -1,4 +1,4 @@
-require_relative "../lib/download_pdfs.rb"
+require_relative "../lib/download_pdfs"
 
 class Fastnlo < Formula
   desc "Fast pQCD calculations for PDF fits"
