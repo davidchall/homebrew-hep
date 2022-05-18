@@ -37,5 +37,6 @@ class Jetvheto < Formula
     inreplace "input.fxd", "MSTW2008nnlo90cl.LHgrid", "MSTW2008nnlo68cl"
 
     system bin/"jetvheto", "-in", "input.fxd", "-out", "output.res", "-xQ", "0.05"
+    assert_predicate testpath/"output.res", :exist?
   end
 end
