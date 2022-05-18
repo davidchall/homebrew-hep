@@ -10,16 +10,16 @@
 
   ],
   "desc": "Quickly reproduce NLO calculations with any input PDFs",
-  "license": null,
+  "license": "GPL-3.0-only",
   "homepage": "https://applgrid.hepforge.org",
   "versions": {
-    "stable": "1.5.46",
+    "stable": "1.6.27",
     "head": null,
-    "bottle": false
+    "bottle": true
   },
   "urls": {
     "stable": {
-      "url": "https://www.hepforge.org/archive/applgrid/applgrid-1.5.46.tgz",
+      "url": "https://applgrid.hepforge.org/downloads?f=applgrid-1.6.27.tgz",
       "tag": null,
       "revision": null
     }
@@ -27,6 +27,27 @@
   "revision": 0,
   "version_scheme": 0,
   "bottle": {
+    "stable": {
+      "rebuild": 0,
+      "root_url": "https://ghcr.io/v2/davidchall/hep",
+      "files": {
+        "monterey": {
+          "cellar": ":any",
+          "url": "https://ghcr.io/v2/davidchall/hep/applgrid/blobs/sha256:19c2fe49f23f6a9f24440e272cfc7e490e83eda4bf1a0fd89d57605a8ce30548",
+          "sha256": "19c2fe49f23f6a9f24440e272cfc7e490e83eda4bf1a0fd89d57605a8ce30548"
+        },
+        "big_sur": {
+          "cellar": ":any",
+          "url": "https://ghcr.io/v2/davidchall/hep/applgrid/blobs/sha256:971209fb409b6577c974b0909de087e662e1fb6f8f5bb6b89d76ce1a24d596ca",
+          "sha256": "971209fb409b6577c974b0909de087e662e1fb6f8f5bb6b89d76ce1a24d596ca"
+        },
+        "catalina": {
+          "cellar": ":any",
+          "url": "https://ghcr.io/v2/davidchall/hep/applgrid/blobs/sha256:59c4590544e40fe820c342954220e27330fafcb910bf0de399b08fd1be2e5c0e",
+          "sha256": "59c4590544e40fe820c342954220e27330fafcb910bf0de399b08fd1be2e5c0e"
+        }
+      }
+    }
   },
   "keg_only": false,
   "keg_only_reason": null,
@@ -37,22 +58,27 @@
       "description": "Build without hoppet support"
     },
     {
-      "option": "--with-lhapdf",
-      "description": "Build with lhapdf support"
+      "option": "--without-lhapdf",
+      "description": "Build without lhapdf support"
+    },
+    {
+      "option": "--without-root",
+      "description": "Build without root support"
     }
   ],
   "build_dependencies": [
 
   ],
   "dependencies": [
-    "gcc",
-    "root"
+    "gcc"
   ],
   "recommended_dependencies": [
-    "hoppet"
+    "hoppet",
+    "lhapdf",
+    "root"
   ],
   "optional_dependencies": [
-    "lhapdf"
+
   ],
   "uses_from_macos": [
 
