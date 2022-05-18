@@ -1,6 +1,6 @@
 {
-  "name": "jetvheto",
-  "full_name": "davidchall/hep/jetvheto",
+  "name": "chaplin",
+  "full_name": "davidchall/hep/chaplin",
   "tap": "davidchall/hep",
   "oldname": null,
   "aliases": [
@@ -9,17 +9,17 @@
   "versioned_formulae": [
 
   ],
-  "desc": "NNLL resummation for jet-veto efficiencies and cross sections",
-  "license": "GPL-3.0-only",
-  "homepage": "https://jetvheto.hepforge.org",
+  "desc": "Complex Harmonic Polylogarithms in Fortran",
+  "license": null,
+  "homepage": "https://chaplin.hepforge.org",
   "versions": {
-    "stable": "3.0.0",
+    "stable": "1.2",
     "head": null,
     "bottle": true
   },
   "urls": {
     "stable": {
-      "url": "https://jetvheto.hepforge.org/downloads/?f=JetVHeto-3.0.0.tgz",
+      "url": "https://chaplin.hepforge.org/code/chaplin-1.2.tar",
       "tag": null,
       "revision": null
     }
@@ -33,18 +33,18 @@
       "files": {
         "monterey": {
           "cellar": ":any",
-          "url": "https://ghcr.io/v2/davidchall/hep/jetvheto/blobs/sha256:b9868bd1d37ef1de91e60dfa7551dfe21cd0a5f7a4ab51ae313d53923ec72c88",
-          "sha256": "b9868bd1d37ef1de91e60dfa7551dfe21cd0a5f7a4ab51ae313d53923ec72c88"
+          "url": "https://ghcr.io/v2/davidchall/hep/chaplin/blobs/sha256:5e542fca01a18571c8534b119f3b9a09aa8cc5ed389e52e2611b52cfd257f519",
+          "sha256": "5e542fca01a18571c8534b119f3b9a09aa8cc5ed389e52e2611b52cfd257f519"
         },
         "big_sur": {
           "cellar": ":any",
-          "url": "https://ghcr.io/v2/davidchall/hep/jetvheto/blobs/sha256:8312a2c9bc2b2446814f32917a4042a10369b5d10611f36c7a2900035c96f1e9",
-          "sha256": "8312a2c9bc2b2446814f32917a4042a10369b5d10611f36c7a2900035c96f1e9"
+          "url": "https://ghcr.io/v2/davidchall/hep/chaplin/blobs/sha256:88ad109eaf179df2bc2cdf831f4486bd3f8bb25ba00f000253c97db0c335b27a",
+          "sha256": "88ad109eaf179df2bc2cdf831f4486bd3f8bb25ba00f000253c97db0c335b27a"
         },
         "catalina": {
           "cellar": ":any",
-          "url": "https://ghcr.io/v2/davidchall/hep/jetvheto/blobs/sha256:bd971bcf7b4a6d47d01333fdc6ba5c7af97dd5198aee797f594a889fbf9d08aa",
-          "sha256": "bd971bcf7b4a6d47d01333fdc6ba5c7af97dd5198aee797f594a889fbf9d08aa"
+          "url": "https://ghcr.io/v2/davidchall/hep/chaplin/blobs/sha256:11f2f2a452a772f4fc14ee0f55ddebc2e658a0e2b9ded387637fafd77de66adc",
+          "sha256": "11f2f2a452a772f4fc14ee0f55ddebc2e658a0e2b9ded387637fafd77de66adc"
         }
       }
     }
@@ -59,10 +59,7 @@
 
   ],
   "dependencies": [
-    "chaplin",
-    "gcc",
-    "hoppet",
-    "lhapdf"
+    "gcc"
   ],
   "recommended_dependencies": [
 
