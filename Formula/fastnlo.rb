@@ -1,3 +1,5 @@
+require_relative "../lib/download_pdfs.rb"
+
 class Fastnlo < Formula
   desc "Fast pQCD calculations for PDF fits"
   homepage "https://fastnlo.hepforge.org"
@@ -31,11 +33,6 @@ class Fastnlo < Formula
     (build.with? pkg) ? "--with-#{pkg}=#{Formula[pkg].opt_prefix}" : "--without-#{pkg}"
   end
 
-  def download_pdfs(dest, pdfs)
-    pdfs.each { |pdf| quiet_system "lhapdf", "--pdfdir=#{dest}", "install", pdf }
-    ENV["LHAPDF_DATA_PATH"] = dest
-  end
-
   def install
     args = %W[
       --disable-dependency-tracking
@@ -53,7 +50,7 @@ class Fastnlo < Formula
     system "./configure", *args
     system "make"
     if build.with? "test"
-      download_pdfs(buildpath/"pdf-sets", %w[CT10nlo])
+      download_pdfs(buildpath/"pdf-sets", "CT10nlo")
       system "make", "check"
     end
     system "make", "install"

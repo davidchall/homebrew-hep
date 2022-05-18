@@ -1,3 +1,5 @@
+require_relative "../lib/download_pdfs.rb"
+
 class Herwig < Formula
   desc "Monte Carlo event generator"
   homepage "https://herwig.hepforge.org"
@@ -36,11 +38,6 @@ class Herwig < Formula
   depends_on "thepeg"
 
   patch :DATA
-
-  def download_pdfs(dest, pdfs)
-    pdfs.each { |pdf| quiet_system "lhapdf", "--pdfdir=#{dest}", "install", pdf }
-    ENV["LHAPDF_DATA_PATH"] = dest
-  end
 
   def install
     args = %W[

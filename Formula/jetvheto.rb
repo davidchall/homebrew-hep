@@ -1,3 +1,5 @@
+require_relative "../lib/download_pdfs.rb"
+
 class Jetvheto < Formula
   desc "NNLL resummation for jet-veto efficiencies and cross sections"
   homepage "https://jetvheto.hepforge.org"
@@ -22,11 +24,6 @@ class Jetvheto < Formula
   depends_on "hoppet"
   depends_on "lhapdf"
 
-  def download_pdfs(dest, pdfs)
-    pdfs.each { |pdf| quiet_system "lhapdf", "--pdfdir=#{dest}", "install", pdf }
-    ENV["LHAPDF_DATA_PATH"] = dest
-  end
-
   def install
     inreplace "Makefile", /^CHAPLIN=.+/, "CHAPLIN=#{Formula["chaplin"].opt_lib}"
     system "make"
@@ -38,7 +35,7 @@ class Jetvheto < Formula
   end
 
   test do
-    download_pdfs(testpath/"pdf-sets", %w[MSTW2008nnlo68cl])
+    download_pdfs(testpath/"pdf-sets", "MSTW2008nnlo68cl")
 
     cp share/"fixed-order/H125-LHC8-R04-xmur050-xmuf050-log.fxd", "input.fxd"
     inreplace "input.fxd", "MSTW2008nnlo90cl.LHgrid", "MSTW2008nnlo68cl"
