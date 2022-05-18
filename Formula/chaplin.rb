@@ -9,6 +9,13 @@ class Chaplin < Formula
     regex(/href=.*?chaplin[._-]v?(\d+(?:\.\d+)+)\.t/i)
   end
 
+  bottle do
+    root_url "https://ghcr.io/v2/davidchall/hep"
+    sha256 cellar: :any, monterey: "5e542fca01a18571c8534b119f3b9a09aa8cc5ed389e52e2611b52cfd257f519"
+    sha256 cellar: :any, big_sur:  "88ad109eaf179df2bc2cdf831f4486bd3f8bb25ba00f000253c97db0c335b27a"
+    sha256 cellar: :any, catalina: "11f2f2a452a772f4fc14ee0f55ddebc2e658a0e2b9ded387637fafd77de66adc"
+  end
+
   depends_on "gcc" # for gfortran
 
   def install
