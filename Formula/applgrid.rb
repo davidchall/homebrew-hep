@@ -1,8 +1,9 @@
 class Applgrid < Formula
   desc "Quickly reproduce NLO calculations with any input PDFs"
   homepage "https://applgrid.hepforge.org"
-  url "https://www.hepforge.org/archive/applgrid/applgrid-1.5.46.tgz"
-  sha256 "166171623d859c42a75aa9659d780a7a22091b9fd936fb3035b1230b73dedaac"
+  url "https://applgrid.hepforge.org/downloads?f=applgrid-1.6.27.tgz"
+  sha256 "87e64d1a3df7148c20e1f382c9f189ad428cdaf0c3425efa25c2e1b5ba003ad7"
+  license "GPL-3.0-only"
 
   livecheck do
     url "https://applgrid.hepforge.org/downloads"
@@ -10,20 +11,25 @@ class Applgrid < Formula
   end
 
   depends_on "gcc" # for gfortran
-  depends_on "root"
   depends_on "hoppet" => :recommended
-  depends_on "lhapdf" => :optional
-
-  cxxstdlib_check :skip
+  depends_on "lhapdf" => :recommended
+  depends_on "root"   => :recommended
 
   def install
-    ENV.deparallelize
+    args = %W[
+      --disable-dependency-tracking
+      --disable-silent-rules
+      --prefix=#{prefix}
+    ]
 
-    system "./configure", "--disable-dependency-tracking", "--prefix=#{prefix}"
+    args << "--without-root" if build.without? "root"
+
+    system "./configure", *args
+    system "make"
     system "make", "install"
   end
 
   test do
-    system "#{bin}/applgrid-config", "--version"
+    system bin/"applgrid-config", "--version"
   end
 end
