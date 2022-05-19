@@ -16,7 +16,6 @@ class Openloops < Formula
   patch :DATA
 
   def install
-    inreplace "SConstruct", "\$$ORIGIN", "\\$$ORIGIN"
     system "scons"
     cp_r ".", prefix
     bin.install_symlink prefix/"openloops"
