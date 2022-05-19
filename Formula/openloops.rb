@@ -52,3 +52,33 @@ index 5f068c9..e3e09f7 100755
  fi
 
  #####################
+
+diff --git a/SConstruct b/SConstruct
+index 1111ea7..6740a67 100644
+--- a/SConstruct
++++ b/SConstruct
+@@ -387,11 +387,13 @@ env = Environment(tools = ['default', 'textfile'] + [config['fortran_tool']],
+                   LINKFLAGS = config['link_flags'],
+                   LIBPATH = [config['generic_lib_dir']],
+                   DOLLAR = '\$$',
+-                  RPATH = [HashableLiteral('\$$ORIGIN')],
+                   F90 = config['fortran_compiler'],
+                   FORTRAN = config['fortran_compiler'],
+                   CC = config['cc'])
+
++env.Append(LINKFLAGS = Split('-z origin') )
++env.Append(RPATH = env.Literal('\\$$ORIGIN'))
++
+ if config['fortran_tool'] == 'gfortran':
+     # SCons bug: FORTRANMODDIRPREFIX is missing in gfortran tool
+     env.Replace(FORTRANMODDIRPREFIX = '-J')
+@@ -690,7 +692,8 @@ for (loops, process_api, processlib) in process_list:
+         processes_seen[processlib] = loops
+ process_list = process_list_nodup
+
+-env.Append(RPATH = [HashableLiteral('\$$ORIGIN/../lib')])
++env.Append(LINKFLAGS = Split('-z origin'))
++env.Append(RPATH = env.Literal(os.path.join('\\$$ORIGIN', os.pardir, 'lib')))
+
+
+ for (loops, process_api, processlib) in process_list:
