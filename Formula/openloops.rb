@@ -67,7 +67,7 @@ index 1111ea7..6740a67 100644
                    CC = config['cc'])
 
 +env.Append(LINKFLAGS = Split('-z origin') )
-+env.Append(RPATH = env.Literal('\\$$ORIGIN'))
++env.Append(RPATH = [env.Literal('\\$$ORIGIN')])
 +
  if config['fortran_tool'] == 'gfortran':
      # SCons bug: FORTRANMODDIRPREFIX is missing in gfortran tool
@@ -78,7 +78,7 @@ index 1111ea7..6740a67 100644
 
 -env.Append(RPATH = [HashableLiteral('\$$ORIGIN/../lib')])
 +env.Append(LINKFLAGS = Split('-z origin'))
-+env.Append(RPATH = env.Literal(os.path.join('\\$$ORIGIN', os.pardir, 'lib')))
++env.Append(RPATH = [env.Literal(os.path.join('\\$$ORIGIN', os.pardir, 'lib'))])
 
 
  for (loops, process_api, processlib) in process_list:
