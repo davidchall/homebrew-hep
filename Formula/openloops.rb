@@ -16,16 +16,7 @@ class Openloops < Formula
   patch :DATA
 
   def install
-    # (buildpath/"openloops.cfg").write <<~EOS
-    #   [OpenLoops]
-    #   cc = #{ENV.cc}
-    #   cxx = #{ENV.cxx}
-    #   cpp = #{ENV.cxx}
-    #   ccflags = #{ENV.cflags}
-    #   cxxflags = #{ENV.cxxflags}
-    #   link_flags = #{ENV.ldflags}
-    # EOS
-
+    inreplace "SConstruct", "\$$ORIGIN", "\\$$ORIGIN"
     system "scons"
     cp_r ".", prefix
     bin.install_symlink prefix/"openloops"
