@@ -9,6 +9,13 @@ class Openloops < Formula
     regex(/href=.*?OpenLoops[._-]v?(\d+(?:\.\d+)+)\.t/i)
   end
 
+  bottle do
+    root_url "https://ghcr.io/v2/davidchall/hep"
+    sha256 cellar: :any, monterey: "981e3f2b5601f6839548abeab6a122f5dfe3c5b571659efcbcf5e9a21ee6765b"
+    sha256 cellar: :any, big_sur:  "86fbc11f2e61b0a1e4b23f37952e1249b3da36f52b2fc5dd99a5ba8b30247a1a"
+    sha256 cellar: :any, catalina: "79bad08133f8e46db91580c5659bbcb57b259d717d820d362244ea57fa57b2cc"
+  end
+
   depends_on "scons" => :build
   depends_on arch: :x86_64 # https://github.com/davidchall/homebrew-hep/issues/203
   depends_on "gcc" # for gfortran
