@@ -72,7 +72,7 @@ index 1111ea7..6740a67 100644
  if config['fortran_tool'] == 'gfortran':
      # SCons bug: FORTRANMODDIRPREFIX is missing in gfortran tool
      env.Replace(FORTRANMODDIRPREFIX = '-J')
-@@ -690,7 +692,8 @@ for (loops, process_api, processlib) in process_list:
+@@ -690,7 +692,7 @@ for (loops, process_api, processlib) in process_list:
          processes_seen[processlib] = loops
  process_list = process_list_nodup
 
