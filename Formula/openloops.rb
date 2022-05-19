@@ -9,8 +9,8 @@ class Openloops < Formula
     regex(/href=.*?OpenLoops[._-]v?(\d+(?:\.\d+)+)\.t/i)
   end
 
-  depends_on arch: :x86_64 # https://github.com/davidchall/homebrew-hep/issues/203
   depends_on "scons" => :build
+  depends_on arch: :x86_64 # https://github.com/davidchall/homebrew-hep/issues/203
   depends_on "gcc" # for gfortran
 
   patch :DATA
