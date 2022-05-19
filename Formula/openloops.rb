@@ -66,7 +66,7 @@ index 1111ea7..6740a67 100644
                    FORTRAN = config['fortran_compiler'],
                    CC = config['cc'])
 
-+env.Append(LINKFLAGS = Split('-z origin') )
++env.Append(LINKFLAGS = Split('-Wl,-z,origin') )
 +env.Append(RPATH = [env.Literal('\\$$ORIGIN')])
 +
  if config['fortran_tool'] == 'gfortran':
@@ -77,7 +77,6 @@ index 1111ea7..6740a67 100644
  process_list = process_list_nodup
 
 -env.Append(RPATH = [HashableLiteral('\$$ORIGIN/../lib')])
-+env.Append(LINKFLAGS = Split('-z origin'))
 +env.Append(RPATH = [env.Literal(os.path.join('\\$$ORIGIN', os.pardir, 'lib'))])
 
 
