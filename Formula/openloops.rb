@@ -57,7 +57,7 @@ diff --git a/SConstruct b/SConstruct
 index 1111ea7..6740a67 100644
 --- a/SConstruct
 +++ b/SConstruct
-@@ -387,11 +387,13 @@ env = Environment(tools = ['default', 'textfile'] + [config['fortran_tool']],
+@@ -387,11 +387,12 @@ env = Environment(tools = ['default', 'textfile'] + [config['fortran_tool']],
                    LINKFLAGS = config['link_flags'],
                    LIBPATH = [config['generic_lib_dir']],
                    DOLLAR = '\$$',
@@ -66,7 +66,6 @@ index 1111ea7..6740a67 100644
                    FORTRAN = config['fortran_compiler'],
                    CC = config['cc'])
 
-+env.Append(LINKFLAGS = Split('-Wl,-z,origin') )
 +env.Append(RPATH = [env.Literal('\\$$ORIGIN')])
 +
  if config['fortran_tool'] == 'gfortran':
