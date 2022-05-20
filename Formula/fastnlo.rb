@@ -16,9 +16,9 @@ class Fastnlo < Formula
 
   bottle do
     root_url "https://ghcr.io/v2/davidchall/hep"
-    sha256 cellar: :any, monterey: "f9c252db9a66f6722fe788fc77080ecadb9c2c19ab7493fb043583acd348e5ba"
-    sha256 cellar: :any, big_sur:  "41e03eb2f24fbe0d8179c15fa931d663d01d139a67249f2cfd14bba482f669d2"
-    sha256 cellar: :any, catalina: "ba2772fe7d874cae5edf92df882aba3f345574e0ab74f591a5ccb472b806e1ff"
+    sha256 cellar: :any, monterey: "21b03b289194d24aff0f7bec0cbfea4b4ecf74889ce1eb2643717f2deb0c8b4b"
+    sha256 cellar: :any, big_sur:  "f3e40a12ffdf6d182d29a843f2a0cc0d8667caaaecc5035d5ab85d809fd1abf7"
+    sha256 cellar: :any, catalina: "ab30fb3cd1097ede185b2d3cf9c794fc094d3490d2212f6789948daa0493abab"
   end
 
   option "with-test", "Test during installation"
