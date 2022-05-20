@@ -3,8 +3,8 @@ class Lhapdf < Formula
 
   desc "PDF interpolation and evaluation"
   homepage "https://lhapdf.hepforge.org/"
-  url "https://lhapdf.hepforge.org/downloads/?f=LHAPDF-6.4.0.tar.gz"
-  sha256 "7d2f0267e2d65b0ddee048553b342d7c893a6dbabe1e326cad62de0010dd810c"
+  url "https://lhapdf.hepforge.org/downloads/?f=LHAPDF-6.5.1.tar.gz"
+  sha256 "1256419e2227d1a4f93387fe1da805e648351417d3755e8af5a30a35a6a66751"
   license "GPL-3.0-or-later"
 
   livecheck do
@@ -30,6 +30,8 @@ class Lhapdf < Formula
   end
 
   depends_on "python@3.9"
+
+  patch :DATA
 
   def install
     ENV.prepend_path "PATH", Formula["python@3.9"].opt_libexec/"bin"
@@ -71,3 +73,18 @@ class Lhapdf < Formula
     system python, "-c", "import lhapdf"
   end
 end
+
+__END__
+diff --git a/wrappers/python/setup.py.in b/wrappers/python/setup.py.in
+index 21a3d27..5b52590 100644
+--- a/wrappers/python/setup.py.in
++++ b/wrappers/python/setup.py.in
+@@ -22,7 +22,7 @@ libdir = os.path.abspath("@top_builddir@/src/.libs")
+ ext = Extension("lhapdf",
+                 ["lhapdf.cpp"],
+                 include_dirs=[incdir_src, incdir_build],
+-                extra_compile_args=["-I@prefix@/include"],
++                extra_compile_args=["-std=c++11", "-I@prefix@/include"],
+                 library_dirs=[libdir],
+                 language="C++",
+                 libraries=["stdc++", "LHAPDF"])
