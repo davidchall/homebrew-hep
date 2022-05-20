@@ -9,6 +9,8 @@ class Mcgrid < Formula
     regex(/href=.*?mcgrid[._-]v?(\d+(?:\.\d+)+)\.t/i)
   end
 
+  disable! date: "2022-05-19", because: "does not build with the latest Rivet"
+
   depends_on "pkg-config" => :build
   depends_on "rivet"
   depends_on "applgrid" => :recommended
