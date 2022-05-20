@@ -31,7 +31,7 @@ class Mcfm < Formula
       "target_link_libraries(qcdloop_static -L#{gfortran_lib} -lquadmath)"
 
     cd "Bin" do
-      args = %W[
+      args = %w[
         -Duse_internal_lhapdf=OFF
       ]
       args << "-Dwith_vvamp=OFF" if build.without? "vv-nnlo"
@@ -42,7 +42,7 @@ class Mcfm < Formula
     end
 
     bin.install "Bin/mcfm_omp"
-    #pkgshare.install Dir["Bin/*"]
+    # pkgshare.install Dir["Bin/*"]
     doc.install Dir["Doc/*.pdf"]
   end
 
