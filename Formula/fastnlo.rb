@@ -7,6 +7,7 @@ class Fastnlo < Formula
   version "2.5.0"
   sha256 "eda20c6023a41c2ff5ec21d88847ebc6fb522714c38afad2ec1437d9c1a2132d"
   license "GPL-3.0-only"
+  revision 1
 
   livecheck do
     url :homepage
