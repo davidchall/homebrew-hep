@@ -14,9 +14,9 @@ class Rivet < Formula
 
   bottle do
     root_url "https://ghcr.io/v2/davidchall/hep"
-    sha256 monterey: "29424a47d929906d44afa4dd4d50a24680cb918bb911ecb89e2b55c0faa46fc1"
-    sha256 big_sur:  "994733c064eb1a851d77030279d8fcf284aa1922dc82dc7b31d5de045eb924da"
-    sha256 catalina: "162ca873c2a2c12a020e3df7e0b3f43cf49ed753ecb136c0966b530be18506f8"
+    sha256 monterey: "276fa63e2d678ea43808387d09a8c3f699a63bb3a3e00867fa4ec4f56a256d5c"
+    sha256 big_sur:  "52472778d3d4a1f4ee49b7caee058d9138fdbe116c1d4ffdb7afbf66e24d0e85"
+    sha256 catalina: "78153c5d89d8ea647b52d176f1f8096af7037815787e0dea7bfe3f66bd00f432"
   end
 
   head do
