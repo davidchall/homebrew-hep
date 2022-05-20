@@ -14,10 +14,9 @@ class Yoda < Formula
 
   bottle do
     root_url "https://ghcr.io/v2/davidchall/hep"
-    rebuild 1
-    sha256 cellar: :any, monterey: "7d8066c9493267eb51dd2cf9df480723ef4e210643d33c2c4eba332722d69496"
-    sha256 cellar: :any, big_sur:  "31e667ee68972ee0427ce8d2a99bdf439c48a6cbee290e68e798dc3e3d15b174"
-    sha256 cellar: :any, catalina: "a3c03d1f831a4e9cfe9519abf5b07a55029cf56de1766b453910e12fadd4e25c"
+    sha256 cellar: :any, monterey: "7efae44adea74025f588c798c3e7c8c060596a49941f5eb59deee0479bed80b3"
+    sha256 cellar: :any, big_sur:  "56903bd59d21e8e54ea1c2d2d41a2576f204e0c3b0dab58564d697fc07774cbb"
+    sha256 cellar: :any, catalina: "a188afc53fad7b784fcb7d195ca820a2f2c9d2bd91e85c7083e6e9ad3ed0dcad"
   end
 
   head do
