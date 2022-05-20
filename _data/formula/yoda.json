@@ -13,13 +13,13 @@
   "license": "GPL-3.0-only",
   "homepage": "https://yoda.hepforge.org",
   "versions": {
-    "stable": "1.9.4",
+    "stable": "1.9.5",
     "head": "HEAD",
     "bottle": true
   },
   "urls": {
     "stable": {
-      "url": "https://yoda.hepforge.org/downloads/?f=YODA-1.9.4.tar.gz",
+      "url": "https://yoda.hepforge.org/downloads/?f=YODA-1.9.5.tar.gz",
       "tag": null,
       "revision": null
     }
@@ -28,23 +28,23 @@
   "version_scheme": 0,
   "bottle": {
     "stable": {
-      "rebuild": 1,
+      "rebuild": 0,
       "root_url": "https://ghcr.io/v2/davidchall/hep",
       "files": {
         "monterey": {
           "cellar": ":any",
-          "url": "https://ghcr.io/v2/davidchall/hep/yoda/blobs/sha256:7d8066c9493267eb51dd2cf9df480723ef4e210643d33c2c4eba332722d69496",
-          "sha256": "7d8066c9493267eb51dd2cf9df480723ef4e210643d33c2c4eba332722d69496"
+          "url": "https://ghcr.io/v2/davidchall/hep/yoda/blobs/sha256:7efae44adea74025f588c798c3e7c8c060596a49941f5eb59deee0479bed80b3",
+          "sha256": "7efae44adea74025f588c798c3e7c8c060596a49941f5eb59deee0479bed80b3"
         },
         "big_sur": {
           "cellar": ":any",
-          "url": "https://ghcr.io/v2/davidchall/hep/yoda/blobs/sha256:31e667ee68972ee0427ce8d2a99bdf439c48a6cbee290e68e798dc3e3d15b174",
-          "sha256": "31e667ee68972ee0427ce8d2a99bdf439c48a6cbee290e68e798dc3e3d15b174"
+          "url": "https://ghcr.io/v2/davidchall/hep/yoda/blobs/sha256:56903bd59d21e8e54ea1c2d2d41a2576f204e0c3b0dab58564d697fc07774cbb",
+          "sha256": "56903bd59d21e8e54ea1c2d2d41a2576f204e0c3b0dab58564d697fc07774cbb"
         },
         "catalina": {
           "cellar": ":any",
-          "url": "https://ghcr.io/v2/davidchall/hep/yoda/blobs/sha256:a3c03d1f831a4e9cfe9519abf5b07a55029cf56de1766b453910e12fadd4e25c",
-          "sha256": "a3c03d1f831a4e9cfe9519abf5b07a55029cf56de1766b453910e12fadd4e25c"
+          "url": "https://ghcr.io/v2/davidchall/hep/yoda/blobs/sha256:a188afc53fad7b784fcb7d195ca820a2f2c9d2bd91e85c7083e6e9ad3ed0dcad",
+          "sha256": "a188afc53fad7b784fcb7d195ca820a2f2c9d2bd91e85c7083e6e9ad3ed0dcad"
         }
       }
     }

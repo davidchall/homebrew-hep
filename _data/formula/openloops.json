@@ -13,13 +13,13 @@
   "license": null,
   "homepage": "https://openloops.hepforge.org",
   "versions": {
-    "stable": "1.3.1",
+    "stable": "2.1.2",
     "head": null,
-    "bottle": false
+    "bottle": true
   },
   "urls": {
     "stable": {
-      "url": "https://www.hepforge.org/archive/openloops/OpenLoops-1.3.1.tar.gz",
+      "url": "https://openloops.hepforge.org/downloads?f=OpenLoops-2.1.2.tar.gz",
       "tag": null,
       "revision": null
     }
@@ -27,6 +27,27 @@
   "revision": 0,
   "version_scheme": 0,
   "bottle": {
+    "stable": {
+      "rebuild": 0,
+      "root_url": "https://ghcr.io/v2/davidchall/hep",
+      "files": {
+        "monterey": {
+          "cellar": ":any",
+          "url": "https://ghcr.io/v2/davidchall/hep/openloops/blobs/sha256:981e3f2b5601f6839548abeab6a122f5dfe3c5b571659efcbcf5e9a21ee6765b",
+          "sha256": "981e3f2b5601f6839548abeab6a122f5dfe3c5b571659efcbcf5e9a21ee6765b"
+        },
+        "big_sur": {
+          "cellar": ":any",
+          "url": "https://ghcr.io/v2/davidchall/hep/openloops/blobs/sha256:86fbc11f2e61b0a1e4b23f37952e1249b3da36f52b2fc5dd99a5ba8b30247a1a",
+          "sha256": "86fbc11f2e61b0a1e4b23f37952e1249b3da36f52b2fc5dd99a5ba8b30247a1a"
+        },
+        "catalina": {
+          "cellar": ":any",
+          "url": "https://ghcr.io/v2/davidchall/hep/openloops/blobs/sha256:79bad08133f8e46db91580c5659bbcb57b259d717d820d362244ea57fa57b2cc",
+          "sha256": "79bad08133f8e46db91580c5659bbcb57b259d717d820d362244ea57fa57b2cc"
+        }
+      }
+    }
   },
   "keg_only": false,
   "keg_only_reason": null,
@@ -50,12 +71,20 @@
 
   ],
   "requirements": [
+    {
+      "name": "arch",
+      "cask": null,
+      "download": null,
+      "version": "x86_64",
+      "contexts": [
 
+      ]
+    }
   ],
   "conflicts_with": [
 
   ],
-  "caveats": "OpenLoops downloads and installs process libraries in its\nown installation path: $(brew --prefix)/Cellar/openloops/1.3.1\n\nThese process libraries are lost if OpenLoops is uninstalled.\n\n",
+  "caveats": "OpenLoops downloads and installs process libraries in its\nown installation path: $(brew --prefix)/Cellar/openloops/2.1.2\n\nThese process libraries are lost if OpenLoops is uninstalled.\n\n",
   "installed": [
 
   ],
