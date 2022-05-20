@@ -10,6 +10,8 @@ class Mcfm < Formula
     regex(/href=.*?MCFM[._-]v?(\d+(?:\.\d+)+)\.t/i)
   end
 
+  option "with-vv-nnlo", "Support NNLO diboson processes (slow compilation)"
+
   depends_on "cmake" => :build
   depends_on "gcc"
   depends_on "lhapdf"
@@ -28,15 +30,20 @@ class Mcfm < Formula
       "target_link_libraries(qcdloop_static)",
       "target_link_libraries(qcdloop_static -L#{gfortran_lib} -lquadmath)"
 
-    mkdir "../build" do
-      system "cmake", buildpath, *std_cmake_args, "-Duse_internal_lhapdf=OFF"
-      system "make"
-      system "make", "install"
+    cd "Bin" do
+      args = %W[
+        -Duse_internal_lhapdf=OFF
+      ]
+      args << "-Dwith_vvamp=OFF" if build.without? "vv-nnlo"
 
-      bin.install "Bin/mcfm_omp"
-      pkgshare.install Dir["Bin/*"]
-      doc.install Dir["Doc/*.pdf"]
+      ENV.deparallelize
+      system "cmake", "..", *args
+      system "make"
     end
+
+    bin.install "Bin/mcfm_omp"
+    #pkgshare.install Dir["Bin/*"]
+    doc.install Dir["Doc/*.pdf"]
   end
 
   test do
