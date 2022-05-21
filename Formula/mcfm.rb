@@ -10,11 +10,11 @@ class Mcfm < Formula
     regex(/href=.*?MCFM[._-]v?(\d+(?:\.\d+)+)\.t/i)
   end
 
-  option "with-vv-nnlo", "Support NNLO diboson processes (slow compilation)"
+  option "with-nnlo-vv", "Include NNLO diboson processes (slow compilation)"
 
   depends_on "cmake" => :build
-  depends_on "gcc"
-  depends_on "lhapdf"
+  depends_on "gcc@12"
+  depends_on "lhapdf" => :optional
 
   # needs gcc >= 7
   fails_with :clang
@@ -22,7 +22,10 @@ class Mcfm < Formula
   fails_with gcc: "6"
 
   def install
-    gfortran_lib = Formula["gcc"].opt_lib/"gcc"/Formula["gcc"].version_suffix
+    pkgshare.install Dir["Bin/*"]
+    doc.install Dir["Doc/*.pdf"]
+
+    gfortran_lib = Formula["gcc@12"].opt_lib/"gcc"/Formula["gcc@12"].version_suffix
     inreplace "lib/qcdloop-2.0.5/CMakeLists.txt",
       "target_link_libraries(qcdloop_shared)",
       "target_link_libraries(qcdloop_shared -L#{gfortran_lib} -lquadmath)"
@@ -32,24 +35,32 @@ class Mcfm < Formula
 
     cd "Bin" do
       args = %w[
-        -Duse_internal_lhapdf=OFF
+        -DCMAKE_Fortran_COMPILER=gfortran-12
+        -DCMAKE_C_COMPILER=gcc-12
+        -DCMAKE_CXX_COMPILER=g++-12
       ]
-      args << "-Dwith_vvamp=OFF" if build.without? "vv-nnlo"
+      args << "-Dwith_vvamp=OFF" if build.without? "nnlo-vv"
+      if build.with? "lhapdf"
+        args << "-Duse_internal_lhapdf=OFF"
+        args << "-Dlhapdf_include_path=#{Formula["lhapdf"].opt_include}"
+      end
 
-      ENV.deparallelize
+      ENV.append "FCFLAGS", "-I."
+      ENV.append "CXXFLAGS", "-I."
       system "cmake", "..", *args
       system "make"
     end
 
-    bin.install "Bin/mcfm_omp"
-    # pkgshare.install Dir["Bin/*"]
-    doc.install Dir["Doc/*.pdf"]
+    bin.install "Bin/mcfm"
   end
 
   test do
-    download_pdfs(buildpath/"pdf-sets", "CT14nnlo")
-    system bin/"mcfm_omp", pkgshare/"input.ini"
-    system "ls"
-    assert_predicate testpath/"W_only_nlo_CT14.NN_80___80___13TeV.top", :exist?
+    ln_s pkgshare/"PDFs", testpath
+    ln_s pkgshare/"process.DAT", testpath
+    cp pkgshare/"input.ini", testpath
+
+    inreplace "input.ini", "part = nlo", "part = lo" # avoid test timeout
+    system bin/"mcfm", "input.ini"
+    assert_predicate testpath/"W_only_lo_CT14nnlo_1.00_1.00_14TeV_total_cross.txt", :exist?
   end
 end
