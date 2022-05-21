@@ -21,7 +21,7 @@ class Mcfm < Formula
 
   depends_on "cmake" => :build
   depends_on "gcc@12"
-  depends_on "lhapdf" => :optional
+  depends_on "lhapdf" => :optional # needs to be built with gcc
 
   fails_with :clang
 
