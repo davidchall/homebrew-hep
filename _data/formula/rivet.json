@@ -13,13 +13,13 @@
   "license": "GPL-3.0-only",
   "homepage": "https://rivet.hepforge.org",
   "versions": {
-    "stable": "3.1.5",
+    "stable": "3.1.6",
     "head": "HEAD",
     "bottle": true
   },
   "urls": {
     "stable": {
-      "url": "https://rivet.hepforge.org/downloads/?f=Rivet-3.1.5.tar.gz",
+      "url": "https://rivet.hepforge.org/downloads/?f=Rivet-3.1.6.tar.gz",
       "tag": null,
       "revision": null
     }
@@ -33,18 +33,18 @@
       "files": {
         "monterey": {
           "cellar": "/usr/local/Cellar",
-          "url": "https://ghcr.io/v2/davidchall/hep/rivet/blobs/sha256:29424a47d929906d44afa4dd4d50a24680cb918bb911ecb89e2b55c0faa46fc1",
-          "sha256": "29424a47d929906d44afa4dd4d50a24680cb918bb911ecb89e2b55c0faa46fc1"
+          "url": "https://ghcr.io/v2/davidchall/hep/rivet/blobs/sha256:276fa63e2d678ea43808387d09a8c3f699a63bb3a3e00867fa4ec4f56a256d5c",
+          "sha256": "276fa63e2d678ea43808387d09a8c3f699a63bb3a3e00867fa4ec4f56a256d5c"
         },
         "big_sur": {
           "cellar": "/usr/local/Cellar",
-          "url": "https://ghcr.io/v2/davidchall/hep/rivet/blobs/sha256:994733c064eb1a851d77030279d8fcf284aa1922dc82dc7b31d5de045eb924da",
-          "sha256": "994733c064eb1a851d77030279d8fcf284aa1922dc82dc7b31d5de045eb924da"
+          "url": "https://ghcr.io/v2/davidchall/hep/rivet/blobs/sha256:52472778d3d4a1f4ee49b7caee058d9138fdbe116c1d4ffdb7afbf66e24d0e85",
+          "sha256": "52472778d3d4a1f4ee49b7caee058d9138fdbe116c1d4ffdb7afbf66e24d0e85"
         },
         "catalina": {
           "cellar": "/usr/local/Cellar",
-          "url": "https://ghcr.io/v2/davidchall/hep/rivet/blobs/sha256:162ca873c2a2c12a020e3df7e0b3f43cf49ed753ecb136c0966b530be18506f8",
-          "sha256": "162ca873c2a2c12a020e3df7e0b3f43cf49ed753ecb136c0966b530be18506f8"
+          "url": "https://ghcr.io/v2/davidchall/hep/rivet/blobs/sha256:78153c5d89d8ea647b52d176f1f8096af7037815787e0dea7bfe3f66bd00f432",
+          "sha256": "78153c5d89d8ea647b52d176f1f8096af7037815787e0dea7bfe3f66bd00f432"
         }
       }
     }
