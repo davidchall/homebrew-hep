@@ -10,22 +10,21 @@ class Mcfm < Formula
     regex(/href=.*?MCFM[._-]v?(\d+(?:\.\d+)+)\.t/i)
   end
 
-  option "with-nnlo-vv", "Include NNLO diboson processes (slow compilation)"
+  option "with-nnlo-vv", "Build NNLO diboson processes (slow compilation)"
 
   depends_on "cmake" => :build
-  depends_on "gcc@12"
+  depends_on "gcc@12" => :build # for gfortran
   depends_on "lhapdf" => :optional
 
-  # needs gcc >= 7
   fails_with :clang
-  fails_with gcc: "5"
-  fails_with gcc: "6"
+
+  patch :DATA
 
   def install
-    pkgshare.install Dir["Bin/*"]
-    doc.install Dir["Doc/*.pdf"]
+    gcc = Formula["gcc@12"]
+    ENV["FC"] = gcc.opt_bin/"gfortran-#{gcc.version_suffix}"
+    gfortran_lib = gcc.opt_lib/"gcc/#{gcc.version_suffix}"
 
-    gfortran_lib = Formula["gcc@12"].opt_lib/"gcc"/Formula["gcc@12"].version_suffix
     inreplace "lib/qcdloop-2.0.5/CMakeLists.txt",
       "target_link_libraries(qcdloop_shared)",
       "target_link_libraries(qcdloop_shared -L#{gfortran_lib} -lquadmath)"
@@ -33,25 +32,30 @@ class Mcfm < Formula
       "target_link_libraries(qcdloop_static)",
       "target_link_libraries(qcdloop_static -L#{gfortran_lib} -lquadmath)"
 
+    pkgshare.install Dir["Bin/*"]
+
     cd "Bin" do
-      args = %w[
-        -DCMAKE_Fortran_COMPILER=gfortran-12
-        -DCMAKE_C_COMPILER=gcc-12
-        -DCMAKE_CXX_COMPILER=g++-12
-      ]
+      args = []
       args << "-Dwith_vvamp=OFF" if build.without? "nnlo-vv"
       if build.with? "lhapdf"
         args << "-Duse_internal_lhapdf=OFF"
         args << "-Dlhapdf_include_path=#{Formula["lhapdf"].opt_include}"
       end
 
-      ENV.append "FCFLAGS", "-I."
-      ENV.append "CXXFLAGS", "-I."
       system "cmake", "..", *args
       system "make"
     end
 
     bin.install "Bin/mcfm"
+    doc.install Dir["Doc/*.pdf"]
+  end
+
+  def caveats
+    <<~EOS
+      Before running mcfm, copy this file to your working directory:
+        #{pkgshare}/process.DAT
+
+    EOS
   end
 
   test do
@@ -64,3 +68,19 @@ class Mcfm < Formula
     assert_predicate testpath/"W_only_lo_CT14nnlo_1.00_1.00_14TeV_total_cross.txt", :exist?
   end
 end
+
+__END__
+diff --git a/CMakeLists.txt b/CMakeLists.txt
+index 4fff350..1dc0b76 100644
+--- a/CMakeLists.txt
++++ b/CMakeLists.txt
+@@ -290,8 +290,8 @@ if(use_internal_lhapdf)
+ elseif(use_external_lhapdf)
+     find_library(lhapdf_lib NAMES LHAPDF REQUIRED)
+     target_link_libraries(mcfm ${lhapdf_lib})
+-    if (${lhapdf_include_path})
+-        target_include_directories(objlib PRIVATE "${LHAPDF_INCLUDE_PATH}" "${CMAKE_BINARY_DIR}/local/include" "${CMAKE_BINARY_DIR}/local/include/qd")
++    if (NOT ${lhapdf_include_path} STREQUAL "OFF")
++        target_include_directories(objlib PRIVATE "${lhapdf_include_path}" "${CMAKE_BINARY_DIR}/local/include" "${CMAKE_BINARY_DIR}/local/include/qd")
+     endif()
+ endif()
