@@ -13,7 +13,7 @@ class Mcfm < Formula
   option "with-nnlo-vv", "Build NNLO diboson processes (slow compilation)"
 
   depends_on "cmake" => :build
-  depends_on "gcc@12" => :build # for gfortran
+  depends_on "gcc@12"
   depends_on "lhapdf" => :optional
 
   fails_with :clang
