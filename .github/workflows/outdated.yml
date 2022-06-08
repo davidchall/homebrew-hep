@@ -10,6 +10,9 @@ jobs:
     steps:
       - name: Set up tap
         run: brew tap davidchall/hep
+        
+      - name: Enable developer mode
+        run: brew developer on
 
       - name: Check for outdated
         run: brew livecheck --newer-only --tap davidchall/hep
