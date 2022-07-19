@@ -1,8 +1,8 @@
 class Applgrid < Formula
   desc "Quickly reproduce NLO calculations with any input PDFs"
   homepage "https://applgrid.hepforge.org"
-  url "https://applgrid.hepforge.org/downloads?f=applgrid-1.6.27.tgz"
-  sha256 "87e64d1a3df7148c20e1f382c9f189ad428cdaf0c3425efa25c2e1b5ba003ad7"
+  url "https://applgrid.hepforge.org/downloads?f=applgrid-1.6.28.tgz"
+  sha256 "df42ed93ab43e467e87f34b90f426ce5b0f988901a6583f200e2254d08e0ca01"
   license "GPL-3.0-only"
 
   livecheck do
