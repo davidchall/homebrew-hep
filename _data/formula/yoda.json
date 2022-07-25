@@ -13,13 +13,13 @@
   "license": "GPL-3.0-only",
   "homepage": "https://yoda.hepforge.org",
   "versions": {
-    "stable": "1.9.5",
+    "stable": "1.9.6",
     "head": "HEAD",
     "bottle": true
   },
   "urls": {
     "stable": {
-      "url": "https://yoda.hepforge.org/downloads/?f=YODA-1.9.5.tar.gz",
+      "url": "https://yoda.hepforge.org/downloads/?f=YODA-1.9.6.tar.gz",
       "tag": null,
       "revision": null
     }
@@ -33,25 +33,24 @@
       "files": {
         "monterey": {
           "cellar": ":any",
-          "url": "https://ghcr.io/v2/davidchall/hep/yoda/blobs/sha256:7efae44adea74025f588c798c3e7c8c060596a49941f5eb59deee0479bed80b3",
-          "sha256": "7efae44adea74025f588c798c3e7c8c060596a49941f5eb59deee0479bed80b3"
+          "url": "https://ghcr.io/v2/davidchall/hep/yoda/blobs/sha256:0ec3a35c6f5dc9acda350b6262e4fa3cef856f3ba327728ce2aec93118f82641",
+          "sha256": "0ec3a35c6f5dc9acda350b6262e4fa3cef856f3ba327728ce2aec93118f82641"
         },
         "big_sur": {
           "cellar": ":any",
-          "url": "https://ghcr.io/v2/davidchall/hep/yoda/blobs/sha256:56903bd59d21e8e54ea1c2d2d41a2576f204e0c3b0dab58564d697fc07774cbb",
-          "sha256": "56903bd59d21e8e54ea1c2d2d41a2576f204e0c3b0dab58564d697fc07774cbb"
+          "url": "https://ghcr.io/v2/davidchall/hep/yoda/blobs/sha256:8817e9daa8c24ab08fb8ef3c1d30863ea702246929942c5ecffaff4cbf909bd8",
+          "sha256": "8817e9daa8c24ab08fb8ef3c1d30863ea702246929942c5ecffaff4cbf909bd8"
         },
         "catalina": {
           "cellar": ":any",
-          "url": "https://ghcr.io/v2/davidchall/hep/yoda/blobs/sha256:a188afc53fad7b784fcb7d195ca820a2f2c9d2bd91e85c7083e6e9ad3ed0dcad",
-          "sha256": "a188afc53fad7b784fcb7d195ca820a2f2c9d2bd91e85c7083e6e9ad3ed0dcad"
+          "url": "https://ghcr.io/v2/davidchall/hep/yoda/blobs/sha256:387cca231a0d2104b5da40545bc357ef930f0b525cff204a548f9351fb4e24bd",
+          "sha256": "387cca231a0d2104b5da40545bc357ef930f0b525cff204a548f9351fb4e24bd"
         }
       }
     }
   },
   "keg_only": false,
   "keg_only_reason": null,
-  "bottle_disabled": false,
   "options": [
     {
       "option": "--with-test",

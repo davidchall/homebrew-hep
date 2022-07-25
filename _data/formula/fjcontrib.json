@@ -13,35 +13,44 @@
   "license": null,
   "homepage": "https://fastjet.hepforge.org/contrib/",
   "versions": {
-    "stable": "1.048",
+    "stable": "1.049",
     "head": null,
     "bottle": true
   },
   "urls": {
     "stable": {
-      "url": "https://fastjet.hepforge.org/contrib/downloads/fjcontrib-1.048.tar.gz",
+      "url": "https://fastjet.hepforge.org/contrib/downloads/fjcontrib-1.049.tar.gz",
       "tag": null,
       "revision": null
     }
   },
-  "revision": 1,
+  "revision": 0,
   "version_scheme": 0,
   "bottle": {
     "stable": {
       "rebuild": 0,
       "root_url": "https://ghcr.io/v2/davidchall/hep",
       "files": {
+        "monterey": {
+          "cellar": ":any_skip_relocation",
+          "url": "https://ghcr.io/v2/davidchall/hep/fjcontrib/blobs/sha256:3fb23ad1e65647fd4d7ecfc539cfd07fdbb4c85c7645e97e112039ef3b850ad5",
+          "sha256": "3fb23ad1e65647fd4d7ecfc539cfd07fdbb4c85c7645e97e112039ef3b850ad5"
+        },
         "big_sur": {
           "cellar": ":any_skip_relocation",
-          "url": "https://ghcr.io/v2/davidchall/hep/fjcontrib/blobs/sha256:81a5f5da671b112f7f1d90405fd8ee95927a873dc198111f6bfd7f2c66c9da67",
-          "sha256": "81a5f5da671b112f7f1d90405fd8ee95927a873dc198111f6bfd7f2c66c9da67"
+          "url": "https://ghcr.io/v2/davidchall/hep/fjcontrib/blobs/sha256:9520a2112bb4d35c0dfdf83ef9b10d4b88030e0d40d998a508cc40e01bca7b4e",
+          "sha256": "9520a2112bb4d35c0dfdf83ef9b10d4b88030e0d40d998a508cc40e01bca7b4e"
+        },
+        "catalina": {
+          "cellar": ":any_skip_relocation",
+          "url": "https://ghcr.io/v2/davidchall/hep/fjcontrib/blobs/sha256:3bc0e9acac14dc6b066a2474723338f04a25e9b093fd92299c2f5ebfcaf29607",
+          "sha256": "3bc0e9acac14dc6b066a2474723338f04a25e9b093fd92299c2f5ebfcaf29607"
         }
       }
     }
   },
   "keg_only": false,
   "keg_only_reason": null,
-  "bottle_disabled": false,
   "options": [
     {
       "option": "--with-test",
