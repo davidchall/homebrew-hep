@@ -12,7 +12,7 @@ on:
         type: boolean
         default: false
   schedule:
-    - cron: 20 * * * *
+    - cron: 0 0 * * 1
 
 jobs:
   update-tap:
