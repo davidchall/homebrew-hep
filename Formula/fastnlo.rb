@@ -31,7 +31,7 @@ class Fastnlo < Formula
   depends_on "yoda"    => :optional
 
   def am_opt(pkg)
-    (build.with? pkg) ? "--with-#{pkg}=#{Formula[pkg].opt_prefix}" : "--without-#{pkg}"
+    build.with? pkg ? "--with-#{pkg}=#{Formula[pkg].opt_prefix}" : "--without-#{pkg}"
   end
 
   def install
