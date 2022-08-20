@@ -3,8 +3,14 @@ name: bump outdated
 on:
   workflow_dispatch:
     inputs:
-      formulae:
+      formula:
         description: 'Comma-separated list of formulae to bump'
+        type: string
+      force:
+        description: 'Force PR creation (ignore existing PRs)'
+        required: true
+        type: boolean
+        default: false
   schedule:
     - cron: 0 0 * * 1
 
@@ -18,6 +24,6 @@ jobs:
           # Required, custom GitHub access token with only the 'public_repo' scope enabled
           token: ${{ secrets.TOKEN }}
           tap: davidchall/hep
-          formula: ${{ github.event.inputs.formulae }}
-          force: false
+          formula: ${{ inputs.formula }}
+          force: ${{ inputs.force }}
           livecheck: true
