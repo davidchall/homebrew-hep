@@ -4,15 +4,15 @@ on:
   workflow_dispatch:
     inputs:
       formula:
-        description: 'Comma-separated list of formulae to bump'
+        description: 'Comma-separated list of formulae'
         type: string
       force:
-        description: 'Force PR creation (ignore existing PRs)'
+        description: 'Force PR creation (ignore existing)'
         required: true
         type: boolean
         default: false
   schedule:
-    - cron: 0 0 * * 1
+    - cron: 20 * * * *
 
 jobs:
   update-tap:
