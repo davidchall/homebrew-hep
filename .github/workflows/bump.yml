@@ -1,0 +1,19 @@
+name: bump outdated
+
+on:
+  schedule:
+    # every Sunday
+    - cron: 0 0 * * 1
+
+jobs:
+  update-tap:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Update Homebrew formulae
+        uses: dawidd6/action-homebrew-bump-formula@v3
+        with:
+          # Required, custom GitHub access token with only the 'public_repo' scope enabled
+          token: ${{ secrets.TOKEN }}
+          tap: davidchall/hep
+          force: false
+          livecheck: true
