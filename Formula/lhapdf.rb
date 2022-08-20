@@ -30,8 +30,6 @@ class Lhapdf < Formula
 
   depends_on "python@3.9"
 
-  patch :DATA
-
   def install
     ENV.prepend_path "PATH", Formula["python@3.9"].opt_libexec/"bin"
     ENV.prepend_create_path "PYTHONPATH", prefix/Language::Python.site_packages("python3.9")
@@ -72,18 +70,3 @@ class Lhapdf < Formula
     system python, "-c", "import lhapdf"
   end
 end
-
-__END__
-diff --git a/wrappers/python/setup.py.in b/wrappers/python/setup.py.in
-index 21a3d27..5b52590 100644
---- a/wrappers/python/setup.py.in
-+++ b/wrappers/python/setup.py.in
-@@ -22,7 +22,7 @@ libdir = os.path.abspath("@top_builddir@/src/.libs")
- ext = Extension("lhapdf",
-                 ["lhapdf.cpp"],
-                 include_dirs=[incdir_src, incdir_build],
--                extra_compile_args=["-I@prefix@/include"],
-+                extra_compile_args=["-std=c++11", "-I@prefix@/include"],
-                 library_dirs=[libdir],
-                 language="C++",
-                 libraries=["stdc++", "LHAPDF"])
