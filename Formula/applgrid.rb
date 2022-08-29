@@ -12,9 +12,9 @@ class Applgrid < Formula
 
   bottle do
     root_url "https://ghcr.io/v2/davidchall/hep"
-    sha256 cellar: :any, monterey: "2e3e3ffe97c23eb24c3f395ee2a06b3b9e8592ab7bfd1667509713b5e0ca5bb8"
-    sha256 cellar: :any, big_sur:  "4ab060b1878b06eaaee47d99f34f0d68f48042641f7b9891e99aaf9da2067597"
-    sha256 cellar: :any, catalina: "022ed6893763da687242f0d4b08cb59a606217a8dd07cec6556b9e5db72088fa"
+    sha256 cellar: :any, monterey: "3a7c5052f4d8a59d94faf249b6fb4d4b0e5008934f0423248ccab693ea2adc32"
+    sha256 cellar: :any, big_sur:  "a44edad11173836223cabc381f2a97c17d86219162179b7a987d52a028c52911"
+    sha256 cellar: :any, catalina: "ee62df2ea1e2f7521766a79427b96b282f09322e2c2382066156c0dd3233c53e"
   end
 
   depends_on "gcc" # for gfortran
