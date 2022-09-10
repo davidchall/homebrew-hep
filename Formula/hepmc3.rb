@@ -49,7 +49,7 @@ class Hepmc3 < Formula
   test do
     assert_equal prefix.to_s, shell_output(bin/"HepMC3-config --prefix").strip
 
-    python = Formula["python@3.9"].opt_bin/"python3"
+    python = Formula["python@3.9"].opt_bin/"python3.9"
     system python, "-c", "import pyHepMC3"
 
     cp_r share/"doc/HepMC3/examples/.", testpath
