@@ -14,13 +14,6 @@ class Qcdnum < Formula
     end
   end
 
-  bottle do
-    root_url "https://ghcr.io/v2/davidchall/hep"
-    sha256 cellar: :any_skip_relocation, monterey: "09784b1ccf97422566c754601d49b83766668fa9e0e0e6d1372ab4f9d915c4c7"
-    sha256 cellar: :any_skip_relocation, big_sur:  "2839af37bbd5ee48f72ae80dbaf0acabc466a8751dabd239334b3de4cf8e3d7c"
-    sha256 cellar: :any_skip_relocation, catalina: "3f8d86f689008c58d016885fdea5e203f828766fd2a086b0db108654c1c8f229"
-  end
-
   depends_on "gcc" # for gfortran
 
   def install
