@@ -3,8 +3,8 @@ class Madgraph5Amcatnlo < Formula
 
   desc "Automated LO and NLO processes matched to parton showers"
   homepage "https://launchpad.net/mg5amcnlo"
-  url "https://launchpad.net/mg5amcnlo/3.0/3.4.x/+download/MG5_aMC_v3.4.0.tar.gz"
-  sha256 "6853c311c3641e6f2d1fc99695bb72d4dcf159f9b944f8e7322e085257406611"
+  url "https://launchpad.net/mg5amcnlo/3.0/3.4.x/+download/MG5_aMC_v3.4.1.tar.gz"
+  sha256 "d0dc25a84393687017dcd9154e8f0eee0ba3d6a7122b4a61541db24ffbc148c3"
   license "NCSA"
 
   livecheck do
@@ -30,7 +30,7 @@ class Madgraph5Amcatnlo < Formula
 
   def install
     resource("six").stage do
-      system Formula["python@3.9"].opt_bin/"python3", *Language::Python.setup_install_args(prefix)
+      system Formula["python@3.9"].opt_bin/"python3.9", *Language::Python.setup_install_args(prefix)
     end
 
     # fix broken dynamic links
