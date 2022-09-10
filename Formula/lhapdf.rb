@@ -13,13 +13,6 @@ class Lhapdf < Formula
     regex(/href=.*?LHAPDF[._-]v?(\d+(?:\.\d+)+)\.t/i)
   end
 
-  bottle do
-    root_url "https://ghcr.io/v2/davidchall/hep"
-    sha256 monterey: "ce6b18b94fd95b6d134aeec3c4a528c21e9028db9d6f0186f3a3db21ffff1b1d"
-    sha256 big_sur:  "36f3fd3b8b5be592f71b30b490121ff29b6a62ef8f6849efae894416b821a2f0"
-    sha256 catalina: "4498fe86aadfa323eeafaa670b975e1350c92726d1b4e927478b3a202ba06307"
-  end
-
   head do
     url "http://lhapdf.hepforge.org/hg/lhapdf", using: :hg
 
