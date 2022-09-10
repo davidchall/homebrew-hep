@@ -6,6 +6,7 @@ class Lhapdf < Formula
   url "https://lhapdf.hepforge.org/downloads/?f=LHAPDF-6.5.1.tar.gz"
   sha256 "1256419e2227d1a4f93387fe1da805e648351417d3755e8af5a30a35a6a66751"
   license "GPL-3.0-or-later"
+  revision 1
 
   livecheck do
     url "https://lhapdf.hepforge.org/downloads"
@@ -32,9 +33,13 @@ class Lhapdf < Formula
 
   patch :DATA
 
+  def python
+    "python3.9"
+  end
+
   def install
     ENV.prepend_path "PATH", Formula["python@3.9"].opt_libexec/"bin"
-    ENV.prepend_create_path "PYTHONPATH", prefix/Language::Python.site_packages("python3.9")
+    ENV.prepend_create_path "PYTHONPATH", prefix/Language::Python.site_packages(python)
 
     args = %W[
       --disable-dependency-tracking
@@ -48,7 +53,7 @@ class Lhapdf < Formula
 
     system "./configure", "--enable-python", *args
     cd "wrappers/python" do
-      system "python3", *Language::Python.setup_install_args(prefix)
+      system python, *Language::Python.setup_install_args(prefix, python)
     end
 
     rewrite_shebang detected_python_shebang, bin/"lhapdf"
@@ -67,9 +72,8 @@ class Lhapdf < Formula
   end
 
   test do
-    python = Formula["python@3.9"].opt_bin/"python3"
     system bin/"lhapdf", "--help"
-    system python, "-c", "import lhapdf"
+    system Formula["python@3.9"].opt_bin/python, "-c", "import lhapdf"
   end
 end
 
