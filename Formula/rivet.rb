@@ -6,17 +6,11 @@ class Rivet < Formula
   url "https://rivet.hepforge.org/downloads/?f=Rivet-3.1.6.tar.gz"
   sha256 "7d9b35fcf7e5cb61c4641bdcc499418e35dee84b7a06fa2d7df5d296f5f4201e"
   license "GPL-3.0-only"
+  revision 1
 
   livecheck do
     url "https://rivet.hepforge.org/downloads/"
     regex(/href=.*?Rivet[._-]v?(\d+(?:\.\d+)+)\.t/i)
-  end
-
-  bottle do
-    root_url "https://ghcr.io/v2/davidchall/hep"
-    sha256 monterey: "276fa63e2d678ea43808387d09a8c3f699a63bb3a3e00867fa4ec4f56a256d5c"
-    sha256 big_sur:  "52472778d3d4a1f4ee49b7caee058d9138fdbe116c1d4ffdb7afbf66e24d0e85"
-    sha256 catalina: "78153c5d89d8ea647b52d176f1f8096af7037815787e0dea7bfe3f66bd00f432"
   end
 
   head do
@@ -44,6 +38,10 @@ class Rivet < Formula
     sha256 "f9989d3b6aeb22848bcf91095c30607f027d3ef277a4f0f704a8f0fc2e766981"
   end
 
+  def python
+    "python3.9"
+  end
+
   def install
     resource("fjcontrib").stage do
       inreplace "Makefile.in",
@@ -68,7 +66,14 @@ class Rivet < Formula
     args << "--disable-analyses" if build.without? "analyses"
     args << "--enable-unvalidated" if build.with? "unvalidated"
 
-    ENV["PYTHON"] = Formula["python@3.9"].opt_bin/"python3"
+    ENV["PYTHON"] = Formula["python@3.9"].opt_bin/python
+
+    # fix error: could not create '/opt/homebrew/lib/python3.9/site-packages/rivet':
+    # Operation not permitted
+    site_packages = prefix/Language::Python.site_packages(python)
+    inreplace "pyext/Makefile.in",
+              "$(abs_builddir)/setup.py install \\",
+              "$(abs_builddir)/setup.py install --install-lib #{site_packages} \\"
 
     system "autoreconf", "-i" if build.head?
     system "./configure", *args
@@ -81,8 +86,7 @@ class Rivet < Formula
   end
 
   test do
-    python = Formula["python@3.9"].opt_bin/"python3"
-    system python, "-c", "import rivet"
+    system Formula["python@3.9"].opt_bin/python, "-c", "import rivet"
     pipe_output bin/"rivet -q", File.read(prefix/"test/testApi.hepmc"), 0
   end
 end
