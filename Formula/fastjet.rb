@@ -1,7 +1,7 @@
 class Fastjet < Formula
   desc "Package for jet finding in pp and ee collisions"
-  homepage "http://fastjet.fr"
-  url "http://fastjet.fr/repo/fastjet-3.4.0.tar.gz"
+  homepage "https://fastjet.fr"
+  url "https://fastjet.fr/repo/fastjet-3.4.0.tar.gz"
   sha256 "ee07c8747c8ead86d88de4a9e4e8d1e9e7d7614973f5631ba8297f7a02478b91"
   license "GPL-2.0-or-later"
 
@@ -50,7 +50,7 @@ class Fastjet < Formula
     ln_s prefix/"example/python", testpath
     system prefix/"example/fastjet_example < data/single-event.dat"
 
-    python = Formula["python@3.9"].opt_bin/"python3"
+    python = Formula["python@3.9"].opt_bin/"python3.9"
     cd "python" do
       system python, "01-basic.py"
     end
