@@ -6,6 +6,7 @@ class Yoda < Formula
   url "https://yoda.hepforge.org/downloads/?f=YODA-1.9.6.tar.gz"
   sha256 "5c57914eb8d8068844560e3a3e545f68d89ca49796dcc0932cdd42ee62064955"
   license "GPL-3.0-only"
+  revision 1
 
   livecheck do
     url "https://yoda.hepforge.org/downloads/"
@@ -34,6 +35,10 @@ class Yoda < Formula
   depends_on "numpy" => :optional
   depends_on "root" => :optional
 
+  def python
+    "python3.9"
+  end
+
   def install
     ENV.prepend_path "PATH", Formula["python@3.9"].opt_libexec/"bin"
 
@@ -48,6 +53,13 @@ class Yoda < Formula
       ENV.append "PYTHONPATH", Formula["root"].opt_prefix/"lib/root" if build.with? "test"
     end
 
+    # fix error: could not create '/opt/homebrew/lib/python3.9/site-packages/yoda':
+    # Operation not permitted
+    site_packages = prefix/Language::Python.site_packages(python)
+    inreplace "pyext/Makefile.in",
+              "$(abs_builddir)/setup.py install \\",
+              "$(abs_builddir)/setup.py install --install-lib #{site_packages} \\"
+
     system "autoreconf", "-i" if build.head?
     system "./configure", *args
     system "make"
@@ -58,8 +70,7 @@ class Yoda < Formula
   end
 
   test do
-    python = Formula["python@3.9"].opt_bin/"python3"
-    system python, "-c", "import yoda"
+    system Formula["python@3.9"].opt_bin/python, "-c", "import yoda"
     system bin/"yoda-config", "--version"
     system bin/"yodastack", "--help"
   end
