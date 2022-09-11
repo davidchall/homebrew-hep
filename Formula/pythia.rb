@@ -42,7 +42,5 @@ class Pythia < Formula
     cp_r share/"Pythia8/examples/.", testpath
     system "make", "main01"
     system "./main01"
-    system "make", "main41"
-    system "./main41"
   end
 end
