@@ -4,7 +4,7 @@ class Hepmc3 < Formula
   url "https://hepmc.web.cern.ch/hepmc/releases/HepMC3-3.2.5.tar.gz"
   sha256 "cd0f75c80f75549c59cc2a829ece7601c77de97cb2a5ab75790cac8e1d585032"
   license "GPL-3.0-or-later"
-  revision 1
+  revision 2
 
   livecheck do
     url "https://hepmc.web.cern.ch/hepmc/"
@@ -23,8 +23,12 @@ class Hepmc3 < Formula
 
   depends_on "cmake" => [:build, :test]
   depends_on "coreutils" # HepMC3-config uses greadlink
-  depends_on "python@3.9"
+  depends_on "python@3.10"
   depends_on "root" => :optional
+
+  def python
+    "python3.10"
+  end
 
   def install
     mkdir "../build" do
@@ -32,8 +36,8 @@ class Hepmc3 < Formula
         -DCMAKE_INSTALL_PREFIX=#{prefix}
         -DHEPMC3_INSTALL_INTERFACES=ON
         -DHEPMC3_BUILD_STATIC_LIBS=OFF
-        -DHEPMC3_PYTHON_VERSIONS=3.9
-        -DHEPMC3_Python_SITEARCH39=#{prefix/Language::Python.site_packages("python3.9")}
+        -DHEPMC3_PYTHON_VERSIONS=3.10
+        -DHEPMC3_Python_SITEARCH310=#{prefix/Language::Python.site_packages(python)}
       ]
 
       args << "-DHEPMC3_ENABLE_TEST=ON" if build.with? "test"
@@ -49,8 +53,7 @@ class Hepmc3 < Formula
   test do
     assert_equal prefix.to_s, shell_output(bin/"HepMC3-config --prefix").strip
 
-    python = Formula["python@3.9"].opt_bin/"python3.9"
-    system python, "-c", "import pyHepMC3"
+    system Formula["python@3.10"].opt_bin/python, "-c", "import pyHepMC3"
 
     cp_r share/"doc/HepMC3/examples/.", testpath
     system "cmake", "-DUSE_INSTALLED_HEPMC3=ON", "CMakeLists.txt"
