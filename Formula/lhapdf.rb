@@ -6,7 +6,7 @@ class Lhapdf < Formula
   url "https://lhapdf.hepforge.org/downloads/?f=LHAPDF-6.5.1.tar.gz"
   sha256 "1256419e2227d1a4f93387fe1da805e648351417d3755e8af5a30a35a6a66751"
   license "GPL-3.0-or-later"
-  revision 1
+  revision 2
 
   livecheck do
     url "https://lhapdf.hepforge.org/downloads"
