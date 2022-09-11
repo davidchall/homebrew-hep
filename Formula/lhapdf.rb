@@ -22,16 +22,16 @@ class Lhapdf < Formula
     depends_on "libtool" => :build
   end
 
-  depends_on "python@3.10"
+  depends_on "python@3.9"
 
   patch :DATA
 
   def python
-    "python3.10"
+    "python3.9"
   end
 
   def install
-    ENV.prepend_path "PATH", Formula["python@3.10"].opt_libexec/"bin"
+    ENV.prepend_path "PATH", Formula["python@3.9"].opt_libexec/"bin"
     ENV.prepend_create_path "PYTHONPATH", prefix/Language::Python.site_packages(python)
 
     args = %W[
@@ -66,7 +66,7 @@ class Lhapdf < Formula
 
   test do
     system bin/"lhapdf", "--help"
-    system Formula["python@3.10"].opt_bin/python, "-c", "import lhapdf"
+    system Formula["python@3.9"].opt_bin/python, "-c", "import lhapdf"
   end
 end
 
