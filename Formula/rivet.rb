@@ -6,7 +6,7 @@ class Rivet < Formula
   url "https://rivet.hepforge.org/downloads/?f=Rivet-3.1.6.tar.gz"
   sha256 "7d9b35fcf7e5cb61c4641bdcc499418e35dee84b7a06fa2d7df5d296f5f4201e"
   license "GPL-3.0-only"
-  revision 1
+  revision 2
 
   livecheck do
     url "https://rivet.hepforge.org/downloads/"
@@ -29,7 +29,7 @@ class Rivet < Formula
   depends_on "fastjet"
   depends_on "gsl"
   depends_on "hepmc3"
-  depends_on "python@3.9"
+  depends_on "python@3.10"
   depends_on "yoda"
 
   # rivet needs a special installation of fjcontrib
@@ -39,7 +39,7 @@ class Rivet < Formula
   end
 
   def python
-    "python3.9"
+    "python3.10"
   end
 
   def install
@@ -66,7 +66,7 @@ class Rivet < Formula
     args << "--disable-analyses" if build.without? "analyses"
     args << "--enable-unvalidated" if build.with? "unvalidated"
 
-    ENV["PYTHON"] = Formula["python@3.9"].opt_bin/python
+    ENV["PYTHON"] = Formula["python@3.10"].opt_bin/python
 
     # fix error: could not create '/opt/homebrew/lib/python3.9/site-packages/rivet':
     # Operation not permitted
@@ -86,7 +86,7 @@ class Rivet < Formula
   end
 
   test do
-    system Formula["python@3.9"].opt_bin/python, "-c", "import rivet"
+    system Formula["python@3.10"].opt_bin/python, "-c", "import rivet"
     pipe_output bin/"rivet -q", File.read(prefix/"test/testApi.hepmc"), 0
   end
 end
