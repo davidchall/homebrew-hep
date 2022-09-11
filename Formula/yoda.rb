@@ -6,7 +6,7 @@ class Yoda < Formula
   url "https://yoda.hepforge.org/downloads/?f=YODA-1.9.6.tar.gz"
   sha256 "5c57914eb8d8068844560e3a3e545f68d89ca49796dcc0932cdd42ee62064955"
   license "GPL-3.0-only"
-  revision 1
+  revision 2
 
   livecheck do
     url "https://yoda.hepforge.org/downloads/"
@@ -24,16 +24,16 @@ class Yoda < Formula
 
   option "with-test", "Test during installation"
 
-  depends_on "python@3.9"
+  depends_on "python@3.10"
   depends_on "numpy" => :optional
   depends_on "root" => :optional
 
   def python
-    "python3.9"
+    "python3.10"
   end
 
   def install
-    ENV.prepend_path "PATH", Formula["python@3.9"].opt_libexec/"bin"
+    ENV.prepend_path "PATH", Formula["python@3.10"].opt_libexec/"bin"
 
     args = %W[
       --disable-debug
@@ -63,7 +63,7 @@ class Yoda < Formula
   end
 
   test do
-    system Formula["python@3.9"].opt_bin/python, "-c", "import yoda"
+    system Formula["python@3.10"].opt_bin/python, "-c", "import yoda"
     system bin/"yoda-config", "--version"
     system bin/"yodastack", "--help"
   end
