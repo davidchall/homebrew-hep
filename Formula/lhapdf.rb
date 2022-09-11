@@ -73,24 +73,31 @@ end
 
 __END__
 diff --git a/wrappers/python/build.py.in b/wrappers/python/build.py.in
-index c9d6710..955882f 100644
+index c9d6710..8c2e633 100644
 --- a/wrappers/python/build.py.in
 +++ b/wrappers/python/build.py.in
-@@ -34,7 +34,7 @@ libargs = " ".join("-l{}".format(l) for l in libraries)
+@@ -34,23 +34,12 @@ libargs = " ".join("-l{}".format(l) for l in libraries)
 
  ## Python compile/link args
  pyargs = "-I" + sysconfig.get_config_var("INCLUDEPY")
 -libpys = [os.path.join(sysconfig.get_config_var(ld), sysconfig.get_config_var("LDLIBRARY")) for ld in ["LIBPL", "LIBDIR"]]
-+libpys = glob(os.path.join(sysconfig.get_config_var("LIBDIR"), "libpython*.dylib"))
- libpy = None
- for lp in libpys:
-     if os.path.exists(lp):
-@@ -46,7 +46,7 @@ if libpy is None:
- pyargs += " " + libpy
+-libpy = None
+-for lp in libpys:
+-    if os.path.exists(lp):
+-        libpy = lp
+-        break
+-if libpy is None:
+-    print("No libpython found in expected location {}, exiting".format(libpy))
+-    sys.exit(1)
+-pyargs += " " + libpy
  pyargs += " " + sysconfig.get_config_var("LIBS")
  pyargs += " " + sysconfig.get_config_var("LIBM")
 -pyargs += " " + sysconfig.get_config_var("LINKFORSHARED")
-+#pyargs += " " + sysconfig.get_config_var("LINKFORSHARED")
 
 
  ## Assemble the compile & link command
+-compile_cmd = "  ".join([os.environ.get("CXX", "g++"), "-shared -fPIC",
++compile_cmd = "  ".join([sysconfig.get_config_var("LDCXXSHARED"), "-std=c++11",
+                          "-o", srcname.replace(".cpp", ".so"),
+                          srcpath, incargs, cmpargs, linkargs, libargs, pyargs])
+ print("Build command =", compile_cmd)
