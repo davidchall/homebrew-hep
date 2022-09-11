@@ -6,7 +6,7 @@ class Lhapdf < Formula
   url "https://lhapdf.hepforge.org/downloads/?f=LHAPDF-6.5.1.tar.gz"
   sha256 "1256419e2227d1a4f93387fe1da805e648351417d3755e8af5a30a35a6a66751"
   license "GPL-3.0-or-later"
-  revision 1
+  revision 2
 
   livecheck do
     url "https://lhapdf.hepforge.org/downloads"
@@ -22,16 +22,16 @@ class Lhapdf < Formula
     depends_on "libtool" => :build
   end
 
-  depends_on "python@3.9"
+  depends_on "python@3.10"
 
   patch :DATA
 
   def python
-    "python3.9"
+    "python3.10"
   end
 
   def install
-    ENV.prepend_path "PATH", Formula["python@3.9"].opt_libexec/"bin"
+    ENV.prepend_path "PATH", Formula["python@3.10"].opt_libexec/"bin"
     ENV.prepend_create_path "PYTHONPATH", prefix/Language::Python.site_packages(python)
 
     args = %W[
@@ -66,7 +66,7 @@ class Lhapdf < Formula
 
   test do
     system bin/"lhapdf", "--help"
-    system Formula["python@3.9"].opt_bin/python, "-c", "import lhapdf"
+    system Formula["python@3.10"].opt_bin/python, "-c", "import lhapdf"
   end
 end
 
