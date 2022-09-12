@@ -4,6 +4,7 @@ class Applgrid < Formula
   url "https://applgrid.hepforge.org/downloads?f=applgrid-1.6.32.tgz"
   sha256 "bca2dfbca5652688a45c5604e8ca0e7dac935ddd11198842f272ebbe3c43c505"
   license "GPL-3.0-only"
+  revision 1
 
   livecheck do
     url "https://applgrid.hepforge.org/downloads"
