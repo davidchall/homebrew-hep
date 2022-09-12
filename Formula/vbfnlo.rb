@@ -9,6 +9,13 @@ class Vbfnlo < Formula
     skip "In longterm beta"
   end
 
+  bottle do
+    root_url "https://ghcr.io/v2/davidchall/hep"
+    sha256 cellar: :any, monterey: "291c743e810d2fac4f029c0a19836a2ecb6cc196058213f7cdac4bb2c3e2c562"
+    sha256 cellar: :any, big_sur:  "01da231788e9fcdec02f86dc420fef47e599d3e428df0dddbbb50e4e7ef7d8b6"
+    sha256 cellar: :any, catalina: "9b9695cf5bc1153d4ba453637ea82de9d14c0139d3dd493c7cfc8d7d98f681ff"
+  end
+
   option "with-kk", "Enable Kaluza-Klein resonances"
   option "with-spin2", "Enable spin-2 resonances"
 
