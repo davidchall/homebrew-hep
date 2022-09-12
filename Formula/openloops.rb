@@ -3,6 +3,7 @@ class Openloops < Formula
   homepage "https://openloops.hepforge.org"
   url "https://openloops.hepforge.org/downloads?f=OpenLoops-2.1.2.tar.gz"
   sha256 "f52575cae3d70b6b51a5d423e9cd0e076ed5961afcc015eec00987e64529a6ae"
+  revision 1
 
   livecheck do
     url "https://openloops.hepforge.org/downloads"
@@ -10,7 +11,6 @@ class Openloops < Formula
   end
 
   depends_on "scons" => :build
-  depends_on arch: :x86_64 # https://github.com/davidchall/homebrew-hep/issues/203
   depends_on "gcc" # for gfortran
 
   patch :DATA
