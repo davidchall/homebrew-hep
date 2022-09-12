@@ -11,6 +11,13 @@ class Applgrid < Formula
     regex(/href=.*?applgrid[._-]v?(\d+(?:\.\d+)+)\.t/i)
   end
 
+  bottle do
+    root_url "https://ghcr.io/v2/davidchall/hep"
+    sha256 cellar: :any, monterey: "06262f4f18ce2c07a6c88b6f1160e28d9a846f89f753325466ac4864b0f38989"
+    sha256 cellar: :any, big_sur:  "2115b5c60f82f50ba40bf1f610b5cb3a93ed7746f3ac498538bf38b099141227"
+    sha256 cellar: :any, catalina: "1ee5e7acea696de64b178b8b001c13033886956f50c9dcc1befa7de774c864b4"
+  end
+
   depends_on "gcc" # for gfortran
   depends_on "hoppet" => :recommended
   depends_on "lhapdf" => :recommended
