@@ -4,7 +4,7 @@ class Partons < Formula
   url "https://drf-gitlab.cea.fr/partons/core/partons/-/archive/v3.0/partons-v3.0.tar.gz"
   sha256 "03a5c6382e74d89f479a85fdcc3246403b6a5c3663a04710fb39321c2002da83"
   license all_of: ["Apache-2.0", "GPL-3.0-only"]
-  revision 1
+  revision 2
 
   livecheck do
     url :stable
