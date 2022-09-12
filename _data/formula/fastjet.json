@@ -11,7 +11,7 @@
   ],
   "desc": "Package for jet finding in pp and ee collisions",
   "license": "GPL-2.0-or-later",
-  "homepage": "http://fastjet.fr",
+  "homepage": "https://fastjet.fr",
   "versions": {
     "stable": "3.4.0",
     "head": null,
@@ -19,32 +19,32 @@
   },
   "urls": {
     "stable": {
-      "url": "http://fastjet.fr/repo/fastjet-3.4.0.tar.gz",
+      "url": "https://fastjet.fr/repo/fastjet-3.4.0.tar.gz",
       "tag": null,
       "revision": null
     }
   },
-  "revision": 0,
+  "revision": 1,
   "version_scheme": 0,
   "bottle": {
     "stable": {
-      "rebuild": 1,
+      "rebuild": 0,
       "root_url": "https://ghcr.io/v2/davidchall/hep",
       "files": {
         "monterey": {
           "cellar": ":any",
-          "url": "https://ghcr.io/v2/davidchall/hep/fastjet/blobs/sha256:8391ca25a36a28be07e680a6af1419b43c3f130c18485af6c560bd87663e782f",
-          "sha256": "8391ca25a36a28be07e680a6af1419b43c3f130c18485af6c560bd87663e782f"
+          "url": "https://ghcr.io/v2/davidchall/hep/fastjet/blobs/sha256:6e6f1ba39501284c160b663366f8997a8f75dbb372bb56eac188dc59e3eac002",
+          "sha256": "6e6f1ba39501284c160b663366f8997a8f75dbb372bb56eac188dc59e3eac002"
         },
         "big_sur": {
           "cellar": ":any",
-          "url": "https://ghcr.io/v2/davidchall/hep/fastjet/blobs/sha256:64793fb0741fda6358b64297cc07a2c9c5386fc25dba0fce8d125d918cb9e7d0",
-          "sha256": "64793fb0741fda6358b64297cc07a2c9c5386fc25dba0fce8d125d918cb9e7d0"
+          "url": "https://ghcr.io/v2/davidchall/hep/fastjet/blobs/sha256:e5b33f49864f0da21b01221f68a6d10054aecbd23c21963b06e0925bf2e6533c",
+          "sha256": "e5b33f49864f0da21b01221f68a6d10054aecbd23c21963b06e0925bf2e6533c"
         },
         "catalina": {
           "cellar": ":any",
-          "url": "https://ghcr.io/v2/davidchall/hep/fastjet/blobs/sha256:44ea80df7cdce1f0078bc40bcc1fe9039c69b73b2e37236bc6b134eb25c85d54",
-          "sha256": "44ea80df7cdce1f0078bc40bcc1fe9039c69b73b2e37236bc6b134eb25c85d54"
+          "url": "https://ghcr.io/v2/davidchall/hep/fastjet/blobs/sha256:71a0340ffe9e82a94f3420001c4cefd66aa549967b48ca9bb8a138796af6980b",
+          "sha256": "71a0340ffe9e82a94f3420001c4cefd66aa549967b48ca9bb8a138796af6980b"
         }
       }
     }
@@ -65,7 +65,7 @@
 
   ],
   "dependencies": [
-    "python@3.9"
+    "python@3.10"
   ],
   "recommended_dependencies": [
     "cgal"

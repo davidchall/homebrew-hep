@@ -13,13 +13,13 @@
   "license": "GPL-3.0-or-later",
   "homepage": "https://lhapdf.hepforge.org/",
   "versions": {
-    "stable": "6.5.1",
+    "stable": "6.5.3",
     "head": "HEAD",
     "bottle": true
   },
   "urls": {
     "stable": {
-      "url": "https://lhapdf.hepforge.org/downloads/?f=LHAPDF-6.5.1.tar.gz",
+      "url": "https://lhapdf.hepforge.org/downloads/?f=LHAPDF-6.5.3.tar.gz",
       "tag": null,
       "revision": null
     }
@@ -33,18 +33,18 @@
       "files": {
         "monterey": {
           "cellar": "/usr/local/Cellar",
-          "url": "https://ghcr.io/v2/davidchall/hep/lhapdf/blobs/sha256:ce6b18b94fd95b6d134aeec3c4a528c21e9028db9d6f0186f3a3db21ffff1b1d",
-          "sha256": "ce6b18b94fd95b6d134aeec3c4a528c21e9028db9d6f0186f3a3db21ffff1b1d"
+          "url": "https://ghcr.io/v2/davidchall/hep/lhapdf/blobs/sha256:8ac041f9166e92beaf547c36d654cd76ecdccb82985cf1a9207d9926181c1ef5",
+          "sha256": "8ac041f9166e92beaf547c36d654cd76ecdccb82985cf1a9207d9926181c1ef5"
         },
         "big_sur": {
           "cellar": "/usr/local/Cellar",
-          "url": "https://ghcr.io/v2/davidchall/hep/lhapdf/blobs/sha256:36f3fd3b8b5be592f71b30b490121ff29b6a62ef8f6849efae894416b821a2f0",
-          "sha256": "36f3fd3b8b5be592f71b30b490121ff29b6a62ef8f6849efae894416b821a2f0"
+          "url": "https://ghcr.io/v2/davidchall/hep/lhapdf/blobs/sha256:53bc6ec90e5134be7e5b9f9d92e41502f4b6193586e1af34402054e0efdb9221",
+          "sha256": "53bc6ec90e5134be7e5b9f9d92e41502f4b6193586e1af34402054e0efdb9221"
         },
         "catalina": {
           "cellar": "/usr/local/Cellar",
-          "url": "https://ghcr.io/v2/davidchall/hep/lhapdf/blobs/sha256:4498fe86aadfa323eeafaa670b975e1350c92726d1b4e927478b3a202ba06307",
-          "sha256": "4498fe86aadfa323eeafaa670b975e1350c92726d1b4e927478b3a202ba06307"
+          "url": "https://ghcr.io/v2/davidchall/hep/lhapdf/blobs/sha256:0c69beafb2ca891b920ed07937368b5623c88d07d982f208040c2a8866573260",
+          "sha256": "0c69beafb2ca891b920ed07937368b5623c88d07d982f208040c2a8866573260"
         }
       }
     }
@@ -58,7 +58,7 @@
 
   ],
   "dependencies": [
-    "python@3.9"
+    "python@3.10"
   ],
   "recommended_dependencies": [
 
@@ -75,7 +75,7 @@
   "conflicts_with": [
 
   ],
-  "caveats": "PDFs may be downloaded and installed with\n\n  lhapdf install CT10nlo\n\nAt runtime, LHAPDF searches $(brew --prefix)/Cellar/lhapdf/6.5.1/share/LHAPDF\nand paths in LHAPDF_DATA_PATH for PDF sets.\n\n",
+  "caveats": "PDFs may be downloaded and installed with\n\n  lhapdf install CT10nlo\n\nAt runtime, LHAPDF searches $(brew --prefix)/Cellar/lhapdf/6.5.3/share/LHAPDF\nand paths in LHAPDF_DATA_PATH for PDF sets.\n\n",
   "installed": [
 
   ],

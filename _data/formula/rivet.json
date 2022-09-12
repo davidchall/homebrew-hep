@@ -24,7 +24,7 @@
       "revision": null
     }
   },
-  "revision": 0,
+  "revision": 2,
   "version_scheme": 0,
   "bottle": {
     "stable": {
@@ -33,18 +33,18 @@
       "files": {
         "monterey": {
           "cellar": "/usr/local/Cellar",
-          "url": "https://ghcr.io/v2/davidchall/hep/rivet/blobs/sha256:276fa63e2d678ea43808387d09a8c3f699a63bb3a3e00867fa4ec4f56a256d5c",
-          "sha256": "276fa63e2d678ea43808387d09a8c3f699a63bb3a3e00867fa4ec4f56a256d5c"
+          "url": "https://ghcr.io/v2/davidchall/hep/rivet/blobs/sha256:bda35157a4d67caa4092c593a6febf197cecda8a45793fd5ec0c525b541d713e",
+          "sha256": "bda35157a4d67caa4092c593a6febf197cecda8a45793fd5ec0c525b541d713e"
         },
         "big_sur": {
           "cellar": "/usr/local/Cellar",
-          "url": "https://ghcr.io/v2/davidchall/hep/rivet/blobs/sha256:52472778d3d4a1f4ee49b7caee058d9138fdbe116c1d4ffdb7afbf66e24d0e85",
-          "sha256": "52472778d3d4a1f4ee49b7caee058d9138fdbe116c1d4ffdb7afbf66e24d0e85"
+          "url": "https://ghcr.io/v2/davidchall/hep/rivet/blobs/sha256:1556d7cc6147f961f27c461271610553997ac2ed061b892d5bd20f15e32c8dc1",
+          "sha256": "1556d7cc6147f961f27c461271610553997ac2ed061b892d5bd20f15e32c8dc1"
         },
         "catalina": {
           "cellar": "/usr/local/Cellar",
-          "url": "https://ghcr.io/v2/davidchall/hep/rivet/blobs/sha256:78153c5d89d8ea647b52d176f1f8096af7037815787e0dea7bfe3f66bd00f432",
-          "sha256": "78153c5d89d8ea647b52d176f1f8096af7037815787e0dea7bfe3f66bd00f432"
+          "url": "https://ghcr.io/v2/davidchall/hep/rivet/blobs/sha256:576a653c861e19bf5ef55a3fcf278fed79af809db86f43ff76cd62b42247c9ec",
+          "sha256": "576a653c861e19bf5ef55a3fcf278fed79af809db86f43ff76cd62b42247c9ec"
         }
       }
     }
@@ -72,7 +72,7 @@
     "fastjet",
     "gsl",
     "hepmc3",
-    "python@3.9",
+    "python@3.10",
     "yoda"
   ],
   "recommended_dependencies": [

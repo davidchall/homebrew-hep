@@ -24,7 +24,7 @@
       "revision": null
     }
   },
-  "revision": 0,
+  "revision": 2,
   "version_scheme": 0,
   "bottle": {
     "stable": {
@@ -33,18 +33,18 @@
       "files": {
         "monterey": {
           "cellar": ":any",
-          "url": "https://ghcr.io/v2/davidchall/hep/yoda/blobs/sha256:0ec3a35c6f5dc9acda350b6262e4fa3cef856f3ba327728ce2aec93118f82641",
-          "sha256": "0ec3a35c6f5dc9acda350b6262e4fa3cef856f3ba327728ce2aec93118f82641"
+          "url": "https://ghcr.io/v2/davidchall/hep/yoda/blobs/sha256:71b2f8cc22a752ef312b6bdd47ab040bf01c89455b38b50cb90f5aa004e6b8b9",
+          "sha256": "71b2f8cc22a752ef312b6bdd47ab040bf01c89455b38b50cb90f5aa004e6b8b9"
         },
         "big_sur": {
           "cellar": ":any",
-          "url": "https://ghcr.io/v2/davidchall/hep/yoda/blobs/sha256:8817e9daa8c24ab08fb8ef3c1d30863ea702246929942c5ecffaff4cbf909bd8",
-          "sha256": "8817e9daa8c24ab08fb8ef3c1d30863ea702246929942c5ecffaff4cbf909bd8"
+          "url": "https://ghcr.io/v2/davidchall/hep/yoda/blobs/sha256:358ed4c58e9aafd95cbbbbdce724980e2b6cf8e5f8e8bfe8713ab8e96428dc5f",
+          "sha256": "358ed4c58e9aafd95cbbbbdce724980e2b6cf8e5f8e8bfe8713ab8e96428dc5f"
         },
         "catalina": {
           "cellar": ":any",
-          "url": "https://ghcr.io/v2/davidchall/hep/yoda/blobs/sha256:387cca231a0d2104b5da40545bc357ef930f0b525cff204a548f9351fb4e24bd",
-          "sha256": "387cca231a0d2104b5da40545bc357ef930f0b525cff204a548f9351fb4e24bd"
+          "url": "https://ghcr.io/v2/davidchall/hep/yoda/blobs/sha256:869c6a0eebb1b62fabfa9b6478723a7c022ecc2b516368ff342e06fa4a40b68f",
+          "sha256": "869c6a0eebb1b62fabfa9b6478723a7c022ecc2b516368ff342e06fa4a40b68f"
         }
       }
     }
@@ -69,7 +69,7 @@
 
   ],
   "dependencies": [
-    "python@3.9"
+    "python@3.10"
   ],
   "recommended_dependencies": [
 
