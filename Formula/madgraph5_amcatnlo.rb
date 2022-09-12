@@ -6,6 +6,7 @@ class Madgraph5Amcatnlo < Formula
   url "https://launchpad.net/mg5amcnlo/3.0/3.4.x/+download/MG5_aMC_v3.4.1.tar.gz"
   sha256 "d0dc25a84393687017dcd9154e8f0eee0ba3d6a7122b4a61541db24ffbc148c3"
   license "NCSA"
+  revision 1
 
   livecheck do
     url "https://launchpad.net/mg5amcnlo/+download"
@@ -14,16 +15,20 @@ class Madgraph5Amcatnlo < Formula
 
   depends_on "fastjet"
   depends_on "gcc" # for gfortran
-  depends_on "python@3.9"
+  depends_on "python@3.10"
 
   resource "six" do
     url "https://files.pythonhosted.org/packages/71/39/171f1c67cd00715f190ba0b100d606d440a28c93c7714febeca8b79af85e/six-1.16.0.tar.gz"
     sha256 "1e61c37477a1626458e36f7b1d82aa5c9b094fa4802892072e49de9c60c4c926"
   end
 
+  def python
+    "python3.10"
+  end
+
   def install
     resource("six").stage do
-      system Formula["python@3.9"].opt_bin/"python3.9", *Language::Python.setup_install_args(prefix)
+      system python, *Language::Python.setup_install_args(prefix, python)
     end
 
     # fix broken dynamic links
