@@ -4,6 +4,7 @@ class Thepeg < Formula
   url "https://thepeg.hepforge.org/downloads/ThePEG-2.2.3.tar.bz2"
   sha256 "f21473197a761fc32917b08a8d24d2bfaf93ff57f3441fd605da99ac9de5d50b"
   license "GPL-3.0-only"
+  revision 1
 
   livecheck do
     url "https://thepeg.hepforge.org/downloads"
@@ -32,6 +33,7 @@ class Thepeg < Formula
   depends_on "gsl"
   depends_on "hepmc3"
   depends_on "lhapdf"
+  depends_on "rivet"
 
   def install
     args = %W[
@@ -44,6 +46,7 @@ class Thepeg < Formula
       --with-hepmc=#{Formula["hepmc3"].opt_prefix}
       --with-hepmcversion=3
       --with-lhapdf=#{Formula["lhapdf"].opt_prefix}
+      --with-rivet=#{Formula["rivet"].opt_prefix}
     ]
 
     system "autoreconf", "-i" if build.head?
