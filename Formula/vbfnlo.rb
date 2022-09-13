@@ -3,7 +3,7 @@ class Vbfnlo < Formula
   homepage "https://www.itp.kit.edu/vbfnlo"
   url "https://www.itp.kit.edu/vbfnlo/wiki/lib/exe/fetch.php?media=download:vbfnlo-3.0.0beta5.tgz"
   sha256 "d7ce67aa394a6b47da33ede3a0314436414ec12d6c30238622405bdfb76cb544"
-  revision 1
+  revision 2
 
   livecheck do
     skip "In longterm beta"
@@ -33,7 +33,6 @@ class Vbfnlo < Formula
     args = %W[
       --disable-debug
       --disable-dependency-tracking
-      --enable-shared=no
       --prefix=#{prefix}
     ]
 
@@ -45,7 +44,13 @@ class Vbfnlo < Formula
     # https://github.com/davidchall/homebrew-hep/issues/203
     args << "--disable-quad"
 
+    # resolve gfortran compiler errors
     ENV.append "FCFLAGS", "-std=legacy"
+
+    # link to gfortran libraries
+    inreplace "utilities/Makefile.in",
+              "$(libVBFNLOUtilities_la_LIBADD) $(LIBS)",
+              "$(libVBFNLOUtilities_la_LIBADD) $(LIBS) $(FCLIBS)"
 
     system "./configure", *args
     system "make"
