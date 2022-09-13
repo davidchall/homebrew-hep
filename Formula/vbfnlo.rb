@@ -11,9 +11,9 @@ class Vbfnlo < Formula
 
   bottle do
     root_url "https://ghcr.io/v2/davidchall/hep"
-    sha256 cellar: :any, monterey: "291c743e810d2fac4f029c0a19836a2ecb6cc196058213f7cdac4bb2c3e2c562"
-    sha256 cellar: :any, big_sur:  "01da231788e9fcdec02f86dc420fef47e599d3e428df0dddbbb50e4e7ef7d8b6"
-    sha256 cellar: :any, catalina: "9b9695cf5bc1153d4ba453637ea82de9d14c0139d3dd493c7cfc8d7d98f681ff"
+    sha256 cellar: :any, monterey: "c0dd264d565a140cd52fddbb505d708adc0cf1e9cb5df00b2505cfcfeed36e31"
+    sha256 cellar: :any, big_sur:  "5e265f263077e70e6094c594454e3c43f590f9c4a62f88dda998a3d038999e70"
+    sha256 cellar: :any, catalina: "b48bc555d0e964157844e453c22aee8e36b76c2ad887b26d1ac37e9eda1b4420"
   end
 
   option "with-kk", "Enable Kaluza-Klein resonances"
