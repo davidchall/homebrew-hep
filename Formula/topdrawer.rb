@@ -10,6 +10,13 @@ class Topdrawer < Formula
     skip "No version information available"
   end
 
+  bottle do
+    root_url "https://ghcr.io/v2/davidchall/hep"
+    sha256 cellar: :any, monterey: "fced6ab599701a8c2ef71c629dd1f40e6a86ed5b45d273b02dc5bf2ebcf86457"
+    sha256 cellar: :any, big_sur:  "ec19a9654b132c40fdf6011942127288f97668a3ec3bf023a0c157b9c06218a0"
+    sha256 cellar: :any, catalina: "c97d412ce50beb096c418122181653c7ea3fc41a3ec3abbd793bfa54a9e4a963"
+  end
+
   depends_on "f2c" => :build
   depends_on "imake" => :build
   depends_on "ugs" => :build
