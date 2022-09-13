@@ -11,6 +11,13 @@ class Mcfm < Formula
     regex(/href=.*?MCFM[._-]v?(\d+(?:\.\d+)+)\.t/i)
   end
 
+  bottle do
+    root_url "https://ghcr.io/v2/davidchall/hep"
+    sha256 cellar: :any, monterey: "7791a379aa3f245b8b61f6606f42a214dc35d91a1808eae3c87cbfd448f70e41"
+    sha256 cellar: :any, big_sur:  "00311d6c6d3edecc4a726a1dbd36000e4eb2de5af7d57f8e4ee1e7c27e54e1ad"
+    sha256 cellar: :any, catalina: "213654abe451b0bbfcdfa28db32097dd29afa46c81d4adda4d21ff946aa88c5b"
+  end
+
   option "with-nnlo-vv", "Build NNLO diboson processes (slow compilation)"
 
   depends_on "cmake" => :build
