@@ -6,6 +6,7 @@ class Jetvheto < Formula
   url "https://jetvheto.hepforge.org/downloads/?f=JetVHeto-3.0.0.tgz"
   sha256 "c3eaefd2ff154df70ed7d1ead053c7419e82ec854f2124a3d58585193866a40f"
   license "GPL-3.0-only"
+  revision 1
 
   livecheck do
     url "https://jetvheto.hepforge.org/downloads/"
