@@ -13,6 +13,13 @@ class Herwig < Formula
     regex(/href=.*?Herwig[._-]v?(\d+(?:\.\d+)+)\.t/i)
   end
 
+  bottle do
+    root_url "https://ghcr.io/v2/davidchall/hep"
+    sha256 monterey: "a9e34d09a603eab00b5ba4f7482c13b2d5d53d5b5d589d2ba1515b0eba6007c3"
+    sha256 big_sur:  "a6a8158cf8364924d862f784f22ec5482caf79695624f8385dea588695eaa36d"
+    sha256 catalina: "1f606460720c72877d5dd85ad7ea64fdf375ef199e65d428edeb202000bb947d"
+  end
+
   head do
     url "http://herwig.hepforge.org/hg/herwig", using: :hg
 
