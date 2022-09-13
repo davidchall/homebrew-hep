@@ -4,6 +4,7 @@ class Topdrawer < Formula
   url "http://ftp.riken.jp/pub/iris/topdrawer/topdrawer.tar.gz"
   version "1.4e"
   sha256 "2a44dffd19e243aa261b4e3cd2b0fe6247ced97ee10e3271f8c7eeae8cb62401"
+  revision 1
 
   livecheck do
     skip "No version information available"
