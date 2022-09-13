@@ -33,7 +33,7 @@ class Thepeg < Formula
   depends_on "gsl"
   depends_on "hepmc3"
   depends_on "lhapdf"
-  depends_on "rivet"
+  depends_on "rivet" => :recommended
 
   def install
     args = %W[
@@ -46,8 +46,9 @@ class Thepeg < Formula
       --with-hepmc=#{Formula["hepmc3"].opt_prefix}
       --with-hepmcversion=3
       --with-lhapdf=#{Formula["lhapdf"].opt_prefix}
-      --with-rivet=#{Formula["rivet"].opt_prefix}
     ]
+
+    args << "--with-rivet=#{Formula["rivet"].opt_prefix}" if build.with? "rivet"
 
     system "autoreconf", "-i" if build.head?
     system "./configure", *args
