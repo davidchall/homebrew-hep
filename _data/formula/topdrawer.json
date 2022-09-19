@@ -15,7 +15,7 @@
   "versions": {
     "stable": "1.4e",
     "head": null,
-    "bottle": false
+    "bottle": true
   },
   "urls": {
     "stable": {
@@ -24,9 +24,30 @@
       "revision": null
     }
   },
-  "revision": 0,
+  "revision": 1,
   "version_scheme": 0,
   "bottle": {
+    "stable": {
+      "rebuild": 0,
+      "root_url": "https://ghcr.io/v2/davidchall/hep",
+      "files": {
+        "monterey": {
+          "cellar": ":any",
+          "url": "https://ghcr.io/v2/davidchall/hep/topdrawer/blobs/sha256:fced6ab599701a8c2ef71c629dd1f40e6a86ed5b45d273b02dc5bf2ebcf86457",
+          "sha256": "fced6ab599701a8c2ef71c629dd1f40e6a86ed5b45d273b02dc5bf2ebcf86457"
+        },
+        "big_sur": {
+          "cellar": ":any",
+          "url": "https://ghcr.io/v2/davidchall/hep/topdrawer/blobs/sha256:ec19a9654b132c40fdf6011942127288f97668a3ec3bf023a0c157b9c06218a0",
+          "sha256": "ec19a9654b132c40fdf6011942127288f97668a3ec3bf023a0c157b9c06218a0"
+        },
+        "catalina": {
+          "cellar": ":any",
+          "url": "https://ghcr.io/v2/davidchall/hep/topdrawer/blobs/sha256:c97d412ce50beb096c418122181653c7ea3fc41a3ec3abbd793bfa54a9e4a963",
+          "sha256": "c97d412ce50beb096c418122181653c7ea3fc41a3ec3abbd793bfa54a9e4a963"
+        }
+      }
+    }
   },
   "keg_only": false,
   "keg_only_reason": null,

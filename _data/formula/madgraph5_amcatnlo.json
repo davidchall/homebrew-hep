@@ -16,7 +16,7 @@
   "versions": {
     "stable": "3.4.1",
     "head": null,
-    "bottle": false
+    "bottle": true
   },
   "urls": {
     "stable": {
@@ -25,9 +25,30 @@
       "revision": null
     }
   },
-  "revision": 0,
+  "revision": 1,
   "version_scheme": 0,
   "bottle": {
+    "stable": {
+      "rebuild": 0,
+      "root_url": "https://ghcr.io/v2/davidchall/hep",
+      "files": {
+        "monterey": {
+          "cellar": ":any",
+          "url": "https://ghcr.io/v2/davidchall/hep/madgraph5_amcatnlo/blobs/sha256:57fc59f9ae920d7c7b286688ace2812d5926d05d3cba31f82212e73ad6759778",
+          "sha256": "57fc59f9ae920d7c7b286688ace2812d5926d05d3cba31f82212e73ad6759778"
+        },
+        "big_sur": {
+          "cellar": ":any",
+          "url": "https://ghcr.io/v2/davidchall/hep/madgraph5_amcatnlo/blobs/sha256:bb44cbabfb83583479cb895793adc14ff45fe77aad79e7c2539c8dfe2774c7cc",
+          "sha256": "bb44cbabfb83583479cb895793adc14ff45fe77aad79e7c2539c8dfe2774c7cc"
+        },
+        "catalina": {
+          "cellar": ":any",
+          "url": "https://ghcr.io/v2/davidchall/hep/madgraph5_amcatnlo/blobs/sha256:982151e7e0ed80c587a8c2fdefbf4f168fb0ba6a7d32a82aca5eb97620586474",
+          "sha256": "982151e7e0ed80c587a8c2fdefbf4f168fb0ba6a7d32a82aca5eb97620586474"
+        }
+      }
+    }
   },
   "keg_only": false,
   "keg_only_reason": null,
@@ -40,7 +61,7 @@
   "dependencies": [
     "fastjet",
     "gcc",
-    "python@3.9"
+    "python@3.10"
   ],
   "recommended_dependencies": [
 

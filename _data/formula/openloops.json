@@ -15,7 +15,7 @@
   "versions": {
     "stable": "2.1.2",
     "head": null,
-    "bottle": false
+    "bottle": true
   },
   "urls": {
     "stable": {
@@ -24,9 +24,30 @@
       "revision": null
     }
   },
-  "revision": 0,
+  "revision": 1,
   "version_scheme": 0,
   "bottle": {
+    "stable": {
+      "rebuild": 0,
+      "root_url": "https://ghcr.io/v2/davidchall/hep",
+      "files": {
+        "monterey": {
+          "cellar": ":any",
+          "url": "https://ghcr.io/v2/davidchall/hep/openloops/blobs/sha256:561315c9a2a5254b0cf8fdfbdeeb33f909b3c264ac8b4e70c34f474a8d9374b0",
+          "sha256": "561315c9a2a5254b0cf8fdfbdeeb33f909b3c264ac8b4e70c34f474a8d9374b0"
+        },
+        "big_sur": {
+          "cellar": ":any",
+          "url": "https://ghcr.io/v2/davidchall/hep/openloops/blobs/sha256:fb57cd4648cb5accc694bf43d3e45d6fa1ab0067211f1ce3086bf2c4ad03a522",
+          "sha256": "fb57cd4648cb5accc694bf43d3e45d6fa1ab0067211f1ce3086bf2c4ad03a522"
+        },
+        "catalina": {
+          "cellar": ":any",
+          "url": "https://ghcr.io/v2/davidchall/hep/openloops/blobs/sha256:8c040c9820241d7739eb4e7838dcdfe0e97d64d3c5753abe56c46bb13714dab8",
+          "sha256": "8c040c9820241d7739eb4e7838dcdfe0e97d64d3c5753abe56c46bb13714dab8"
+        }
+      }
+    }
   },
   "keg_only": false,
   "keg_only_reason": null,
@@ -49,20 +70,12 @@
 
   ],
   "requirements": [
-    {
-      "name": "arch",
-      "cask": null,
-      "download": null,
-      "version": "x86_64",
-      "contexts": [
 
-      ]
-    }
   ],
   "conflicts_with": [
 
   ],
-  "caveats": "OpenLoops downloads and installs process libraries in its\nown installation path: $(brew --prefix)/Cellar/openloops/2.1.2\n\nThese process libraries are lost if OpenLoops is uninstalled.\n\n",
+  "caveats": "OpenLoops downloads and installs process libraries in its\nown installation path: $(brew --prefix)/Cellar/openloops/2.1.2_1\n\nThese process libraries are lost if OpenLoops is uninstalled.\n\n",
   "installed": [
 
   ],
