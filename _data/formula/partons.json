@@ -67,6 +67,9 @@
     "qt@5",
     "sfml"
   ],
+  "test_dependencies": [
+    "cmake"
+  ],
   "recommended_dependencies": [
 
   ],

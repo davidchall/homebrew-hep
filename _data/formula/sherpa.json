@@ -80,6 +80,9 @@
     "gcc",
     "sqlite"
   ],
+  "test_dependencies": [
+
+  ],
   "recommended_dependencies": [
     "fastjet",
     "hepmc3",

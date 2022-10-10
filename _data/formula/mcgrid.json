@@ -46,6 +46,9 @@
   "dependencies": [
     "rivet"
   ],
+  "test_dependencies": [
+
+  ],
   "recommended_dependencies": [
     "applgrid",
     "fastnlo"

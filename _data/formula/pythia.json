@@ -62,6 +62,9 @@
     "hepmc3",
     "lhapdf"
   ],
+  "test_dependencies": [
+
+  ],
   "recommended_dependencies": [
 
   ],

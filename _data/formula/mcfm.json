@@ -67,6 +67,9 @@
   "dependencies": [
     "gcc@12"
   ],
+  "test_dependencies": [
+
+  ],
   "recommended_dependencies": [
 
   ],
