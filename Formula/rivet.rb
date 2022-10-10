@@ -3,10 +3,9 @@ class Rivet < Formula
 
   desc "Monte Carlo analysis system"
   homepage "https://rivet.hepforge.org"
-  url "https://rivet.hepforge.org/downloads/?f=Rivet-3.1.6.tar.gz"
-  sha256 "7d9b35fcf7e5cb61c4641bdcc499418e35dee84b7a06fa2d7df5d296f5f4201e"
+  url "https://rivet.hepforge.org/downloads/?f=Rivet-3.1.7.tar.gz"
+  sha256 "d18993298b79cc9c0f086780ad5251df4647c565ba4a99b692458dcbd597378a"
   license "GPL-3.0-only"
-  revision 2
 
   livecheck do
     url "https://rivet.hepforge.org/downloads/"
@@ -45,6 +44,8 @@ class Rivet < Formula
     sha256 "f9989d3b6aeb22848bcf91095c30607f027d3ef277a4f0f704a8f0fc2e766981"
   end
 
+  patch :DATA
+
   def python
     "python3.10"
   end
@@ -75,13 +76,6 @@ class Rivet < Formula
 
     ENV["PYTHON"] = Formula["python@3.10"].opt_bin/python
 
-    # fix error: could not create '/opt/homebrew/lib/python3.9/site-packages/rivet':
-    # Operation not permitted
-    site_packages = prefix/Language::Python.site_packages(python)
-    inreplace "pyext/Makefile.in",
-              "$(abs_builddir)/setup.py install \\",
-              "$(abs_builddir)/setup.py install --install-lib #{site_packages} \\"
-
     system "autoreconf", "-i" if build.head?
     system "./configure", *args
     system "make"
@@ -97,3 +91,36 @@ class Rivet < Formula
     pipe_output bin/"rivet -q", File.read(prefix/"test/testApi.hepmc"), 0
   end
 end
+
+__END__
+diff --git a/pyext/build.py.in b/pyext/build.py.in
+index b23621b..8d011f5 100755
+--- a/pyext/build.py.in
++++ b/pyext/build.py.in
+@@ -62,26 +62,13 @@ libargs = " ".join("-l{}".format(l) for l in libraries)
+
+ ## Python compile/link args
+ pyargs = "-I" + sysconfig.get_config_var("INCLUDEPY")
+-libpys = [os.path.join(sysconfig.get_config_var(ld), sysconfig.get_config_var("LDLIBRARY")) for ld in ["LIBPL", "LIBDIR"]]
+-libpys.extend( glob(os.path.join(sysconfig.get_config_var("LIBPL"), "libpython*.*")) )
+-libpys.extend( glob(os.path.join(sysconfig.get_config_var("LIBDIR"), "libpython*.*")) )
+-libpy = None
+-for lp in libpys:
+-    if os.path.exists(lp):
+-        libpy = lp
+-        break
+-if libpy is None:
+-    print("No libpython found in expected location exiting")
+-    print("Considered locations were:", libpys)
+-    sys.exit(1)
+-pyargs += " " + libpy
+ pyargs += " " + sysconfig.get_config_var("LIBS")
+ pyargs += " " + sysconfig.get_config_var("LIBM")
+ #pyargs += " " + sysconfig.get_config_var("LINKFORSHARED")
+
+
+ ## Assemble the compile & link command
+-compile_cmd = "  ".join([os.environ.get("CXX", "g++"), "-shared -fPIC", "-o core.so",
++compile_cmd = "  ".join([sysconfig.get_config_var("LDCXXSHARED"), "-std=c++14", "-o core.so",
+                          srcpath, incargs, cmpargs, linkargs, libargs, pyargs])
+ print("Build command =", compile_cmd)
