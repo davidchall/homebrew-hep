@@ -34,6 +34,8 @@ class Yoda < Formula
   depends_on "numpy" => :optional
   depends_on "root" => :optional
 
+  patch :DATA
+
   def python
     "python3.10"
   end
@@ -52,13 +54,6 @@ class Yoda < Formula
       ENV.append "PYTHONPATH", Formula["root"].opt_prefix/"lib/root" if build.with? "test"
     end
 
-    # fix error: could not create '/opt/homebrew/lib/python3.9/site-packages/yoda':
-    # Operation not permitted
-    site_packages = prefix/Language::Python.site_packages(python)
-    inreplace "pyext/Makefile.in",
-              "$(abs_builddir)/setup.py install \\",
-              "$(abs_builddir)/setup.py install --install-lib #{site_packages} \\"
-
     system "autoreconf", "-i" if build.head?
     system "./configure", *args
     system "make"
@@ -74,3 +69,38 @@ class Yoda < Formula
     system bin/"yodastack", "--help"
   end
 end
+
+__END__
+diff --git a/pyext/build.py.in b/pyext/build.py.in
+index cdebf43..6694941 100755
+--- a/pyext/build.py.in
++++ b/pyext/build.py.in
+@@ -35,19 +35,6 @@ libargs = " ".join("-l{}".format(l) for l in libraries)
+
+ ## Python compile/link args
+ pyargs = "-I" + sysconfig.get_config_var("INCLUDEPY")
+-libpys = [os.path.join(sysconfig.get_config_var(ld), sysconfig.get_config_var("LDLIBRARY")) for ld in ["LIBPL", "LIBDIR"]]
+-libpys.extend( glob(os.path.join(sysconfig.get_config_var("LIBPL"), "libpython*.*")) )
+-libpys.extend( glob(os.path.join(sysconfig.get_config_var("LIBDIR"), "libpython*.*")) )
+-libpy = None
+-for lp in libpys:
+-    if os.path.exists(lp):
+-        libpy = lp
+-        break
+-if libpy is None:
+-    print("No libpython found in expected location exiting")
+-    print("Considered locations were:", libpys)
+-    sys.exit(1)
+-pyargs += " " + libpy
+ pyargs += " " + sysconfig.get_config_var("LIBS")
+ pyargs += " " + sysconfig.get_config_var("LIBM")
+ #pyargs += " " + sysconfig.get_config_var("LINKFORSHARED")
+@@ -92,7 +79,8 @@ for srcname in srcnames:
+         xlinkargs += " " + "@ROOT_LDFLAGS@ @ROOT_LIBS@"
+
+     ## Assemble the compile & link command
+-    compile_cmd = "  ".join([os.environ.get("CXX", "g++"), "-shared -fPIC", "-o {}.so".format(srcname),
++    compile_cmd = "  ".join([sysconfig.get_config_var("LDCXXSHARED"), "-std=c++11",
++                             "-o {}.so".format(srcname),
+                              srcpath, incargs, xcmpargs, xlinkargs, libargs, pyargs])
+     print("Build command =", compile_cmd)
