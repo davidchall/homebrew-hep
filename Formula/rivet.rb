@@ -38,13 +38,13 @@ class Rivet < Formula
   depends_on "python@3.10"
   depends_on "yoda"
 
-  patch :DATA
-
   # rivet needs a special installation of fjcontrib
   resource "fjcontrib" do
     url "https://fastjet.hepforge.org/contrib/downloads/fjcontrib-1.048.tar.gz"
     sha256 "f9989d3b6aeb22848bcf91095c30607f027d3ef277a4f0f704a8f0fc2e766981"
   end
+
+  patch :DATA
 
   def python
     "python3.10"
