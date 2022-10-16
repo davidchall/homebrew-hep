@@ -38,6 +38,8 @@ class Rivet < Formula
   depends_on "python@3.10"
   depends_on "yoda"
 
+  patch :DATA
+
   # rivet needs a special installation of fjcontrib
   resource "fjcontrib" do
     url "https://fastjet.hepforge.org/contrib/downloads/fjcontrib-1.048.tar.gz"
@@ -74,13 +76,6 @@ class Rivet < Formula
 
     ENV["PYTHON"] = Formula["python@3.10"].opt_bin/python
 
-    # fix error: could not create '/opt/homebrew/lib/python3.9/site-packages/rivet':
-    # Operation not permitted
-    site_packages = prefix/Language::Python.site_packages(python)
-    inreplace "pyext/Makefile.in",
-              "$(abs_builddir)/setup.py install \\",
-              "$(abs_builddir)/setup.py install --install-lib #{site_packages} \\"
-
     system "autoreconf", "-i" if build.head?
     system "./configure", *args
     system "make"
@@ -96,3 +91,36 @@ class Rivet < Formula
     pipe_output bin/"rivet -q", File.read(prefix/"test/testApi.hepmc"), 0
   end
 end
+
+__END__
+diff --git a/pyext/build.py.in b/pyext/build.py.in
+index b23621b..8d011f5 100755
+--- a/pyext/build.py.in
++++ b/pyext/build.py.in
+@@ -62,26 +62,13 @@ libargs = " ".join("-l{}".format(l) for l in libraries)
+
+ ## Python compile/link args
+ pyargs = "-I" + sysconfig.get_config_var("INCLUDEPY")
+-libpys = [os.path.join(sysconfig.get_config_var(ld), sysconfig.get_config_var("LDLIBRARY")) for ld in ["LIBPL", "LIBDIR"]]
+-libpys.extend( glob(os.path.join(sysconfig.get_config_var("LIBPL"), "libpython*.*")) )
+-libpys.extend( glob(os.path.join(sysconfig.get_config_var("LIBDIR"), "libpython*.*")) )
+-libpy = None
+-for lp in libpys:
+-    if os.path.exists(lp):
+-        libpy = lp
+-        break
+-if libpy is None:
+-    print("No libpython found in expected location exiting")
+-    print("Considered locations were:", libpys)
+-    sys.exit(1)
+-pyargs += " " + libpy
+ pyargs += " " + sysconfig.get_config_var("LIBS")
+ pyargs += " " + sysconfig.get_config_var("LIBM")
+ #pyargs += " " + sysconfig.get_config_var("LINKFORSHARED")
+
+
+ ## Assemble the compile & link command
+-compile_cmd = "  ".join([os.environ.get("CXX", "g++"), "-shared -fPIC", "-o core.so",
++compile_cmd = "  ".join([sysconfig.get_config_var("LDCXXSHARED"), "-std=c++14", "-o core.so",
+                          srcpath, incargs, cmpargs, linkargs, libargs, pyargs])
+ print("Build command =", compile_cmd)
