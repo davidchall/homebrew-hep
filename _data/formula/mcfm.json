@@ -21,7 +21,8 @@
     "stable": {
       "url": "https://mcfm.fnal.gov/downloads/MCFM-10.2.1.tar.gz",
       "tag": null,
-      "revision": null
+      "revision": null,
+      "checksum": "5b97dd90159efcef227420b49e8eb53b7f1ee0af8d5a6bf8595a29c320afe2dc"
     }
   },
   "revision": 1,

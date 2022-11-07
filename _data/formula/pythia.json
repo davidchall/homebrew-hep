@@ -21,7 +21,8 @@
     "stable": {
       "url": "https://pythia.org/download/pythia83/pythia8307.tgz",
       "tag": null,
-      "revision": null
+      "revision": null,
+      "checksum": "e5b14d44aa5943332e32dd5dda9a18fdd1a0085c7198e28d840e04167fa6013d"
     }
   },
   "revision": 0,

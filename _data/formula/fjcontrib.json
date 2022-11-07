@@ -21,7 +21,8 @@
     "stable": {
       "url": "https://fastjet.hepforge.org/contrib/downloads/fjcontrib-1.050.tar.gz",
       "tag": null,
-      "revision": null
+      "revision": null,
+      "checksum": "336c352ffff53bae67cbf9ebaf2d703f048d96569ebda8df08e5dd680d7aa0d6"
     }
   },
   "revision": 0,

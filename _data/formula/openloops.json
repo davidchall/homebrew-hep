@@ -21,7 +21,8 @@
     "stable": {
       "url": "https://openloops.hepforge.org/downloads?f=OpenLoops-2.1.2.tar.gz",
       "tag": null,
-      "revision": null
+      "revision": null,
+      "checksum": "f52575cae3d70b6b51a5d423e9cd0e076ed5961afcc015eec00987e64529a6ae"
     }
   },
   "revision": 1,

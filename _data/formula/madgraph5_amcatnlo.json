@@ -22,7 +22,8 @@
     "stable": {
       "url": "https://launchpad.net/mg5amcnlo/3.0/3.4.x/+download/MG5_aMC_v3.4.1.tar.gz",
       "tag": null,
-      "revision": null
+      "revision": null,
+      "checksum": "d0dc25a84393687017dcd9154e8f0eee0ba3d6a7122b4a61541db24ffbc148c3"
     }
   },
   "revision": 1,

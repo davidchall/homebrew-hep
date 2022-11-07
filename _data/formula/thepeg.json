@@ -21,7 +21,8 @@
     "stable": {
       "url": "https://thepeg.hepforge.org/downloads/ThePEG-2.2.3.tar.bz2",
       "tag": null,
-      "revision": null
+      "revision": null,
+      "checksum": "f21473197a761fc32917b08a8d24d2bfaf93ff57f3441fd605da99ac9de5d50b"
     }
   },
   "revision": 1,

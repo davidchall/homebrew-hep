@@ -21,7 +21,8 @@
     "stable": {
       "url": "https://drf-gitlab.cea.fr/partons/core/partons/-/archive/v3.0/partons-v3.0.tar.gz",
       "tag": null,
-      "revision": null
+      "revision": null,
+      "checksum": "03a5c6382e74d89f479a85fdcc3246403b6a5c3663a04710fb39321c2002da83"
     }
   },
   "revision": 2,

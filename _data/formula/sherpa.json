@@ -21,7 +21,8 @@
     "stable": {
       "url": "https://sherpa.hepforge.org/downloads/?f=SHERPA-MC-2.2.12.tar.gz",
       "tag": null,
-      "revision": null
+      "revision": null,
+      "checksum": "529464775ca828b9dc965110526f340de743b6003c1e6f8abe2fc14550aed001"
     }
   },
   "revision": 1,

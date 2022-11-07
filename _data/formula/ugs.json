@@ -21,7 +21,8 @@
     "stable": {
       "url": "https://ftp.riken.jp/iris/ugs/ugs.tar.gz",
       "tag": null,
-      "revision": null
+      "revision": null,
+      "checksum": "27bc46e975917bdf149e9ff6997885ffa24b0b1416bdf82ffaea5246b36e1f83"
     }
   },
   "revision": 0,

@@ -21,7 +21,8 @@
     "stable": {
       "url": "https://yoda.hepforge.org/downloads/?f=YODA-1.9.7.tar.gz",
       "tag": null,
-      "revision": null
+      "revision": null,
+      "checksum": "abff3e56bc360e38b2dd32d49bd962d6e773e97da1d50140ac4703daa1d51c8b"
     }
   },
   "revision": 0,

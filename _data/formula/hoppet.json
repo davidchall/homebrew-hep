@@ -21,7 +21,8 @@
     "stable": {
       "url": "https://hoppet.hepforge.org/downloads/hoppet-1.2.0.tgz",
       "tag": null,
-      "revision": null
+      "revision": null,
+      "checksum": "bffd1bbfd3cc8d1470ded5c82fe33346d44e86cf426439eb77ab7702f319e448"
     }
   },
   "revision": 1,

@@ -21,7 +21,8 @@
     "stable": {
       "url": "https://github.com/RosettaCommons/binder/archive/refs/tags/v1.2.0.tar.gz",
       "tag": null,
-      "revision": null
+      "revision": null,
+      "checksum": "2e33f4d1c5855699127461c3794108b35bcdd7b48291d95d8259f2f6bba0c76b"
     }
   },
   "revision": 0,

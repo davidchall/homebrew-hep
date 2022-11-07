@@ -21,7 +21,8 @@
     "stable": {
       "url": "https://github.com/vbertone/apfelxx/archive/4.6.0.tar.gz",
       "tag": null,
-      "revision": null
+      "revision": null,
+      "checksum": "37ad4121dfa5726ebe09cd2b7cf148976feb063ec6aeae7332ad9adc29c41543"
     }
   },
   "revision": 2,

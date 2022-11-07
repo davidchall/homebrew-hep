@@ -21,7 +21,8 @@
     "stable": {
       "url": "https://lhapdf.hepforge.org/downloads/?f=LHAPDF-6.5.3.tar.gz",
       "tag": null,
-      "revision": null
+      "revision": null,
+      "checksum": "57435cd695e297065d53e69bd29090765c934936b6a975ff8c559766f2230359"
     }
   },
   "revision": 0,

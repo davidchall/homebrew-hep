@@ -21,7 +21,8 @@
     "stable": {
       "url": "https://netlib.sandia.gov/f2c/libf2c.zip",
       "tag": null,
-      "revision": null
+      "revision": null,
+      "checksum": "ca404070e9ce0a9aaa6a71fc7d5489d014ade952c5d6de7efb88de8e24f2e8e0"
     }
   },
   "revision": 0,

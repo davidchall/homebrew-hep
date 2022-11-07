@@ -21,7 +21,8 @@
     "stable": {
       "url": "https://whizard.hepforge.org/downloads/?f=whizard-3.0.3.tar.gz",
       "tag": null,
-      "revision": null
+      "revision": null,
+      "checksum": "20f2269d302fc162a6aed8e781b504ba5112ef0711c078cdb08b293059ed67cf"
     }
   },
   "revision": 2,

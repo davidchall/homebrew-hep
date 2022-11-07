@@ -21,7 +21,8 @@
     "stable": {
       "url": "https://hepmc.web.cern.ch/hepmc/releases/HepMC3-3.2.5.tar.gz",
       "tag": null,
-      "revision": null
+      "revision": null,
+      "checksum": "cd0f75c80f75549c59cc2a829ece7601c77de97cb2a5ab75790cac8e1d585032"
     }
   },
   "revision": 2,

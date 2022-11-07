@@ -21,7 +21,8 @@
     "stable": {
       "url": "https://jetvheto.hepforge.org/downloads/?f=JetVHeto-3.0.0.tgz",
       "tag": null,
-      "revision": null
+      "revision": null,
+      "checksum": "c3eaefd2ff154df70ed7d1ead053c7419e82ec854f2124a3d58585193866a40f"
     }
   },
   "revision": 1,

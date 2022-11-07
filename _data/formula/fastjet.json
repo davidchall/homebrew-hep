@@ -21,7 +21,8 @@
     "stable": {
       "url": "https://fastjet.fr/repo/fastjet-3.4.0.tar.gz",
       "tag": null,
-      "revision": null
+      "revision": null,
+      "checksum": "ee07c8747c8ead86d88de4a9e4e8d1e9e7d7614973f5631ba8297f7a02478b91"
     }
   },
   "revision": 1,

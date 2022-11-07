@@ -21,7 +21,8 @@
     "stable": {
       "url": "https://www.nikhef.nl/~h24/qcdnum-files/download/qcdnum180000.tar.gz",
       "tag": null,
-      "revision": null
+      "revision": null,
+      "checksum": "e108f926b7840352e4080ba71914d3403ed8118364f87710e221fdec320ee200"
     }
   },
   "revision": 1,
