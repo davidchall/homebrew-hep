@@ -27,7 +27,7 @@ class Sherpa < Formula
   depends_on "root"    => :optional
 
   def install
-    ENV.cxx11
+    ENV.cxx14
 
     args = %W[
       --disable-dependency-tracking
