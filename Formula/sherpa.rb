@@ -27,8 +27,6 @@ class Sherpa < Formula
   depends_on "root"    => :optional
 
   def install
-    ENV.cxx14
-
     args = %W[
       --disable-dependency-tracking
       --prefix=#{prefix}
@@ -42,6 +40,9 @@ class Sherpa < Formula
     args << "--enable-lhapdf=#{Formula["lhapdf"].opt_prefix}"   if build.with? "lhapdf"
     args << "--enable-rivet=#{Formula["rivet"].opt_prefix}"     if build.with? "rivet"
     args << "--enable-root=#{Formula["root"].opt_prefix}"       if build.with? "root"
+
+    # rivet requires C++14
+    ENV.append "CXXFLAGS", "-std=c++14"
 
     system "./configure", *args
     system "make"
