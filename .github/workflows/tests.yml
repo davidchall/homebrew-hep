@@ -26,6 +26,10 @@ jobs:
       - name: Install Homebrew Bundler RubyGems
         if: steps.cache.outputs.cache-hit != 'true'
         run: brew install-bundler-gems
+        
+      - name: Override Xcode version
+        if: matrix.os == 'macos-12'
+        run: sudo xcode-select -s '/Applications/Xcode_13.4.1.app'
 
       - run: brew test-bot --only-cleanup-before
 
