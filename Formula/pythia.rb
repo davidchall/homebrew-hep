@@ -1,9 +1,9 @@
 class Pythia < Formula
   desc "Monte Carlo event generator"
   homepage "https://pythia.org"
-  url "https://pythia.org/download/pythia83/pythia8307.tgz"
-  version "8.307"
-  sha256 "e5b14d44aa5943332e32dd5dda9a18fdd1a0085c7198e28d840e04167fa6013d"
+  url "https://pythia.org/download/pythia83/pythia8308.tgz"
+  version "8.308"
+  sha256 "c2e8c8d38136d85fc0bc9c9fad4c2db679b0819b7d2b6fc9a47f80f99538b4e3"
   license "GPL-2.0-or-later"
 
   livecheck do
