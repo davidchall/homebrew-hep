@@ -13,19 +13,19 @@
   "license": "GPL-3.0-or-later",
   "homepage": "https://mcfm.fnal.gov",
   "versions": {
-    "stable": "10.2.1",
+    "stable": "10.2.2",
     "head": null,
     "bottle": true
   },
   "urls": {
     "stable": {
-      "url": "https://mcfm.fnal.gov/downloads/MCFM-10.2.1.tar.gz",
+      "url": "https://mcfm.fnal.gov/downloads/MCFM-10.2.2.tar.gz",
       "tag": null,
       "revision": null,
-      "checksum": "5b97dd90159efcef227420b49e8eb53b7f1ee0af8d5a6bf8595a29c320afe2dc"
+      "checksum": "15ebd4cb51cafb4af674a2e0a3ec8c02ac88a49565b3265c80719c59c0cc3c9d"
     }
   },
-  "revision": 1,
+  "revision": 0,
   "version_scheme": 0,
   "bottle": {
     "stable": {
@@ -34,18 +34,13 @@
       "files": {
         "monterey": {
           "cellar": ":any",
-          "url": "https://ghcr.io/v2/davidchall/hep/mcfm/blobs/sha256:7791a379aa3f245b8b61f6606f42a214dc35d91a1808eae3c87cbfd448f70e41",
-          "sha256": "7791a379aa3f245b8b61f6606f42a214dc35d91a1808eae3c87cbfd448f70e41"
+          "url": "https://ghcr.io/v2/davidchall/hep/mcfm/blobs/sha256:af86d32b133eed55d90b9a6c09f2839d37c38534609badb08e2c457f4a77fe58",
+          "sha256": "af86d32b133eed55d90b9a6c09f2839d37c38534609badb08e2c457f4a77fe58"
         },
         "big_sur": {
           "cellar": ":any",
-          "url": "https://ghcr.io/v2/davidchall/hep/mcfm/blobs/sha256:00311d6c6d3edecc4a726a1dbd36000e4eb2de5af7d57f8e4ee1e7c27e54e1ad",
-          "sha256": "00311d6c6d3edecc4a726a1dbd36000e4eb2de5af7d57f8e4ee1e7c27e54e1ad"
-        },
-        "catalina": {
-          "cellar": ":any",
-          "url": "https://ghcr.io/v2/davidchall/hep/mcfm/blobs/sha256:213654abe451b0bbfcdfa28db32097dd29afa46c81d4adda4d21ff946aa88c5b",
-          "sha256": "213654abe451b0bbfcdfa28db32097dd29afa46c81d4adda4d21ff946aa88c5b"
+          "url": "https://ghcr.io/v2/davidchall/hep/mcfm/blobs/sha256:f6da20fbf7a9ebf81ad2a43e4d7dbe4cc9e4495b4e0f92572608e1d2e8e261c7",
+          "sha256": "f6da20fbf7a9ebf81ad2a43e4d7dbe4cc9e4495b4e0f92572608e1d2e8e261c7"
         }
       }
     }
@@ -86,7 +81,7 @@
   "conflicts_with": [
 
   ],
-  "caveats": "Before running mcfm, copy this file to your working directory:\n  $(brew --prefix)/Cellar/mcfm/10.2.1_1/share/mcfm/process.DAT\n\n",
+  "caveats": "Before running mcfm, copy this file to your working directory:\n  $(brew --prefix)/Cellar/mcfm/10.2.2/share/mcfm/process.DAT\n\n",
   "installed": [
 
   ],
