@@ -10,6 +10,12 @@ class Cernlib < Formula
     regex(/href=.*?cernlib[._-](\d{4}\.\d{2}\.\d{2}\.\d+)-free\.t/i)
   end
 
+  bottle do
+    root_url "https://ghcr.io/v2/davidchall/hep"
+    sha256 monterey: "9ec59dd47f46471acabf48a5f95e911909f3d36ddd0210eabc838429286a14a7"
+    sha256 big_sur:  "ee13be398fad0d22a2d7dff96f3c2a529b6f5002e57ce84f104f7dfd96184b50"
+  end
+
   option "with-test", "Test during installation"
 
   depends_on "cmake" => :build
