@@ -1,28 +1,28 @@
 {
-  "name": "pythia",
-  "full_name": "davidchall/hep/pythia",
+  "name": "cernlib",
+  "full_name": "davidchall/hep/cernlib",
   "tap": "davidchall/hep",
-  "oldname": "pythia8",
+  "oldname": null,
   "aliases": [
 
   ],
   "versioned_formulae": [
 
   ],
-  "desc": "Monte Carlo event generator",
+  "desc": "CERN library",
   "license": "GPL-2.0-or-later",
-  "homepage": "https://pythia.org",
+  "homepage": "https://cernlib.web.cern.ch",
   "versions": {
-    "stable": "8.308",
+    "stable": "2022.11.08.0",
     "head": null,
     "bottle": true
   },
   "urls": {
     "stable": {
-      "url": "https://pythia.org/download/pythia83/pythia8308.tgz",
+      "url": "https://cernlib.web.cern.ch/cernlib/download/2022_source/tar/cernlib-2022.11.08.0-free.tar.gz",
       "tag": null,
       "revision": null,
-      "checksum": "c2e8c8d38136d85fc0bc9c9fad4c2db679b0819b7d2b6fc9a47f80f99538b4e3"
+      "checksum": "733d148415ef78012ff81f21922d3bf641be7514b0242348dd0200cf1b003e46"
     }
   },
   "revision": 0,
@@ -34,13 +34,13 @@
       "files": {
         "monterey": {
           "cellar": "/usr/local/Cellar",
-          "url": "https://ghcr.io/v2/davidchall/hep/pythia/blobs/sha256:b4f3efb87ff02af6fb59a0b1ae3650ca3603f27909623439fe158c8b49d414a0",
-          "sha256": "b4f3efb87ff02af6fb59a0b1ae3650ca3603f27909623439fe158c8b49d414a0"
+          "url": "https://ghcr.io/v2/davidchall/hep/cernlib/blobs/sha256:9ec59dd47f46471acabf48a5f95e911909f3d36ddd0210eabc838429286a14a7",
+          "sha256": "9ec59dd47f46471acabf48a5f95e911909f3d36ddd0210eabc838429286a14a7"
         },
         "big_sur": {
           "cellar": "/usr/local/Cellar",
-          "url": "https://ghcr.io/v2/davidchall/hep/pythia/blobs/sha256:a52a1afb74d19178a9b8ca6d8589c5d2139a8cca8e4b746bb1dc826d0940f9c0",
-          "sha256": "a52a1afb74d19178a9b8ca6d8589c5d2139a8cca8e4b746bb1dc826d0940f9c0"
+          "url": "https://ghcr.io/v2/davidchall/hep/cernlib/blobs/sha256:ee13be398fad0d22a2d7dff96f3c2a529b6f5002e57ce84f104f7dfd96184b50",
+          "sha256": "ee13be398fad0d22a2d7dff96f3c2a529b6f5002e57ce84f104f7dfd96184b50"
         }
       }
     }
@@ -48,15 +48,20 @@
   "keg_only": false,
   "keg_only_reason": null,
   "options": [
-
+    {
+      "option": "--with-test",
+      "description": "Test during installation"
+    }
   ],
   "build_dependencies": [
-
+    "cmake",
+    "gnu-sed"
   ],
   "dependencies": [
-    "boost",
-    "hepmc3",
-    "lhapdf"
+    "coreutils",
+    "gcc",
+    "libxaw",
+    "openmotif"
   ],
   "test_dependencies": [
 
