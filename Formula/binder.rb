@@ -1,8 +1,8 @@
 class Binder < Formula
   desc "Tool for automatic generation of Python bindings for C++"
   homepage "https://github.com/RosettaCommons/binder"
-  url "https://github.com/RosettaCommons/binder/archive/refs/tags/v1.2.0.tar.gz"
-  sha256 "2e33f4d1c5855699127461c3794108b35bcdd7b48291d95d8259f2f6bba0c76b"
+  url "https://github.com/RosettaCommons/binder/archive/refs/tags/v1.3.0.tar.gz"
+  sha256 "22aaf4ade92a8acf15198e847a9f64ffd239f43252af24ceaa7cc8bdc45310b2"
 
   depends_on "cmake" => :build
   depends_on "gsed" => :build
