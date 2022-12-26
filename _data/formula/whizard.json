@@ -13,19 +13,19 @@
   "license": "GPL-2.0-or-later",
   "homepage": "https://whizard.hepforge.org",
   "versions": {
-    "stable": "3.0.3",
+    "stable": "3.1.0",
     "head": null,
     "bottle": true
   },
   "urls": {
     "stable": {
-      "url": "https://whizard.hepforge.org/downloads/?f=whizard-3.0.3.tar.gz",
+      "url": "https://whizard.hepforge.org/downloads/?f=whizard-3.1.0.tar.gz",
       "tag": null,
       "revision": null,
-      "checksum": "20f2269d302fc162a6aed8e781b504ba5112ef0711c078cdb08b293059ed67cf"
+      "checksum": "9dc5e6d1a25d2fc708625f85010cb81b63559ff02cceb9b35024cf9f426c0ad9"
     }
   },
-  "revision": 2,
+  "revision": 0,
   "version_scheme": 0,
   "bottle": {
     "stable": {
@@ -34,18 +34,13 @@
       "files": {
         "monterey": {
           "cellar": ":any",
-          "url": "https://ghcr.io/v2/davidchall/hep/whizard/blobs/sha256:a9f88af7177423393fc6dec09ba8e7ce9aef2b0c81672dd4ae9749a6eb68e59a",
-          "sha256": "a9f88af7177423393fc6dec09ba8e7ce9aef2b0c81672dd4ae9749a6eb68e59a"
+          "url": "https://ghcr.io/v2/davidchall/hep/whizard/blobs/sha256:c2f22ca531422a39faf992503164a6c0f74a9186f226b25a44afdeabfddadc08",
+          "sha256": "c2f22ca531422a39faf992503164a6c0f74a9186f226b25a44afdeabfddadc08"
         },
         "big_sur": {
           "cellar": ":any",
-          "url": "https://ghcr.io/v2/davidchall/hep/whizard/blobs/sha256:63dc8f6c8f2acaee3234937f9fd5387ef4f51dc1e08f50346267424fb056bd97",
-          "sha256": "63dc8f6c8f2acaee3234937f9fd5387ef4f51dc1e08f50346267424fb056bd97"
-        },
-        "catalina": {
-          "cellar": ":any",
-          "url": "https://ghcr.io/v2/davidchall/hep/whizard/blobs/sha256:54ca21056852c12c546d7609ed25dbdf1e26aacb47c3186bcc2b42eafc28931e",
-          "sha256": "54ca21056852c12c546d7609ed25dbdf1e26aacb47c3186bcc2b42eafc28931e"
+          "url": "https://ghcr.io/v2/davidchall/hep/whizard/blobs/sha256:8ff724f3be6e25c56044b37a04974e77bdad9e74b9a42cabfde9485cac03f665",
+          "sha256": "8ff724f3be6e25c56044b37a04974e77bdad9e74b9a42cabfde9485cac03f665"
         }
       }
     }
