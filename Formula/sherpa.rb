@@ -12,9 +12,8 @@ class Sherpa < Formula
 
   bottle do
     root_url "https://ghcr.io/v2/davidchall/hep"
-    sha256 monterey: "85558b02e6b65bcec7715f6960b336f2fc04de2496124f2e0f0e5a77b1c306cc"
-    sha256 big_sur:  "f1fd4d564f7381ab027d56611c58a5c8bce97ccc8948d304e1912957f5580c2b"
-    sha256 catalina: "b4554a0a9b6a6f3e7473f830965acfc9f012481caaf9536bdf2eb8f4f45e80d1"
+    sha256 monterey: "eb75d7e28ed087e788dd7b57794deb0897cb3cd36f95e62385f070a84929b462"
+    sha256 big_sur:  "749c7a337181b6379c990803ce451981ab89be8f4bcdcb60ac987f3083d4bc4d"
   end
 
   depends_on "autoconf" => :build
