@@ -13,16 +13,16 @@
   "license": "GPL-2.0-only",
   "homepage": "https://sherpa-team.gitlab.io",
   "versions": {
-    "stable": "2.2.13",
+    "stable": "2.2.14",
     "head": null,
     "bottle": true
   },
   "urls": {
     "stable": {
-      "url": "https://sherpa.hepforge.org/downloads/?f=SHERPA-MC-2.2.13.tar.gz",
+      "url": "https://sherpa.hepforge.org/downloads/?f=SHERPA-MC-2.2.14.tar.gz",
       "tag": null,
       "revision": null,
-      "checksum": "148a339b6026c5a10b20388b04dc7c46d502cb57c88d31ad9e916201c29c6571"
+      "checksum": "db89ced9c15e1f1fd74cdb02fe1c6742ef9f456266e40e62751b45cfa6d3a364"
     }
   },
   "revision": 0,
@@ -34,18 +34,13 @@
       "files": {
         "monterey": {
           "cellar": "/usr/local/Cellar",
-          "url": "https://ghcr.io/v2/davidchall/hep/sherpa/blobs/sha256:85558b02e6b65bcec7715f6960b336f2fc04de2496124f2e0f0e5a77b1c306cc",
-          "sha256": "85558b02e6b65bcec7715f6960b336f2fc04de2496124f2e0f0e5a77b1c306cc"
+          "url": "https://ghcr.io/v2/davidchall/hep/sherpa/blobs/sha256:eb75d7e28ed087e788dd7b57794deb0897cb3cd36f95e62385f070a84929b462",
+          "sha256": "eb75d7e28ed087e788dd7b57794deb0897cb3cd36f95e62385f070a84929b462"
         },
         "big_sur": {
           "cellar": "/usr/local/Cellar",
-          "url": "https://ghcr.io/v2/davidchall/hep/sherpa/blobs/sha256:f1fd4d564f7381ab027d56611c58a5c8bce97ccc8948d304e1912957f5580c2b",
-          "sha256": "f1fd4d564f7381ab027d56611c58a5c8bce97ccc8948d304e1912957f5580c2b"
-        },
-        "catalina": {
-          "cellar": "/usr/local/Cellar",
-          "url": "https://ghcr.io/v2/davidchall/hep/sherpa/blobs/sha256:b4554a0a9b6a6f3e7473f830965acfc9f012481caaf9536bdf2eb8f4f45e80d1",
-          "sha256": "b4554a0a9b6a6f3e7473f830965acfc9f012481caaf9536bdf2eb8f4f45e80d1"
+          "url": "https://ghcr.io/v2/davidchall/hep/sherpa/blobs/sha256:749c7a337181b6379c990803ce451981ab89be8f4bcdcb60ac987f3083d4bc4d",
+          "sha256": "749c7a337181b6379c990803ce451981ab89be8f4bcdcb60ac987f3083d4bc4d"
         }
       }
     }
