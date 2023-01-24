@@ -6,6 +6,7 @@ class Madgraph5Amcatnlo < Formula
   url "https://launchpad.net/mg5amcnlo/3.0/3.4.x/+download/MG5_aMC_v3.4.2.tar.gz"
   sha256 "ca8631e10cc384f9d05a4d3311f6cb101eeaa57cb39ab7325ee5d1aec1fe218f"
   license "NCSA"
+  revision 1
 
   livecheck do
     url "https://launchpad.net/mg5amcnlo/+download"
@@ -21,21 +22,13 @@ class Madgraph5Amcatnlo < Formula
   depends_on "fastjet"
   depends_on "gcc" # for gfortran
   depends_on "python@3.10"
-
-  resource "six" do
-    url "https://files.pythonhosted.org/packages/71/39/171f1c67cd00715f190ba0b100d606d440a28c93c7714febeca8b79af85e/six-1.16.0.tar.gz"
-    sha256 "1e61c37477a1626458e36f7b1d82aa5c9b094fa4802892072e49de9c60c4c926"
-  end
+  depends_on "six"
 
   def python
     "python3.10"
   end
 
   def install
-    resource("six").stage do
-      system python, *Language::Python.setup_install_args(prefix, python)
-    end
-
     # fix broken dynamic links
     gfortran_lib = Formula["gcc"].opt_lib/"gcc"/Formula["gcc"].version_suffix
     MachO::Tools.change_install_name("vendor/DiscreteSampler/check",
