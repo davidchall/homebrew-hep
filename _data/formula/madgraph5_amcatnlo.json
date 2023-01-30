@@ -14,16 +14,16 @@
   "license": "NCSA",
   "homepage": "https://launchpad.net/mg5amcnlo",
   "versions": {
-    "stable": "3.4.1",
+    "stable": "3.4.2",
     "head": null,
     "bottle": true
   },
   "urls": {
     "stable": {
-      "url": "https://launchpad.net/mg5amcnlo/3.0/3.4.x/+download/MG5_aMC_v3.4.1.tar.gz",
+      "url": "https://launchpad.net/mg5amcnlo/3.0/3.4.x/+download/MG5_aMC_v3.4.2.tar.gz",
       "tag": null,
       "revision": null,
-      "checksum": "d0dc25a84393687017dcd9154e8f0eee0ba3d6a7122b4a61541db24ffbc148c3"
+      "checksum": "ca8631e10cc384f9d05a4d3311f6cb101eeaa57cb39ab7325ee5d1aec1fe218f"
     }
   },
   "revision": 1,
@@ -35,18 +35,13 @@
       "files": {
         "monterey": {
           "cellar": ":any",
-          "url": "https://ghcr.io/v2/davidchall/hep/madgraph5_amcatnlo/blobs/sha256:57fc59f9ae920d7c7b286688ace2812d5926d05d3cba31f82212e73ad6759778",
-          "sha256": "57fc59f9ae920d7c7b286688ace2812d5926d05d3cba31f82212e73ad6759778"
+          "url": "https://ghcr.io/v2/davidchall/hep/madgraph5_amcatnlo/blobs/sha256:4cd5fd9ffd46b22e7f9a17bc171bbc4ab9dfe3f42bfead1821d7ed796d0821e7",
+          "sha256": "4cd5fd9ffd46b22e7f9a17bc171bbc4ab9dfe3f42bfead1821d7ed796d0821e7"
         },
         "big_sur": {
           "cellar": ":any",
-          "url": "https://ghcr.io/v2/davidchall/hep/madgraph5_amcatnlo/blobs/sha256:bb44cbabfb83583479cb895793adc14ff45fe77aad79e7c2539c8dfe2774c7cc",
-          "sha256": "bb44cbabfb83583479cb895793adc14ff45fe77aad79e7c2539c8dfe2774c7cc"
-        },
-        "catalina": {
-          "cellar": ":any",
-          "url": "https://ghcr.io/v2/davidchall/hep/madgraph5_amcatnlo/blobs/sha256:982151e7e0ed80c587a8c2fdefbf4f168fb0ba6a7d32a82aca5eb97620586474",
-          "sha256": "982151e7e0ed80c587a8c2fdefbf4f168fb0ba6a7d32a82aca5eb97620586474"
+          "url": "https://ghcr.io/v2/davidchall/hep/madgraph5_amcatnlo/blobs/sha256:b38fedb47b503f927efd283fbaf81ca581f8fadab7615a04c31bb6afd9c0f4ff",
+          "sha256": "b38fedb47b503f927efd283fbaf81ca581f8fadab7615a04c31bb6afd9c0f4ff"
         }
       }
     }
@@ -62,7 +57,8 @@
   "dependencies": [
     "fastjet",
     "gcc",
-    "python@3.10"
+    "python@3.10",
+    "six"
   ],
   "test_dependencies": [
 
