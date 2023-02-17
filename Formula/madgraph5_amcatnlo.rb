@@ -15,8 +15,8 @@ class Madgraph5Amcatnlo < Formula
 
   bottle do
     root_url "https://ghcr.io/v2/davidchall/hep"
-    sha256 cellar: :any, monterey: "4cd5fd9ffd46b22e7f9a17bc171bbc4ab9dfe3f42bfead1821d7ed796d0821e7"
-    sha256 cellar: :any, big_sur:  "b38fedb47b503f927efd283fbaf81ca581f8fadab7615a04c31bb6afd9c0f4ff"
+    sha256 cellar: :any, monterey: "622cba4ed27785e89f53e5e2e8c55719870b5cf654b75b4f7692cf75c770b385"
+    sha256 cellar: :any, big_sur:  "d8ae21e5bfcd4319933bf77142305c04e451d4164f03c4710cdc3f12a92f2e0d"
   end
 
   depends_on "fastjet"
