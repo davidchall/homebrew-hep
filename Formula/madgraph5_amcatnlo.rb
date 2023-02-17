@@ -6,7 +6,7 @@ class Madgraph5Amcatnlo < Formula
   url "https://launchpad.net/mg5amcnlo/3.0/3.4.x/+download/MG5_aMC_v3.4.2.tar.gz"
   sha256 "ca8631e10cc384f9d05a4d3311f6cb101eeaa57cb39ab7325ee5d1aec1fe218f"
   license "NCSA"
-  revision 1
+  revision 2
 
   livecheck do
     url "https://launchpad.net/mg5amcnlo/+download"
@@ -29,8 +29,9 @@ class Madgraph5Amcatnlo < Formula
   end
 
   def install
-    # fix broken dynamic links
-    gfortran_lib = Formula["gcc"].opt_lib/"gcc"/Formula["gcc"].version_suffix
+    # hardcoded paths cause problems on GCC minor version bumps
+    gcc = Formula["gcc"]
+    gfortran_lib = gcc.opt_lib/"gcc"/gcc.any_installed_version.major
     MachO::Tools.change_install_name("vendor/DiscreteSampler/check",
                                      "/opt/local/lib/libgcc/libgfortran.3.dylib",
                                      "#{gfortran_lib}/libgfortran.dylib")
