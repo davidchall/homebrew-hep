@@ -56,6 +56,6 @@ class Cernlib < Formula
   end
 
   test do
-    system "cernlib"
+    system "#{bin}/cernlib"
   end
 end
