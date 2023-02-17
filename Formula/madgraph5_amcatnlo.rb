@@ -31,7 +31,7 @@ class Madgraph5Amcatnlo < Formula
   def install
     # hardcoded paths cause problems on GCC minor version bumps
     gcc = Formula["gcc"]
-    gfortran_lib = gcc.opt_lib/"gcc"/gcc.installed_version.major
+    gfortran_lib = gcc.opt_lib/"gcc"/gcc.any_installed_version.major
     MachO::Tools.change_install_name("vendor/DiscreteSampler/check",
                                      "/opt/local/lib/libgcc/libgfortran.3.dylib",
                                      "#{gfortran_lib}/libgfortran.dylib")
