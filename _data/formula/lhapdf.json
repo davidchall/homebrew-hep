@@ -83,6 +83,12 @@
   "conflicts_with": [
 
   ],
+  "conflicts_with_reasons": [
+
+  ],
+  "link_overwrite": [
+
+  ],
   "caveats": "PDFs may be downloaded and installed with\n\n  lhapdf install CT10nlo\n\nAt runtime, LHAPDF searches $HOMEBREW_PREFIX/Cellar/lhapdf/6.5.3/share/LHAPDF\nand paths in LHAPDF_DATA_PATH for PDF sets.\n\n",
   "installed": [
 

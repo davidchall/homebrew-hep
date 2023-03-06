@@ -81,6 +81,12 @@
   "conflicts_with": [
 
   ],
+  "conflicts_with_reasons": [
+
+  ],
+  "link_overwrite": [
+
+  ],
   "caveats": "Before running mcfm, copy this file to your working directory:\n  $HOMEBREW_PREFIX/Cellar/mcfm/10.2.2/share/mcfm/process.DAT\n\n",
   "installed": [
 

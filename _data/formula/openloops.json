@@ -79,6 +79,12 @@
   "conflicts_with": [
 
   ],
+  "conflicts_with_reasons": [
+
+  ],
+  "link_overwrite": [
+
+  ],
   "caveats": "OpenLoops downloads and installs process libraries in its\nown installation path: $HOMEBREW_PREFIX/Cellar/openloops/2.1.2_1\n\nThese process libraries are lost if OpenLoops is uninstalled.\n\n",
   "installed": [
 

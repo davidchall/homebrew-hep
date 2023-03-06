@@ -66,6 +66,12 @@
   "conflicts_with": [
 
   ],
+  "conflicts_with_reasons": [
+
+  ],
+  "link_overwrite": [
+
+  ],
   "caveats": "You can disable one of the applgrid and fastnlo dependencies.\nHowever, the build will fail if you disable both.\n\nA manual is installed in:\n  $(brew --prefix mcgrid)/manual.pdf\n\nExamples are installed in:\n  $(brew --prefix mcgrid)/examples-rivet-2.2.0\n",
   "installed": [
 
