@@ -13,16 +13,16 @@
   "license": null,
   "homepage": "https://fastjet.hepforge.org/contrib/",
   "versions": {
-    "stable": "1.050",
+    "stable": "1.051",
     "head": null,
     "bottle": true
   },
   "urls": {
     "stable": {
-      "url": "https://fastjet.hepforge.org/contrib/downloads/fjcontrib-1.050.tar.gz",
+      "url": "https://fastjet.hepforge.org/contrib/downloads/fjcontrib-1.051.tar.gz",
       "tag": null,
       "revision": null,
-      "checksum": "336c352ffff53bae67cbf9ebaf2d703f048d96569ebda8df08e5dd680d7aa0d6"
+      "checksum": "76a2ec612c768db3eb6bbaf686d02b05ddb64dde477d185e20df563b52308473"
     }
   },
   "revision": 0,
@@ -34,18 +34,13 @@
       "files": {
         "monterey": {
           "cellar": ":any_skip_relocation",
-          "url": "https://ghcr.io/v2/davidchall/hep/fjcontrib/blobs/sha256:b8a34df52ca28954763bb86a2a0c82348b2fea15572f74dd9ae759e52db4dfd1",
-          "sha256": "b8a34df52ca28954763bb86a2a0c82348b2fea15572f74dd9ae759e52db4dfd1"
+          "url": "https://ghcr.io/v2/davidchall/hep/fjcontrib/blobs/sha256:2acaef923210841c9db699190f5347c72bc8083dcd55d8141fd3f980364c66bf",
+          "sha256": "2acaef923210841c9db699190f5347c72bc8083dcd55d8141fd3f980364c66bf"
         },
         "big_sur": {
           "cellar": ":any_skip_relocation",
-          "url": "https://ghcr.io/v2/davidchall/hep/fjcontrib/blobs/sha256:af0f7b4e860e953cb3a93f85f12fa75f18535feda692cc95b17a5fe965119485",
-          "sha256": "af0f7b4e860e953cb3a93f85f12fa75f18535feda692cc95b17a5fe965119485"
-        },
-        "catalina": {
-          "cellar": ":any_skip_relocation",
-          "url": "https://ghcr.io/v2/davidchall/hep/fjcontrib/blobs/sha256:25a31f8835c9113d9f2dd9b592164fd574231e768fc8cec41a21aac142693204",
-          "sha256": "25a31f8835c9113d9f2dd9b592164fd574231e768fc8cec41a21aac142693204"
+          "url": "https://ghcr.io/v2/davidchall/hep/fjcontrib/blobs/sha256:ba830b743291d43d59dce4cb77f5e32af5e2111969aa2ddf8f24b992255a0db3",
+          "sha256": "ba830b743291d43d59dce4cb77f5e32af5e2111969aa2ddf8f24b992255a0db3"
         }
       }
     }
@@ -101,5 +96,8 @@
   "disabled": false,
   "disable_date": null,
   "disable_reason": null,
-  "tap_git_head": "141f8548d045df88d498ab44df16d2091742e4b1"
+  "tap_git_head": "5a611881ffb191bb52edfaa4cd4bf466be1d1171",
+  "ruby_source_checksum": {
+    "sha256": "0f48d0076e1db765791a179729aadb281bc686e7a5334fcbb24403482ca58a95"
+  }
 }

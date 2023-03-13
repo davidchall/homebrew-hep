@@ -98,5 +98,8 @@
   "disabled": false,
   "disable_date": null,
   "disable_reason": null,
-  "tap_git_head": "141f8548d045df88d498ab44df16d2091742e4b1"
+  "tap_git_head": "5a611881ffb191bb52edfaa4cd4bf466be1d1171",
+  "ruby_source_checksum": {
+    "sha256": "081a1fee1228891af9641604cc8867f19c1ec6540074de689d1c4abcf7f33701"
+  }
 }
