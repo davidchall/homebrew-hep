@@ -13,16 +13,16 @@
   "license": "GPL-2.0-only",
   "homepage": "https://sherpa-team.gitlab.io",
   "versions": {
-    "stable": "2.2.14",
+    "stable": "2.2.15",
     "head": null,
     "bottle": true
   },
   "urls": {
     "stable": {
-      "url": "https://sherpa.hepforge.org/downloads/?f=SHERPA-MC-2.2.14.tar.gz",
+      "url": "https://sherpa.hepforge.org/downloads/?f=SHERPA-MC-2.2.15.tar.gz",
       "tag": null,
       "revision": null,
-      "checksum": "db89ced9c15e1f1fd74cdb02fe1c6742ef9f456266e40e62751b45cfa6d3a364"
+      "checksum": "df3bcb6b593f6e6eee396294b13c90337f5c3c15c92651753a03e0ce7975864b"
     }
   },
   "revision": 0,
@@ -34,13 +34,13 @@
       "files": {
         "monterey": {
           "cellar": "/usr/local/Cellar",
-          "url": "https://ghcr.io/v2/davidchall/hep/sherpa/blobs/sha256:eb75d7e28ed087e788dd7b57794deb0897cb3cd36f95e62385f070a84929b462",
-          "sha256": "eb75d7e28ed087e788dd7b57794deb0897cb3cd36f95e62385f070a84929b462"
+          "url": "https://ghcr.io/v2/davidchall/hep/sherpa/blobs/sha256:5e8a8e831cb9adbf81177fdf91f020c7b5662f228dd516a2c87191cf24197a54",
+          "sha256": "5e8a8e831cb9adbf81177fdf91f020c7b5662f228dd516a2c87191cf24197a54"
         },
         "big_sur": {
           "cellar": "/usr/local/Cellar",
-          "url": "https://ghcr.io/v2/davidchall/hep/sherpa/blobs/sha256:749c7a337181b6379c990803ce451981ab89be8f4bcdcb60ac987f3083d4bc4d",
-          "sha256": "749c7a337181b6379c990803ce451981ab89be8f4bcdcb60ac987f3083d4bc4d"
+          "url": "https://ghcr.io/v2/davidchall/hep/sherpa/blobs/sha256:a120787adbf1ff882eba1f996e5f3cb8c30146f27d9230c658826d0e516359b5",
+          "sha256": "a120787adbf1ff882eba1f996e5f3cb8c30146f27d9230c658826d0e516359b5"
         }
       }
     }
@@ -116,8 +116,8 @@
   "disabled": false,
   "disable_date": null,
   "disable_reason": null,
-  "tap_git_head": "5a611881ffb191bb52edfaa4cd4bf466be1d1171",
+  "tap_git_head": "a854364b70960e061ca811b88316a0621740767e",
   "ruby_source_checksum": {
-    "sha256": "4a57146c05a7b0f694dca5c578baf5dea8831c71e1e0efd1c38bd75ae791cf4d"
+    "sha256": "c3be250f859d4f10b3a3d2afd71a039a67cfccedbb695d1ebfffefbaa24143c5"
   }
 }

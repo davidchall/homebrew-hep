@@ -13,16 +13,16 @@
   "license": "GPL-2.0-or-later",
   "homepage": "https://whizard.hepforge.org",
   "versions": {
-    "stable": "3.1.0",
+    "stable": "3.1.1",
     "head": null,
     "bottle": true
   },
   "urls": {
     "stable": {
-      "url": "https://whizard.hepforge.org/downloads/?f=whizard-3.1.0.tar.gz",
+      "url": "https://whizard.hepforge.org/downloads/?f=whizard-3.1.1.tar.gz",
       "tag": null,
       "revision": null,
-      "checksum": "9dc5e6d1a25d2fc708625f85010cb81b63559ff02cceb9b35024cf9f426c0ad9"
+      "checksum": "dd48e4e39b8a4990be47775ec6171f89d8147cb2e9e293afc7051a7dbc5a23ef"
     }
   },
   "revision": 0,
@@ -34,13 +34,13 @@
       "files": {
         "monterey": {
           "cellar": ":any",
-          "url": "https://ghcr.io/v2/davidchall/hep/whizard/blobs/sha256:c2f22ca531422a39faf992503164a6c0f74a9186f226b25a44afdeabfddadc08",
-          "sha256": "c2f22ca531422a39faf992503164a6c0f74a9186f226b25a44afdeabfddadc08"
+          "url": "https://ghcr.io/v2/davidchall/hep/whizard/blobs/sha256:a2652711d20e355fead49385a896e503371a1bbe62565e285242eb4658b85459",
+          "sha256": "a2652711d20e355fead49385a896e503371a1bbe62565e285242eb4658b85459"
         },
         "big_sur": {
           "cellar": ":any",
-          "url": "https://ghcr.io/v2/davidchall/hep/whizard/blobs/sha256:8ff724f3be6e25c56044b37a04974e77bdad9e74b9a42cabfde9485cac03f665",
-          "sha256": "8ff724f3be6e25c56044b37a04974e77bdad9e74b9a42cabfde9485cac03f665"
+          "url": "https://ghcr.io/v2/davidchall/hep/whizard/blobs/sha256:d2f0705c63619340d69ec650643651c270f6613077ef3daa445d80386d1c85a7",
+          "sha256": "d2f0705c63619340d69ec650643651c270f6613077ef3daa445d80386d1c85a7"
         }
       }
     }
@@ -112,8 +112,8 @@
   "disabled": false,
   "disable_date": null,
   "disable_reason": null,
-  "tap_git_head": "5a611881ffb191bb52edfaa4cd4bf466be1d1171",
+  "tap_git_head": "a854364b70960e061ca811b88316a0621740767e",
   "ruby_source_checksum": {
-    "sha256": "f8baeda2e1c854ed41e5f2586a9677f6f9e15c0de7c5d14d1d292167ee59f674"
+    "sha256": "d2ebbc24c24f20f63cc286e5ff73c2cd1c37f16cb09954b516fbd6681f647c4b"
   }
 }
