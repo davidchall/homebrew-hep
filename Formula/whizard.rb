@@ -1,8 +1,8 @@
 class Whizard < Formula
   desc "Monte Carlo event generator"
   homepage "https://whizard.hepforge.org"
-  url "https://whizard.hepforge.org/downloads/?f=whizard-3.1.1.tar.gz"
-  sha256 "dd48e4e39b8a4990be47775ec6171f89d8147cb2e9e293afc7051a7dbc5a23ef"
+  url "https://whizard.hepforge.org/downloads/?f=whizard-3.1.2.tar.gz"
+  sha256 "4f706f8ef02a580ae4dba867828691dfe0b3f9f9b8982b617af72eb8cd4c6fa3"
   license "GPL-2.0-or-later"
 
   livecheck do
