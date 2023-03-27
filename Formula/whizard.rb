@@ -12,8 +12,8 @@ class Whizard < Formula
 
   bottle do
     root_url "https://ghcr.io/v2/davidchall/hep"
-    sha256 cellar: :any, monterey: "a2652711d20e355fead49385a896e503371a1bbe62565e285242eb4658b85459"
-    sha256 cellar: :any, big_sur:  "d2f0705c63619340d69ec650643651c270f6613077ef3daa445d80386d1c85a7"
+    sha256 cellar: :any, monterey: "a6f50e12d6649c81f49876ee7952362a3d3b7c862e8f08d7c804367583c1b4d5"
+    sha256 cellar: :any, big_sur:  "ab3fed222d8f69319ae3e727260889dc6c61e5122d3919f2b003b08e69999750"
   end
 
   depends_on "gcc" # for gfortran
