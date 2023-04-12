@@ -1,10 +1,9 @@
 class Hepmc3 < Formula
   desc "C++ event record for Monte Carlo generators"
   homepage "https://hepmc.web.cern.ch/"
-  url "https://gitlab.cern.ch/hepmc/HepMC3/-/archive/3.2.6/HepMC3-3.2.6.tar.gz"
-  sha256 "648a3725a772e3dc26eaba0fe3c2f941a38d2b39679cea64413a2ae49ad946b0"
+  url "https://hepmc.web.cern.ch/hepmc/releases/HepMC3-3.2.6.tar.gz"
+  sha256 "248f3b5b36dd773844cbe73d51f60891458334b986b259754c59dbf4bbf1d525"
   license "LGPL-3.0-or-later"
-  revision 1
 
   livecheck do
     url "https://hepmc.web.cern.ch/hepmc/"
@@ -16,8 +15,8 @@ class Hepmc3 < Formula
   end
 
   option "with-test", "Test during installation"
-  option "with-root", "Enable root IO"
   option "with-protobuf", "Enable protobuf IO"
+  option "with-root", "Enable root IO"
 
   depends_on "cmake" => [:build, :test]
   depends_on "coreutils" # HepMC3-config uses greadlink
