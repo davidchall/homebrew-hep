@@ -1,10 +1,10 @@
 class Hepmc3 < Formula
   desc "C++ event record for Monte Carlo generators"
   homepage "https://hepmc.web.cern.ch/"
-  url "https://hepmc.web.cern.ch/hepmc/releases/HepMC3-3.2.5.tar.gz"
-  sha256 "cd0f75c80f75549c59cc2a829ece7601c77de97cb2a5ab75790cac8e1d585032"
-  license "GPL-3.0-or-later"
-  revision 2
+  url "https://gitlab.cern.ch/hepmc/HepMC3/-/archive/3.2.6/HepMC3-3.2.6.tar.gz"
+  sha256 "648a3725a772e3dc26eaba0fe3c2f941a38d2b39679cea64413a2ae49ad946b0"
+  license "LGPL-3.0-or-later"
+  revision 1
 
   livecheck do
     url "https://hepmc.web.cern.ch/hepmc/"
@@ -13,18 +13,17 @@ class Hepmc3 < Formula
 
   bottle do
     root_url "https://ghcr.io/v2/davidchall/hep"
-    sha256 cellar: :any, monterey: "d2273c38945cc73c136c961213f3b710caf1b10293be65fffbafeeb8ffc05f72"
-    sha256 cellar: :any, big_sur:  "2c530f4799b706b4d43409f3697bf25eb2c3efe80325cac5c87a4d692b75240b"
-    sha256 cellar: :any, catalina: "fd75e28c150f0c66648a2c038a848d144d72983e9d99e13f411a253c8c1ef108"
   end
 
   option "with-test", "Test during installation"
   option "with-root", "Enable root IO"
+  option "with-protobuf", "Enable protobuf IO"
 
   depends_on "cmake" => [:build, :test]
   depends_on "coreutils" # HepMC3-config uses greadlink
   depends_on "python@3.10"
   depends_on "root" => :optional
+  depends_on "protobuf" => :optional
 
   def python
     "python3.10"
@@ -42,6 +41,7 @@ class Hepmc3 < Formula
 
       args << "-DHEPMC3_ENABLE_TEST=ON" if build.with? "test"
       args << "-DHEPMC3_ENABLE_ROOTIO=OFF" if build.without? "root"
+      args << "-DHEPMC3_ENABLE_PROTOBUFIO=ON" if build.with? "protobuf"
 
       system "cmake", buildpath, *args
       system "make"
