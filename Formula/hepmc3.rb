@@ -21,8 +21,8 @@ class Hepmc3 < Formula
   depends_on "cmake" => [:build, :test]
   depends_on "coreutils" # HepMC3-config uses greadlink
   depends_on "python@3.10"
+  depends_on "protobuf" => :optional  
   depends_on "root" => :optional
-  depends_on "protobuf" => :optional
 
   def python
     "python3.10"
