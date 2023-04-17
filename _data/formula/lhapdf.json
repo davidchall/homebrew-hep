@@ -106,5 +106,6 @@
   "tap_git_head": "57aed13a34feccf3e9e92233d88a21da6732e4da",
   "ruby_source_checksum": {
     "sha256": "323d1d858685703503f2437d0c1ae1073238cada19fa0802170fb15a31fd3b9a"
-  }
+  },
+  "ruby_source_path": "Formula/lhapdf.rb"
 }

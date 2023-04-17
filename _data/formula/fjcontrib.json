@@ -100,5 +100,6 @@
   "tap_git_head": "57aed13a34feccf3e9e92233d88a21da6732e4da",
   "ruby_source_checksum": {
     "sha256": "0f48d0076e1db765791a179729aadb281bc686e7a5334fcbb24403482ca58a95"
-  }
+  },
+  "ruby_source_path": "Formula/fjcontrib.rb"
 }

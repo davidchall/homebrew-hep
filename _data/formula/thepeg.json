@@ -117,5 +117,6 @@
   "tap_git_head": "57aed13a34feccf3e9e92233d88a21da6732e4da",
   "ruby_source_checksum": {
     "sha256": "d3cc1958afa26b32d5221d7c596a1b86233d677c3bf5d7613b7b5f74b2f802b6"
-  }
+  },
+  "ruby_source_path": "Formula/thepeg.rb"
 }

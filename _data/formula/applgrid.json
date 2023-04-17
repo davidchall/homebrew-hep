@@ -115,5 +115,6 @@
   "tap_git_head": "57aed13a34feccf3e9e92233d88a21da6732e4da",
   "ruby_source_checksum": {
     "sha256": "e3ed70b812bc9b7cc568885b446bc2a0941cce0c1df71832912ec52999893684"
-  }
+  },
+  "ruby_source_path": "Formula/applgrid.rb"
 }

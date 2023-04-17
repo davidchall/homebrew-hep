@@ -110,5 +110,6 @@
   "tap_git_head": "57aed13a34feccf3e9e92233d88a21da6732e4da",
   "ruby_source_checksum": {
     "sha256": "fb9ea7543603a666fddc676e590f2014b7a7aadd8d524f12de7cff8b6842cc51"
-  }
+  },
+  "ruby_source_path": "Formula/hepmc3.rb"
 }
