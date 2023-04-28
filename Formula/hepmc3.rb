@@ -11,8 +11,6 @@ class Hepmc3 < Formula
   end
 
   option "with-test", "Test during installation"
-  option "with-protobuf", "Enable protobuf IO"
-  option "with-root", "Enable root IO"
 
   depends_on "cmake" => [:build, :test]
   depends_on "coreutils" # HepMC3-config uses greadlink
