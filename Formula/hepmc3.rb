@@ -10,10 +10,6 @@ class Hepmc3 < Formula
     regex(/href=.*?HepMC3[._-]v?(\d+(?:\.\d+)+)\.t/i)
   end
 
-  bottle do
-    root_url "https://ghcr.io/v2/davidchall/hep"
-  end
-
   option "with-test", "Test during installation"
   option "with-protobuf", "Enable protobuf IO"
   option "with-root", "Enable root IO"
