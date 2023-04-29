@@ -11,6 +11,12 @@ class Sherpa < Formula
     regex(/href=.*?SHERPA-MC[._-]v?(\d+(?:\.\d+)+)\.t/i)
   end
 
+  bottle do
+    root_url "https://ghcr.io/v2/davidchall/hep"
+    sha256 monterey: "060c750c2cb885e8c8998dc572dacbb8518c75f812984626d19b11110d4f1c0c"
+    sha256 big_sur:  "b47aa1f089999adb58193a5f3b09d5f9f7c1775fd5c7d081fc78e768cfd49df9"
+  end
+
   depends_on "autoconf" => :build
   depends_on "gcc" # for gfortran
   depends_on "sqlite"
