@@ -6,6 +6,7 @@ class Rivet < Formula
   url "https://rivet.hepforge.org/downloads/?f=Rivet-3.1.7.tar.gz"
   sha256 "d18993298b79cc9c0f086780ad5251df4647c565ba4a99b692458dcbd597378a"
   license "GPL-3.0-only"
+  revision 1
 
   livecheck do
     url "https://rivet.hepforge.org/downloads/"
