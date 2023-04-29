@@ -13,6 +13,12 @@ class Rivet < Formula
     regex(/href=.*?Rivet[._-]v?(\d+(?:\.\d+)+)\.t/i)
   end
 
+  bottle do
+    root_url "https://ghcr.io/v2/davidchall/hep"
+    sha256 monterey: "54124f92f663ac143dc672abce492fa7a4b95e771a26550f0c0abacac3fcf4d3"
+    sha256 big_sur:  "e852c85f6c9ed3bd47dd56371366e2cb1baf3ba4676a15c8ae87d00dc3bea160"
+  end
+
   head do
     url "http://rivet.hepforge.org/hg/rivet", using: :hg, branch: "tip"
 
