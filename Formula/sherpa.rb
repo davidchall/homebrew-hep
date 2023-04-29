@@ -4,6 +4,7 @@ class Sherpa < Formula
   url "https://sherpa.hepforge.org/downloads/?f=SHERPA-MC-2.2.15.tar.gz"
   sha256 "df3bcb6b593f6e6eee396294b13c90337f5c3c15c92651753a03e0ce7975864b"
   license "GPL-2.0-only"
+  revision 1
 
   livecheck do
     url "https://sherpa.hepforge.org/downloads"
