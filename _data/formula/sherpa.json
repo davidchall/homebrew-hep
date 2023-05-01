@@ -25,7 +25,7 @@
       "checksum": "df3bcb6b593f6e6eee396294b13c90337f5c3c15c92651753a03e0ce7975864b"
     }
   },
-  "revision": 0,
+  "revision": 1,
   "version_scheme": 0,
   "bottle": {
     "stable": {
@@ -34,13 +34,13 @@
       "files": {
         "monterey": {
           "cellar": "/usr/local/Cellar",
-          "url": "https://ghcr.io/v2/davidchall/hep/sherpa/blobs/sha256:5e8a8e831cb9adbf81177fdf91f020c7b5662f228dd516a2c87191cf24197a54",
-          "sha256": "5e8a8e831cb9adbf81177fdf91f020c7b5662f228dd516a2c87191cf24197a54"
+          "url": "https://ghcr.io/v2/davidchall/hep/sherpa/blobs/sha256:060c750c2cb885e8c8998dc572dacbb8518c75f812984626d19b11110d4f1c0c",
+          "sha256": "060c750c2cb885e8c8998dc572dacbb8518c75f812984626d19b11110d4f1c0c"
         },
         "big_sur": {
           "cellar": "/usr/local/Cellar",
-          "url": "https://ghcr.io/v2/davidchall/hep/sherpa/blobs/sha256:a120787adbf1ff882eba1f996e5f3cb8c30146f27d9230c658826d0e516359b5",
-          "sha256": "a120787adbf1ff882eba1f996e5f3cb8c30146f27d9230c658826d0e516359b5"
+          "url": "https://ghcr.io/v2/davidchall/hep/sherpa/blobs/sha256:b47aa1f089999adb58193a5f3b09d5f9f7c1775fd5c7d081fc78e768cfd49df9",
+          "sha256": "b47aa1f089999adb58193a5f3b09d5f9f7c1775fd5c7d081fc78e768cfd49df9"
         }
       }
     }
@@ -117,9 +117,9 @@
   "disable_date": null,
   "disable_reason": null,
   "service": null,
-  "tap_git_head": "57aed13a34feccf3e9e92233d88a21da6732e4da",
+  "tap_git_head": "182e64019238cada98cd59222915660c0dbf7578",
   "ruby_source_checksum": {
-    "sha256": "c3be250f859d4f10b3a3d2afd71a039a67cfccedbb695d1ebfffefbaa24143c5"
+    "sha256": "4f0adc239c039289773e5c90756962bf52818228c29c1da74a7da1a3aa2bf107"
   },
   "ruby_source_path": "Formula/sherpa.rb"
 }
