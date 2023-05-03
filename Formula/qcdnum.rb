@@ -25,38 +25,13 @@ class Qcdnum < Formula
   depends_on "gcc" # for gfortran
 
   def install
-    libraries = %w[
-      mbutil
-      qcdnum
-      zmstf
-      hqstf
-    ]
-
-    lib.mkpath
-    prefix.install "testjobs"
-
-    libraries.each do |libname|
-      cd libname do
-        system "gfortran -c -fPIC -Wall -O2 -Iinc */*.f"
-        system "ar -r #{lib}/lib#{libname}.a *.o"
-      end
-    end
+    system "./configure", "--prefix=#{prefix}"
+    system "make"
+    system "make", "install"
   end
 
   test do
-    args = %W[
-      -Wall
-      -O
-      -fbounds-check
-      #{prefix}/testjobs/example.f
-      -o
-      example.exe
-      #{lib}/libhqstf.a
-      #{lib}/libzmstf.a
-      #{lib}/libqcdnum.a
-      #{lib}/libmbutil.a
-    ]
-    system "gfortran", *args
-    system "./example.exe"
+    system bin/"qcdnum-config", "--libs"
   end
+  
 end
