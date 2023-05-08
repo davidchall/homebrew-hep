@@ -3,8 +3,8 @@ class Yoda < Formula
 
   desc "Yet more Objects for Data Analysis"
   homepage "https://yoda.hepforge.org"
-  url "https://yoda.hepforge.org/downloads/?f=YODA-1.9.7.tar.gz"
-  sha256 "abff3e56bc360e38b2dd32d49bd962d6e773e97da1d50140ac4703daa1d51c8b"
+  url "https://yoda.hepforge.org/downloads/?f=YODA-1.9.8.tar.gz"
+  sha256 "c7d5e8b35027d607ddc2ce132fe5032f764e3e39b81e81a9d79ecdee2278ebe5"
   license "GPL-3.0-only"
 
   livecheck do
