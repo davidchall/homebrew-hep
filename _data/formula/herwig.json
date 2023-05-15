@@ -3,6 +3,9 @@
   "full_name": "davidchall/hep/herwig",
   "tap": "davidchall/hep",
   "oldname": "herwig++",
+  "oldnames": [
+    "herwig++"
+  ],
   "aliases": [
 
   ],
@@ -112,8 +115,8 @@
   "disable_reason": null,
   "service": null,
   "tap_git_head": "182e64019238cada98cd59222915660c0dbf7578",
+  "ruby_source_path": "Formula/herwig.rb",
   "ruby_source_checksum": {
     "sha256": "1bc07cc59c79944a4d77495f97e5f384365629e0affa9158cfd0f95e32524d2c"
-  },
-  "ruby_source_path": "Formula/herwig.rb"
+  }
 }

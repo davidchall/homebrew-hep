@@ -3,6 +3,9 @@
   "full_name": "davidchall/hep/hepmc2",
   "tap": "davidchall/hep",
   "oldname": "hepmc",
+  "oldnames": [
+    "hepmc"
+  ],
   "aliases": [
 
   ],
@@ -103,8 +106,8 @@
   "disable_reason": null,
   "service": null,
   "tap_git_head": "182e64019238cada98cd59222915660c0dbf7578",
+  "ruby_source_path": "Formula/hepmc2.rb",
   "ruby_source_checksum": {
     "sha256": "3cfe85e6e7afdc3abf55110c0a16b02085f25dd9a388cc2500889fb91c6b9eed"
-  },
-  "ruby_source_path": "Formula/hepmc2.rb"
+  }
 }

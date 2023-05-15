@@ -3,6 +3,9 @@
   "full_name": "davidchall/hep/hepmc3",
   "tap": "davidchall/hep",
   "oldname": null,
+  "oldnames": [
+
+  ],
   "aliases": [
 
   ],
@@ -108,8 +111,8 @@
   "disable_reason": null,
   "service": null,
   "tap_git_head": "182e64019238cada98cd59222915660c0dbf7578",
+  "ruby_source_path": "Formula/hepmc3.rb",
   "ruby_source_checksum": {
     "sha256": "4b3829a55373b48769280dd2f7005acf4032ad312115654443c7867fd4876e5f"
-  },
-  "ruby_source_path": "Formula/hepmc3.rb"
+  }
 }

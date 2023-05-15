@@ -3,6 +3,9 @@
   "full_name": "davidchall/hep/hoppet",
   "tap": "davidchall/hep",
   "oldname": null,
+  "oldnames": [
+
+  ],
   "aliases": [
 
   ],
@@ -103,8 +106,8 @@
   "disable_reason": null,
   "service": null,
   "tap_git_head": "182e64019238cada98cd59222915660c0dbf7578",
+  "ruby_source_path": "Formula/hoppet.rb",
   "ruby_source_checksum": {
     "sha256": "08e47ba6adf803f03d71d66ecd0ccb0ff0bc7a4d3d8d21f09425808004d322e7"
-  },
-  "ruby_source_path": "Formula/hoppet.rb"
+  }
 }

@@ -3,6 +3,9 @@
   "full_name": "davidchall/hep/openloops",
   "tap": "davidchall/hep",
   "oldname": null,
+  "oldnames": [
+
+  ],
   "aliases": [
 
   ],
@@ -100,8 +103,8 @@
   "disable_reason": null,
   "service": null,
   "tap_git_head": "182e64019238cada98cd59222915660c0dbf7578",
+  "ruby_source_path": "Formula/openloops.rb",
   "ruby_source_checksum": {
     "sha256": "5554937c7bbf662bc29002678e65f62258b9a42cdbebddd46d616885bca32f19"
-  },
-  "ruby_source_path": "Formula/openloops.rb"
+  }
 }
