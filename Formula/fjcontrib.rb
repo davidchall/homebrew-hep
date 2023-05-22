@@ -1,8 +1,8 @@
 class Fjcontrib < Formula
   desc "Package of contributed add-ons to FastJet"
   homepage "https://fastjet.hepforge.org/contrib/"
-  url "https://fastjet.hepforge.org/contrib/downloads/fjcontrib-1.051.tar.gz"
-  sha256 "76a2ec612c768db3eb6bbaf686d02b05ddb64dde477d185e20df563b52308473"
+  url "https://fastjet.hepforge.org/contrib/downloads/fjcontrib-1.052.tar.gz"
+  sha256 "bde63c28cbdf992bedea4ddedfc3cd52c9fec241a767cc455dd4ad10e8210c39"
 
   livecheck do
     url "https://fastjet.hepforge.org/contrib/downloads"
