@@ -63,6 +63,9 @@
   "uses_from_macos": [
 
   ],
+  "uses_from_macos_bounds": [
+
+  ],
   "requirements": [
 
   ],
@@ -88,6 +91,7 @@
   "disabled": true,
   "disable_date": "2022-05-19",
   "disable_reason": "does not build with the latest Rivet",
+  "post_install_defined": false,
   "service": null,
   "tap_git_head": "182e64019238cada98cd59222915660c0dbf7578",
   "ruby_source_path": "Formula/mcgrid.rb",

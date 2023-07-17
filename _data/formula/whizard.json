@@ -90,6 +90,9 @@
   "uses_from_macos": [
 
   ],
+  "uses_from_macos_bounds": [
+
+  ],
   "requirements": [
 
   ],
@@ -115,6 +118,7 @@
   "disabled": false,
   "disable_date": null,
   "disable_reason": null,
+  "post_install_defined": false,
   "service": null,
   "tap_git_head": "182e64019238cada98cd59222915660c0dbf7578",
   "ruby_source_path": "Formula/whizard.rb",
