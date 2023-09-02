@@ -33,5 +33,4 @@ class Qcdnum < Formula
   test do
     system bin/"qcdnum-config", "--libs"
   end
-  
 end
