@@ -10,7 +10,6 @@ class Cernlib < Formula
     regex(/href=.*?cernlib[._-](\d{4}\.\d{2}\.\d{2}\.\d+)-free\.t/i)
   end
 
-
   option "with-test", "Test during installation"
 
   depends_on "cmake" => :build
