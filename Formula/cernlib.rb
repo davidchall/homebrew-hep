@@ -20,9 +20,11 @@ class Cernlib < Formula
   depends_on "openmotif"
 
   def install
+    gcc_major_ver = Formula["gcc"].any_installed_version.major
+    
     args = std_cmake_args + %W[
-      -DCMAKE_Fortran_COMPILER=gfortran-#{Formula["gcc"].installed_version.major}
-      -DCMAKE_C_COMPILER=gcc-#{Formula["gcc"].installed_version.major}
+      -DCMAKE_Fortran_COMPILER=gfortran-#{gcc_major_ver}
+      -DCMAKE_C_COMPILER=gcc-#{gcc_major_ver}
       -DMOTIF_INCLUDE_DIR=#{Formula["openmotif"].opt_include}
       -DMOTIF_LIBRARIES=#{Formula["openmotif"].opt_lib}/#{shared_library("libXm")}
       -DCMAKE_INSTALL_LIBDIR=lib/cernlib/2023/lib
