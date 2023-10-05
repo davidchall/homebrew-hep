@@ -21,7 +21,7 @@ class Cernlib < Formula
 
   def install
     gcc_major_ver = Formula["gcc"].any_installed_version.major
-    
+
     args = std_cmake_args + %W[
       -DCMAKE_Fortran_COMPILER=gfortran-#{gcc_major_ver}
       -DCMAKE_C_COMPILER=gcc-#{gcc_major_ver}
