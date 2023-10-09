@@ -1,8 +1,8 @@
 class Hepmc3 < Formula
   desc "C++ event record for Monte Carlo generators"
   homepage "https://hepmc.web.cern.ch/"
-  url "https://hepmc.web.cern.ch/hepmc/releases/HepMC3-3.2.6.tar.gz"
-  sha256 "248f3b5b36dd773844cbe73d51f60891458334b986b259754c59dbf4bbf1d525"
+  url "https://hepmc.web.cern.ch/hepmc/releases/HepMC3-3.2.7.tar.gz"
+  sha256 "587faa6556cc54ccd89ad35421461b4761d7809bc17a2e72f5034daea142232b"
   license "LGPL-3.0-or-later"
 
   livecheck do
@@ -13,8 +13,6 @@ class Hepmc3 < Formula
   bottle do
     root_url "https://ghcr.io/v2/davidchall/hep"
     rebuild 1
-    sha256 cellar: :any, monterey: "c23ed0a007c130b6b5e3866cd299b63ab9457a5cba0c1d04383865b3c576a28e"
-    sha256 cellar: :any, big_sur:  "2248251cac9e1d4783a964dbffbfe047e4ba572ba8de86bb7267b9235f707a6f"
   end
 
   option "with-test", "Test during installation"
