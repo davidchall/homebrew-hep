@@ -32,6 +32,7 @@ class Cernlib < Formula
     ]
 
     mkdir "build" do
+      system "xattr", "-rc", "../"
       system "cmake", "..", *args
       system "cmake", "--build", "."
       system "ctest" if build.with? "test"
