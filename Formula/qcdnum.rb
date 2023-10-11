@@ -5,7 +5,7 @@ class Qcdnum < Formula
   version "18.0.0"
   sha256 "e108f926b7840352e4080ba71914d3403ed8118364f87710e221fdec320ee200"
   license "GPL-3.0-or-later"
-  revision 1
+  revision 2
 
   livecheck do
     url "https://www.nikhef.nl/~h24/qcdnum-files/download/"
@@ -25,22 +25,11 @@ class Qcdnum < Formula
   depends_on "gcc" # for gfortran
 
   def install
-    libraries = %w[
-      mbutil
-      qcdnum
-      zmstf
-      hqstf
-    ]
+    system "./configure", "--prefix=#{prefix}"
+    system "make"
+    system "make", "install"
 
-    lib.mkpath
     prefix.install "testjobs"
-
-    libraries.each do |libname|
-      cd libname do
-        system "gfortran -c -fPIC -Wall -O2 -Iinc */*.f"
-        system "ar -r #{lib}/lib#{libname}.a *.o"
-      end
-    end
   end
 
   test do
@@ -56,6 +45,7 @@ class Qcdnum < Formula
       #{lib}/libqcdnum.a
       #{lib}/libmbutil.a
     ]
+    system bin/"qcdnum-config", "--libs"
     system "gfortran", *args
     system "./example.exe"
   end
