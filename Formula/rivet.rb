@@ -39,8 +39,8 @@ class Rivet < Formula
 
   # rivet needs a special installation of fjcontrib
   resource "fjcontrib" do
-    url "https://fastjet.hepforge.org/contrib/downloads/fjcontrib-1.048.tar.gz"
-    sha256 "f9989d3b6aeb22848bcf91095c30607f027d3ef277a4f0f704a8f0fc2e766981"
+    url "https://fastjet.hepforge.org/contrib/downloads/fjcontrib-1.049.tar.gz"
+    sha256 "ae2ed6206bc6278b65e99a4f78df0eeb2911f301a28fb57b50c573c0d5869987"
   end
 
   patch :DATA
@@ -73,21 +73,24 @@ class Rivet < Formula
     args << "--disable-analyses" if build.without? "analyses"
     args << "--enable-unvalidated" if build.with? "unvalidated"
 
-    ENV["PYTHON"] = Formula["python@3.10"].opt_bin/python
-
     system "autoreconf", "-i" if build.head?
+
+    # rivet attempts to install to HOMEBREW_PREFIX/lib/pythonX.Y/site-packages
+    prefix_site_packages = prefix/Language::Python.site_packages(python)
+    inreplace "configure", /(?<!#)RIVET_PYTHONPATH=.+/, "RIVET_PYTHONPATH=#{prefix_site_packages}"
+
     system "./configure", *args
     system "make"
-    system "make", "check" if build.with? "test"
     system "make", "install"
+    system "make", "check" if build.with? "test"
 
-    prefix.install "test"
+    prefix.install "test/testApi.hepmc"
     rewrite_shebang detected_python_shebang, *bin.children
   end
 
   test do
     system Formula["python@3.10"].opt_bin/python, "-c", "import rivet"
-    pipe_output bin/"rivet -q", File.read(prefix/"test/testApi.hepmc"), 0
+    pipe_output bin/"rivet -q", File.read(prefix/"testApi.hepmc"), 0
   end
 end
 
