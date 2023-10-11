@@ -9,6 +9,7 @@ jobs:
     runs-on: macos-latest
     permissions:
       contents: write
+      packages: write
       pull-requests: write
     steps:
       - name: Set up Homebrew
