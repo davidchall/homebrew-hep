@@ -33,20 +33,8 @@ class Qcdnum < Formula
   end
 
   test do
-    args = %W[
-      -Wall
-      -O
-      -fbounds-check
-      #{prefix}/testjobs/example.f
-      -o
-      example.exe
-      #{lib}/libhqstf.a
-      #{lib}/libzmstf.a
-      #{lib}/libqcdnum.a
-      #{lib}/libmbutil.a
-    ]
-    system bin/"qcdnum-config", "--libs"
-    system "gfortran", *args
-    system "./example.exe"
+    flags = shell_output(bin/"qcdnum-config --cppflags --ldflags").split
+    system "gfortran", prefix/"testjobs/example.f", "-o", "example", *flags
+    system "./example"
   end
 end
