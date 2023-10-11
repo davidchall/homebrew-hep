@@ -31,8 +31,13 @@ class Yoda < Formula
   option "with-test", "Test during installation"
 
   depends_on "python@3.10"
-  depends_on "numpy" => :optional
   depends_on "root" => :optional
+
+  if build.with? "test"
+    depends_on "numpy"
+  else
+    depends_on "numpy" => :optional
+  end
 
   patch :DATA
 
@@ -41,8 +46,6 @@ class Yoda < Formula
   end
 
   def install
-    ENV.prepend_path "PATH", Formula["python@3.10"].opt_libexec/"bin"
-
     args = %W[
       --disable-debug
       --disable-dependency-tracking
@@ -54,11 +57,15 @@ class Yoda < Formula
       ENV.append "PYTHONPATH", Formula["root"].opt_prefix/"lib/root" if build.with? "test"
     end
 
+    # yoda attempts to install to HOMEBREW_PREFIX/lib/pythonX.Y/site-packages
+    prefix_site_packages = prefix/Language::Python.site_packages(python)
+    inreplace "configure", /(?<!#)YODA_PYTHONPATH=.+/, "YODA_PYTHONPATH=#{prefix_site_packages}"
+
     system "autoreconf", "-i" if build.head?
     system "./configure", *args
     system "make"
-    system "make", "check" if build.with? "test"
     system "make", "install"
+    system "make", "check" if build.with? "test"
 
     rewrite_shebang detected_python_shebang, *bin.children
   end
