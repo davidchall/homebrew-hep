@@ -1,5 +1,7 @@
 #!/usr/bin/env brew ruby
 
+require "formula"
+
 tap = Tap.fetch("davidchall/hep")
 
 directories = ["_data/formula", "formula"]
