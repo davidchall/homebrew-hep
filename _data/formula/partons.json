@@ -16,39 +16,34 @@
   "license": "Apache-2.0 and GPL-3.0-only",
   "homepage": "https://drf-gitlab.cea.fr/partons/core/partons",
   "versions": {
-    "stable": "3.0",
+    "stable": "4.0",
     "head": null,
     "bottle": true
   },
   "urls": {
     "stable": {
-      "url": "https://drf-gitlab.cea.fr/partons/core/partons/-/archive/v3.0/partons-v3.0.tar.gz",
+      "url": "https://drf-gitlab.cea.fr/partons/core/partons/-/archive/v4.0/partons-v4.0.tar.gz",
       "tag": null,
       "revision": null,
-      "checksum": "03a5c6382e74d89f479a85fdcc3246403b6a5c3663a04710fb39321c2002da83"
+      "checksum": "ecd6f5c307e20cb096ce4bfc5d917f84d8f9201f5090c4dfb54472174d93811f"
     }
   },
-  "revision": 2,
+  "revision": 0,
   "version_scheme": 0,
   "bottle": {
     "stable": {
       "rebuild": 0,
       "root_url": "https://ghcr.io/v2/davidchall/hep",
       "files": {
+        "ventura": {
+          "cellar": ":any",
+          "url": "https://ghcr.io/v2/davidchall/hep/partons/blobs/sha256:771207f9e629dde053670a4b331d53fa766c450ee1cc71e5267bc25a502cdda4",
+          "sha256": "771207f9e629dde053670a4b331d53fa766c450ee1cc71e5267bc25a502cdda4"
+        },
         "monterey": {
           "cellar": ":any",
-          "url": "https://ghcr.io/v2/davidchall/hep/partons/blobs/sha256:a40f77bb02886fa7fd04fe14e1c58c58250c4191a08f5c10366180b2e4ec820b",
-          "sha256": "a40f77bb02886fa7fd04fe14e1c58c58250c4191a08f5c10366180b2e4ec820b"
-        },
-        "big_sur": {
-          "cellar": ":any",
-          "url": "https://ghcr.io/v2/davidchall/hep/partons/blobs/sha256:3f74552eba67822c3e176eb51b72d58f062e3f3a5fd1aa47c19e76bf8702f8bf",
-          "sha256": "3f74552eba67822c3e176eb51b72d58f062e3f3a5fd1aa47c19e76bf8702f8bf"
-        },
-        "catalina": {
-          "cellar": ":any",
-          "url": "https://ghcr.io/v2/davidchall/hep/partons/blobs/sha256:c0e7d2d9d46cf24297d1d93e685b38a8be3e1f10dd36dd94336e1145acb3f2af",
-          "sha256": "c0e7d2d9d46cf24297d1d93e685b38a8be3e1f10dd36dd94336e1145acb3f2af"
+          "url": "https://ghcr.io/v2/davidchall/hep/partons/blobs/sha256:cb4af652634838ebb5ee0c2bd58e7b04eae97d105586c6005b1a65682cac2255",
+          "sha256": "cb4af652634838ebb5ee0c2bd58e7b04eae97d105586c6005b1a65682cac2255"
         }
       }
     }
@@ -113,9 +108,9 @@
   "disable_reason": null,
   "post_install_defined": false,
   "service": null,
-  "tap_git_head": "182e64019238cada98cd59222915660c0dbf7578",
+  "tap_git_head": "0095c7ea3cacba904c6b1aa8fafe25d003851660",
   "ruby_source_path": "Formula/partons.rb",
   "ruby_source_checksum": {
-    "sha256": "cca8942bfcb2093dd084ff2b818f0459998caf6550f529c7dc3a12fe8cf93c0e"
+    "sha256": "c7da797edac15d6007b6d6cc5df8a69edc6c03542c109c131f026fdd984be392"
   }
 }

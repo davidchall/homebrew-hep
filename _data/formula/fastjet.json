@@ -16,39 +16,34 @@
   "license": "GPL-2.0-or-later",
   "homepage": "https://fastjet.fr",
   "versions": {
-    "stable": "3.4.0",
+    "stable": "3.4.2",
     "head": null,
     "bottle": true
   },
   "urls": {
     "stable": {
-      "url": "https://fastjet.fr/repo/fastjet-3.4.0.tar.gz",
+      "url": "https://fastjet.fr/repo/fastjet-3.4.2.tar.gz",
       "tag": null,
       "revision": null,
-      "checksum": "ee07c8747c8ead86d88de4a9e4e8d1e9e7d7614973f5631ba8297f7a02478b91"
+      "checksum": "b3d33155b55ce43f420cd6d99b525acf7bdc2593a7bb7ea898a9ddb3d8ca38e3"
     }
   },
-  "revision": 1,
+  "revision": 0,
   "version_scheme": 0,
   "bottle": {
     "stable": {
       "rebuild": 0,
       "root_url": "https://ghcr.io/v2/davidchall/hep",
       "files": {
+        "ventura": {
+          "cellar": ":any",
+          "url": "https://ghcr.io/v2/davidchall/hep/fastjet/blobs/sha256:851ab4be01b01d5e2d994c4bb49a3463038788f4d016f821e013a55bdbe0f46d",
+          "sha256": "851ab4be01b01d5e2d994c4bb49a3463038788f4d016f821e013a55bdbe0f46d"
+        },
         "monterey": {
           "cellar": ":any",
-          "url": "https://ghcr.io/v2/davidchall/hep/fastjet/blobs/sha256:6e6f1ba39501284c160b663366f8997a8f75dbb372bb56eac188dc59e3eac002",
-          "sha256": "6e6f1ba39501284c160b663366f8997a8f75dbb372bb56eac188dc59e3eac002"
-        },
-        "big_sur": {
-          "cellar": ":any",
-          "url": "https://ghcr.io/v2/davidchall/hep/fastjet/blobs/sha256:e5b33f49864f0da21b01221f68a6d10054aecbd23c21963b06e0925bf2e6533c",
-          "sha256": "e5b33f49864f0da21b01221f68a6d10054aecbd23c21963b06e0925bf2e6533c"
-        },
-        "catalina": {
-          "cellar": ":any",
-          "url": "https://ghcr.io/v2/davidchall/hep/fastjet/blobs/sha256:71a0340ffe9e82a94f3420001c4cefd66aa549967b48ca9bb8a138796af6980b",
-          "sha256": "71a0340ffe9e82a94f3420001c4cefd66aa549967b48ca9bb8a138796af6980b"
+          "url": "https://ghcr.io/v2/davidchall/hep/fastjet/blobs/sha256:42cf7f0bfc52e06b7d24829b2dc40b9986fcf1a3d97e69a49fe1b45c1e8c9c70",
+          "sha256": "42cf7f0bfc52e06b7d24829b2dc40b9986fcf1a3d97e69a49fe1b45c1e8c9c70"
         }
       }
     }
@@ -113,9 +108,9 @@
   "disable_reason": null,
   "post_install_defined": false,
   "service": null,
-  "tap_git_head": "182e64019238cada98cd59222915660c0dbf7578",
+  "tap_git_head": "0095c7ea3cacba904c6b1aa8fafe25d003851660",
   "ruby_source_path": "Formula/fastjet.rb",
   "ruby_source_checksum": {
-    "sha256": "437e65ba225d45c8a9383f730794cc5308d393a681fff559c99881b0e392623f"
+    "sha256": "def4f9a0b18b3a8096eb67da7814bd95a53bc4024f77c1265f2830ee3d9cb85c"
   }
 }

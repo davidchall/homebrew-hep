@@ -16,16 +16,16 @@
   "license": "GPL-3.0-only",
   "homepage": "https://yoda.hepforge.org",
   "versions": {
-    "stable": "1.9.7",
+    "stable": "1.9.8",
     "head": "HEAD",
     "bottle": true
   },
   "urls": {
     "stable": {
-      "url": "https://yoda.hepforge.org/downloads/?f=YODA-1.9.7.tar.gz",
+      "url": "https://yoda.hepforge.org/downloads/?f=YODA-1.9.8.tar.gz",
       "tag": null,
       "revision": null,
-      "checksum": "abff3e56bc360e38b2dd32d49bd962d6e773e97da1d50140ac4703daa1d51c8b"
+      "checksum": "c7d5e8b35027d607ddc2ce132fe5032f764e3e39b81e81a9d79ecdee2278ebe5"
     },
     "head": {
       "url": "http://yoda.hepforge.org/hg/yoda",
@@ -39,20 +39,15 @@
       "rebuild": 0,
       "root_url": "https://ghcr.io/v2/davidchall/hep",
       "files": {
+        "ventura": {
+          "cellar": "/usr/local/Cellar",
+          "url": "https://ghcr.io/v2/davidchall/hep/yoda/blobs/sha256:28eae916b1b35b895a37b652338855c05a911b47173e59809ea985abd6b3413f",
+          "sha256": "28eae916b1b35b895a37b652338855c05a911b47173e59809ea985abd6b3413f"
+        },
         "monterey": {
-          "cellar": ":any",
-          "url": "https://ghcr.io/v2/davidchall/hep/yoda/blobs/sha256:ed70e1312d864f0a671a9d7c2767a22771d9cc86b8342f307a71b030711a4a26",
-          "sha256": "ed70e1312d864f0a671a9d7c2767a22771d9cc86b8342f307a71b030711a4a26"
-        },
-        "big_sur": {
-          "cellar": ":any",
-          "url": "https://ghcr.io/v2/davidchall/hep/yoda/blobs/sha256:acba1f871ace2cb3e0dc2c9f8ff70b901c565b360b79ff9c53fc15e3fbb8205f",
-          "sha256": "acba1f871ace2cb3e0dc2c9f8ff70b901c565b360b79ff9c53fc15e3fbb8205f"
-        },
-        "catalina": {
-          "cellar": ":any",
-          "url": "https://ghcr.io/v2/davidchall/hep/yoda/blobs/sha256:c7fc2ec2794cab2e241fdfd585e979da723c7c6147da9ddf735cec860fc401c1",
-          "sha256": "c7fc2ec2794cab2e241fdfd585e979da723c7c6147da9ddf735cec860fc401c1"
+          "cellar": "/usr/local/Cellar",
+          "url": "https://ghcr.io/v2/davidchall/hep/yoda/blobs/sha256:15c9e0db934d529495aa23386aa352aee328880b25baa4374b02deacf8bb5b7e",
+          "sha256": "15c9e0db934d529495aa23386aa352aee328880b25baa4374b02deacf8bb5b7e"
         }
       }
     }
@@ -65,12 +60,12 @@
       "description": "Test during installation"
     },
     {
-      "option": "--with-numpy",
-      "description": "Build with numpy support"
-    },
-    {
       "option": "--with-root",
       "description": "Build with root support"
+    },
+    {
+      "option": "--with-numpy",
+      "description": "Build with numpy support"
     }
   ],
   "build_dependencies": [
@@ -86,8 +81,8 @@
 
   ],
   "optional_dependencies": [
-    "numpy",
-    "root"
+    "root",
+    "numpy"
   ],
   "uses_from_macos": [
 
@@ -122,10 +117,10 @@
   "disable_reason": null,
   "post_install_defined": false,
   "service": null,
-  "tap_git_head": "182e64019238cada98cd59222915660c0dbf7578",
+  "tap_git_head": "0095c7ea3cacba904c6b1aa8fafe25d003851660",
   "ruby_source_path": "Formula/yoda.rb",
   "ruby_source_checksum": {
-    "sha256": "6bb3b2ea49bc6566a11f460830966a567b24ddc46c81f4584d97177e358fc441"
+    "sha256": "4f10bf40fdd74ac6d9825cd345b21d5a4525d75253b48d53532eefda0d2822a1"
   },
   "head_dependencies": {
     "build_dependencies": [
@@ -144,8 +139,8 @@
 
     ],
     "optional_dependencies": [
-      "numpy",
-      "root"
+      "root",
+      "numpy"
     ],
     "uses_from_macos": [
 

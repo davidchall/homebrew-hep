@@ -32,27 +32,22 @@
       "branch": null
     }
   },
-  "revision": 1,
+  "revision": 2,
   "version_scheme": 0,
   "bottle": {
     "stable": {
       "rebuild": 0,
       "root_url": "https://ghcr.io/v2/davidchall/hep",
       "files": {
+        "ventura": {
+          "cellar": "/usr/local/Cellar",
+          "url": "https://ghcr.io/v2/davidchall/hep/herwig/blobs/sha256:9cbb35da540ff13697bc7abb14e44838618a74724e94bef69b706e7a96022137",
+          "sha256": "9cbb35da540ff13697bc7abb14e44838618a74724e94bef69b706e7a96022137"
+        },
         "monterey": {
           "cellar": "/usr/local/Cellar",
-          "url": "https://ghcr.io/v2/davidchall/hep/herwig/blobs/sha256:a9e34d09a603eab00b5ba4f7482c13b2d5d53d5b5d589d2ba1515b0eba6007c3",
-          "sha256": "a9e34d09a603eab00b5ba4f7482c13b2d5d53d5b5d589d2ba1515b0eba6007c3"
-        },
-        "big_sur": {
-          "cellar": "/usr/local/Cellar",
-          "url": "https://ghcr.io/v2/davidchall/hep/herwig/blobs/sha256:a6a8158cf8364924d862f784f22ec5482caf79695624f8385dea588695eaa36d",
-          "sha256": "a6a8158cf8364924d862f784f22ec5482caf79695624f8385dea588695eaa36d"
-        },
-        "catalina": {
-          "cellar": "/usr/local/Cellar",
-          "url": "https://ghcr.io/v2/davidchall/hep/herwig/blobs/sha256:1f606460720c72877d5dd85ad7ea64fdf375ef199e65d428edeb202000bb947d",
-          "sha256": "1f606460720c72877d5dd85ad7ea64fdf375ef199e65d428edeb202000bb947d"
+          "url": "https://ghcr.io/v2/davidchall/hep/herwig/blobs/sha256:caa9a4f1671723da6a2c49045036dce82eca6ff1335c9d76a93fc260eb975fb9",
+          "sha256": "caa9a4f1671723da6a2c49045036dce82eca6ff1335c9d76a93fc260eb975fb9"
         }
       }
     }
@@ -118,10 +113,10 @@
   "disable_reason": null,
   "post_install_defined": false,
   "service": null,
-  "tap_git_head": "182e64019238cada98cd59222915660c0dbf7578",
+  "tap_git_head": "0095c7ea3cacba904c6b1aa8fafe25d003851660",
   "ruby_source_path": "Formula/herwig.rb",
   "ruby_source_checksum": {
-    "sha256": "1bc07cc59c79944a4d77495f97e5f384365629e0affa9158cfd0f95e32524d2c"
+    "sha256": "84f8b1977e4d8e3b8d6f0a15ab80b3c14493849d086774c9acd46159c966784a"
   },
   "head_dependencies": {
     "build_dependencies": [

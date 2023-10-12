@@ -16,38 +16,38 @@
   "license": "GPL-3.0-only",
   "homepage": "https://rivet.hepforge.org",
   "versions": {
-    "stable": "3.1.7",
+    "stable": "3.1.8",
     "head": "HEAD",
     "bottle": true
   },
   "urls": {
     "stable": {
-      "url": "https://rivet.hepforge.org/downloads/?f=Rivet-3.1.7.tar.gz",
+      "url": "https://rivet.hepforge.org/downloads/?f=Rivet-3.1.8.tar.gz",
       "tag": null,
       "revision": null,
-      "checksum": "d18993298b79cc9c0f086780ad5251df4647c565ba4a99b692458dcbd597378a"
+      "checksum": "4795a8f522f4780e97bcc97511c4b0ace9dca9dd51a6004a713287a0dce45953"
     },
     "head": {
       "url": "http://rivet.hepforge.org/hg/rivet",
       "branch": "tip"
     }
   },
-  "revision": 1,
+  "revision": 0,
   "version_scheme": 0,
   "bottle": {
     "stable": {
       "rebuild": 0,
       "root_url": "https://ghcr.io/v2/davidchall/hep",
       "files": {
+        "ventura": {
+          "cellar": "/usr/local/Cellar",
+          "url": "https://ghcr.io/v2/davidchall/hep/rivet/blobs/sha256:3821b47fd974e7053e90b09c398ba76d51a8c232f5e370c739001666fc0bc5b7",
+          "sha256": "3821b47fd974e7053e90b09c398ba76d51a8c232f5e370c739001666fc0bc5b7"
+        },
         "monterey": {
           "cellar": "/usr/local/Cellar",
-          "url": "https://ghcr.io/v2/davidchall/hep/rivet/blobs/sha256:54124f92f663ac143dc672abce492fa7a4b95e771a26550f0c0abacac3fcf4d3",
-          "sha256": "54124f92f663ac143dc672abce492fa7a4b95e771a26550f0c0abacac3fcf4d3"
-        },
-        "big_sur": {
-          "cellar": "/usr/local/Cellar",
-          "url": "https://ghcr.io/v2/davidchall/hep/rivet/blobs/sha256:e852c85f6c9ed3bd47dd56371366e2cb1baf3ba4676a15c8ae87d00dc3bea160",
-          "sha256": "e852c85f6c9ed3bd47dd56371366e2cb1baf3ba4676a15c8ae87d00dc3bea160"
+          "url": "https://ghcr.io/v2/davidchall/hep/rivet/blobs/sha256:8cb2ca786a407078d30507127f4e4fe63aeb43bf2b01e4e2852468b19f533419",
+          "sha256": "8cb2ca786a407078d30507127f4e4fe63aeb43bf2b01e4e2852468b19f533419"
         }
       }
     }
@@ -120,10 +120,10 @@
   "disable_reason": null,
   "post_install_defined": false,
   "service": null,
-  "tap_git_head": "182e64019238cada98cd59222915660c0dbf7578",
+  "tap_git_head": "0095c7ea3cacba904c6b1aa8fafe25d003851660",
   "ruby_source_path": "Formula/rivet.rb",
   "ruby_source_checksum": {
-    "sha256": "1997af99dd267bb23977390bfab01e5c6a4d6baffe0fb2f789497cb9fb7553ed"
+    "sha256": "9acbdabae6ce4d91d650878120645903804126d5f4ff3dd5def3ccabc2051cff"
   },
   "head_dependencies": {
     "build_dependencies": [
