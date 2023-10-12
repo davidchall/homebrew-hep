@@ -6,7 +6,7 @@ class Herwig < Formula
   url "https://herwig.hepforge.org/downloads/Herwig-7.2.3.tar.bz2"
   sha256 "5599899379b01b09e331a2426d78d39b7f6ec126db2543e9d340aefe6aa50f84"
   license "GPL-3.0-only"
-  revision 1
+  revision 2
 
   livecheck do
     url "https://herwig.hepforge.org/downloads"
@@ -79,7 +79,7 @@ index 8e7e3eb..3be587e 100644
 +++ b/src/defaults/decayers.in.in
 @@ -24505,4 +24505,4 @@ newdef RadiativeHyperon:Ntry 500
  newdef RadiativeHyperon:Points 10000
- newdef RadiativeHyperon:GenerateIntermediates 0
+ newdef RadiativeHyperon:GenerateIntermediates 0 
 
 -read EvtGenDecayer.in
 +@LOAD_EVTGEN_DECAYER@
