@@ -11,13 +11,6 @@ class Thepeg < Formula
     regex(/href=.*?ThePEG[._-]v?(\d+(?:\.\d+)+)\.t/i)
   end
 
-  bottle do
-    root_url "https://ghcr.io/v2/davidchall/hep"
-    sha256 monterey: "4424afa6403ce5a6b0fd375aaddf41125dbfb900450517625fb9a8493e7b860d"
-    sha256 big_sur:  "3f53920a7d66478c3c5e324848730722b0c93d1439fac79df0343ba565c3daf3"
-    sha256 catalina: "f3c778fd9e7502ddc3d622959b2d9c9008a281ac829123ac86ce11710db4e54c"
-  end
-
   head do
     url "http://thepeg.hepforge.org/hg/ThePEG", using: :hg
 
