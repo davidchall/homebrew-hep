@@ -12,9 +12,8 @@ class Partons < Formula
 
   bottle do
     root_url "https://ghcr.io/v2/davidchall/hep"
-    sha256 cellar: :any, monterey: "a40f77bb02886fa7fd04fe14e1c58c58250c4191a08f5c10366180b2e4ec820b"
-    sha256 cellar: :any, big_sur:  "3f74552eba67822c3e176eb51b72d58f062e3f3a5fd1aa47c19e76bf8702f8bf"
-    sha256 cellar: :any, catalina: "c0e7d2d9d46cf24297d1d93e685b38a8be3e1f10dd36dd94336e1145acb3f2af"
+    sha256 cellar: :any, ventura:  "771207f9e629dde053670a4b331d53fa766c450ee1cc71e5267bc25a502cdda4"
+    sha256 cellar: :any, monterey: "cb4af652634838ebb5ee0c2bd58e7b04eae97d105586c6005b1a65682cac2255"
   end
 
   depends_on "cmake" => [:build, :test]
