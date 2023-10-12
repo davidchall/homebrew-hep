@@ -24,6 +24,7 @@ class Sherpa < Formula
   depends_on "hepmc3"  => :recommended
   depends_on "lhapdf"  => :recommended
   depends_on "rivet"   => :recommended
+  depends_on "hepmc2"  => :optional
   depends_on "root"    => :optional
 
   def install
@@ -36,6 +37,7 @@ class Sherpa < Formula
     ]
 
     args << "--enable-fastjet=#{Formula["fastjet"].opt_prefix}" if build.with? "fastjet"
+    args << "--enable-hepmc2=#{Formula["hepmc2"].opt_prefix}"   if build.with? "hepmc2"
     args << "--enable-hepmc3=#{Formula["hepmc3"].opt_prefix}"   if build.with? "hepmc3"
     args << "--enable-lhapdf=#{Formula["lhapdf"].opt_prefix}"   if build.with? "lhapdf"
     args << "--enable-rivet=#{Formula["rivet"].opt_prefix}"     if build.with? "rivet"
@@ -72,6 +74,14 @@ class Sherpa < Formula
       }(mi)
     EOS
 
-    system bin/"Sherpa", "-p", testpath, "-L", testpath, "-e", "100"
+    system bin/"Sherpa", "-e", "100"
+    if build.with? "hepmc2"
+      system bin/"Sherpa", "-e", "100", "EVENT_OUTPUT=HepMC_GenEvent[events]"
+      assert_predicate testpath/"events.hepmc2g", :exist?
+    end
+    if build.with? "hepmc3"
+      system bin/"Sherpa", "-e", "100", "EVENT_OUTPUT=HepMC3_GenEvent[events]"
+      assert_predicate testpath/"events", :exist?
+    end
   end
 end
