@@ -4,7 +4,7 @@ description: Homebrew's package index
 repo: homebrew-hep
 remote: https://github.com/davidchall/homebrew-hep
 
-remote_theme: Homebrew/brew.sh
+remote_theme: Homebrew/brew.sh@ea364121ad92b0a1a5d89e033f9bb5773c7777ea
 
 plugins:
   - jekyll-feed
