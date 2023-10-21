@@ -16,8 +16,8 @@ class Pythia < Formula
 
   bottle do
     root_url "https://ghcr.io/v2/davidchall/hep"
-    sha256 monterey: "b0312c112a46542939f9f592104b7aa4a10150f1ff8f5866cd0cd73d9a81f834"
-    sha256 big_sur:  "ec14f8e1ef57696755433abc66b7b4ad60c9fccf102efbcfd46b3962f5470f7b"
+    sha256 ventura:  "338c97cf415d5b1036bdf3ba33a83bd42a603700daf21daaccd2cd2da2f303b0"
+    sha256 monterey: "0e821928f0911e5d9ad149a054802eeedf2088923c1f75ef55c7c1a2abe2af6d"
   end
 
   depends_on "boost"
