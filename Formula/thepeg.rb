@@ -12,9 +12,8 @@ class Thepeg < Formula
 
   bottle do
     root_url "https://ghcr.io/v2/davidchall/hep"
-    rebuild 1
-    sha256 ventura:  "056a0f6551906d014981178c9e8cc6df7c5ff829422f332b5f25adaf560d53d5"
-    sha256 monterey: "ca4ac8290e6e214273ccc21f92d65cbf6b8ee59786348771c8403fe3a8d87e4c"
+    sha256 ventura:  "d1b95d2a0911425ff1372c3d54074b329420c00ba1bc7e75a03cf3cf97756e20"
+    sha256 monterey: "3966dc8e3377fa1e2f87ae967e3522b5e6c0623d4f6e40ebe0bf4f49ff74e880"
   end
 
   head do
