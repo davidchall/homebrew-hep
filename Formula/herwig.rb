@@ -3,10 +3,9 @@ require_relative "../lib/download_pdfs"
 class Herwig < Formula
   desc "Monte Carlo event generator"
   homepage "https://herwig.hepforge.org"
-  url "https://herwig.hepforge.org/downloads/Herwig-7.2.3.tar.bz2"
-  sha256 "5599899379b01b09e331a2426d78d39b7f6ec126db2543e9d340aefe6aa50f84"
+  url "https://herwig.hepforge.org/downloads/Herwig-7.3.0.tar.bz2"
+  sha256 "7239640a5b6a14749b1aad7a3534649a00ddea3444fcadac31d3db4eca556105"
   license "GPL-3.0-only"
-  revision 2
 
   livecheck do
     url "https://herwig.hepforge.org/downloads"
