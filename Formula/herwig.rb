@@ -36,8 +36,6 @@ class Herwig < Formula
   depends_on "hepmc3"
   depends_on "thepeg"
 
-  patch :DATA
-
   def install
     args = %W[
       --disable-debug
@@ -69,15 +67,3 @@ class Herwig < Formula
     system bin/"Herwig", "run", "LHC.run", "-N", "50"
   end
 end
-
-__END__
-diff --git a/src/defaults/decayers.in.in b/src/defaults/decayers.in.in
-index 8e7e3eb..3be587e 100644
---- a/src/defaults/decayers.in.in
-+++ b/src/defaults/decayers.in.in
-@@ -24505,4 +24505,4 @@ newdef RadiativeHyperon:Ntry 500
- newdef RadiativeHyperon:Points 10000
- newdef RadiativeHyperon:GenerateIntermediates 0 
-
--read EvtGenDecayer.in
-+@LOAD_EVTGEN_DECAYER@
