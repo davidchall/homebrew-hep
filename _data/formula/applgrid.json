@@ -16,39 +16,34 @@
   "license": "GPL-3.0-only",
   "homepage": "https://applgrid.hepforge.org",
   "versions": {
-    "stable": "1.6.32",
+    "stable": "1.6.35",
     "head": null,
     "bottle": true
   },
   "urls": {
     "stable": {
-      "url": "https://applgrid.hepforge.org/downloads?f=applgrid-1.6.32.tgz",
+      "url": "https://applgrid.hepforge.org/downloads?f=applgrid-1.6.35.tgz",
       "tag": null,
       "revision": null,
-      "checksum": "bca2dfbca5652688a45c5604e8ca0e7dac935ddd11198842f272ebbe3c43c505"
+      "checksum": "5a9706ba9875aa958cc4f57abe467baa1ac4b5f01d07133dca3a0cb738cabf36"
     }
   },
-  "revision": 1,
+  "revision": 0,
   "version_scheme": 0,
   "bottle": {
     "stable": {
       "rebuild": 0,
       "root_url": "https://ghcr.io/v2/davidchall/hep",
       "files": {
+        "ventura": {
+          "cellar": ":any",
+          "url": "https://ghcr.io/v2/davidchall/hep/applgrid/blobs/sha256:4de2471b234046a62e80738fbbb1384e55d7f36b28ffb849395ab1d024bfce0b",
+          "sha256": "4de2471b234046a62e80738fbbb1384e55d7f36b28ffb849395ab1d024bfce0b"
+        },
         "monterey": {
           "cellar": ":any",
-          "url": "https://ghcr.io/v2/davidchall/hep/applgrid/blobs/sha256:06262f4f18ce2c07a6c88b6f1160e28d9a846f89f753325466ac4864b0f38989",
-          "sha256": "06262f4f18ce2c07a6c88b6f1160e28d9a846f89f753325466ac4864b0f38989"
-        },
-        "big_sur": {
-          "cellar": ":any",
-          "url": "https://ghcr.io/v2/davidchall/hep/applgrid/blobs/sha256:2115b5c60f82f50ba40bf1f610b5cb3a93ed7746f3ac498538bf38b099141227",
-          "sha256": "2115b5c60f82f50ba40bf1f610b5cb3a93ed7746f3ac498538bf38b099141227"
-        },
-        "catalina": {
-          "cellar": ":any",
-          "url": "https://ghcr.io/v2/davidchall/hep/applgrid/blobs/sha256:1ee5e7acea696de64b178b8b001c13033886956f50c9dcc1befa7de774c864b4",
-          "sha256": "1ee5e7acea696de64b178b8b001c13033886956f50c9dcc1befa7de774c864b4"
+          "url": "https://ghcr.io/v2/davidchall/hep/applgrid/blobs/sha256:9c04c9bbb5e4b6a3415803ade5ed87eaaa36c8a7df25a154f303a2f49cdbb17d",
+          "sha256": "9c04c9bbb5e4b6a3415803ade5ed87eaaa36c8a7df25a154f303a2f49cdbb17d"
         }
       }
     }
@@ -119,9 +114,9 @@
   "disable_reason": null,
   "post_install_defined": false,
   "service": null,
-  "tap_git_head": "999e2f8cf48db848e05f2e80a8caf0e2a5ea4049",
+  "tap_git_head": "fb92c3063994145f52804481abb7e97c5f3f1199",
   "ruby_source_path": "Formula/applgrid.rb",
   "ruby_source_checksum": {
-    "sha256": "e3ed70b812bc9b7cc568885b446bc2a0941cce0c1df71832912ec52999893684"
+    "sha256": "827cae3eb3b6476d828171246abe99ac385587e7339f21f68b9358979a71aa22"
   }
 }
