@@ -1,5 +1,5 @@
 class Apfel < Formula
-  desc "A PDF Evolution Library"
+  desc "PDF Evolution Library"
   homepage "https://github.com/scarrazza/apfel"
   url "https://github.com/scarrazza/apfel/archive/refs/tags/3.0.6.tar.gz"
   sha256 "7063c9eee457e030b97926ac166cdaedd84625b31397e1dfd01ae47371fb9f61"
@@ -15,7 +15,7 @@ class Apfel < Formula
       --prefix=#{prefix}
       --enable-pywrap
       --enable-lhapdf
-    ]  
+    ]
     system "./configure", *args
     system "make"
     system "make", "install"
