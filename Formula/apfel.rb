@@ -36,12 +36,33 @@ class Apfel < Formula
 end
 
 __END__
+diff --git a/Makefile.am b/Makefile.am
+index 6e792d8..06c0f43 100644
+--- a/Makefile.am
++++ b/Makefile.am
+@@ -1,6 +1,9 @@
+ ACLOCAL_AMFLAGS = -I m4
+ 
+-SUBDIRS = include ccwrap src lib examples pywrap doc bin
++SUBDIRS = include ccwrap src lib examples  doc bin
++if ENABLE_PYWRAP
++SUBDIRS += pywrap
++endif
+ dist_doc_DATA = README
+ dist_pkgdata_DATA = src/HELL/data/*
+ 
 diff --git a/configure.ac b/configure.ac
-@@ -85,7 +85,6 @@
+index 4b1845d..fdc7524 100644
+--- a/configure.ac
++++ b/configure.ac
+@@ -85,7 +85,8 @@ AM_CONDITIONAL(ENABLE_LHAPDF, [test x$enable_lhapdf == xyes])
  AC_ARG_ENABLE(pywrap, [AS_HELP_STRING([--disable-pywrap],[don't build Python module (default=build)])],
    [], [enable_pywrap=yes])   
  
 -enable_pywrap=yes
++AM_CONDITIONAL(ENABLE_PYWRAP, [test x$enable_pywrap == xyes])
++
  AZ_PYTHON_DEFAULT
  ## Basic Python checks
  if test x$enable_pywrap == xyes; then
+
