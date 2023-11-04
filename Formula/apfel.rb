@@ -52,17 +52,14 @@ index 6e792d8..06c0f43 100644
  dist_pkgdata_DATA = src/HELL/data/*
  
 diff --git a/configure.ac b/configure.ac
-index 4b1845d..fdc7524 100644
+index 4b1845d..22d6dcf 100644
 --- a/configure.ac
 +++ b/configure.ac
-@@ -85,7 +85,8 @@ AM_CONDITIONAL(ENABLE_LHAPDF, [test x$enable_lhapdf == xyes])
+@@ -85,7 +85,6 @@ AM_CONDITIONAL(ENABLE_LHAPDF, [test x$enable_lhapdf == xyes])
  AC_ARG_ENABLE(pywrap, [AS_HELP_STRING([--disable-pywrap],[don't build Python module (default=build)])],
    [], [enable_pywrap=yes])   
  
 -enable_pywrap=yes
-+AM_CONDITIONAL(ENABLE_PYWRAP, [test x$enable_pywrap == xyes])
-+
  AZ_PYTHON_DEFAULT
  ## Basic Python checks
  if test x$enable_pywrap == xyes; then
-
