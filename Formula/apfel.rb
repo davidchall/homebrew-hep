@@ -6,14 +6,13 @@ class Apfel < Formula
 
   depends_on "gcc" # for gfortran
   depends_on "lhapdf"
-  depends_on "python@3.11"
 
   def install
     args = %W[
       --disable-debug
       --disable-dependency-tracking
       --prefix=#{prefix}
-      --enable-pywrap
+      --disable-pywrap
       --enable-lhapdf
     ]
     system "./configure", *args
