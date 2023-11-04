@@ -10,6 +10,8 @@ class Apfel < Formula
   depends_on "gcc" # for gfortran
   depends_on "lhapdf"
 
+  patch :DATA
+
   def install
     args = %W[
       --disable-debug
