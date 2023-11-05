@@ -25,12 +25,12 @@ class Apfel < Formula
     system "make"
     system "make", "install"
 
-    prefix.install "examples/LuminosityCxx.cc"
+    prefix.install "examples"
   end
 
   test do
     flags = shell_output(bin/"apfel-config --cxxflags --ldflags").split
-    system ENV.cxx, "-std=c++11", prefix/"LuminosityCxx.cc", "-o", "LuminosityCxx", *flags
+    system ENV.cxx, "-std=c++11", prefix/"examples/LuminosityCxx.cc", "-o", "LuminosityCxx", *flags
     system "./LuminosityCxx"
   end
 end
