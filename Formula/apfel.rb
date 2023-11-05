@@ -3,6 +3,7 @@ class Apfel < Formula
   homepage "https://github.com/scarrazza/apfel"
   url "https://github.com/scarrazza/apfel/archive/refs/tags/3.0.6.tar.gz"
   sha256 "7063c9eee457e030b97926ac166cdaedd84625b31397e1dfd01ae47371fb9f61"
+  license "GPL-3.0-only"
 
   depends_on "autoconf" => :build
   depends_on "automake" => :build
