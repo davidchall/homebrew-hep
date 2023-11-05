@@ -5,6 +5,12 @@ class Apfel < Formula
   sha256 "7063c9eee457e030b97926ac166cdaedd84625b31397e1dfd01ae47371fb9f61"
   license "GPL-3.0-only"
 
+  bottle do
+    root_url "https://ghcr.io/v2/davidchall/hep"
+    sha256 ventura:  "9c8b136bf1403649bf27f6ac85cd8fdc92a2b8768bfa0eb18e70ea7f5c00f157"
+    sha256 monterey: "783a9a7b763ec253e168d8ffe7ed75f1985f882a8b3789dd89684a3b4b68b6f1"
+  end
+
   depends_on "autoconf" => :build
   depends_on "automake" => :build
   depends_on "libtool" => :build
