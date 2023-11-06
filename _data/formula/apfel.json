@@ -1,6 +1,6 @@
 {
-  "name": "partons",
-  "full_name": "davidchall/hep/partons",
+  "name": "apfel",
+  "full_name": "davidchall/hep/apfel",
   "tap": "davidchall/hep",
   "oldname": null,
   "oldnames": [
@@ -12,21 +12,21 @@
   "versioned_formulae": [
 
   ],
-  "desc": "PARtonic Tomography Of Nucleon Software",
-  "license": "Apache-2.0 and GPL-3.0-only",
-  "homepage": "https://drf-gitlab.cea.fr/partons/core/partons",
+  "desc": "PDF Evolution Library",
+  "license": "GPL-3.0-only",
+  "homepage": "https://github.com/scarrazza/apfel",
   "versions": {
-    "stable": "4.0",
+    "stable": "3.0.6",
     "head": null,
     "bottle": true
   },
   "urls": {
     "stable": {
-      "url": "https://drf-gitlab.cea.fr/partons/core/partons/-/archive/v4.0/partons-v4.0.tar.gz",
+      "url": "https://github.com/scarrazza/apfel/archive/refs/tags/3.0.6.tar.gz",
       "tag": null,
       "revision": null,
       "using": null,
-      "checksum": "ecd6f5c307e20cb096ce4bfc5d917f84d8f9201f5090c4dfb54472174d93811f"
+      "checksum": "7063c9eee457e030b97926ac166cdaedd84625b31397e1dfd01ae47371fb9f61"
     }
   },
   "revision": 0,
@@ -37,14 +37,14 @@
       "root_url": "https://ghcr.io/v2/davidchall/hep",
       "files": {
         "ventura": {
-          "cellar": ":any",
-          "url": "https://ghcr.io/v2/davidchall/hep/partons/blobs/sha256:771207f9e629dde053670a4b331d53fa766c450ee1cc71e5267bc25a502cdda4",
-          "sha256": "771207f9e629dde053670a4b331d53fa766c450ee1cc71e5267bc25a502cdda4"
+          "cellar": "/usr/local/Cellar",
+          "url": "https://ghcr.io/v2/davidchall/hep/apfel/blobs/sha256:9c8b136bf1403649bf27f6ac85cd8fdc92a2b8768bfa0eb18e70ea7f5c00f157",
+          "sha256": "9c8b136bf1403649bf27f6ac85cd8fdc92a2b8768bfa0eb18e70ea7f5c00f157"
         },
         "monterey": {
-          "cellar": ":any",
-          "url": "https://ghcr.io/v2/davidchall/hep/partons/blobs/sha256:cb4af652634838ebb5ee0c2bd58e7b04eae97d105586c6005b1a65682cac2255",
-          "sha256": "cb4af652634838ebb5ee0c2bd58e7b04eae97d105586c6005b1a65682cac2255"
+          "cellar": "/usr/local/Cellar",
+          "url": "https://ghcr.io/v2/davidchall/hep/apfel/blobs/sha256:783a9a7b763ec253e168d8ffe7ed75f1985f882a8b3789dd89684a3b4b68b6f1",
+          "sha256": "783a9a7b763ec253e168d8ffe7ed75f1985f882a8b3789dd89684a3b4b68b6f1"
         }
       }
     }
@@ -55,20 +55,16 @@
 
   ],
   "build_dependencies": [
-    "cmake"
+    "autoconf",
+    "automake",
+    "libtool"
   ],
   "dependencies": [
-    "apfel++",
-    "cln",
-    "eigen",
     "gcc",
-    "gsl",
-    "lhapdf",
-    "qt@5",
-    "sfml"
+    "lhapdf"
   ],
   "test_dependencies": [
-    "cmake"
+
   ],
   "recommended_dependencies": [
 
@@ -110,8 +106,8 @@
   "post_install_defined": false,
   "service": null,
   "tap_git_head": "56a166b86c9f83934c75175d8d4a7f0a03bf320f",
-  "ruby_source_path": "Formula/partons.rb",
+  "ruby_source_path": "Formula/apfel.rb",
   "ruby_source_checksum": {
-    "sha256": "c7da797edac15d6007b6d6cc5df8a69edc6c03542c109c131f026fdd984be392"
+    "sha256": "c128ec6fac18c0adc1371c551f57a662e29d7692e7c77dc1d7e5eccc424ede01"
   }
 }

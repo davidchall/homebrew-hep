@@ -25,11 +25,13 @@
       "url": "https://thepeg.hepforge.org/downloads/ThePEG-2.3.0.tar.bz2",
       "tag": null,
       "revision": null,
+      "using": null,
       "checksum": "deec8f22e89bb1a3f31b3b84e8feddf59a69845c9d33fba718f5599ce4a6ae9d"
     },
     "head": {
       "url": "http://thepeg.hepforge.org/hg/ThePEG",
-      "branch": null
+      "branch": null,
+      "using": "hg"
     }
   },
   "revision": 0,
@@ -116,7 +118,7 @@
   "disable_reason": null,
   "post_install_defined": false,
   "service": null,
-  "tap_git_head": "fb92c3063994145f52804481abb7e97c5f3f1199",
+  "tap_git_head": "56a166b86c9f83934c75175d8d4a7f0a03bf320f",
   "ruby_source_path": "Formula/thepeg.rb",
   "ruby_source_checksum": {
     "sha256": "230edf82a18fd251c074e89d0d88e40ced7e6d430bc89115c75729f6fa8b48cb"

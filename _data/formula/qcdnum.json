@@ -25,6 +25,7 @@
       "url": "https://www.nikhef.nl/~h24/qcdnum-files/download/qcdnum180000.tar.gz",
       "tag": null,
       "revision": null,
+      "using": null,
       "checksum": "e108f926b7840352e4080ba71914d3403ed8118364f87710e221fdec320ee200"
     }
   },
@@ -101,7 +102,7 @@
   "disable_reason": null,
   "post_install_defined": false,
   "service": null,
-  "tap_git_head": "fb92c3063994145f52804481abb7e97c5f3f1199",
+  "tap_git_head": "56a166b86c9f83934c75175d8d4a7f0a03bf320f",
   "ruby_source_path": "Formula/qcdnum.rb",
   "ruby_source_checksum": {
     "sha256": "28877a9a1480d04198d402fe214514ccacf447d77805751c1471ea5d428d8fb2"

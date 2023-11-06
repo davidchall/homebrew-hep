@@ -25,6 +25,7 @@
       "url": "https://netlib.sandia.gov/f2c/libf2c.zip",
       "tag": null,
       "revision": null,
+      "using": null,
       "checksum": "ca404070e9ce0a9aaa6a71fc7d5489d014ade952c5d6de7efb88de8e24f2e8e0"
     }
   },
@@ -106,7 +107,7 @@
   "disable_reason": null,
   "post_install_defined": false,
   "service": null,
-  "tap_git_head": "fb92c3063994145f52804481abb7e97c5f3f1199",
+  "tap_git_head": "56a166b86c9f83934c75175d8d4a7f0a03bf320f",
   "ruby_source_path": "Formula/f2c.rb",
   "ruby_source_checksum": {
     "sha256": "5f371db890b4a77e9048dd69b0fd9491e210d16a8cf93c81d4059e35d64ac9a9"

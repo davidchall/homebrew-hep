@@ -25,6 +25,7 @@
       "url": "https://mcfm.fnal.gov/downloads/MCFM-10.2.2.tar.gz",
       "tag": null,
       "revision": null,
+      "using": null,
       "checksum": "15ebd4cb51cafb4af674a2e0a3ec8c02ac88a49565b3265c80719c59c0cc3c9d"
     }
   },
@@ -108,7 +109,7 @@
   "disable_reason": null,
   "post_install_defined": false,
   "service": null,
-  "tap_git_head": "fb92c3063994145f52804481abb7e97c5f3f1199",
+  "tap_git_head": "56a166b86c9f83934c75175d8d4a7f0a03bf320f",
   "ruby_source_path": "Formula/mcfm.rb",
   "ruby_source_checksum": {
     "sha256": "5d2a1069b1b58ea025c096551d41f5ab97a81209d05d56bfb42f95169dbf4ada"

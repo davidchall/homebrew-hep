@@ -25,6 +25,7 @@
       "url": "https://applgrid.hepforge.org/downloads?f=applgrid-1.6.35.tgz",
       "tag": null,
       "revision": null,
+      "using": null,
       "checksum": "5a9706ba9875aa958cc4f57abe467baa1ac4b5f01d07133dca3a0cb738cabf36"
     }
   },
@@ -114,7 +115,7 @@
   "disable_reason": null,
   "post_install_defined": false,
   "service": null,
-  "tap_git_head": "fb92c3063994145f52804481abb7e97c5f3f1199",
+  "tap_git_head": "56a166b86c9f83934c75175d8d4a7f0a03bf320f",
   "ruby_source_path": "Formula/applgrid.rb",
   "ruby_source_checksum": {
     "sha256": "827cae3eb3b6476d828171246abe99ac385587e7339f21f68b9358979a71aa22"

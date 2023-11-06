@@ -25,6 +25,7 @@
       "url": "https://fastjet.hepforge.org/contrib/downloads/fjcontrib-1.053.tar.gz",
       "tag": null,
       "revision": null,
+      "using": null,
       "checksum": "b12a248e0b143934c99e3b7c8dd83265122f6c6c09533c2a03df44f5eff1e6fa"
     }
   },
@@ -104,7 +105,7 @@
   "disable_reason": null,
   "post_install_defined": false,
   "service": null,
-  "tap_git_head": "fb92c3063994145f52804481abb7e97c5f3f1199",
+  "tap_git_head": "56a166b86c9f83934c75175d8d4a7f0a03bf320f",
   "ruby_source_path": "Formula/fjcontrib.rb",
   "ruby_source_checksum": {
     "sha256": "68d4f171464f5b3780224241594dfff72312371786c748b6576f6308a0b5641b"
