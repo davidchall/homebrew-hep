@@ -5,6 +5,12 @@ class Apfel < Formula
   sha256 "0a7e693536de6a9a84504c221a77cd8154fd939c3332d21dfce74432d468f4fd"
   license "GPL-3.0-only"
 
+  bottle do
+    root_url "https://ghcr.io/v2/davidchall/hep"
+    sha256 cellar: :any, ventura:  "2dd5e0406d8b27a8706bcc07243e6308dbec116efd4969f1e2eea40914099bb0"
+    sha256 cellar: :any, monterey: "ba2244e00b0f628887918aaa9769a27bf1b8d0e6d749e068a11a8d9b9ed4adb9"
+  end
+
   option "with-test", "Test during installation"
 
   depends_on "cmake" => [:build, :test]
