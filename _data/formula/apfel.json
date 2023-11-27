@@ -16,17 +16,17 @@
   "license": "GPL-3.0-only",
   "homepage": "https://github.com/scarrazza/apfel",
   "versions": {
-    "stable": "3.0.6",
+    "stable": "3.1.0",
     "head": null,
     "bottle": true
   },
   "urls": {
     "stable": {
-      "url": "https://github.com/scarrazza/apfel/archive/refs/tags/3.0.6.tar.gz",
+      "url": "https://github.com/scarrazza/apfel/archive/refs/tags/3.1.0.tar.gz",
       "tag": null,
       "revision": null,
       "using": null,
-      "checksum": "7063c9eee457e030b97926ac166cdaedd84625b31397e1dfd01ae47371fb9f61"
+      "checksum": "0a7e693536de6a9a84504c221a77cd8154fd939c3332d21dfce74432d468f4fd"
     }
   },
   "revision": 0,
@@ -37,14 +37,14 @@
       "root_url": "https://ghcr.io/v2/davidchall/hep",
       "files": {
         "ventura": {
-          "cellar": "/usr/local/Cellar",
-          "url": "https://ghcr.io/v2/davidchall/hep/apfel/blobs/sha256:9c8b136bf1403649bf27f6ac85cd8fdc92a2b8768bfa0eb18e70ea7f5c00f157",
-          "sha256": "9c8b136bf1403649bf27f6ac85cd8fdc92a2b8768bfa0eb18e70ea7f5c00f157"
+          "cellar": ":any",
+          "url": "https://ghcr.io/v2/davidchall/hep/apfel/blobs/sha256:2dd5e0406d8b27a8706bcc07243e6308dbec116efd4969f1e2eea40914099bb0",
+          "sha256": "2dd5e0406d8b27a8706bcc07243e6308dbec116efd4969f1e2eea40914099bb0"
         },
         "monterey": {
-          "cellar": "/usr/local/Cellar",
-          "url": "https://ghcr.io/v2/davidchall/hep/apfel/blobs/sha256:783a9a7b763ec253e168d8ffe7ed75f1985f882a8b3789dd89684a3b4b68b6f1",
-          "sha256": "783a9a7b763ec253e168d8ffe7ed75f1985f882a8b3789dd89684a3b4b68b6f1"
+          "cellar": ":any",
+          "url": "https://ghcr.io/v2/davidchall/hep/apfel/blobs/sha256:ba2244e00b0f628887918aaa9769a27bf1b8d0e6d749e068a11a8d9b9ed4adb9",
+          "sha256": "ba2244e00b0f628887918aaa9769a27bf1b8d0e6d749e068a11a8d9b9ed4adb9"
         }
       }
     }
@@ -52,19 +52,22 @@
   "keg_only": false,
   "keg_only_reason": null,
   "options": [
-
+    {
+      "option": "--with-test",
+      "description": "Test during installation"
+    }
   ],
   "build_dependencies": [
-    "autoconf",
-    "automake",
-    "libtool"
+    "cmake",
+    "swig"
   ],
   "dependencies": [
     "gcc",
-    "lhapdf"
+    "lhapdf",
+    "python@3.10"
   ],
   "test_dependencies": [
-
+    "cmake"
   ],
   "recommended_dependencies": [
 
@@ -105,9 +108,9 @@
   "disable_reason": null,
   "post_install_defined": false,
   "service": null,
-  "tap_git_head": "56a166b86c9f83934c75175d8d4a7f0a03bf320f",
+  "tap_git_head": "9ec8aceaf180fef1cac6d4d81dd7e4025eae4c41",
   "ruby_source_path": "Formula/apfel.rb",
   "ruby_source_checksum": {
-    "sha256": "c128ec6fac18c0adc1371c551f57a662e29d7692e7c77dc1d7e5eccc424ede01"
+    "sha256": "a443700823fe22dedeee57a7f02b7f810681ad9a7260663d98a0e03b84c691d7"
   }
 }

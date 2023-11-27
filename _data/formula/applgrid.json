@@ -115,7 +115,7 @@
   "disable_reason": null,
   "post_install_defined": false,
   "service": null,
-  "tap_git_head": "56a166b86c9f83934c75175d8d4a7f0a03bf320f",
+  "tap_git_head": "9ec8aceaf180fef1cac6d4d81dd7e4025eae4c41",
   "ruby_source_path": "Formula/applgrid.rb",
   "ruby_source_checksum": {
     "sha256": "827cae3eb3b6476d828171246abe99ac385587e7339f21f68b9358979a71aa22"

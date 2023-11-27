@@ -16,17 +16,17 @@
   "license": "GPL-2.0-or-later",
   "homepage": "https://whizard.hepforge.org",
   "versions": {
-    "stable": "3.1.3",
+    "stable": "3.1.4",
     "head": null,
     "bottle": true
   },
   "urls": {
     "stable": {
-      "url": "https://whizard.hepforge.org/downloads/?f=whizard-3.1.3.tar.gz",
+      "url": "https://whizard.hepforge.org/downloads/?f=whizard-3.1.4.tar.gz",
       "tag": null,
       "revision": null,
       "using": null,
-      "checksum": "fba14c16ce9b9add13df17cc6471e9f251bd9e5c09e43d59784fb6b4f93f3630"
+      "checksum": "9da9805251d786adaf4ad5a112f9c4ee61d515778af0d2623d6460c3f1f900cd"
     }
   },
   "revision": 0,
@@ -38,13 +38,13 @@
       "files": {
         "ventura": {
           "cellar": ":any",
-          "url": "https://ghcr.io/v2/davidchall/hep/whizard/blobs/sha256:8629603975e2a3d99d966d7a3a3947d963572859cb55b501a5333d3bca293a42",
-          "sha256": "8629603975e2a3d99d966d7a3a3947d963572859cb55b501a5333d3bca293a42"
+          "url": "https://ghcr.io/v2/davidchall/hep/whizard/blobs/sha256:eef9314bd7e498f2aa967162f8d0875bf582e9a2e410e29233f5afdd7cfff5e9",
+          "sha256": "eef9314bd7e498f2aa967162f8d0875bf582e9a2e410e29233f5afdd7cfff5e9"
         },
         "monterey": {
           "cellar": ":any",
-          "url": "https://ghcr.io/v2/davidchall/hep/whizard/blobs/sha256:b483e5e1fe914d95458cb1d5ded44336120c06480a72aeba83e197cf809ed9ae",
-          "sha256": "b483e5e1fe914d95458cb1d5ded44336120c06480a72aeba83e197cf809ed9ae"
+          "url": "https://ghcr.io/v2/davidchall/hep/whizard/blobs/sha256:a714990fa8abe2fbaaa5c3e751ed54eaac69cbf5fa5d118e187163a10c8d3ead",
+          "sha256": "a714990fa8abe2fbaaa5c3e751ed54eaac69cbf5fa5d118e187163a10c8d3ead"
         }
       }
     }
@@ -121,9 +121,9 @@
   "disable_reason": null,
   "post_install_defined": false,
   "service": null,
-  "tap_git_head": "56a166b86c9f83934c75175d8d4a7f0a03bf320f",
+  "tap_git_head": "9ec8aceaf180fef1cac6d4d81dd7e4025eae4c41",
   "ruby_source_path": "Formula/whizard.rb",
   "ruby_source_checksum": {
-    "sha256": "c3f2cc8eb74bd05bb0ce6eecb53258f040108f03a5c2d2baa910e012417a05bc"
+    "sha256": "91c593b92bc718c0de32d1a411bcb29bb95911642f98bd4c4b19ef9bda7951e9"
   }
 }

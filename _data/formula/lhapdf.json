@@ -107,7 +107,7 @@
   "disable_reason": null,
   "post_install_defined": false,
   "service": null,
-  "tap_git_head": "56a166b86c9f83934c75175d8d4a7f0a03bf320f",
+  "tap_git_head": "9ec8aceaf180fef1cac6d4d81dd7e4025eae4c41",
   "ruby_source_path": "Formula/lhapdf.rb",
   "ruby_source_checksum": {
     "sha256": "649ba327b0a47b8be9bcc3a8b54bb2f54612e137e97afa2c94bc10b3f9b7084f"
