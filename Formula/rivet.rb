@@ -3,8 +3,8 @@ class Rivet < Formula
 
   desc "Monte Carlo analysis system"
   homepage "https://rivet.hepforge.org"
-  url "https://rivet.hepforge.org/downloads/?f=Rivet-3.1.8.tar.gz"
-  sha256 "4795a8f522f4780e97bcc97511c4b0ace9dca9dd51a6004a713287a0dce45953"
+  url "https://rivet.hepforge.org/downloads/?f=Rivet-3.1.9.tar.gz"
+  sha256 "ddf0f13f722d0b4fc61969f3db06416b6b68f721dba36ca5d2a85c2759bf9fd7"
   license "GPL-3.0-only"
 
   livecheck do
