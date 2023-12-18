@@ -1,8 +1,8 @@
 class Apfel < Formula
   desc "PDF Evolution Library"
   homepage "https://github.com/scarrazza/apfel"
-  url "https://github.com/scarrazza/apfel/archive/refs/tags/3.1.0.tar.gz"
-  sha256 "0a7e693536de6a9a84504c221a77cd8154fd939c3332d21dfce74432d468f4fd"
+  url "https://github.com/scarrazza/apfel/archive/refs/tags/3.1.1.tar.gz"
+  sha256 "9006b2a9544e504e8f6b5047f665054151870c3c3a4a05db3d4fb46f21908d4b"
   license "GPL-3.0-only"
 
   bottle do
