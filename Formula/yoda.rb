@@ -14,8 +14,7 @@ class Yoda < Formula
 
   bottle do
     root_url "https://ghcr.io/v2/davidchall/hep"
-    sha256 ventura:  "28eae916b1b35b895a37b652338855c05a911b47173e59809ea985abd6b3413f"
-    sha256 monterey: "15c9e0db934d529495aa23386aa352aee328880b25baa4374b02deacf8bb5b7e"
+    sha256 monterey: "984f157a7463c600e52309b9589b1cc0649f699a6da72a6670688d67174ee931"
   end
 
   head do
