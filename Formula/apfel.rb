@@ -7,8 +7,7 @@ class Apfel < Formula
 
   bottle do
     root_url "https://ghcr.io/v2/davidchall/hep"
-    sha256 cellar: :any, ventura:  "2dd5e0406d8b27a8706bcc07243e6308dbec116efd4969f1e2eea40914099bb0"
-    sha256 cellar: :any, monterey: "ba2244e00b0f628887918aaa9769a27bf1b8d0e6d749e068a11a8d9b9ed4adb9"
+    sha256 cellar: :any, monterey: "19d8048e68d28ce69aec0d60aad241ac57c94094e789dcb2015be765fc8c795f"
   end
 
   option "with-test", "Test during installation"
