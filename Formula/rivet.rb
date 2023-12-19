@@ -40,7 +40,7 @@ class Rivet < Formula
   # rivet needs a special installation of fjcontrib
   resource "fjcontrib" do
     url "https://fastjet.hepforge.org/contrib/downloads/fjcontrib-1.051.tar.gz"
-    sha256 "ae2ed6206bc6278b65e99a4f78df0eeb2911f301a28fb57b50c573c0d5869987"
+    sha256 "76a2ec612c768db3eb6bbaf686d02b05ddb64dde477d185e20df563b52308473"
   end
 
   patch :DATA
