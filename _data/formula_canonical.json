@@ -3,6 +3,6 @@
   "hepmc": "hepmc2",
   "herwig++": "herwig",
   "pythia8": "pythia",
-  "davidchall/hep/madgraph5": "davidchall/hep/madgraph5_amcatnlo",
-  "davidchall/hep/amcatnlo": "davidchall/hep/madgraph5_amcatnlo"
+  "davidchall/hep/amcatnlo": "davidchall/hep/madgraph5_amcatnlo",
+  "davidchall/hep/madgraph5": "davidchall/hep/madgraph5_amcatnlo"
 }

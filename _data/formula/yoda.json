@@ -16,17 +16,17 @@
   "license": "GPL-3.0-only",
   "homepage": "https://yoda.hepforge.org",
   "versions": {
-    "stable": "1.9.8",
+    "stable": "1.9.9",
     "head": "HEAD",
     "bottle": true
   },
   "urls": {
     "stable": {
-      "url": "https://yoda.hepforge.org/downloads/?f=YODA-1.9.8.tar.gz",
+      "url": "https://yoda.hepforge.org/downloads/?f=YODA-1.9.9.tar.gz",
       "tag": null,
       "revision": null,
       "using": null,
-      "checksum": "c7d5e8b35027d607ddc2ce132fe5032f764e3e39b81e81a9d79ecdee2278ebe5"
+      "checksum": "b95398fac39f46ff73fb507c4739b4248f9689462d5b1c057caf7f3faffc1eb2"
     },
     "head": {
       "url": "http://yoda.hepforge.org/hg/yoda",
@@ -41,19 +41,15 @@
       "rebuild": 0,
       "root_url": "https://ghcr.io/v2/davidchall/hep",
       "files": {
-        "ventura": {
-          "cellar": "/usr/local/Cellar",
-          "url": "https://ghcr.io/v2/davidchall/hep/yoda/blobs/sha256:28eae916b1b35b895a37b652338855c05a911b47173e59809ea985abd6b3413f",
-          "sha256": "28eae916b1b35b895a37b652338855c05a911b47173e59809ea985abd6b3413f"
-        },
         "monterey": {
           "cellar": "/usr/local/Cellar",
-          "url": "https://ghcr.io/v2/davidchall/hep/yoda/blobs/sha256:15c9e0db934d529495aa23386aa352aee328880b25baa4374b02deacf8bb5b7e",
-          "sha256": "15c9e0db934d529495aa23386aa352aee328880b25baa4374b02deacf8bb5b7e"
+          "url": "https://ghcr.io/v2/davidchall/hep/yoda/blobs/sha256:984f157a7463c600e52309b9589b1cc0649f699a6da72a6670688d67174ee931",
+          "sha256": "984f157a7463c600e52309b9589b1cc0649f699a6da72a6670688d67174ee931"
         }
       }
     }
   },
+  "pour_bottle_only_if": null,
   "keg_only": false,
   "keg_only_reason": null,
   "options": [
@@ -119,10 +115,10 @@
   "disable_reason": null,
   "post_install_defined": false,
   "service": null,
-  "tap_git_head": "9ec8aceaf180fef1cac6d4d81dd7e4025eae4c41",
+  "tap_git_head": "ad70b2106d007b7ea954847f2907cd4308175e14",
   "ruby_source_path": "Formula/yoda.rb",
   "ruby_source_checksum": {
-    "sha256": "4f10bf40fdd74ac6d9825cd345b21d5a4525d75253b48d53532eefda0d2822a1"
+    "sha256": "52104974f2d207d26e6c8fd17db6cd39ab0ad0ddc718a77c2863ae84a3263b56"
   },
   "head_dependencies": {
     "build_dependencies": [

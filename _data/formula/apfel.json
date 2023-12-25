@@ -16,17 +16,17 @@
   "license": "GPL-3.0-only",
   "homepage": "https://github.com/scarrazza/apfel",
   "versions": {
-    "stable": "3.1.0",
+    "stable": "3.1.1",
     "head": null,
     "bottle": true
   },
   "urls": {
     "stable": {
-      "url": "https://github.com/scarrazza/apfel/archive/refs/tags/3.1.0.tar.gz",
+      "url": "https://github.com/scarrazza/apfel/archive/refs/tags/3.1.1.tar.gz",
       "tag": null,
       "revision": null,
       "using": null,
-      "checksum": "0a7e693536de6a9a84504c221a77cd8154fd939c3332d21dfce74432d468f4fd"
+      "checksum": "9006b2a9544e504e8f6b5047f665054151870c3c3a4a05db3d4fb46f21908d4b"
     }
   },
   "revision": 0,
@@ -36,19 +36,15 @@
       "rebuild": 0,
       "root_url": "https://ghcr.io/v2/davidchall/hep",
       "files": {
-        "ventura": {
-          "cellar": ":any",
-          "url": "https://ghcr.io/v2/davidchall/hep/apfel/blobs/sha256:2dd5e0406d8b27a8706bcc07243e6308dbec116efd4969f1e2eea40914099bb0",
-          "sha256": "2dd5e0406d8b27a8706bcc07243e6308dbec116efd4969f1e2eea40914099bb0"
-        },
         "monterey": {
           "cellar": ":any",
-          "url": "https://ghcr.io/v2/davidchall/hep/apfel/blobs/sha256:ba2244e00b0f628887918aaa9769a27bf1b8d0e6d749e068a11a8d9b9ed4adb9",
-          "sha256": "ba2244e00b0f628887918aaa9769a27bf1b8d0e6d749e068a11a8d9b9ed4adb9"
+          "url": "https://ghcr.io/v2/davidchall/hep/apfel/blobs/sha256:19d8048e68d28ce69aec0d60aad241ac57c94094e789dcb2015be765fc8c795f",
+          "sha256": "19d8048e68d28ce69aec0d60aad241ac57c94094e789dcb2015be765fc8c795f"
         }
       }
     }
   },
+  "pour_bottle_only_if": null,
   "keg_only": false,
   "keg_only_reason": null,
   "options": [
@@ -108,9 +104,9 @@
   "disable_reason": null,
   "post_install_defined": false,
   "service": null,
-  "tap_git_head": "9ec8aceaf180fef1cac6d4d81dd7e4025eae4c41",
+  "tap_git_head": "ad70b2106d007b7ea954847f2907cd4308175e14",
   "ruby_source_path": "Formula/apfel.rb",
   "ruby_source_checksum": {
-    "sha256": "a443700823fe22dedeee57a7f02b7f810681ad9a7260663d98a0e03b84c691d7"
+    "sha256": "6b53530ca4713ee47d949676af48e8497dc9bfa54109f7cfc798ff46eead65f8"
   }
 }
