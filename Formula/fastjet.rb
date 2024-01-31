@@ -10,12 +10,6 @@ class Fastjet < Formula
     regex(/href=.*?fastjet[._-]v?(\d+(?:\.\d+)+)\.t/i)
   end
 
-  bottle do
-    root_url "https://ghcr.io/v2/davidchall/hep"
-    sha256 cellar: :any, ventura:  "851ab4be01b01d5e2d994c4bb49a3463038788f4d016f821e013a55bdbe0f46d"
-    sha256 cellar: :any, monterey: "42cf7f0bfc52e06b7d24829b2dc40b9986fcf1a3d97e69a49fe1b45c1e8c9c70"
-  end
-
   option "without-cgal", "Disable CGAL support (required for NlnN strategy)"
   option "with-test", "Test during installation"
 
