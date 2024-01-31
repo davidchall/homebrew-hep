@@ -6,9 +6,8 @@ class Apfelxx < Formula
 
   bottle do
     root_url "https://ghcr.io/v2/davidchall/hep"
-    rebuild 1
-    sha256 cellar: :any, ventura:  "5718780aac3bd41edeacc06a44612cf598136361545c5e26c880c2b1a273a5c6"
-    sha256 cellar: :any, monterey: "222f72d1ea5b9bfc51507ee142e850a403baaf8d1966b030ab0855c140f045f2"
+    sha256 cellar: :any, arm64_sonoma: "cf08bb49e6b44cef92e845f926c8cfa2dcae09a4e8b319c5962bebaa2c83777f"
+    sha256 cellar: :any, ventura:      "3d57f38506c52114a18432d43c127ae565dd4c9d3ba188cca23857e63509a3a7"
   end
 
   depends_on "cmake" => :build
