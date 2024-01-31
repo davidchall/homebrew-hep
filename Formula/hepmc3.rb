@@ -10,6 +10,13 @@ class Hepmc3 < Formula
     regex(/href=.*?HepMC3[._-]v?(\d+(?:\.\d+)+)\.t/i)
   end
 
+  bottle do
+    root_url "https://ghcr.io/v2/davidchall/hep"
+    rebuild 1
+    sha256 cellar: :any, arm64_sonoma: "c8f0f32185db72b5229805ae8356ba464c9d184acce779d56305b525cfe18dbb"
+    sha256 cellar: :any, ventura:      "228982c1d84cea4c73631617626afd45f72159af358365afed2a0c9f50194f0a"
+  end
+
   option "with-test", "Test during installation"
 
   depends_on "cmake" => [:build, :test]
