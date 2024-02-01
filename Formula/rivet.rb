@@ -123,6 +123,6 @@ index b23621b..8d011f5 100755
 
  ## Assemble the compile & link command
 -compile_cmd = "  ".join([os.environ.get("CXX", "g++"), "-shared -fPIC", "-o core.so",
-+compile_cmd = "  ".join([sysconfig.get_config_var("LDCXXSHARED"), "-std=c++14", "-o core.so",
++compile_cmd = "  ".join([sysconfig.get_config_var("LDCXXSHARED"), "-std=c++17", "-o core.so",
                           srcpath, incargs, cmpargs, linkargs, libargs, pyargs])
  print("Build command =", compile_cmd)
