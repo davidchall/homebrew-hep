@@ -12,6 +12,13 @@ class Yoda < Formula
     regex(/href=.*?YODA[._-]v?(\d+(?:\.\d+)+)\.t/i)
   end
 
+  bottle do
+    root_url "https://ghcr.io/v2/davidchall/hep"
+    rebuild 1
+    sha256 arm64_sonoma: "a3c7b912ae75c129a407055bd3eaf8fd23e04cd11c7311b2f7fbc884f4a56fc9"
+    sha256 ventura:      "14d466bc21633ea3450da8f43f5510903b74488556cd6564391943eb032dddf6"
+  end
+
   head do
     url "http://yoda.hepforge.org/hg/yoda", using: :hg
 
