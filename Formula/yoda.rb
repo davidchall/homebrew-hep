@@ -6,6 +6,7 @@ class Yoda < Formula
   url "https://yoda.hepforge.org/downloads/?f=YODA-1.9.9.tar.gz"
   sha256 "b95398fac39f46ff73fb507c4739b4248f9689462d5b1c057caf7f3faffc1eb2"
   license "GPL-3.0-only"
+  revision 1
 
   livecheck do
     url "https://yoda.hepforge.org/downloads/"
