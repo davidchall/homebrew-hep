@@ -14,8 +14,8 @@ class Herwig < Formula
 
   bottle do
     root_url "https://ghcr.io/v2/davidchall/hep"
-    sha256 ventura:  "9cbb35da540ff13697bc7abb14e44838618a74724e94bef69b706e7a96022137"
-    sha256 monterey: "caa9a4f1671723da6a2c49045036dce82eca6ff1335c9d76a93fc260eb975fb9"
+    sha256 arm64_sonoma: "538ab235d41bf44f639e6f66263e6146753413733d2ea9d6f1b15bc5b05b294e"
+    sha256 ventura:      "73ee4d6cc966ec6a78b40a1d0bcefb7ab0d7cae545379d116296e6111ab84708"
   end
 
   head do
