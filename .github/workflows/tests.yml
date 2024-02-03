@@ -42,3 +42,4 @@ jobs:
         with:
           name: bottles
           path: '*.bottle.*'
+          if-no-files-found: error
