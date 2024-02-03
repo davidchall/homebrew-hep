@@ -4,7 +4,7 @@ class Herwig < Formula
   desc "Monte Carlo event generator"
   homepage "https://herwig.hepforge.org"
   url "https://herwig.hepforge.org/downloads/Herwig-7.3.0.tar.bz2"
-  sha256 "7239640a5b6a14749b1aad7a3534649a00ddea3444fcadac31d3db4eca556105"
+  sha256 "2624819d2dff105ba952ea1b5cf12eb6f4926d4951774a41907699e2f567686c"
   license "GPL-3.0-only"
 
   livecheck do
