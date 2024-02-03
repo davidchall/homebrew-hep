@@ -10,13 +10,6 @@ class Hoppet < Formula
     regex(/href=.*?hoppet[._-]v?(\d+(?:\.\d+)+)\.t/i)
   end
 
-  bottle do
-    root_url "https://ghcr.io/v2/davidchall/hep"
-    rebuild 1
-    sha256 cellar: :any_skip_relocation, ventura:  "f805c56b39710f53ef2457f60c207f7eafcd8e063b50bdb1439ec96f2518a030"
-    sha256 cellar: :any_skip_relocation, monterey: "d499f3cd567170274898cdefdcad96ebe88ba54ec4b500cc5a0652452f4b8cd3"
-  end
-
   option "with-test", "Test during installation"
 
   depends_on "gcc" # for gfortran
