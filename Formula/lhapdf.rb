@@ -30,8 +30,11 @@ class Lhapdf < Formula
 
   depends_on "python@3.10"
 
-  # fix error:
-  #   cp: /opt/homebrew/lib/python3.10/site-packages/lhapdf: Operation not permitted
+  # fix brew audit:
+  # * python modules have explicit framework links
+  #   These python extension modules were linked directly to a Python
+  #   framework binary. They should be linked with -undefined dynamic_lookup
+  #   instead of -lpython or -framework Python.
   patch :DATA
 
   def python
@@ -39,9 +42,6 @@ class Lhapdf < Formula
   end
 
   def install
-    ENV.prepend_path "PATH", Formula["python@3.10"].opt_libexec/"bin"
-    ENV.prepend_create_path "PYTHONPATH", prefix/Language::Python.site_packages(python)
-
     args = %W[
       --disable-dependency-tracking
       --prefix=#{prefix}
@@ -50,7 +50,7 @@ class Lhapdf < Formula
     system "autoreconf", "-i" if build.head?
     system "./configure", *args
     system "make"
-    system "make", "install"
+    system "make", "install", "PYTHON_PATH=#{prefix/Language::Python.site_packages(python)}"
 
     rewrite_shebang detected_python_shebang, bin/"lhapdf"
   end
@@ -74,16 +74,17 @@ class Lhapdf < Formula
 end
 
 __END__
-diff --git a/configure b/configure
-index 2723592..1f23030 100755
---- a/configure
-+++ b/configure
-@@ -18572,7 +18572,7 @@ See \`config.log' for more details" "$LINENO" 5; }
-
-
-
--    PYTHON_PATH=`$PYTHON -c "from __future__ import print_function; import sysconfig; print(sysconfig.get_path('platlib', vars={'platbase': '$prefix', 'base': '$prefix'}))"`
-+    PYTHON_PATH=`$PYTHON -c "from __future__ import print_function; import sysconfig; print(sysconfig.get_path('platlib', 'posix_user', vars={'userbase' : '$prefix'}))"`
-
-     { printf "%s\n" "$as_me:${as_lineno-$LINENO}: LHAPDF Python library to be installed to $PYTHON_PATH" >&5
- printf "%s\n" "$as_me: LHAPDF Python library to be installed to $PYTHON_PATH" >&6;}
+diff --git a/wrappers/python/build.py.in b/wrappers/python/build.py.in
+index d9d1624..40ad0e7 100755
+--- a/wrappers/python/build.py.in
++++ b/wrappers/python/build.py.in
+@@ -48,8 +48,7 @@ if libpy is None:
+     print("No libpython found in expected location exiting")
+     print("Considered locations were:", libpys)
+     sys.exit(1)
+-pyargs += " " + libpy
+-pyargs += " " + sysconfig.get_config_var("LIBS")
++pyargs += " -undefined dynamic_lookup"
+ pyargs += " " + sysconfig.get_config_var("LIBM")
+ #pyargs += " " + sysconfig.get_config_var("LINKFORSHARED")
+ 
