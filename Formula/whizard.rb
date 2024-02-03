@@ -10,6 +10,13 @@ class Whizard < Formula
     regex(/href=.*?whizard[._-]v?(\d+(?:\.\d+)+)\.t/i)
   end
 
+  bottle do
+    root_url "https://ghcr.io/v2/davidchall/hep"
+    rebuild 1
+    sha256               arm64_sonoma: "5bab4235dbda2e56c3774d2514078d614adbac87b2fd60e5c6ab8536b0da6d80"
+    sha256 cellar: :any, ventura:      "5a62ac85ac5848da3da28f36133eada1be478daa34ddf8c781a8bc110363df08"
+  end
+
   depends_on "gcc" # for gfortran
   depends_on "ocaml"
   depends_on "fastjet" => :optional
