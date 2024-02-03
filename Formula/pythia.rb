@@ -14,6 +14,13 @@ class Pythia < Formula
     end
   end
 
+  bottle do
+    root_url "https://ghcr.io/v2/davidchall/hep"
+    rebuild 1
+    sha256 arm64_sonoma: "3fd4307a1d3860c3ea5b773ce7c9b44b1b95ab7876027c68ad7ed01801afc58e"
+    sha256 ventura:      "244e9e4d130be94a02435cbe144ed03522e970190b93ed7240f6a7adc65074ef"
+  end
+
   depends_on "boost"
   depends_on "hepmc3"
   depends_on "lhapdf"
