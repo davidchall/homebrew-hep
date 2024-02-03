@@ -10,6 +10,13 @@ class Partons < Formula
     regex(/^v?(\d+(?:\.\d+)+)$/i)
   end
 
+  bottle do
+    root_url "https://ghcr.io/v2/davidchall/hep"
+    rebuild 1
+    sha256 cellar: :any, arm64_sonoma: "716c9d058b9e0260608fd1fdf768ff87eb0ce394dccca3b1b344e35fac936fd9"
+    sha256 cellar: :any, ventura:      "f420ad19b606065a96b2e131a67ef2705d0935cdc1ff2fb753f30a11e5aabfcc"
+  end
+
   depends_on "cmake" => [:build, :test]
   depends_on "apfel++"
   depends_on "cln"
