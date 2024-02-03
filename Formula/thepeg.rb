@@ -2,8 +2,9 @@ class Thepeg < Formula
   desc "Toolkit for high energy physics event generation"
   homepage "https://herwig.hepforge.org"
   url "https://thepeg.hepforge.org/downloads/ThePEG-2.3.0.tar.bz2"
-  sha256 "deec8f22e89bb1a3f31b3b84e8feddf59a69845c9d33fba718f5599ce4a6ae9d"
+  sha256 "ac35979ae89c29608ca92c156a49ff68aace7a5a12a0c92f0a01a833d2d34572"
   license "GPL-3.0-only"
+  revision 1
 
   livecheck do
     url "https://thepeg.hepforge.org/downloads"
