@@ -11,6 +11,12 @@ class Thepeg < Formula
     regex(/href=.*?ThePEG[._-]v?(\d+(?:\.\d+)+)\.t/i)
   end
 
+  bottle do
+    root_url "https://ghcr.io/v2/davidchall/hep"
+    sha256 arm64_sonoma: "86bc26944d1dae474739190dd587547404b877b8599787c6ae1dc68051d48513"
+    sha256 ventura:      "55e8ff9b16d60acce0a8538f6034b5118db13a9d729982d54880ba630fdbe225"
+  end
+
   head do
     url "http://thepeg.hepforge.org/hg/ThePEG", using: :hg
 
