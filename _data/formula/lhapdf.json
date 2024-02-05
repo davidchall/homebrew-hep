@@ -16,17 +16,17 @@
   "license": "GPL-3.0-or-later",
   "homepage": "https://lhapdf.hepforge.org/",
   "versions": {
-    "stable": "6.5.3",
+    "stable": "6.5.4",
     "head": "HEAD",
     "bottle": true
   },
   "urls": {
     "stable": {
-      "url": "https://lhapdf.hepforge.org/downloads/?f=LHAPDF-6.5.3.tar.gz",
+      "url": "https://lhapdf.hepforge.org/downloads/?f=LHAPDF-6.5.4.tar.gz",
       "tag": null,
       "revision": null,
       "using": null,
-      "checksum": "57435cd695e297065d53e69bd29090765c934936b6a975ff8c559766f2230359"
+      "checksum": "2443a4b32cc3b0597c8248bd6e25703ace9c91a7a253c5f60b1b5428ef9c869e"
     },
     "head": {
       "url": "http://lhapdf.hepforge.org/hg/lhapdf",
@@ -38,18 +38,18 @@
   "version_scheme": 0,
   "bottle": {
     "stable": {
-      "rebuild": 1,
+      "rebuild": 0,
       "root_url": "https://ghcr.io/v2/davidchall/hep",
       "files": {
+        "arm64_sonoma": {
+          "cellar": "/opt/homebrew/Cellar",
+          "url": "https://ghcr.io/v2/davidchall/hep/lhapdf/blobs/sha256:262f58712e1e6c3f3b6e781b4cd57beba3c2f731e82231976df6f75555c999cf",
+          "sha256": "262f58712e1e6c3f3b6e781b4cd57beba3c2f731e82231976df6f75555c999cf"
+        },
         "ventura": {
           "cellar": "/usr/local/Cellar",
-          "url": "https://ghcr.io/v2/davidchall/hep/lhapdf/blobs/sha256:9bb49ac1a0770fad48aa408344b4d218d302e99401cad6f33549c28264240cdd",
-          "sha256": "9bb49ac1a0770fad48aa408344b4d218d302e99401cad6f33549c28264240cdd"
-        },
-        "monterey": {
-          "cellar": "/usr/local/Cellar",
-          "url": "https://ghcr.io/v2/davidchall/hep/lhapdf/blobs/sha256:072b262cf7b118116ee1602ba36f493d4c88296e87dbd7ae0b82b21996c3882a",
-          "sha256": "072b262cf7b118116ee1602ba36f493d4c88296e87dbd7ae0b82b21996c3882a"
+          "url": "https://ghcr.io/v2/davidchall/hep/lhapdf/blobs/sha256:bef7b5fce646c6b35084a9d4e8917662add30205d4e989add1cf765bcee0ae5a",
+          "sha256": "bef7b5fce646c6b35084a9d4e8917662add30205d4e989add1cf765bcee0ae5a"
         }
       }
     }
@@ -93,7 +93,7 @@
   "link_overwrite": [
 
   ],
-  "caveats": "PDFs may be downloaded and installed with\n\n  lhapdf install CT10nlo\n\nAt runtime, LHAPDF searches $HOMEBREW_PREFIX/Cellar/lhapdf/6.5.3/share/LHAPDF\nand paths in LHAPDF_DATA_PATH for PDF sets.\n\n",
+  "caveats": "PDFs may be downloaded and installed with\n\n  lhapdf install CT10nlo\n\nAt runtime, LHAPDF searches $HOMEBREW_PREFIX/Cellar/lhapdf/6.5.4/share/LHAPDF\nand paths in LHAPDF_DATA_PATH for PDF sets.\n\n",
   "installed": [
 
   ],
@@ -108,10 +108,10 @@
   "disable_reason": null,
   "post_install_defined": false,
   "service": null,
-  "tap_git_head": "ad70b2106d007b7ea954847f2907cd4308175e14",
+  "tap_git_head": "810f75bca29594c14929f487097739e2a936d965",
   "ruby_source_path": "Formula/lhapdf.rb",
   "ruby_source_checksum": {
-    "sha256": "649ba327b0a47b8be9bcc3a8b54bb2f54612e137e97afa2c94bc10b3f9b7084f"
+    "sha256": "f16b6910046829edf6794a7aae5e7209362a23829d4c8cb4aeab8d1819d91819"
   },
   "head_dependencies": {
     "build_dependencies": [

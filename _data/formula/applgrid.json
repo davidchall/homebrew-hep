@@ -29,22 +29,22 @@
       "checksum": "5a9706ba9875aa958cc4f57abe467baa1ac4b5f01d07133dca3a0cb738cabf36"
     }
   },
-  "revision": 0,
+  "revision": 1,
   "version_scheme": 0,
   "bottle": {
     "stable": {
       "rebuild": 0,
       "root_url": "https://ghcr.io/v2/davidchall/hep",
       "files": {
+        "arm64_sonoma": {
+          "cellar": ":any",
+          "url": "https://ghcr.io/v2/davidchall/hep/applgrid/blobs/sha256:97fa0006304968864b47b5e60f2ad21dd59e69a03dc7897ea276a6e1a55b9515",
+          "sha256": "97fa0006304968864b47b5e60f2ad21dd59e69a03dc7897ea276a6e1a55b9515"
+        },
         "ventura": {
           "cellar": ":any",
-          "url": "https://ghcr.io/v2/davidchall/hep/applgrid/blobs/sha256:4de2471b234046a62e80738fbbb1384e55d7f36b28ffb849395ab1d024bfce0b",
-          "sha256": "4de2471b234046a62e80738fbbb1384e55d7f36b28ffb849395ab1d024bfce0b"
-        },
-        "monterey": {
-          "cellar": ":any",
-          "url": "https://ghcr.io/v2/davidchall/hep/applgrid/blobs/sha256:9c04c9bbb5e4b6a3415803ade5ed87eaaa36c8a7df25a154f303a2f49cdbb17d",
-          "sha256": "9c04c9bbb5e4b6a3415803ade5ed87eaaa36c8a7df25a154f303a2f49cdbb17d"
+          "url": "https://ghcr.io/v2/davidchall/hep/applgrid/blobs/sha256:9947ebb029a46737c1de1a445b0c955f019a2525ed1ac638cadb64417deeaf9d",
+          "sha256": "9947ebb029a46737c1de1a445b0c955f019a2525ed1ac638cadb64417deeaf9d"
         }
       }
     }
@@ -116,9 +116,9 @@
   "disable_reason": null,
   "post_install_defined": false,
   "service": null,
-  "tap_git_head": "ad70b2106d007b7ea954847f2907cd4308175e14",
+  "tap_git_head": "810f75bca29594c14929f487097739e2a936d965",
   "ruby_source_path": "Formula/applgrid.rb",
   "ruby_source_checksum": {
-    "sha256": "827cae3eb3b6476d828171246abe99ac385587e7339f21f68b9358979a71aa22"
+    "sha256": "79825b7b82037953be39759312a21c4adc6aca79b6c88c8b460c403e7f20ba9c"
   }
 }

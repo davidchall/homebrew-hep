@@ -26,7 +26,7 @@
       "tag": null,
       "revision": null,
       "using": null,
-      "checksum": "deec8f22e89bb1a3f31b3b84e8feddf59a69845c9d33fba718f5599ce4a6ae9d"
+      "checksum": "ac35979ae89c29608ca92c156a49ff68aace7a5a12a0c92f0a01a833d2d34572"
     },
     "head": {
       "url": "http://thepeg.hepforge.org/hg/ThePEG",
@@ -34,22 +34,22 @@
       "using": "hg"
     }
   },
-  "revision": 0,
+  "revision": 1,
   "version_scheme": 0,
   "bottle": {
     "stable": {
       "rebuild": 0,
       "root_url": "https://ghcr.io/v2/davidchall/hep",
       "files": {
+        "arm64_sonoma": {
+          "cellar": "/opt/homebrew/Cellar",
+          "url": "https://ghcr.io/v2/davidchall/hep/thepeg/blobs/sha256:86bc26944d1dae474739190dd587547404b877b8599787c6ae1dc68051d48513",
+          "sha256": "86bc26944d1dae474739190dd587547404b877b8599787c6ae1dc68051d48513"
+        },
         "ventura": {
           "cellar": "/usr/local/Cellar",
-          "url": "https://ghcr.io/v2/davidchall/hep/thepeg/blobs/sha256:d1b95d2a0911425ff1372c3d54074b329420c00ba1bc7e75a03cf3cf97756e20",
-          "sha256": "d1b95d2a0911425ff1372c3d54074b329420c00ba1bc7e75a03cf3cf97756e20"
-        },
-        "monterey": {
-          "cellar": "/usr/local/Cellar",
-          "url": "https://ghcr.io/v2/davidchall/hep/thepeg/blobs/sha256:3966dc8e3377fa1e2f87ae967e3522b5e6c0623d4f6e40ebe0bf4f49ff74e880",
-          "sha256": "3966dc8e3377fa1e2f87ae967e3522b5e6c0623d4f6e40ebe0bf4f49ff74e880"
+          "url": "https://ghcr.io/v2/davidchall/hep/thepeg/blobs/sha256:55e8ff9b16d60acce0a8538f6034b5118db13a9d729982d54880ba630fdbe225",
+          "sha256": "55e8ff9b16d60acce0a8538f6034b5118db13a9d729982d54880ba630fdbe225"
         }
       }
     }
@@ -119,10 +119,10 @@
   "disable_reason": null,
   "post_install_defined": false,
   "service": null,
-  "tap_git_head": "ad70b2106d007b7ea954847f2907cd4308175e14",
+  "tap_git_head": "810f75bca29594c14929f487097739e2a936d965",
   "ruby_source_path": "Formula/thepeg.rb",
   "ruby_source_checksum": {
-    "sha256": "230edf82a18fd251c074e89d0d88e40ced7e6d430bc89115c75729f6fa8b48cb"
+    "sha256": "70cb46e988f25f972f6ad4ac82ff466ac71f132fcec9022c53fd7e7c868d9b10"
   },
   "head_dependencies": {
     "build_dependencies": [

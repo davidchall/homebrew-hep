@@ -16,17 +16,17 @@
   "license": "GPL-3.0-only",
   "homepage": "https://herwig.hepforge.org",
   "versions": {
-    "stable": "7.2.3",
+    "stable": "7.3.0",
     "head": "HEAD",
     "bottle": true
   },
   "urls": {
     "stable": {
-      "url": "https://herwig.hepforge.org/downloads/Herwig-7.2.3.tar.bz2",
+      "url": "https://herwig.hepforge.org/downloads/Herwig-7.3.0.tar.bz2",
       "tag": null,
       "revision": null,
       "using": null,
-      "checksum": "5599899379b01b09e331a2426d78d39b7f6ec126db2543e9d340aefe6aa50f84"
+      "checksum": "2624819d2dff105ba952ea1b5cf12eb6f4926d4951774a41907699e2f567686c"
     },
     "head": {
       "url": "http://herwig.hepforge.org/hg/herwig",
@@ -34,22 +34,22 @@
       "using": "hg"
     }
   },
-  "revision": 2,
+  "revision": 0,
   "version_scheme": 0,
   "bottle": {
     "stable": {
       "rebuild": 0,
       "root_url": "https://ghcr.io/v2/davidchall/hep",
       "files": {
+        "arm64_sonoma": {
+          "cellar": "/opt/homebrew/Cellar",
+          "url": "https://ghcr.io/v2/davidchall/hep/herwig/blobs/sha256:538ab235d41bf44f639e6f66263e6146753413733d2ea9d6f1b15bc5b05b294e",
+          "sha256": "538ab235d41bf44f639e6f66263e6146753413733d2ea9d6f1b15bc5b05b294e"
+        },
         "ventura": {
           "cellar": "/usr/local/Cellar",
-          "url": "https://ghcr.io/v2/davidchall/hep/herwig/blobs/sha256:9cbb35da540ff13697bc7abb14e44838618a74724e94bef69b706e7a96022137",
-          "sha256": "9cbb35da540ff13697bc7abb14e44838618a74724e94bef69b706e7a96022137"
-        },
-        "monterey": {
-          "cellar": "/usr/local/Cellar",
-          "url": "https://ghcr.io/v2/davidchall/hep/herwig/blobs/sha256:caa9a4f1671723da6a2c49045036dce82eca6ff1335c9d76a93fc260eb975fb9",
-          "sha256": "caa9a4f1671723da6a2c49045036dce82eca6ff1335c9d76a93fc260eb975fb9"
+          "url": "https://ghcr.io/v2/davidchall/hep/herwig/blobs/sha256:73ee4d6cc966ec6a78b40a1d0bcefb7ab0d7cae545379d116296e6111ab84708",
+          "sha256": "73ee4d6cc966ec6a78b40a1d0bcefb7ab0d7cae545379d116296e6111ab84708"
         }
       }
     }
@@ -116,10 +116,10 @@
   "disable_reason": null,
   "post_install_defined": false,
   "service": null,
-  "tap_git_head": "ad70b2106d007b7ea954847f2907cd4308175e14",
+  "tap_git_head": "810f75bca29594c14929f487097739e2a936d965",
   "ruby_source_path": "Formula/herwig.rb",
   "ruby_source_checksum": {
-    "sha256": "84f8b1977e4d8e3b8d6f0a15ab80b3c14493849d086774c9acd46159c966784a"
+    "sha256": "d231891c59930c234d980abc703cfada94c2c6d883c109d1ea53ffc1e466381d"
   },
   "head_dependencies": {
     "build_dependencies": [

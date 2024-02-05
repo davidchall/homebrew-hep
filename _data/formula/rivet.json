@@ -38,18 +38,18 @@
   "version_scheme": 0,
   "bottle": {
     "stable": {
-      "rebuild": 0,
+      "rebuild": 1,
       "root_url": "https://ghcr.io/v2/davidchall/hep",
       "files": {
+        "arm64_sonoma": {
+          "cellar": "/opt/homebrew/Cellar",
+          "url": "https://ghcr.io/v2/davidchall/hep/rivet/blobs/sha256:63321ceea6df60cc74c64ac17afb7446c260a64a5918090d35be633c4f79e2db",
+          "sha256": "63321ceea6df60cc74c64ac17afb7446c260a64a5918090d35be633c4f79e2db"
+        },
         "ventura": {
           "cellar": "/usr/local/Cellar",
-          "url": "https://ghcr.io/v2/davidchall/hep/rivet/blobs/sha256:3821b47fd974e7053e90b09c398ba76d51a8c232f5e370c739001666fc0bc5b7",
-          "sha256": "3821b47fd974e7053e90b09c398ba76d51a8c232f5e370c739001666fc0bc5b7"
-        },
-        "monterey": {
-          "cellar": "/usr/local/Cellar",
-          "url": "https://ghcr.io/v2/davidchall/hep/rivet/blobs/sha256:8cb2ca786a407078d30507127f4e4fe63aeb43bf2b01e4e2852468b19f533419",
-          "sha256": "8cb2ca786a407078d30507127f4e4fe63aeb43bf2b01e4e2852468b19f533419"
+          "url": "https://ghcr.io/v2/davidchall/hep/rivet/blobs/sha256:86137aa9b62ce2447c4d803c8c9fbf59a0891d8723cf61aff0450bb7d4794220",
+          "sha256": "86137aa9b62ce2447c4d803c8c9fbf59a0891d8723cf61aff0450bb7d4794220"
         }
       }
     }
@@ -123,10 +123,10 @@
   "disable_reason": null,
   "post_install_defined": false,
   "service": null,
-  "tap_git_head": "ad70b2106d007b7ea954847f2907cd4308175e14",
+  "tap_git_head": "810f75bca29594c14929f487097739e2a936d965",
   "ruby_source_path": "Formula/rivet.rb",
   "ruby_source_checksum": {
-    "sha256": "9acbdabae6ce4d91d650878120645903804126d5f4ff3dd5def3ccabc2051cff"
+    "sha256": "eefdb1ee54b021032b83b8a44255440428abac0b32f80b7791e5f013c31e7122"
   },
   "head_dependencies": {
     "build_dependencies": [

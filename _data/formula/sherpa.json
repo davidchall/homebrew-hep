@@ -33,18 +33,18 @@
   "version_scheme": 0,
   "bottle": {
     "stable": {
-      "rebuild": 1,
+      "rebuild": 2,
       "root_url": "https://ghcr.io/v2/davidchall/hep",
       "files": {
+        "arm64_sonoma": {
+          "cellar": "/opt/homebrew/Cellar",
+          "url": "https://ghcr.io/v2/davidchall/hep/sherpa/blobs/sha256:01b30487fbc94c7b3f4f96b7484235558b5339138cb1a024618bead499967571",
+          "sha256": "01b30487fbc94c7b3f4f96b7484235558b5339138cb1a024618bead499967571"
+        },
         "ventura": {
           "cellar": "/usr/local/Cellar",
-          "url": "https://ghcr.io/v2/davidchall/hep/sherpa/blobs/sha256:cd12900e0c42f849a8ee06ea87ff44fa95c7f0919551c14a8412631c2277e54f",
-          "sha256": "cd12900e0c42f849a8ee06ea87ff44fa95c7f0919551c14a8412631c2277e54f"
-        },
-        "monterey": {
-          "cellar": "/usr/local/Cellar",
-          "url": "https://ghcr.io/v2/davidchall/hep/sherpa/blobs/sha256:907a0c96caa3fe900787c1c41f320d93861b1ade57c6afa8fab5d154c313261b",
-          "sha256": "907a0c96caa3fe900787c1c41f320d93861b1ade57c6afa8fab5d154c313261b"
+          "url": "https://ghcr.io/v2/davidchall/hep/sherpa/blobs/sha256:6bfabe371ab2643aa98827afa29bebb8900f607f7ed9993fec4bc37ab4697491",
+          "sha256": "6bfabe371ab2643aa98827afa29bebb8900f607f7ed9993fec4bc37ab4697491"
         }
       }
     }
@@ -131,9 +131,9 @@
   "disable_reason": null,
   "post_install_defined": false,
   "service": null,
-  "tap_git_head": "ad70b2106d007b7ea954847f2907cd4308175e14",
+  "tap_git_head": "810f75bca29594c14929f487097739e2a936d965",
   "ruby_source_path": "Formula/sherpa.rb",
   "ruby_source_checksum": {
-    "sha256": "081274093c6e1db8db0690cc475078ee5f049e31e3c2018522bb8c88c0f0e8a2"
+    "sha256": "a87d3f37e656ce7aebb9357e3cb19809d1839d0c49acf315f7b660f32a7c7d1d"
   }
 }

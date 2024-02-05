@@ -34,17 +34,22 @@
       "using": "hg"
     }
   },
-  "revision": 0,
+  "revision": 1,
   "version_scheme": 0,
   "bottle": {
     "stable": {
       "rebuild": 0,
       "root_url": "https://ghcr.io/v2/davidchall/hep",
       "files": {
-        "monterey": {
+        "arm64_sonoma": {
+          "cellar": "/opt/homebrew/Cellar",
+          "url": "https://ghcr.io/v2/davidchall/hep/yoda/blobs/sha256:cfb348494cfadd83aac7bda5819463664c3ce5ad217b87a38e8763d59cf4043e",
+          "sha256": "cfb348494cfadd83aac7bda5819463664c3ce5ad217b87a38e8763d59cf4043e"
+        },
+        "ventura": {
           "cellar": "/usr/local/Cellar",
-          "url": "https://ghcr.io/v2/davidchall/hep/yoda/blobs/sha256:984f157a7463c600e52309b9589b1cc0649f699a6da72a6670688d67174ee931",
-          "sha256": "984f157a7463c600e52309b9589b1cc0649f699a6da72a6670688d67174ee931"
+          "url": "https://ghcr.io/v2/davidchall/hep/yoda/blobs/sha256:6359e1151618638958a7f4fc8b4258d998f6cdbd8e2977a8f45df3bf24537786",
+          "sha256": "6359e1151618638958a7f4fc8b4258d998f6cdbd8e2977a8f45df3bf24537786"
         }
       }
     }
@@ -115,10 +120,10 @@
   "disable_reason": null,
   "post_install_defined": false,
   "service": null,
-  "tap_git_head": "ad70b2106d007b7ea954847f2907cd4308175e14",
+  "tap_git_head": "810f75bca29594c14929f487097739e2a936d965",
   "ruby_source_path": "Formula/yoda.rb",
   "ruby_source_checksum": {
-    "sha256": "52104974f2d207d26e6c8fd17db6cd39ab0ad0ddc718a77c2863ae84a3263b56"
+    "sha256": "5dd4c4d6bc892fe958a67d9aafe455d320fa259b7644448913b55c19d72a6bb7"
   },
   "head_dependencies": {
     "build_dependencies": [

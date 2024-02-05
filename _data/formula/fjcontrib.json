@@ -33,18 +33,18 @@
   "version_scheme": 0,
   "bottle": {
     "stable": {
-      "rebuild": 0,
+      "rebuild": 1,
       "root_url": "https://ghcr.io/v2/davidchall/hep",
       "files": {
+        "arm64_sonoma": {
+          "cellar": ":any_skip_relocation",
+          "url": "https://ghcr.io/v2/davidchall/hep/fjcontrib/blobs/sha256:39199e2b77ac5792c44d473054b5d093874988052ed52c619fae92b72e54670c",
+          "sha256": "39199e2b77ac5792c44d473054b5d093874988052ed52c619fae92b72e54670c"
+        },
         "ventura": {
           "cellar": ":any_skip_relocation",
-          "url": "https://ghcr.io/v2/davidchall/hep/fjcontrib/blobs/sha256:72360fa975329cd50fcd1b8a6c83d5fd27c2a22254bc77b19dbd2d16f8043d1e",
-          "sha256": "72360fa975329cd50fcd1b8a6c83d5fd27c2a22254bc77b19dbd2d16f8043d1e"
-        },
-        "monterey": {
-          "cellar": ":any_skip_relocation",
-          "url": "https://ghcr.io/v2/davidchall/hep/fjcontrib/blobs/sha256:75420d47102499c4b251f4c3ad150820c5c5c816300bee9baaa2899daf876dfe",
-          "sha256": "75420d47102499c4b251f4c3ad150820c5c5c816300bee9baaa2899daf876dfe"
+          "url": "https://ghcr.io/v2/davidchall/hep/fjcontrib/blobs/sha256:4108467cb996cba60b7aa6d8d0fadecfe6001e9353f7b611d0ec57a71369f931",
+          "sha256": "4108467cb996cba60b7aa6d8d0fadecfe6001e9353f7b611d0ec57a71369f931"
         }
       }
     }
@@ -106,9 +106,9 @@
   "disable_reason": null,
   "post_install_defined": false,
   "service": null,
-  "tap_git_head": "ad70b2106d007b7ea954847f2907cd4308175e14",
+  "tap_git_head": "810f75bca29594c14929f487097739e2a936d965",
   "ruby_source_path": "Formula/fjcontrib.rb",
   "ruby_source_checksum": {
-    "sha256": "68d4f171464f5b3780224241594dfff72312371786c748b6576f6308a0b5641b"
+    "sha256": "6d90b0200d0ceac22b04684baa75becc18ab847ca2802c4fc551f1ebe6d51185"
   }
 }
