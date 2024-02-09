@@ -15,6 +15,13 @@ class Qcdnum < Formula
     end
   end
 
+  bottle do
+    root_url "https://ghcr.io/v2/davidchall/hep"
+    rebuild 1
+    sha256 cellar: :any, arm64_sonoma: "bc0c123edde760c89bc00eb0af23bb66427ae9598337779bacf697b7541ffdc0"
+    sha256 cellar: :any, ventura:      "ba9dd4621163943b82d91a5499a651a905f302f3127e120c49ab430fb24115ea"
+  end
+
   depends_on "gcc" # for gfortran
 
   def install
