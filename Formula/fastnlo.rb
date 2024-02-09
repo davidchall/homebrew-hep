@@ -14,13 +14,6 @@ class Fastnlo < Formula
     regex(%r{href=.*?code/v\d+/fastnlo_toolkit[._-]v?(\d+(?:\.\d+)+)-\d+\.t}i)
   end
 
-  bottle do
-    root_url "https://ghcr.io/v2/davidchall/hep"
-    sha256 cellar: :any, monterey: "21b03b289194d24aff0f7bec0cbfea4b4ecf74889ce1eb2643717f2deb0c8b4b"
-    sha256 cellar: :any, big_sur:  "f3e40a12ffdf6d182d29a843f2a0cc0d8667caaaecc5035d5ab85d809fd1abf7"
-    sha256 cellar: :any, catalina: "ab30fb3cd1097ede185b2d3cf9c794fc094d3490d2212f6789948daa0493abab"
-  end
-
   option "with-test", "Test during installation"
 
   depends_on "lhapdf"
