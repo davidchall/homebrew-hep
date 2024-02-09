@@ -10,13 +10,6 @@ class Openloops < Formula
     regex(/href=.*?OpenLoops[._-]v?(\d+(?:\.\d+)+)\.t/i)
   end
 
-  bottle do
-    root_url "https://ghcr.io/v2/davidchall/hep"
-    sha256 cellar: :any, monterey: "561315c9a2a5254b0cf8fdfbdeeb33f909b3c264ac8b4e70c34f474a8d9374b0"
-    sha256 cellar: :any, big_sur:  "fb57cd4648cb5accc694bf43d3e45d6fa1ab0067211f1ce3086bf2c4ad03a522"
-    sha256 cellar: :any, catalina: "8c040c9820241d7739eb4e7838dcdfe0e97d64d3c5753abe56c46bb13714dab8"
-  end
-
   depends_on "scons" => :build
   depends_on "gcc" # for gfortran
 
