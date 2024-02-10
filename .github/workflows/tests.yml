@@ -11,6 +11,11 @@ jobs:
         os: [macos-13, macos-14]
     runs-on: ${{ matrix.os }}
     steps:
+      # temporarily for MCFM
+      - name: Choose MacOS SDK
+        if: matrix.config.os == 'macos-14'
+        run: sudo xcode-select -s /Applications/Xcode_14.3.1.app
+
       - name: Set up Homebrew
         id: set-up-homebrew
         uses: Homebrew/actions/setup-homebrew@master
