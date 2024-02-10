@@ -6,7 +6,7 @@ class Mcfm < Formula
   license "GPL-3.0-or-later"
 
   livecheck do
-    url :homepage
+    url "https://mcfm.fnal.gov/OverviewofMCFM.html"
     regex(/href=.*?MCFM[._-]v?(\d+(?:\.\d+)+)\.t/i)
   end
 
