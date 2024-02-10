@@ -12,8 +12,8 @@ class Mcfm < Formula
 
   bottle do
     root_url "https://ghcr.io/v2/davidchall/hep"
-    sha256 cellar: :any, monterey: "af86d32b133eed55d90b9a6c09f2839d37c38534609badb08e2c457f4a77fe58"
-    sha256 cellar: :any, big_sur:  "f6da20fbf7a9ebf81ad2a43e4d7dbe4cc9e4495b4e0f92572608e1d2e8e261c7"
+    sha256 cellar: :any, arm64_sonoma: "672acf38e0d7405d0f4b0f2f30f48a56d29a633e5c45a6d256eb2928e047d97b"
+    sha256 cellar: :any, ventura:      "cb281e262f624c81a9ec8989b23ebde56df1b800f79d34ad3bc3acdfa9c5a974"
   end
 
   option "with-nnlo-vv", "Build NNLO diboson processes (slow compilation)"
