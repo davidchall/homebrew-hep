@@ -10,6 +10,12 @@ class Openloops < Formula
     regex(/^-?(\d+(?:\.\d+)+)$/i)
   end
 
+  bottle do
+    root_url "https://ghcr.io/v2/davidchall/hep"
+    sha256 cellar: :any, arm64_sonoma: "952880b1cc3f74b36a99e5c5bfac538b0fd16a96fb215e16a426b2a7acd32a31"
+    sha256 cellar: :any, ventura:      "8434ccce0782cdba46e9026e4601e7f14ee288f7090668573deb4385be8471af"
+  end
+
   depends_on "scons" => :build
   depends_on "gcc" # for gfortran
 
