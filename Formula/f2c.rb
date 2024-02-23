@@ -12,10 +12,8 @@ class F2c < Formula
 
   bottle do
     root_url "https://ghcr.io/v2/davidchall/hep"
-    rebuild 1
-    sha256 cellar: :any_skip_relocation, monterey: "9fca4caf6891bdd46e29f4768ddc52818e985047935aa767104178d87fd40a79"
-    sha256 cellar: :any_skip_relocation, big_sur:  "a0890f7c39400305d7eb3ce750934349cd66c53eb6727ad50e89236b691649c5"
-    sha256 cellar: :any_skip_relocation, catalina: "8a18288b8722e77aca1f1d771cb5d049486ff47ce40527c18ea5627cbfff8cc7"
+    sha256 cellar: :any_skip_relocation, arm64_sonoma: "4ce3b9b1aa3c16b06fb5bea8b07b0e13e14a3f5b5db08c5e3784b3583891a06d"
+    sha256 cellar: :any_skip_relocation, ventura:      "852176593dad5149ca38e0d0219df3fae1a0ec0f19da9bceb5fcd409b5a4b7ed"
   end
 
   resource "f2cexecutablesrc" do
