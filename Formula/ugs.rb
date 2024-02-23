@@ -4,6 +4,7 @@ class Ugs < Formula
   url "https://ftp.riken.jp/iris/ugs/ugs.tar.gz"
   version "2.10e"
   sha256 "27bc46e975917bdf149e9ff6997885ffa24b0b1416bdf82ffaea5246b36e1f83"
+  revision 1
 
   livecheck do
     skip "No version information available"
@@ -31,6 +32,9 @@ class Ugs < Formula
   end
 
   def install
+    inreplace "src/aux.c", "#include <stdlib.h>\n", "#include <stdlib.h>\n#include <string.h>\n"
+    inreplace "src/drivers/rotated.c", "#include <stdio.h>\n", "#include <stdlib.h>\n#include <stdio.h>\n#include <string.h>\n"
+
     ENV.deparallelize
 
     system "xmkmf"
