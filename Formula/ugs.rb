@@ -11,10 +11,9 @@ class Ugs < Formula
 
   bottle do
     root_url "https://ghcr.io/v2/davidchall/hep"
-    rebuild 1
-    sha256 cellar: :any_skip_relocation, monterey: "95993825db09461a6a4ba622722ff68868612f5ac6051ce075ba02c066be6705"
-    sha256 cellar: :any_skip_relocation, big_sur:  "e916e3e696ec3d3756e89826e630082009080675a8ef4626e07e040772fbe591"
-    sha256 cellar: :any_skip_relocation, catalina: "8457dcfe4a4d90f748ab6fa15612125bc6e7967efa72dd5cad68173a220d97dc"
+    rebuild 2
+    sha256 cellar: :any_skip_relocation, arm64_sonoma: "e020736a601e25a6f1978a31aed7f3e9be93b980586bccc5db23a368c9669f60"
+    sha256 cellar: :any_skip_relocation, ventura:      "3c9bbb99d0b67e3778683a1c56342a7c3f56dd1e0281400c65b0025b47706056"
   end
 
   depends_on "gcc" => :build
