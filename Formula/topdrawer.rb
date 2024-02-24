@@ -12,9 +12,8 @@ class Topdrawer < Formula
 
   bottle do
     root_url "https://ghcr.io/v2/davidchall/hep"
-    sha256 cellar: :any, monterey: "fced6ab599701a8c2ef71c629dd1f40e6a86ed5b45d273b02dc5bf2ebcf86457"
-    sha256 cellar: :any, big_sur:  "ec19a9654b132c40fdf6011942127288f97668a3ec3bf023a0c157b9c06218a0"
-    sha256 cellar: :any, catalina: "c97d412ce50beb096c418122181653c7ea3fc41a3ec3abbd793bfa54a9e4a963"
+    sha256 cellar: :any, arm64_sonoma: "c7d0ad76de92efbbfa7086fd50edb95f13848492ac533ebcdedf6e1174c577ef"
+    sha256 cellar: :any, ventura:      "fcbf302cc5837b81bf9cd1f0c2855483c33a5c50d6410f93ac99a5399568b761"
   end
 
   depends_on "f2c" => :build
