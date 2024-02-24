@@ -3,20 +3,13 @@ class Rivet < Formula
 
   desc "Monte Carlo analysis system"
   homepage "https://rivet.hepforge.org"
-  url "https://rivet.hepforge.org/downloads/?f=Rivet-3.1.8.tar.gz"
-  sha256 "4795a8f522f4780e97bcc97511c4b0ace9dca9dd51a6004a713287a0dce45953"
+  url "https://rivet.hepforge.org/downloads/?f=Rivet-3.1.10.tar.gz"
+  sha256 "534389243e7fa3a407a08ac00a4cac9a133d03aedb0b334c19f4edc5889db343"
   license "GPL-3.0-only"
 
   livecheck do
     url "https://rivet.hepforge.org/downloads/"
     regex(/href=.*?Rivet[._-]v?(\d+(?:\.\d+)+)\.t/i)
-  end
-
-  bottle do
-    root_url "https://ghcr.io/v2/davidchall/hep"
-    rebuild 1
-    sha256 arm64_sonoma: "63321ceea6df60cc74c64ac17afb7446c260a64a5918090d35be633c4f79e2db"
-    sha256 ventura:      "86137aa9b62ce2447c4d803c8c9fbf59a0891d8723cf61aff0450bb7d4794220"
   end
 
   head do
@@ -40,8 +33,8 @@ class Rivet < Formula
 
   # rivet needs a special installation of fjcontrib
   resource "fjcontrib" do
-    url "https://fastjet.hepforge.org/contrib/downloads/fjcontrib-1.049.tar.gz"
-    sha256 "ae2ed6206bc6278b65e99a4f78df0eeb2911f301a28fb57b50c573c0d5869987"
+    url "https://fastjet.hepforge.org/contrib/downloads/fjcontrib-1.051.tar.gz"
+    sha256 "76a2ec612c768db3eb6bbaf686d02b05ddb64dde477d185e20df563b52308473"
   end
 
   patch :DATA
