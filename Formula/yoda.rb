@@ -3,20 +3,13 @@ class Yoda < Formula
 
   desc "Yet more Objects for Data Analysis"
   homepage "https://yoda.hepforge.org"
-  url "https://yoda.hepforge.org/downloads/?f=YODA-1.9.9.tar.gz"
-  sha256 "b95398fac39f46ff73fb507c4739b4248f9689462d5b1c057caf7f3faffc1eb2"
+  url "https://yoda.hepforge.org/downloads/?f=YODA-1.9.10.tar.gz"
+  sha256 "b9b978bdf34d688485c26b66c749c7584ee78e825961707367da54d5b95640fb"
   license "GPL-3.0-only"
-  revision 1
 
   livecheck do
     url "https://yoda.hepforge.org/downloads/"
     regex(/href=.*?YODA[._-]v?(\d+(?:\.\d+)+)\.t/i)
-  end
-
-  bottle do
-    root_url "https://ghcr.io/v2/davidchall/hep"
-    sha256 arm64_sonoma: "cfb348494cfadd83aac7bda5819463664c3ce5ad217b87a38e8763d59cf4043e"
-    sha256 ventura:      "6359e1151618638958a7f4fc8b4258d998f6cdbd8e2977a8f45df3bf24537786"
   end
 
   head do
@@ -56,10 +49,6 @@ class Yoda < Formula
       args << "--enable-root"
       ENV.append "PYTHONPATH", Formula["root"].opt_prefix/"lib/root" if build.with? "test"
     end
-
-    # yoda attempts to install to HOMEBREW_PREFIX/lib/pythonX.Y/site-packages
-    prefix_site_packages = prefix/Language::Python.site_packages(python)
-    inreplace "configure", /(?<!#)YODA_PYTHONPATH=.+/, "YODA_PYTHONPATH=#{prefix_site_packages}"
 
     system "autoreconf", "-i" if build.head?
     system "./configure", *args
