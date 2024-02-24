@@ -1,10 +1,10 @@
 class Topdrawer < Formula
   desc "SLAC interface for generating physics graphs"
-  homepage "https://www.pa.msu.edu/reference/topdrawer-docs"
+  homepage "https://ribf.riken.jp/comp/doc/topdrawer"
   url "http://ftp.riken.jp/pub/iris/topdrawer/topdrawer.tar.gz"
   version "1.4e"
   sha256 "2a44dffd19e243aa261b4e3cd2b0fe6247ced97ee10e3271f8c7eeae8cb62401"
-  revision 1
+  revision 2
 
   livecheck do
     skip "No version information available"
@@ -27,17 +27,14 @@ class Topdrawer < Formula
   depends_on "libxext"
   depends_on "libxt"
 
-  patch :p1 do
-    url "https://gist.githubusercontent.com/andriish/9e7da86a48fb8930d19eaadfe982a785/raw/5e5a888cc670b5f52378cc7a6c09f6be7cf377f6/patch-topdrawer-1.txt"
-    sha256 "ff0ecaf06cb27daef99edaec786897c8cc53ef01e45388b4b9c0adfe6859f4a0"
-  end
-
-  env :std
+  patch :DATA
 
   def install
     ENV.deparallelize
 
     inreplace "Imakefile.def", /^UGS = .+/, "UGS = #{Formula["ugs"].opt_lib/"ugs.a"}"
+    (buildpath/"misc/Imakefile").append_lines "CFLAGS += -I$(INCDIR)"
+    (buildpath/ "src/Imakefile").append_lines "CFLAGS += -I$(INCDIR)"
 
     system "xmkmf", "-a"
     system "make", "clean"
@@ -60,3 +57,22 @@ class Topdrawer < Formula
     assert_equal "PostScript", file_type.split.first
   end
 end
+
+__END__
+diff --git a/Imakefile.def b/Imakefile.def
+index 3d7360f..27a5d4e 100644
+--- a/Imakefile.def
++++ b/Imakefile.def
+@@ -69,9 +69,9 @@ LDOPT   = -brename:.malloc_,.malloc -brename:.free_,.free
+ 
+ #if defined(DarwinArchitecture)
+ ARCH    = __Darwin
+-FC      = g95
+-FFLAGS  = -O2 -fstatic -fzero -freal-loops -fsloppy-char
+-CFLAGS  = -O2 -DIUCLC=0001000
++FC      = gfortran
++FFLAGS  = -O2 -std=legacy -fallow-invalid-boz
++CFLAGS  = -O2 -DIUCLC=0001000 -Wno-error -Wno-implicit-function-declaration
+ AR      = ar
+ ARFLAGS = rsv
+ RANCMD  =
