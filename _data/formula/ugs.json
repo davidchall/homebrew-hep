@@ -33,23 +33,18 @@
   "version_scheme": 0,
   "bottle": {
     "stable": {
-      "rebuild": 1,
+      "rebuild": 2,
       "root_url": "https://ghcr.io/v2/davidchall/hep",
       "files": {
-        "monterey": {
+        "arm64_sonoma": {
           "cellar": ":any_skip_relocation",
-          "url": "https://ghcr.io/v2/davidchall/hep/ugs/blobs/sha256:95993825db09461a6a4ba622722ff68868612f5ac6051ce075ba02c066be6705",
-          "sha256": "95993825db09461a6a4ba622722ff68868612f5ac6051ce075ba02c066be6705"
+          "url": "https://ghcr.io/v2/davidchall/hep/ugs/blobs/sha256:e020736a601e25a6f1978a31aed7f3e9be93b980586bccc5db23a368c9669f60",
+          "sha256": "e020736a601e25a6f1978a31aed7f3e9be93b980586bccc5db23a368c9669f60"
         },
-        "big_sur": {
+        "ventura": {
           "cellar": ":any_skip_relocation",
-          "url": "https://ghcr.io/v2/davidchall/hep/ugs/blobs/sha256:e916e3e696ec3d3756e89826e630082009080675a8ef4626e07e040772fbe591",
-          "sha256": "e916e3e696ec3d3756e89826e630082009080675a8ef4626e07e040772fbe591"
-        },
-        "catalina": {
-          "cellar": ":any_skip_relocation",
-          "url": "https://ghcr.io/v2/davidchall/hep/ugs/blobs/sha256:8457dcfe4a4d90f748ab6fa15612125bc6e7967efa72dd5cad68173a220d97dc",
-          "sha256": "8457dcfe4a4d90f748ab6fa15612125bc6e7967efa72dd5cad68173a220d97dc"
+          "url": "https://ghcr.io/v2/davidchall/hep/ugs/blobs/sha256:3c9bbb99d0b67e3778683a1c56342a7c3f56dd1e0281400c65b0025b47706056",
+          "sha256": "3c9bbb99d0b67e3778683a1c56342a7c3f56dd1e0281400c65b0025b47706056"
         }
       }
     }
@@ -113,9 +108,9 @@
   "disable_reason": null,
   "post_install_defined": false,
   "service": null,
-  "tap_git_head": "ff16c8123a723596ac74daf59a5dd3726a6ac3af",
+  "tap_git_head": "124b35e4d942fcd6946a977ab883b96c399e1a86",
   "ruby_source_path": "Formula/ugs.rb",
   "ruby_source_checksum": {
-    "sha256": "8a74a1935ca003562bfe0799068077dbe20db7c66519cf268449d8fef5f44b53"
+    "sha256": "5b68cc219140b05588423b441b6796f357ae109a95ddfac20121824f314d94d5"
   }
 }
