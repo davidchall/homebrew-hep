@@ -13,13 +13,6 @@ class Jetvheto < Formula
     regex(/href=.*?JetVHeto[._-]v?(\d+(?:\.\d+)+)\.t/i)
   end
 
-  bottle do
-    root_url "https://ghcr.io/v2/davidchall/hep"
-    sha256 cellar: :any, monterey: "81153b6f3b612d32957845a7ce02c66b8a6d15d000c9a4cf966815cc271b0278"
-    sha256 cellar: :any, big_sur:  "4e54ecc432ccc7e8ab68b4b53ca00067bb31ffb206bb77754d793750b63f4e52"
-    sha256 cellar: :any, catalina: "58a768e3b9fe3077a8a56c4c15902d999415c11ed8f6cf2da21b428955d6f437"
-  end
-
   depends_on "chaplin"
   depends_on "gcc" # for gfortran
   depends_on "hoppet"
