@@ -10,6 +10,13 @@ class Chaplin < Formula
     regex(/href=.*?chaplin[._-]v?(\d+(?:\.\d+)+)\.t/i)
   end
 
+  bottle do
+    root_url "https://ghcr.io/v2/davidchall/hep"
+    rebuild 1
+    sha256 cellar: :any, arm64_sonoma: "3b3df014e7d907c580eb46bebe33546821ee0b0544b8a839580ed1b47c3fe7a1"
+    sha256 cellar: :any, ventura:      "461ddcd217b03c792a51ee11a2638a6c0452813578c46cb6180fd298e56eced1"
+  end
+
   depends_on "gcc" # for gfortran
 
   def install
