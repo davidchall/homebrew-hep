@@ -3,7 +3,7 @@ class Vbfnlo < Formula
   homepage "https://www.itp.kit.edu/vbfnlo"
   url "https://www.itp.kit.edu/vbfnlo/wiki/lib/exe/fetch.php?media=download:vbfnlo-3.0.0beta5.tgz"
   sha256 "d7ce67aa394a6b47da33ede3a0314436414ec12d6c30238622405bdfb76cb544"
-  revision 2
+  revision 3
 
   livecheck do
     skip "In longterm beta"
@@ -40,9 +40,6 @@ class Vbfnlo < Formula
     args << "--enable-kk"                                   if build.with? "kk"
     args << "--with-LHAPDF=#{Formula["lhapdf"].opt_prefix}" if build.with? "lhapdf"
     args << "--with-root=#{Formula["root"].opt_prefix}"     if build.with? "root"
-
-    # https://github.com/davidchall/homebrew-hep/issues/203
-    args << "--disable-quad"
 
     # resolve gfortran compiler errors
     ENV.append "FCFLAGS", "-std=legacy"
