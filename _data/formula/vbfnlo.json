@@ -29,27 +29,22 @@
       "checksum": "d7ce67aa394a6b47da33ede3a0314436414ec12d6c30238622405bdfb76cb544"
     }
   },
-  "revision": 2,
+  "revision": 3,
   "version_scheme": 0,
   "bottle": {
     "stable": {
       "rebuild": 0,
       "root_url": "https://ghcr.io/v2/davidchall/hep",
       "files": {
-        "monterey": {
-          "cellar": ":any",
-          "url": "https://ghcr.io/v2/davidchall/hep/vbfnlo/blobs/sha256:c0dd264d565a140cd52fddbb505d708adc0cf1e9cb5df00b2505cfcfeed36e31",
-          "sha256": "c0dd264d565a140cd52fddbb505d708adc0cf1e9cb5df00b2505cfcfeed36e31"
+        "arm64_sonoma": {
+          "cellar": "/opt/homebrew/Cellar",
+          "url": "https://ghcr.io/v2/davidchall/hep/vbfnlo/blobs/sha256:5e51bb2e8214ba30fb3f0f89c8cc86f41ce93463d2976670af432331e7be53fa",
+          "sha256": "5e51bb2e8214ba30fb3f0f89c8cc86f41ce93463d2976670af432331e7be53fa"
         },
-        "big_sur": {
+        "ventura": {
           "cellar": ":any",
-          "url": "https://ghcr.io/v2/davidchall/hep/vbfnlo/blobs/sha256:5e265f263077e70e6094c594454e3c43f590f9c4a62f88dda998a3d038999e70",
-          "sha256": "5e265f263077e70e6094c594454e3c43f590f9c4a62f88dda998a3d038999e70"
-        },
-        "catalina": {
-          "cellar": ":any",
-          "url": "https://ghcr.io/v2/davidchall/hep/vbfnlo/blobs/sha256:b48bc555d0e964157844e453c22aee8e36b76c2ad887b26d1ac37e9eda1b4420",
-          "sha256": "b48bc555d0e964157844e453c22aee8e36b76c2ad887b26d1ac37e9eda1b4420"
+          "url": "https://ghcr.io/v2/davidchall/hep/vbfnlo/blobs/sha256:db335ff994feeae3992cda1d044e87ead5381c97a0f1367172e10af101effc06",
+          "sha256": "db335ff994feeae3992cda1d044e87ead5381c97a0f1367172e10af101effc06"
         }
       }
     }
@@ -128,9 +123,9 @@
   "disable_reason": null,
   "post_install_defined": false,
   "service": null,
-  "tap_git_head": "124b35e4d942fcd6946a977ab883b96c399e1a86",
+  "tap_git_head": "eb64ab3b4c64c87df9fa3d709c5fefc30cbf870f",
   "ruby_source_path": "Formula/vbfnlo.rb",
   "ruby_source_checksum": {
-    "sha256": "6dfa562db68a34f37d437c060c26a862313c12a27f16f260eed936c155448894"
+    "sha256": "0db8fd4fb4aeec8de1a53c8c5ded164d1b427d1bbe431c794202990f1c852c7d"
   }
 }
