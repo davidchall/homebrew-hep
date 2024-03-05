@@ -3,19 +3,13 @@ class Yoda < Formula
 
   desc "Yet more Objects for Data Analysis"
   homepage "https://yoda.hepforge.org"
-  url "https://yoda.hepforge.org/downloads/?f=YODA-1.9.10.tar.gz"
-  sha256 "b9b978bdf34d688485c26b66c749c7584ee78e825961707367da54d5b95640fb"
+  url "https://yoda.hepforge.org/downloads/?f=YODA-2.0.0.tar.gz"
+  sha256 "a25e0a29b088c981c1c9af1285dc67a454f931c52ddb5ee683533f453c4e870c"
   license "GPL-3.0-only"
 
   livecheck do
     url "https://yoda.hepforge.org/downloads/"
     regex(/href=.*?YODA[._-]v?(\d+(?:\.\d+)+)\.t/i)
-  end
-
-  bottle do
-    root_url "https://ghcr.io/v2/davidchall/hep"
-    sha256 arm64_sonoma: "a3cd8db06e14abadffd88de927066c1fd4f7aba155598c6465dc23cdc71c2eed"
-    sha256 ventura:      "aa12d416660611aea38f15a6ca03bfd0c34df141662c98994c22e41213986cd4"
   end
 
   head do
@@ -102,7 +96,7 @@ index cdebf43..6694941 100755
 
      ## Assemble the compile & link command
 -    compile_cmd = "  ".join([os.environ.get("CXX", "g++"), "-shared -fPIC", "-o {}.so".format(srcname),
-+    compile_cmd = "  ".join([sysconfig.get_config_var("LDCXXSHARED"), "-std=c++11",
++    compile_cmd = "  ".join([sysconfig.get_config_var("LDCXXSHARED"), "-std=c++17",
 +                             "-o {}.so".format(srcname),
                               srcpath, incargs, xcmpargs, xlinkargs, libargs, pyargs])
      print("Build command =", compile_cmd)
