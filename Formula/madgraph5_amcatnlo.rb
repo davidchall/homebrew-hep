@@ -3,8 +3,8 @@ class Madgraph5Amcatnlo < Formula
 
   desc "Automated LO and NLO processes matched to parton showers"
   homepage "https://launchpad.net/mg5amcnlo"
-  url "https://launchpad.net/mg5amcnlo/3.0/3.5.x/+download/MG5_aMC_v3.5.3.tar.gz"
-  sha256 "796ef4e1e524abc572c0c2b4b31622ddd8b258f78c20b04bd6945779d16d0a27"
+  url "https://launchpad.net/mg5amcnlo/3.0/3.5.x/+download/MG5_aMC_v3.5.4.tar.gz"
+  sha256 "d2732a2b37dc01055287a6f71e46dd06aee40626a0122bfd86f6eb344ab565ee"
   license "NCSA"
 
   livecheck do
