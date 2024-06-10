@@ -1,10 +1,9 @@
 class Sherpa < Formula
   desc "Monte Carlo event generator"
   homepage "https://sherpa-team.gitlab.io"
-  url "https://sherpa.hepforge.org/downloads/?f=SHERPA-MC-2.2.15.tar.gz"
-  sha256 "df3bcb6b593f6e6eee396294b13c90337f5c3c15c92651753a03e0ce7975864b"
+  url "https://sherpa.hepforge.org/downloads/?f=SHERPA-MC-2.2.16.tar.gz"
+  sha256 "027b52379061b4916e0c1a0e16faf3a02aff5b84a75f909e017893733f4c8d4b"
   license "GPL-2.0-only"
-  revision 1
 
   livecheck do
     url "https://sherpa.hepforge.org/downloads"
