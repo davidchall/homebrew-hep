@@ -1,8 +1,8 @@
 class Hepmc3 < Formula
   desc "C++ event record for Monte Carlo generators"
   homepage "https://hepmc.web.cern.ch/"
-  url "https://hepmc.web.cern.ch/hepmc/releases/HepMC3-3.2.7.tar.gz"
-  sha256 "587faa6556cc54ccd89ad35421461b4761d7809bc17a2e72f5034daea142232b"
+  url "https://hepmc.web.cern.ch/hepmc/releases/HepMC3-3.3.0.tar.gz"
+  sha256 "6f876091edcf7ee6d0c0db04e080056e89efc1a61abe62355d97ce8e735769d6"
   license "LGPL-3.0-or-later"
 
   livecheck do
