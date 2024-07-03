@@ -11,8 +11,8 @@ class Fjcontrib < Formula
 
   bottle do
     root_url "https://ghcr.io/v2/davidchall/hep"
-    sha256 cellar: :any_skip_relocation, arm64_sonoma: "1c95f6839605967ce0857a1b055bf7aaeaef3a6ee5e6e83674458ca66486d239"
-    sha256 cellar: :any_skip_relocation, ventura:      "abf97fa26edccc2c290ecfce344a655ea7cf83cb0324f95f338d23d3eaf4e2b2"
+    sha256 cellar: :any_skip_relocation, arm64_sonoma: "5ff87291acc5892c361dd0c1ee7c398b4648aa44a0d701ca3646f3525f9344cc"
+    sha256 cellar: :any_skip_relocation, ventura:      "e41496c7ea51888c23b86d69a14e0ff3b611a00ff3d4eed63fa7f636086930ee"
   end
 
   option "with-test", "Test during installation"
