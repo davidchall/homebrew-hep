@@ -57,7 +57,7 @@ class Hepmc3 < Formula
 
     cp_r share/"doc/HepMC3/examples/.", testpath
     system "cmake", "-DUSE_INSTALLED_HEPMC3=ON", "CMakeLists.txt"
-    system "make", "basic_tree.exe"
-    system "outputs/bin/basic_tree.exe"
+    system "make", "pythia6_example.exe"
+    system "outputs/bin/pythia6_example.exe"
   end
 end
