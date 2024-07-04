@@ -52,12 +52,6 @@ class Hepmc3 < Formula
 
   test do
     assert_equal prefix.to_s, shell_output(bin/"HepMC3-config --prefix").strip
-
     system Formula["python@3.10"].opt_bin/python, "-c", "import pyHepMC3"
-
-    # cp_r share/"doc/HepMC3/examples/.", testpath
-    # system "cmake", "-DUSE_INSTALLED_HEPMC3=ON", "CMakeLists.txt"
-    # system "make", "basic_tree.exe"
-    # system "outputs/bin/basic_tree.exe"
   end
 end
