@@ -15,35 +15,35 @@
   "license": "LGPL-3.0-or-later",
   "homepage": "https://hepmc.web.cern.ch/",
   "versions": {
-    "stable": "3.2.7",
+    "stable": "3.3.0",
     "head": null,
     "bottle": true
   },
   "urls": {
     "stable": {
-      "url": "https://hepmc.web.cern.ch/hepmc/releases/HepMC3-3.2.7.tar.gz",
+      "url": "https://hepmc.web.cern.ch/releases/HepMC3-3.3.0.tar.gz",
       "tag": null,
       "revision": null,
       "using": null,
-      "checksum": "587faa6556cc54ccd89ad35421461b4761d7809bc17a2e72f5034daea142232b"
+      "checksum": "6f876091edcf7ee6d0c0db04e080056e89efc1a61abe62355d97ce8e735769d6"
     }
   },
   "revision": 0,
   "version_scheme": 0,
   "bottle": {
     "stable": {
-      "rebuild": 1,
+      "rebuild": 0,
       "root_url": "https://ghcr.io/v2/davidchall/hep",
       "files": {
         "arm64_sonoma": {
           "cellar": ":any",
-          "url": "https://ghcr.io/v2/davidchall/hep/hepmc3/blobs/sha256:c8f0f32185db72b5229805ae8356ba464c9d184acce779d56305b525cfe18dbb",
-          "sha256": "c8f0f32185db72b5229805ae8356ba464c9d184acce779d56305b525cfe18dbb"
+          "url": "https://ghcr.io/v2/davidchall/hep/hepmc3/blobs/sha256:60d6530c8f4f4e09607ffc5dd71431d54b42b9c5c0c3e20512a904bbc272de28",
+          "sha256": "60d6530c8f4f4e09607ffc5dd71431d54b42b9c5c0c3e20512a904bbc272de28"
         },
         "ventura": {
           "cellar": ":any",
-          "url": "https://ghcr.io/v2/davidchall/hep/hepmc3/blobs/sha256:228982c1d84cea4c73631617626afd45f72159af358365afed2a0c9f50194f0a",
-          "sha256": "228982c1d84cea4c73631617626afd45f72159af358365afed2a0c9f50194f0a"
+          "url": "https://ghcr.io/v2/davidchall/hep/hepmc3/blobs/sha256:9dac88f84a2092962176084f71fafcedf8fb513c083260dc56befcee1e802da0",
+          "sha256": "9dac88f84a2092962176084f71fafcedf8fb513c083260dc56befcee1e802da0"
         }
       }
     }
@@ -115,9 +115,9 @@
   "disable_reason": null,
   "post_install_defined": false,
   "service": null,
-  "tap_git_head": "7c12b0e9101b64e6612d2fde9c40f4f8fb19a39e",
+  "tap_git_head": "09f1e25ec1aeac3a9ee868a0da2f54464542f07e",
   "ruby_source_path": "Formula/hepmc3.rb",
   "ruby_source_checksum": {
-    "sha256": "d1ce23e06e2b2124c15a785af858f4699b5667a0b765e2269404d1e97ff57d6b"
+    "sha256": "21222f8d1fe23e9c65af1f6afcefe883615daf29fbe1a55b3b0db65f6b2c4cd0"
   }
 }
