@@ -20,11 +20,11 @@ class Madgraph5Amcatnlo < Formula
 
   depends_on "fastjet"
   depends_on "gcc" # for gfortran
-  depends_on "python@3.10"
+  depends_on "python@3.12"
   depends_on "six"
 
   def python
-    "python3.10"
+    "python3.12"
   end
 
   def install
