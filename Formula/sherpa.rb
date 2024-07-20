@@ -12,9 +12,8 @@ class Sherpa < Formula
 
   bottle do
     root_url "https://ghcr.io/v2/davidchall/hep"
-    rebuild 2
-    sha256 arm64_sonoma: "01b30487fbc94c7b3f4f96b7484235558b5339138cb1a024618bead499967571"
-    sha256 ventura:      "6bfabe371ab2643aa98827afa29bebb8900f607f7ed9993fec4bc37ab4697491"
+    sha256 arm64_sonoma: "b37909ce9971a130cc978fd8f0f8a60ddde2e5d60c90c49baa03a60f006f4fe7"
+    sha256 ventura:      "dcfd183804e20d2cf1aa71efcc227a120c60f1e27a5fe9db6c08021005658df5"
   end
 
   depends_on "autoconf" => :build
