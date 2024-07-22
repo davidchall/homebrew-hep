@@ -109,7 +109,7 @@
   "disable_reason": null,
   "post_install_defined": false,
   "service": null,
-  "tap_git_head": "09f1e25ec1aeac3a9ee868a0da2f54464542f07e",
+  "tap_git_head": "a1e2e488fcd32ece2cbb2abb369f97a9142dc290",
   "ruby_source_path": "Formula/partons.rb",
   "ruby_source_checksum": {
     "sha256": "eb5b543c30c894212cfc0d7dc5624a67f133a782dac14443cecd1e0212e814d7"

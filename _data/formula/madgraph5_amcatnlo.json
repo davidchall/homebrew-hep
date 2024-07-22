@@ -16,17 +16,17 @@
   "license": "NCSA",
   "homepage": "https://launchpad.net/mg5amcnlo",
   "versions": {
-    "stable": "3.5.3",
+    "stable": "3.5.5",
     "head": null,
     "bottle": true
   },
   "urls": {
     "stable": {
-      "url": "https://launchpad.net/mg5amcnlo/3.0/3.5.x/+download/MG5_aMC_v3.5.3.tar.gz",
+      "url": "https://launchpad.net/mg5amcnlo/3.0/3.5.x/+download/MG5_aMC_v3.5.5.tar.gz",
       "tag": null,
       "revision": null,
       "using": null,
-      "checksum": "796ef4e1e524abc572c0c2b4b31622ddd8b258f78c20b04bd6945779d16d0a27"
+      "checksum": "3b4262024cefb8a06082faa9a7ba43484b27a3f2b940a06fbe49c640c5b7ebd7"
     }
   },
   "revision": 0,
@@ -38,13 +38,13 @@
       "files": {
         "arm64_sonoma": {
           "cellar": ":any",
-          "url": "https://ghcr.io/v2/davidchall/hep/madgraph5_amcatnlo/blobs/sha256:c8eceff933471b060ee5320c6650870c4b3a0d5651cc1feb402c5bf483d8cf89",
-          "sha256": "c8eceff933471b060ee5320c6650870c4b3a0d5651cc1feb402c5bf483d8cf89"
+          "url": "https://ghcr.io/v2/davidchall/hep/madgraph5_amcatnlo/blobs/sha256:5aabeb28661c48ca2de77b7532d239620dba8b49022630ccdbba28f073411c75",
+          "sha256": "5aabeb28661c48ca2de77b7532d239620dba8b49022630ccdbba28f073411c75"
         },
         "ventura": {
           "cellar": ":any",
-          "url": "https://ghcr.io/v2/davidchall/hep/madgraph5_amcatnlo/blobs/sha256:ceb5b7112f8ff9bcad57bfcaef5cad841e40c25165d24ba446330a2fadc38350",
-          "sha256": "ceb5b7112f8ff9bcad57bfcaef5cad841e40c25165d24ba446330a2fadc38350"
+          "url": "https://ghcr.io/v2/davidchall/hep/madgraph5_amcatnlo/blobs/sha256:ef0a2820f9b1cd7ded646277d0dd6241ad532469aeb4a6bacf7e6375d85325ce",
+          "sha256": "ef0a2820f9b1cd7ded646277d0dd6241ad532469aeb4a6bacf7e6375d85325ce"
         }
       }
     }
@@ -61,7 +61,7 @@
   "dependencies": [
     "fastjet",
     "gcc",
-    "python@3.10",
+    "python@3.12",
     "six"
   ],
   "test_dependencies": [
@@ -106,9 +106,9 @@
   "disable_reason": null,
   "post_install_defined": false,
   "service": null,
-  "tap_git_head": "09f1e25ec1aeac3a9ee868a0da2f54464542f07e",
+  "tap_git_head": "a1e2e488fcd32ece2cbb2abb369f97a9142dc290",
   "ruby_source_path": "Formula/madgraph5_amcatnlo.rb",
   "ruby_source_checksum": {
-    "sha256": "16e37a4952be44cd9f2e7be7684f1b09bea1cc07e83c2001580bc6df52bed144"
+    "sha256": "9d283778a9b6b4db32f47a55c29b0937498b5bb93ab5a1336786e27878e619ae"
   }
 }

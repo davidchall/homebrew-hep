@@ -15,20 +15,20 @@
   "license": "GPL-3.0-only",
   "homepage": "https://applgrid.hepforge.org",
   "versions": {
-    "stable": "1.6.35",
+    "stable": "1.6.36",
     "head": null,
     "bottle": true
   },
   "urls": {
     "stable": {
-      "url": "https://applgrid.hepforge.org/downloads?f=applgrid-1.6.35.tgz",
+      "url": "https://applgrid.hepforge.org/downloads?f=applgrid-1.6.36.tgz",
       "tag": null,
       "revision": null,
       "using": null,
-      "checksum": "5a9706ba9875aa958cc4f57abe467baa1ac4b5f01d07133dca3a0cb738cabf36"
+      "checksum": "2dc23844671284b4cf9f4b69f317ef68a1530b4b1fb093a31395b35aac9fcf1c"
     }
   },
-  "revision": 1,
+  "revision": 0,
   "version_scheme": 0,
   "bottle": {
     "stable": {
@@ -37,13 +37,13 @@
       "files": {
         "arm64_sonoma": {
           "cellar": ":any",
-          "url": "https://ghcr.io/v2/davidchall/hep/applgrid/blobs/sha256:97fa0006304968864b47b5e60f2ad21dd59e69a03dc7897ea276a6e1a55b9515",
-          "sha256": "97fa0006304968864b47b5e60f2ad21dd59e69a03dc7897ea276a6e1a55b9515"
+          "url": "https://ghcr.io/v2/davidchall/hep/applgrid/blobs/sha256:27933e6ed7e938baec6c6b3314106b6899e9669d474e3ef112b566d376d539ea",
+          "sha256": "27933e6ed7e938baec6c6b3314106b6899e9669d474e3ef112b566d376d539ea"
         },
         "ventura": {
           "cellar": ":any",
-          "url": "https://ghcr.io/v2/davidchall/hep/applgrid/blobs/sha256:9947ebb029a46737c1de1a445b0c955f019a2525ed1ac638cadb64417deeaf9d",
-          "sha256": "9947ebb029a46737c1de1a445b0c955f019a2525ed1ac638cadb64417deeaf9d"
+          "url": "https://ghcr.io/v2/davidchall/hep/applgrid/blobs/sha256:3f91bb498df35bf87206c6ab2d92503bfdf0d41cbd866bc06e7b1e030038ca3f",
+          "sha256": "3f91bb498df35bf87206c6ab2d92503bfdf0d41cbd866bc06e7b1e030038ca3f"
         }
       }
     }
@@ -115,9 +115,9 @@
   "disable_reason": null,
   "post_install_defined": false,
   "service": null,
-  "tap_git_head": "09f1e25ec1aeac3a9ee868a0da2f54464542f07e",
+  "tap_git_head": "a1e2e488fcd32ece2cbb2abb369f97a9142dc290",
   "ruby_source_path": "Formula/applgrid.rb",
   "ruby_source_checksum": {
-    "sha256": "79825b7b82037953be39759312a21c4adc6aca79b6c88c8b460c403e7f20ba9c"
+    "sha256": "4f25117c08fed360a05f4d16c209dc585cc32634cddeb3881b171e364b21da75"
   }
 }

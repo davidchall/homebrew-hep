@@ -15,35 +15,35 @@
   "license": "GPL-2.0-or-later",
   "homepage": "https://fastjet.fr",
   "versions": {
-    "stable": "3.4.2",
+    "stable": "3.4.3",
     "head": null,
     "bottle": true
   },
   "urls": {
     "stable": {
-      "url": "https://fastjet.fr/repo/fastjet-3.4.2.tar.gz",
+      "url": "https://fastjet.fr/repo/fastjet-3.4.3.tar.gz",
       "tag": null,
       "revision": null,
       "using": null,
-      "checksum": "b3d33155b55ce43f420cd6d99b525acf7bdc2593a7bb7ea898a9ddb3d8ca38e3"
+      "checksum": "cc175471bfab8656b8c6183a8e5e9ad05d5f7506e46f3212a9a8230905b8f6a3"
     }
   },
   "revision": 0,
   "version_scheme": 0,
   "bottle": {
     "stable": {
-      "rebuild": 1,
+      "rebuild": 0,
       "root_url": "https://ghcr.io/v2/davidchall/hep",
       "files": {
         "arm64_sonoma": {
           "cellar": ":any",
-          "url": "https://ghcr.io/v2/davidchall/hep/fastjet/blobs/sha256:081d2f3649258e79b01fac9ec1a963307ae49d269db95516569206aab82f66d7",
-          "sha256": "081d2f3649258e79b01fac9ec1a963307ae49d269db95516569206aab82f66d7"
+          "url": "https://ghcr.io/v2/davidchall/hep/fastjet/blobs/sha256:48190c33a348b353776b0838ea4053bc9139ccac8647f630df9a0a975218682f",
+          "sha256": "48190c33a348b353776b0838ea4053bc9139ccac8647f630df9a0a975218682f"
         },
         "ventura": {
           "cellar": ":any",
-          "url": "https://ghcr.io/v2/davidchall/hep/fastjet/blobs/sha256:21a55a9714fcb7c23613c892f8d5fb9c0c0a958797545e4181ea882aa494d83d",
-          "sha256": "21a55a9714fcb7c23613c892f8d5fb9c0c0a958797545e4181ea882aa494d83d"
+          "url": "https://ghcr.io/v2/davidchall/hep/fastjet/blobs/sha256:f35c50bc42f4ebbdae648613e18a8cba1b342950f9c8b39c323aae20bd22ded5",
+          "sha256": "f35c50bc42f4ebbdae648613e18a8cba1b342950f9c8b39c323aae20bd22ded5"
         }
       }
     }
@@ -109,9 +109,9 @@
   "disable_reason": null,
   "post_install_defined": false,
   "service": null,
-  "tap_git_head": "09f1e25ec1aeac3a9ee868a0da2f54464542f07e",
+  "tap_git_head": "a1e2e488fcd32ece2cbb2abb369f97a9142dc290",
   "ruby_source_path": "Formula/fastjet.rb",
   "ruby_source_checksum": {
-    "sha256": "3d2fa96c39f8c5c96e28e2a3f97939c06c7367adbc57e81aa94a7ca5a5699d06"
+    "sha256": "bd7520ae705dba7a7f214cd9d98ec64cd12cf4e06e4d3105d6d2f246d440ae84"
   }
 }
