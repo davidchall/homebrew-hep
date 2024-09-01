@@ -61,6 +61,8 @@ class Rivet < Formula
       system "make", "install"
     end
 
+    inreplace "configure", "hepmc_mirco", "hepmc_micro"
+
     args = %W[
       --disable-debug
       --disable-dependency-tracking
