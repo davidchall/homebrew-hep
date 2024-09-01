@@ -13,8 +13,8 @@ class Hepmc3 < Formula
 
   bottle do
     root_url "https://ghcr.io/v2/davidchall/hep"
-    sha256 cellar: :any, arm64_sonoma: "60d6530c8f4f4e09607ffc5dd71431d54b42b9c5c0c3e20512a904bbc272de28"
-    sha256 cellar: :any, ventura:      "9dac88f84a2092962176084f71fafcedf8fb513c083260dc56befcee1e802da0"
+    sha256 cellar: :any, arm64_sonoma: "837227225c31931c24ae1f7849998206a5310f99856320c4385c53cd369513f8"
+    sha256 cellar: :any, ventura:      "c646245722ef801587157cb3cdcc1195e92a6f5f89d52ebda5f90705c1abb3de"
   end
 
   option "with-test", "Test during installation"
