@@ -1,9 +1,10 @@
 class Hepmc3 < Formula
   desc "C++ event record for Monte Carlo generators"
   homepage "https://hepmc.web.cern.ch/"
-  url "https://hepmc.web.cern.ch/releases/HepMC3-3.3.0.tar.gz"
-  sha256 "6f876091edcf7ee6d0c0db04e080056e89efc1a61abe62355d97ce8e735769d6"
+  url "https://hepmc.web.cern.ch/releases/HepMC3-3.2.7.tar.gz"
+  sha256 "587faa6556cc54ccd89ad35421461b4761d7809bc17a2e72f5034daea142232b"
   license "LGPL-3.0-or-later"
+  revision 1
 
   livecheck do
     url "https://hepmc.web.cern.ch/hepmc/"
@@ -52,5 +53,10 @@ class Hepmc3 < Formula
   test do
     assert_equal prefix.to_s, shell_output(bin/"HepMC3-config --prefix").strip
     system Formula["python@3.10"].opt_bin/python, "-c", "import pyHepMC3"
+
+    cp_r share/"doc/HepMC3/examples/.", testpath
+    system "cmake", "-DUSE_INSTALLED_HEPMC3=ON", "CMakeLists.txt"
+    system "make", "basic_tree.exe"
+    system "outputs/bin/basic_tree.exe"
   end
 end
