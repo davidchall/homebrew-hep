@@ -3,19 +3,13 @@ class Rivet < Formula
 
   desc "Monte Carlo analysis system"
   homepage "https://rivet.hepforge.org"
-  url "https://rivet.hepforge.org/downloads/?f=Rivet-3.1.10.tar.gz"
-  sha256 "534389243e7fa3a407a08ac00a4cac9a133d03aedb0b334c19f4edc5889db343"
+  url "https://rivet.hepforge.org/downloads/?f=Rivet-4.0.0.tar.gz"
+  sha256 "599b98b4f99d0502a8b21fc72283404bb1c13c8f6e0581ba93f1edcfbe90dd41"
   license "GPL-3.0-only"
 
   livecheck do
     url "https://rivet.hepforge.org/downloads/"
     regex(/href=.*?Rivet[._-]v?(\d+(?:\.\d+)+)\.t/i)
-  end
-
-  bottle do
-    root_url "https://ghcr.io/v2/davidchall/hep"
-    sha256 arm64_sonoma: "8c86aeda66a4952b1806612170ad5103ba3072a09edb242966427f1369af5879"
-    sha256 ventura:      "2aa01d51b11bf444a61378b413a08788c5a7d3d0422e717e00278705af2f600d"
   end
 
   head do
@@ -31,11 +25,18 @@ class Rivet < Formula
   option "without-analyses", "Do not build Rivet analyses"
   option "with-unvalidated", "Build and install unvalidated analyses"
 
+  depends_on "cmake" => :build
   depends_on "fastjet"
   depends_on "gsl"
+  depends_on "hdf5"
   depends_on "hepmc3"
   depends_on "python@3.10"
   depends_on "yoda"
+
+  resource "highfive" do
+    url "https://github.com/BlueBrain/HighFive/archive/refs/tags/v2.7.1.tar.gz"
+    sha256 "25b4c51a94d1e670dc93b9b73f51e79b65d8ff49bcd6e5d5582d5ecd2789a249"
+  end
 
   # rivet needs a special installation of fjcontrib
   resource "fjcontrib" do
@@ -50,6 +51,18 @@ class Rivet < Formula
   end
 
   def install
+    resource("highfive").stage do
+      args = std_cmake_args + %w[
+        -DHIGHFIVE_EXAMPLES=OFF
+        -DHIGHFIVE_USE_BOOST=OFF
+        -DHIGHFIVE_UNIT_TESTS=OFF
+      ]
+
+      system "cmake", ".", *args
+      system "make"
+      system "make", "install"
+    end
+
     resource("fjcontrib").stage do
       inreplace "Makefile.in",
         "libfastjetcontribfragile.@DYNLIBEXT@ $(PREFIX)/lib",
@@ -123,6 +136,6 @@ index b23621b..8d011f5 100755
 
  ## Assemble the compile & link command
 -compile_cmd = "  ".join([os.environ.get("CXX", "g++"), "-shared -fPIC", "-o core.so",
-+compile_cmd = "  ".join([sysconfig.get_config_var("LDCXXSHARED"), "-std=c++14", "-o core.so",
++compile_cmd = "  ".join([sysconfig.get_config_var("LDCXXSHARED"), "-std=c++17", "-o core.so",
                           srcpath, incargs, cmpargs, linkargs, libargs, pyargs])
  print("Build command =", compile_cmd)
