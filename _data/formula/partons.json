@@ -12,7 +12,7 @@
 
   ],
   "desc": "PARtonic Tomography Of Nucleon Software",
-  "license": "Apache-2.0 and GPL-3.0-only",
+  "license": "Apache-2.0 AND GPL-3.0-only",
   "homepage": "https://drf-gitlab.cea.fr/partons/core/partons",
   "versions": {
     "stable": "4.0",
