@@ -36,7 +36,7 @@
       "root_url": "https://ghcr.io/v2/davidchall/hep",
       "files": {
         "arm64_sonoma": {
-          "cellar": "/opt/homebrew/Cellar",
+          "cellar": "/Cellar",
           "url": "https://ghcr.io/v2/davidchall/hep/vbfnlo/blobs/sha256:5e51bb2e8214ba30fb3f0f89c8cc86f41ce93463d2976670af432331e7be53fa",
           "sha256": "5e51bb2e8214ba30fb3f0f89c8cc86f41ce93463d2976670af432331e7be53fa"
         },
