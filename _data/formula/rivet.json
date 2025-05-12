@@ -2,15 +2,9 @@
   "name": "rivet",
   "full_name": "davidchall/hep/rivet",
   "tap": "davidchall/hep",
-  "oldnames": [
-
-  ],
-  "aliases": [
-
-  ],
-  "versioned_formulae": [
-
-  ],
+  "oldnames": [],
+  "aliases": [],
+  "versioned_formulae": [],
   "desc": "Monte Carlo analysis system",
   "license": "GPL-3.0-only",
   "homepage": "https://rivet.hepforge.org",
@@ -70,9 +64,7 @@
       "description": "Build and install unvalidated analyses"
     }
   ],
-  "build_dependencies": [
-
-  ],
+  "build_dependencies": [],
   "dependencies": [
     "fastjet",
     "gsl",
@@ -80,37 +72,17 @@
     "python@3.10",
     "yoda"
   ],
-  "test_dependencies": [
-
-  ],
-  "recommended_dependencies": [
-
-  ],
-  "optional_dependencies": [
-
-  ],
-  "uses_from_macos": [
-
-  ],
-  "uses_from_macos_bounds": [
-
-  ],
-  "requirements": [
-
-  ],
-  "conflicts_with": [
-
-  ],
-  "conflicts_with_reasons": [
-
-  ],
-  "link_overwrite": [
-
-  ],
+  "test_dependencies": [],
+  "recommended_dependencies": [],
+  "optional_dependencies": [],
+  "uses_from_macos": [],
+  "uses_from_macos_bounds": [],
+  "requirements": [],
+  "conflicts_with": [],
+  "conflicts_with_reasons": [],
+  "link_overwrite": [],
   "caveats": null,
-  "installed": [
-
-  ],
+  "installed": [],
   "linked_keg": null,
   "pinned": false,
   "outdated": false,
@@ -145,20 +117,10 @@
       "python@3.10",
       "yoda"
     ],
-    "test_dependencies": [
-
-    ],
-    "recommended_dependencies": [
-
-    ],
-    "optional_dependencies": [
-
-    ],
-    "uses_from_macos": [
-
-    ],
-    "uses_from_macos_bounds": [
-
-    ]
+    "test_dependencies": [],
+    "recommended_dependencies": [],
+    "optional_dependencies": [],
+    "uses_from_macos": [],
+    "uses_from_macos_bounds": []
   }
 }

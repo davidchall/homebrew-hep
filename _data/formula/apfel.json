@@ -2,15 +2,9 @@
   "name": "apfel",
   "full_name": "davidchall/hep/apfel",
   "tap": "davidchall/hep",
-  "oldnames": [
-
-  ],
-  "aliases": [
-
-  ],
-  "versioned_formulae": [
-
-  ],
+  "oldnames": [],
+  "aliases": [],
+  "versioned_formulae": [],
   "desc": "PDF Evolution Library",
   "license": "GPL-3.0-only",
   "homepage": "https://github.com/scarrazza/apfel",
@@ -69,34 +63,16 @@
   "test_dependencies": [
     "cmake"
   ],
-  "recommended_dependencies": [
-
-  ],
-  "optional_dependencies": [
-
-  ],
-  "uses_from_macos": [
-
-  ],
-  "uses_from_macos_bounds": [
-
-  ],
-  "requirements": [
-
-  ],
-  "conflicts_with": [
-
-  ],
-  "conflicts_with_reasons": [
-
-  ],
-  "link_overwrite": [
-
-  ],
+  "recommended_dependencies": [],
+  "optional_dependencies": [],
+  "uses_from_macos": [],
+  "uses_from_macos_bounds": [],
+  "requirements": [],
+  "conflicts_with": [],
+  "conflicts_with_reasons": [],
+  "link_overwrite": [],
   "caveats": null,
-  "installed": [
-
-  ],
+  "installed": [],
   "linked_keg": null,
   "pinned": false,
   "outdated": false,

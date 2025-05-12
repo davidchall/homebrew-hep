@@ -2,15 +2,9 @@
   "name": "mcfm",
   "full_name": "davidchall/hep/mcfm",
   "tap": "davidchall/hep",
-  "oldnames": [
-
-  ],
-  "aliases": [
-
-  ],
-  "versioned_formulae": [
-
-  ],
+  "oldnames": [],
+  "aliases": [],
+  "versioned_formulae": [],
   "desc": "Monte Carlo for FeMtobarn processes",
   "license": "GPL-3.0-or-later",
   "homepage": "https://mcfm.fnal.gov",
@@ -67,37 +61,19 @@
   "dependencies": [
     "gcc"
   ],
-  "test_dependencies": [
-
-  ],
-  "recommended_dependencies": [
-
-  ],
+  "test_dependencies": [],
+  "recommended_dependencies": [],
   "optional_dependencies": [
     "lhapdf"
   ],
-  "uses_from_macos": [
-
-  ],
-  "uses_from_macos_bounds": [
-
-  ],
-  "requirements": [
-
-  ],
-  "conflicts_with": [
-
-  ],
-  "conflicts_with_reasons": [
-
-  ],
-  "link_overwrite": [
-
-  ],
+  "uses_from_macos": [],
+  "uses_from_macos_bounds": [],
+  "requirements": [],
+  "conflicts_with": [],
+  "conflicts_with_reasons": [],
+  "link_overwrite": [],
   "caveats": "Before running mcfm, copy this file to your working directory:\n  $HOMEBREW_PREFIX/Cellar/mcfm/10.3/share/mcfm/process.DAT\n\n",
-  "installed": [
-
-  ],
+  "installed": [],
   "linked_keg": null,
   "pinned": false,
   "outdated": false,

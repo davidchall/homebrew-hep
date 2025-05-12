@@ -2,15 +2,9 @@
   "name": "lhapdf",
   "full_name": "davidchall/hep/lhapdf",
   "tap": "davidchall/hep",
-  "oldnames": [
-
-  ],
-  "aliases": [
-
-  ],
-  "versioned_formulae": [
-
-  ],
+  "oldnames": [],
+  "aliases": [],
+  "versioned_formulae": [],
   "desc": "PDF interpolation and evaluation",
   "license": "GPL-3.0-or-later",
   "homepage": "https://lhapdf.hepforge.org/",
@@ -56,46 +50,22 @@
   "pour_bottle_only_if": null,
   "keg_only": false,
   "keg_only_reason": null,
-  "options": [
-
-  ],
-  "build_dependencies": [
-
-  ],
+  "options": [],
+  "build_dependencies": [],
   "dependencies": [
     "python@3.10"
   ],
-  "test_dependencies": [
-
-  ],
-  "recommended_dependencies": [
-
-  ],
-  "optional_dependencies": [
-
-  ],
-  "uses_from_macos": [
-
-  ],
-  "uses_from_macos_bounds": [
-
-  ],
-  "requirements": [
-
-  ],
-  "conflicts_with": [
-
-  ],
-  "conflicts_with_reasons": [
-
-  ],
-  "link_overwrite": [
-
-  ],
+  "test_dependencies": [],
+  "recommended_dependencies": [],
+  "optional_dependencies": [],
+  "uses_from_macos": [],
+  "uses_from_macos_bounds": [],
+  "requirements": [],
+  "conflicts_with": [],
+  "conflicts_with_reasons": [],
+  "link_overwrite": [],
   "caveats": "PDFs may be downloaded and installed with\n\n  lhapdf install CT10nlo\n\nAt runtime, LHAPDF searches $HOMEBREW_PREFIX/Cellar/lhapdf/6.5.4/share/LHAPDF\nand paths in LHAPDF_DATA_PATH for PDF sets.\n\n",
-  "installed": [
-
-  ],
+  "installed": [],
   "linked_keg": null,
   "pinned": false,
   "outdated": false,
@@ -126,20 +96,10 @@
     "dependencies": [
       "python@3.10"
     ],
-    "test_dependencies": [
-
-    ],
-    "recommended_dependencies": [
-
-    ],
-    "optional_dependencies": [
-
-    ],
-    "uses_from_macos": [
-
-    ],
-    "uses_from_macos_bounds": [
-
-    ]
+    "test_dependencies": [],
+    "recommended_dependencies": [],
+    "optional_dependencies": [],
+    "uses_from_macos": [],
+    "uses_from_macos_bounds": []
   }
 }

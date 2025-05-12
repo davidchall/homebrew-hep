@@ -2,15 +2,9 @@
   "name": "whizard",
   "full_name": "davidchall/hep/whizard",
   "tap": "davidchall/hep",
-  "oldnames": [
-
-  ],
-  "aliases": [
-
-  ],
-  "versioned_formulae": [
-
-  ],
+  "oldnames": [],
+  "aliases": [],
+  "versioned_formulae": [],
   "desc": "Monte Carlo event generator",
   "license": "GPL-2.0-or-later",
   "homepage": "https://whizard.hepforge.org",
@@ -69,47 +63,27 @@
       "description": "Build with lhapdf support"
     }
   ],
-  "build_dependencies": [
-
-  ],
+  "build_dependencies": [],
   "dependencies": [
     "gcc",
     "ocaml"
   ],
-  "test_dependencies": [
-
-  ],
-  "recommended_dependencies": [
-
-  ],
+  "test_dependencies": [],
+  "recommended_dependencies": [],
   "optional_dependencies": [
     "fastjet",
     "hepmc3",
     "hoppet",
     "lhapdf"
   ],
-  "uses_from_macos": [
-
-  ],
-  "uses_from_macos_bounds": [
-
-  ],
-  "requirements": [
-
-  ],
-  "conflicts_with": [
-
-  ],
-  "conflicts_with_reasons": [
-
-  ],
-  "link_overwrite": [
-
-  ],
+  "uses_from_macos": [],
+  "uses_from_macos_bounds": [],
+  "requirements": [],
+  "conflicts_with": [],
+  "conflicts_with_reasons": [],
+  "link_overwrite": [],
   "caveats": null,
-  "installed": [
-
-  ],
+  "installed": [],
   "linked_keg": null,
   "pinned": false,
   "outdated": false,

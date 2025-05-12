@@ -2,15 +2,9 @@
   "name": "qcdnum",
   "full_name": "davidchall/hep/qcdnum",
   "tap": "davidchall/hep",
-  "oldnames": [
-
-  ],
-  "aliases": [
-
-  ],
-  "versioned_formulae": [
-
-  ],
+  "oldnames": [],
+  "aliases": [],
+  "versioned_formulae": [],
   "desc": "Fast PDF evolution",
   "license": "GPL-3.0-or-later",
   "homepage": "https://www.nikhef.nl/~h24/qcdnum",
@@ -51,46 +45,22 @@
   "pour_bottle_only_if": null,
   "keg_only": false,
   "keg_only_reason": null,
-  "options": [
-
-  ],
-  "build_dependencies": [
-
-  ],
+  "options": [],
+  "build_dependencies": [],
   "dependencies": [
     "gcc"
   ],
-  "test_dependencies": [
-
-  ],
-  "recommended_dependencies": [
-
-  ],
-  "optional_dependencies": [
-
-  ],
-  "uses_from_macos": [
-
-  ],
-  "uses_from_macos_bounds": [
-
-  ],
-  "requirements": [
-
-  ],
-  "conflicts_with": [
-
-  ],
-  "conflicts_with_reasons": [
-
-  ],
-  "link_overwrite": [
-
-  ],
+  "test_dependencies": [],
+  "recommended_dependencies": [],
+  "optional_dependencies": [],
+  "uses_from_macos": [],
+  "uses_from_macos_bounds": [],
+  "requirements": [],
+  "conflicts_with": [],
+  "conflicts_with_reasons": [],
+  "link_overwrite": [],
   "caveats": null,
-  "installed": [
-
-  ],
+  "installed": [],
   "linked_keg": null,
   "pinned": false,
   "outdated": false,

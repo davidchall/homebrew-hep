@@ -2,15 +2,9 @@
   "name": "thepeg",
   "full_name": "davidchall/hep/thepeg",
   "tap": "davidchall/hep",
-  "oldnames": [
-
-  ],
-  "aliases": [
-
-  ],
-  "versioned_formulae": [
-
-  ],
+  "oldnames": [],
+  "aliases": [],
+  "versioned_formulae": [],
   "desc": "Toolkit for high energy physics event generation",
   "license": "GPL-3.0-only",
   "homepage": "https://herwig.hepforge.org",
@@ -66,9 +60,7 @@
       "description": "Build without rivet support"
     }
   ],
-  "build_dependencies": [
-
-  ],
+  "build_dependencies": [],
   "dependencies": [
     "boost",
     "fastjet",
@@ -76,37 +68,19 @@
     "hepmc3",
     "lhapdf"
   ],
-  "test_dependencies": [
-
-  ],
+  "test_dependencies": [],
   "recommended_dependencies": [
     "rivet"
   ],
-  "optional_dependencies": [
-
-  ],
-  "uses_from_macos": [
-
-  ],
-  "uses_from_macos_bounds": [
-
-  ],
-  "requirements": [
-
-  ],
-  "conflicts_with": [
-
-  ],
-  "conflicts_with_reasons": [
-
-  ],
-  "link_overwrite": [
-
-  ],
+  "optional_dependencies": [],
+  "uses_from_macos": [],
+  "uses_from_macos_bounds": [],
+  "requirements": [],
+  "conflicts_with": [],
+  "conflicts_with_reasons": [],
+  "link_overwrite": [],
   "caveats": null,
-  "installed": [
-
-  ],
+  "installed": [],
   "linked_keg": null,
   "pinned": false,
   "outdated": false,
@@ -140,20 +114,12 @@
       "hepmc3",
       "lhapdf"
     ],
-    "test_dependencies": [
-
-    ],
+    "test_dependencies": [],
     "recommended_dependencies": [
       "rivet"
     ],
-    "optional_dependencies": [
-
-    ],
-    "uses_from_macos": [
-
-    ],
-    "uses_from_macos_bounds": [
-
-    ]
+    "optional_dependencies": [],
+    "uses_from_macos": [],
+    "uses_from_macos_bounds": []
   }
 }

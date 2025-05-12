@@ -5,12 +5,8 @@
   "oldnames": [
     "herwig++"
   ],
-  "aliases": [
-
-  ],
-  "versioned_formulae": [
-
-  ],
+  "aliases": [],
+  "versioned_formulae": [],
   "desc": "Monte Carlo event generator",
   "license": "GPL-3.0-only",
   "homepage": "https://herwig.hepforge.org",
@@ -62,9 +58,7 @@
       "description": "Test during installation"
     }
   ],
-  "build_dependencies": [
-
-  ],
+  "build_dependencies": [],
   "dependencies": [
     "boost",
     "fastjet",
@@ -73,37 +67,17 @@
     "hepmc3",
     "thepeg"
   ],
-  "test_dependencies": [
-
-  ],
-  "recommended_dependencies": [
-
-  ],
-  "optional_dependencies": [
-
-  ],
-  "uses_from_macos": [
-
-  ],
-  "uses_from_macos_bounds": [
-
-  ],
-  "requirements": [
-
-  ],
-  "conflicts_with": [
-
-  ],
-  "conflicts_with_reasons": [
-
-  ],
-  "link_overwrite": [
-
-  ],
+  "test_dependencies": [],
+  "recommended_dependencies": [],
+  "optional_dependencies": [],
+  "uses_from_macos": [],
+  "uses_from_macos_bounds": [],
+  "requirements": [],
+  "conflicts_with": [],
+  "conflicts_with_reasons": [],
+  "link_overwrite": [],
   "caveats": null,
-  "installed": [
-
-  ],
+  "installed": [],
   "linked_keg": null,
   "pinned": false,
   "outdated": false,
@@ -139,20 +113,10 @@
       "hepmc3",
       "thepeg"
     ],
-    "test_dependencies": [
-
-    ],
-    "recommended_dependencies": [
-
-    ],
-    "optional_dependencies": [
-
-    ],
-    "uses_from_macos": [
-
-    ],
-    "uses_from_macos_bounds": [
-
-    ]
+    "test_dependencies": [],
+    "recommended_dependencies": [],
+    "optional_dependencies": [],
+    "uses_from_macos": [],
+    "uses_from_macos_bounds": []
   }
 }

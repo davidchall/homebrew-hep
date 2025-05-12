@@ -2,15 +2,9 @@
   "name": "vbfnlo",
   "full_name": "davidchall/hep/vbfnlo",
   "tap": "davidchall/hep",
-  "oldnames": [
-
-  ],
-  "aliases": [
-
-  ],
-  "versioned_formulae": [
-
-  ],
+  "oldnames": [],
+  "aliases": [],
+  "versioned_formulae": [],
   "desc": "Parton-level Monte Carlo for processes with electroweak bosons",
   "license": null,
   "homepage": "https://www.itp.kit.edu/vbfnlo",
@@ -73,15 +67,11 @@
       "description": "Build without gsl support"
     }
   ],
-  "build_dependencies": [
-
-  ],
+  "build_dependencies": [],
   "dependencies": [
     "gcc"
   ],
-  "test_dependencies": [
-
-  ],
+  "test_dependencies": [],
   "recommended_dependencies": [
     "lhapdf",
     "gsl"
@@ -89,28 +79,14 @@
   "optional_dependencies": [
     "root"
   ],
-  "uses_from_macos": [
-
-  ],
-  "uses_from_macos_bounds": [
-
-  ],
-  "requirements": [
-
-  ],
-  "conflicts_with": [
-
-  ],
-  "conflicts_with_reasons": [
-
-  ],
-  "link_overwrite": [
-
-  ],
+  "uses_from_macos": [],
+  "uses_from_macos_bounds": [],
+  "requirements": [],
+  "conflicts_with": [],
+  "conflicts_with_reasons": [],
+  "link_overwrite": [],
   "caveats": null,
-  "installed": [
-
-  ],
+  "installed": [],
   "linked_keg": null,
   "pinned": false,
   "outdated": false,

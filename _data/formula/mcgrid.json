@@ -2,15 +2,9 @@
   "name": "mcgrid",
   "full_name": "davidchall/hep/mcgrid",
   "tap": "davidchall/hep",
-  "oldnames": [
-
-  ],
-  "aliases": [
-
-  ],
-  "versioned_formulae": [
-
-  ],
+  "oldnames": [],
+  "aliases": [],
+  "versioned_formulae": [],
   "desc": "Projecting cross section calculations on grids",
   "license": null,
   "homepage": "https://mcgrid.hepforge.org",
@@ -30,8 +24,7 @@
   },
   "revision": 0,
   "version_scheme": 0,
-  "bottle": {
-  },
+  "bottle": {},
   "pour_bottle_only_if": null,
   "keg_only": false,
   "keg_only_reason": null,
@@ -51,38 +44,20 @@
   "dependencies": [
     "rivet"
   ],
-  "test_dependencies": [
-
-  ],
+  "test_dependencies": [],
   "recommended_dependencies": [
     "applgrid",
     "fastnlo"
   ],
-  "optional_dependencies": [
-
-  ],
-  "uses_from_macos": [
-
-  ],
-  "uses_from_macos_bounds": [
-
-  ],
-  "requirements": [
-
-  ],
-  "conflicts_with": [
-
-  ],
-  "conflicts_with_reasons": [
-
-  ],
-  "link_overwrite": [
-
-  ],
+  "optional_dependencies": [],
+  "uses_from_macos": [],
+  "uses_from_macos_bounds": [],
+  "requirements": [],
+  "conflicts_with": [],
+  "conflicts_with_reasons": [],
+  "link_overwrite": [],
   "caveats": "You can disable one of the applgrid and fastnlo dependencies.\nHowever, the build will fail if you disable both.\n\nA manual is installed in:\n  $(brew --prefix mcgrid)/manual.pdf\n\nExamples are installed in:\n  $(brew --prefix mcgrid)/examples-rivet-2.2.0\n",
-  "installed": [
-
-  ],
+  "installed": [],
   "linked_keg": null,
   "pinned": false,
   "outdated": false,
