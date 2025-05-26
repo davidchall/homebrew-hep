@@ -1,12 +1,12 @@
 class Cernlib < Formula
   desc "CERN library"
   homepage "https://cernlib.web.cern.ch"
-  url "https://cernlib.web.cern.ch/download/2023_source/tar/cernlib-2023.08.14.0-free.tar.gz"
-  sha256 "7006475d9c38254cb94ce75e556a319fea3b3155087780ea522003103771474e"
+  url "https://cernlib.web.cern.ch/download/2025_source/tar/cernlib-cernlib-2025.02.25.0-free.tar.gz"
+  sha256 "87251ca68195eed7a25f4e911f643336740d30f07bfb89f382f693b9a1e1155e"
   license "GPL-2.0-or-later"
 
   livecheck do
-    url "https://cernlib.web.cern.ch/cernlib/download/2023_source/tar"
+    url "https://cernlib.web.cern.ch/cernlib/download/2025_source/tar"
     regex(/href=.*?cernlib[._-](\d{4}\.\d{2}\.\d{2}\.\d+)-free\.t/i)
   end
 
@@ -33,8 +33,8 @@ class Cernlib < Formula
       -DCMAKE_C_COMPILER=gcc-#{gcc_major_ver}
       -DMOTIF_INCLUDE_DIR=#{Formula["openmotif"].opt_include}
       -DMOTIF_LIBRARIES=#{Formula["openmotif"].opt_lib}/#{shared_library("libXm")}
-      -DCMAKE_INSTALL_LIBDIR=lib/cernlib/2023/lib
-      -DCMAKE_INSTALL_INCLUDEDIR=include/cernlib/2023
+      -DCMAKE_INSTALL_LIBDIR=lib/cernlib/2025/lib
+      -DCMAKE_INSTALL_INCLUDEDIR=include/cernlib/2025
     ]
 
     mkdir "build" do
