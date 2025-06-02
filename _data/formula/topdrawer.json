@@ -24,6 +24,9 @@
   },
   "revision": 2,
   "version_scheme": 0,
+  "autobump": true,
+  "no_autobump_message": null,
+  "skip_livecheck": true,
   "bottle": {
     "stable": {
       "rebuild": 0,
