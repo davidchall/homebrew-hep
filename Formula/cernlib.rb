@@ -1,8 +1,8 @@
 class Cernlib < Formula
   desc "CERN library"
   homepage "https://cernlib.web.cern.ch"
-  url "https://cernlib.web.cern.ch/download/2023_source/tar/cernlib-2023.08.14.0-free.tar.gz"
-  sha256 "7006475d9c38254cb94ce75e556a319fea3b3155087780ea522003103771474e"
+  url "https://cernlib.web.cern.ch/download/2023_source/tar/cernlib-2023.10.31.0-free.tar.gz"
+  sha256 "8d5d7bb39d789c044db575f76c007862973397790f6cbb7a7a541d7c01d86310"
   license "GPL-2.0-or-later"
 
   livecheck do
