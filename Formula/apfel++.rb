@@ -1,8 +1,8 @@
 class Apfelxx < Formula
   desc "Object oriented rewriting of the APFEL evolution code"
   homepage "https://github.com/vbertone/apfelxx"
-  url "https://github.com/vbertone/apfelxx/archive/refs/tags/4.8.0.tar.gz"
-  sha256 "d577cf0f8cbcfae18699670941827c6c72dfec4aeb14321365c36937ace6a34a"
+  url "https://github.com/vbertone/apfelxx/archive/refs/tags/4.8.1.tar.gz"
+  sha256 "68ee531fc61f488bbdf65ea974093da4c5f821f02a88fa1a453aa34220418616"
 
   bottle do
     root_url "https://ghcr.io/v2/davidchall/hep"
