@@ -24,6 +24,7 @@
   },
   "revision": 0,
   "version_scheme": 0,
+  "compatibility_version": null,
   "autobump": true,
   "no_autobump_message": null,
   "skip_livecheck": false,
