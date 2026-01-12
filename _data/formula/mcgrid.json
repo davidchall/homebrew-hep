@@ -70,11 +70,18 @@
   "deprecation_reason": null,
   "deprecation_replacement_formula": null,
   "deprecation_replacement_cask": null,
+  "deprecate_args": null,
   "disabled": true,
   "disable_date": "2022-05-19",
   "disable_reason": "does not build with the latest Rivet",
   "disable_replacement_formula": null,
   "disable_replacement_cask": null,
+  "disable_args": {
+    "date": "2022-05-19",
+    "because": "does not build with the latest Rivet",
+    "replacement_formula": null,
+    "replacement_cask": null
+  },
   "post_install_defined": false,
   "service": null,
   "tap_git_head": "5b5781517f26b0984883dcfcb44ab6d4cce00fa2",
