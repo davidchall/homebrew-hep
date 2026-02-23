@@ -3,8 +3,8 @@ class Lhapdf < Formula
 
   desc "PDF interpolation and evaluation"
   homepage "https://lhapdf.hepforge.org/"
-  url "https://lhapdf.hepforge.org/downloads/?f=LHAPDF-6.5.4.tar.gz"
-  sha256 "2443a4b32cc3b0597c8248bd6e25703ace9c91a7a253c5f60b1b5428ef9c869e"
+  url "https://lhapdf.hepforge.org/downloads/?f=LHAPDF-6.5.6.tar.gz"
+  sha256 "948bc123dfc2087e87ac759dd0c94d7e05e7ce950ea13db37cdc00a4ae8f7b68"
   license "GPL-3.0-or-later"
 
   livecheck do
