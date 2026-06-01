@@ -61,6 +61,7 @@
   "disable_replacement_formula": null,
   "disable_replacement_cask": null,
   "disable_args": null,
+  "post_install_steps": [],
   "post_install_defined": false,
   "service": null,
   "tap_git_head": "5b5781517f26b0984883dcfcb44ab6d4cce00fa2",
