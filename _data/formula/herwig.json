@@ -29,6 +29,7 @@
       "using": "hg"
     }
   },
+  "patches": [],
   "revision": 0,
   "version_scheme": 0,
   "compatibility_version": null,

@@ -22,6 +22,13 @@
       "checksum": "27bc46e975917bdf149e9ff6997885ffa24b0b1416bdf82ffaea5246b36e1f83"
     }
   },
+  "patches": [
+    {
+      "strip": "p1",
+      "url": "https://gist.githubusercontent.com/andriish/4df18144d5992c0d3301e3f0069b9218/raw/e18c51f5657b9ec8c519ed25cba838fc353fc35d/patch-ugs-1.txt",
+      "sha256": "3e8915fbeae36d4ade037940bb74a90208c0c9c53472ffe29632b85bb42c9eca"
+    }
+  ],
   "revision": 0,
   "version_scheme": 0,
   "compatibility_version": null,

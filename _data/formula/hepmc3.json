@@ -22,6 +22,7 @@
       "checksum": "587faa6556cc54ccd89ad35421461b4761d7809bc17a2e72f5034daea142232b"
     }
   },
+  "patches": [],
   "revision": 1,
   "version_scheme": 0,
   "compatibility_version": null,
