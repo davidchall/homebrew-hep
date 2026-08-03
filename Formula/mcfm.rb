@@ -1,8 +1,8 @@
 class Mcfm < Formula
   desc "Monte Carlo for FeMtobarn processes"
   homepage "https://mcfm.fnal.gov"
-  url "https://mcfm.fnal.gov/downloads/MCFM-10.3.tar.gz"
-  sha256 "97677cbccb06b2821a5fa1569d1f561b253bd0651a97ab05d13247c708864840"
+  url "https://mcfm.fnal.gov/downloads/MCFM-10.3.1.tar.gz"
+  sha256 "db52a8d824309b3573eca3bcfc46016a076092bca31068ceabd63f026b4913fd"
   license "GPL-3.0-or-later"
 
   livecheck do
